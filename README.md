@@ -73,6 +73,8 @@ sentient-BP/
 │   ├── 3_completed/        # Completed work
 │   ├── _reference/         # Reference materials
 │   └── _templates/         # Document templates
+├── content/                # Generated content
+│   └── source.bundle.html  # Bundled HTML output
 ├── index.html              # Main entry point (presentation)
 └── README.md               # This file
 ```
