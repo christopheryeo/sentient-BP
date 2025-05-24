@@ -31,6 +31,63 @@ sentient-BP/
 └── tests/                  # Test files
 ```
 
+### Plans Directory Organization
+
+The `plans/` directory is central to our project management methodology. It provides a structured way to track ideas, plan upcoming work, manage ongoing tasks, and archive completed efforts. Adhering to a standardized organization within `plans/` ensures clarity and allows for easy replication of our project management processes across different projects.
+
+The standard subdirectories within `plans/` are:
+
+*   **`0_backlog/`**:
+    *   **Purpose**: Captures all raw ideas, feature requests, identified bugs, and potential improvements that are not yet scheduled for active development.
+    *   **Content**: Typically contains documents like `feature-ideas.md`, `bug-reports.md`, or individual files for larger concepts. Each item should be described with enough detail to be understood later during a planning session.
+    *   **File Naming**: Use descriptive kebab-case names (e.g., `user-authentication-enhancement.md`).
+
+*   **`1_planning/`**:
+    *   **Purpose**: Holds all documentation related to features or versions that are actively being planned or are slated for near-term development.
+    *   **Content**: Organized into version-specific subdirectories (e.g., `V1.0.0/`, `V1.1.0_feature-name/`). Each versioned subdirectory should contain:
+        *   `README.md`: An overview of the version/feature, its goals, and key deliverables.
+        *   `design.md` or `ui_ux_spec.md`: Detailed design specifications, wireframes, mockups, or user flow diagrams.
+        *   `tech-spec.md`: Technical specifications, including architecture, data models, API changes, and impact on existing systems.
+        *   Other relevant planning documents (e.g., `requirements.md`, `user-stories.md`).
+    *   **Directory Naming**: Use semantic versioning for general releases (e.g., `V1.0.0`, `V1.1.0`, `V2.0.0`). For feature-specific planning that might span multiple minor versions or is a significant standalone piece of work, consider `VMAJOR.MINOR_feature-name/` (e.g., `V1.2_search-implementation/`).
+    *   **File Naming**: Use standard names like `README.md`, `design.md`, `tech-spec.md`. For other documents, use descriptive kebab-case.
+
+*   **`2_inprogress/`**:
+    *   **Purpose**: Tracks features or versions that are currently under active development. This directory provides a snapshot of ongoing work.
+    *   **Content**: Similar to `1_planning/`, it should be organized into version-specific or feature-specific subdirectories. These directories would typically be moved from `1_planning/` once development starts.
+        *   The documents within (e.g., `README.md`, `tech-spec.md`) should be updated to reflect the current status, any changes made during development, and progress tracking (e.g., task lists with completed items).
+        *   May also include developer notes or logs specific to the ongoing work.
+    *   **Note**: It's crucial to keep these documents live and updated throughout the development cycle.
+
+*   **`3_completed/`**:
+    *   **Purpose**: Archives all documentation related to features or versions that have been completed, tested, and released (or deployed).
+    *   **Content**: Organized into version-specific subdirectories, mirroring the structure from `1_planning/` or `2_inprogress/`. These directories are moved here once a version/feature is finalized.
+        *   Documents should reflect the final state of the delivered work.
+        *   Should include a `spec.md` or `final_spec.md` that details exactly what was delivered.
+        *   May also include a `release_notes.md` specific to that version or a `post_mortem.md` if any valuable lessons were learned.
+    *   **Directory Naming**: Follows the same naming convention as `1_planning/` (e.g., `V1.0.0/`).
+
+*   **`_reference/`**:
+    *   **Purpose**: Stores general project reference materials that are not tied to a specific version or feature lifecycle but are relevant for the overall project.
+    *   **Content**: Examples include:
+        *   `ROADMAP.md`: High-level overview of the project's long-term vision and planned major versions/features.
+        *   `CHANGELOG.md`: A log of all notable changes made to the project, typically organized by version.
+        *   `product_management.md`: This document itself, outlining the project management processes.
+        *   `coding_standards.md`, `style_guide.md`, etc.
+    *   **File Naming**: Descriptive kebab-case names.
+
+*   **`_templates/`**:
+    *   **Purpose**: Contains standardized templates for various documents used in the project management process. This helps maintain consistency and ensures all necessary information is captured.
+    *   **Content**: Examples include:
+        *   `feature_spec_template.md`
+        *   `tech_spec_template.md`
+        *   `bug_report_template.md`
+        *   `completed_version_readme_template.md`
+        *   `wip_readme_template.md`
+    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
+
+This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
+
 ## Workflow
 
 1. **Backlog**
