@@ -1,7 +1,7 @@
 # 🚀 Feature Ideas
 
 *Last Updated: 2025-05-24*  
-*Status: Active Brainstorming*  
+*Status: Active Development*  
 
 📌 **Purpose**: This document serves as a living repository for all feature ideas for the Sentient.io Interactive Presentation, from initial concept through to implementation. Use it to capture, refine, and track the evolution of presentation features.
 
@@ -22,10 +22,12 @@
   - Keyboard and touch navigation
   - Progress tracking
   - Cross-browser compatibility
+  - Basic slide transitions
+  - Version-controlled deployment
 
 ## 🔄 In Progress
 
-### V1.1.0 - Enhanced Interactivity
+### V1.1.0 - Enhanced Interactivity (Target: 2025-06-07)
 - **Interactive Elements**
   - [ ] Add quiz functionality
   - [ ] Implement clickable hotspots

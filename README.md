@@ -12,6 +12,7 @@ An interactive, multi-slide presentation for Sentient.io, built with HTML5, CSS3
 - [Development](#-development)
 - [Project Management](#-project-management)
 - [Roadmap](#-roadmap)
+- [Version History](#version-history)
 - [Contributing](#-contributing)
 - [License](#-license)
 
@@ -215,6 +216,29 @@ This project is open source and available under the [MIT License](LICENSE).
 ### Dependencies
 - [Chart.js](https://www.chartjs.org/) - For interactive charts
 - [Normalize.css](https://necolas.github.io/normalize.css/) - For consistent browser styling
+
+## 📋 Version History
+
+| Version   | Commit    | Description                                      |
+|-----------|-----------|--------------------------------------------------|
+| V1.1.0    | `[NEXT]`  | Enhanced interactivity and animations (Planned)  |
+| V1.0.0    | `c9fb87e`  | Initial presentation release                    |
+| V0.1.0    | `8e6ddfa`  | Simplified presentation structure               |
+| V0.0.1    | `2e4c362`  | Initial test version                            |
+
+## 🚀 What's Next?
+
+### V1.1.0 - Enhanced Interactivity (Planned for June 7, 2025)
+- **Interactive Elements**
+  - Quiz functionality
+  - Clickable hotspots
+  - Form collection
+- **Animations**
+  - Entrance animations
+  - Scroll-triggered effects
+  - Micro-interactions
+
+[View detailed planning →](plans/1_planning/V1.1.0/) |
 
 ---
 
