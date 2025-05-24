@@ -206,15 +206,13 @@
             <div class="tagline">NATURALLY INTELLIGENT</div>
         </header>
 
-        <!-- Slides will be injected here by JavaScript -->
         <div id="slide-deck">
-            <!-- Slides will be dynamically inserted here by script.js -->
+            <!-- Slides will be dynamically inserted here -->
         </div>
-
         <div class="navigation">
-            <button id="prev-slide" class="nav-button" aria-label="Previous slide">‹ Prev</button>
+            <button id="prev-slide" class="nav-button">‹ Prev</button>
             <div id="slide-counter">1 / 1</div>
-            <button id="next-slide" class="nav-button" aria-label="Next slide">Next ›</button>
+            <button id="next-slide" class="nav-button">Next ›</button>
         </div>
     </div>
 
@@ -227,13 +225,40 @@
             let currentSlide = 0;
             let slides = [];
 
-            // Slides data remains the same as before
+            // Slides data
             const slidesData = [
-                { // Slide 1 (Original Page 1)
+                {
                     title: "Revolutionizing Enterprise Knowledge",
-                    content: "<p>With Private AI</p><p class='sub-text'>Enterprise-grade Private AI solution that transforms how organizations access, utilize, and secure their institutional knowledge.</p><div class='feature-card'><strong>Unlocking Enterprise Knowledge with Private AI:</strong> Empowering decisions with secure, contextual intelligence.</div><p style='font-size: 0.8em; margin-top: 30px;'>Copyright @ 2025 Sentient.io Pte Ltd. All rights reserved</p>",
+                    content: `
+                        <h1>With Private AI</h1>
+                        <p class="sub-text">Enterprise-grade Private AI solution that transforms how organizations access, utilize, and secure their institutional knowledge.</p>
+                        <div class="feature-card">
+                            <strong>Unlocking Enterprise Knowledge with Private AI:</strong> Empowering decisions with secure, contextual intelligence.
+                        </div>
+                        <p style="font-size: 0.8em; margin-top: 30px;">Copyright @ 2025 Sentient.io Pte Ltd. All rights reserved</p>
+                    `
                 },
-                // ... rest of your slides data ...
+                {
+                    title: "About Sentient.io",
+                    content: `
+                        <ul>
+                            <li>Founded: May 2017</li>
+                            <li>Headquarters: Singapore</li>
+                            <li>Founder & CEO: Christopher Yeo</li>
+                            <li>Employees: Approximately 19 as of 2024</li>
+                            <li>Funding: Raised over $7 million across multiple rounds</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Our Vision",
+                    content: `
+                        <p>To transform how organizations access and utilize their institutional knowledge through secure, private AI solutions.</p>
+                        <div class="feature-card">
+                            <strong>Mission:</strong> Empower enterprises with AI that understands, learns, and protects their unique knowledge assets.
+                        </div>
+                    `
+                }
             ];
 
             function createSlideDOM(slideData, index) {
