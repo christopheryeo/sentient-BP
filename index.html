@@ -1,0 +1,1282 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentient.io Presentation</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="presentation-container">
+        <header class="branding">
+            <div class="logo">sentient.io</div>
+            <div class="tagline">NATURALLY INTELLIGENT</div>
+        </header>
+
+        <!-- Slides will be injected here by JavaScript -->
+        <div id="slide-deck">
+            <!-- Slides will be dynamically inserted here by script.js -->
+        </div>
+
+        <div class="navigation">
+            <button id="prev-slide" class="nav-button" aria-label="Previous slide">‹ Prev</button>
+            <div id="slide-counter">1 / 1</div>
+            <button id="next-slide" class="nav-button" aria-label="Next slide">Next ›</button>
+        </div>
+    </div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
+
+
+style.css:
+
+:root {
+    --primary-color: #D92E26; /* Sentient.io Red */
+    --secondary-color: #4CAF50; /* Sentient.io Green */
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --slide-bg-color: #ffffff;
+    --border-color: #e0e0e0;
+    --accent-color: #007bff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.presentation-container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: var(--slide-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.branding {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.branding .tagline {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+#slide-deck {
+    position: relative;
+    width: 100%;
+    min-height: 450px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* For transitions */
+}
+
+.slide {
+    position: absolute;
+    width: 90%;
+    max-width: 800px;
+    padding: 30px 40px;
+    background-color: var(--slide-bg-color);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    display: none; /* Initially hidden, JS controls visibility */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    display: flex; /* Show active slide */
+    z-index: 1;
+}
+
+.slide.exiting {
+    transform: translateX(-100%);
+}
+
+.slide h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.slide h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.slide p, .slide li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.slide ul {
+    list-style-position: inside;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.slide strong {
+    color: var(--accent-color);
+}
+
+.icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.stat-highlight {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-top: 1px solid var(--border-color);
+    background-color: #f1f1f1;
+}
+
+.nav-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+.nav-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#slide-counter {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Specific slide styles */
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.logo-item {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    min-width: 120px;
+    text-align: center;
+}
+
+.problem-card, .feature-card, .advantage-card, .milestone-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 300px; /* Adjust for grid layout */
+}
+
+.problem-card h3, .feature-card h3, .advantage-card h3, .milestone-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* For small screens */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.status-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.status-won { background-color: #4CAF50; } /* Green */
+.status-negotiating { background-color: #FFC107; } /* Amber */
+.status-trial { background-color: #2196F3; } /* Blue */
+
+
+@media (max-width: 768px) {
+    .presentation-container {
+        width: 95%;
+        margin: 10px;
+    }
+    .slide {
+        padding: 20px;
+    }
+    .slide h2 {
+        font-size: 1.5em;
+    }
+    .slide p, .slide li {
+        font-size: 0.95em;
+    }
+    .branding .logo {
+        font-size: 1.5em;
+    }
+    .branding .tagline {
+        font-size: 0.8em;
+    }
+    .nav-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .problem-card, .feature-card, .advantage-card, .milestone-card {
+        max-width: 90%;
+    }
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Css
+IGNORE_WHEN_COPYING_END
+
+script.js:
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slideDeck = document.getElementById('slide-deck');
+    const prevButton = document.getElementById('prev-slide');
+    const nextButton = document.getElementById('next-slide');
+    const slideCounter = document.getElementById('slide-counter');
+
+    let currentSlideIndex = 0;
+    let slidesData = []; // Will be populated with slide content
+
+    // --- SLIDE CONTENT DEFINITIONS ---
+    // This is where we'll define each slide's content based on the PPT
+    slidesData = [
+        { // Slide 1 (Original Page 1)
+            title: "Revolutionizing Enterprise Knowledge",
+            content: "<p>With Private AI</p><p class='sub-text'>Enterprise-grade Private AI solution that transforms how organizations access, utilize, and secure their institutional knowledge.</p><div class='feature-card'><strong>Unlocking Enterprise Knowledge with Private AI:</strong> Empowering decisions with secure, contextual intelligence.</div><p style='font-size: 0.8em; margin-top: 30px;'>Copyright @ 2025 Sentient.io Pte Ltd. All rights reserved</p>",
+        },
+        { // Slide 2 (Original Page 2 - Company Facts)
+            title: "Company Facts",
+            content: `
+                <ul>
+                    <li><strong>Founded:</strong> May 2017</li>
+                    <li><strong>Headquarters:</strong> Singapore</li>
+                    <li><strong>Founder & CEO:</strong> Christopher Yeo</li>
+                    <li><strong>Employees:</strong> Approximately 19 as of 2024</li>
+                    <li><strong>Funding:</strong> Raised over $7 million across multiple rounds</li>
+                </ul>
+                <img src="https://i.imgur.com/W7xQ7B9.png" alt="Singapore Map" style="max-width:200px; margin-top:15px; opacity:0.7;">
+            `
+        },
+        { // Slide 3 (Original Page 2 - Key Investors)
+            title: "Key Investors",
+            content: `
+                <div class="logo-grid">
+                    <div class="logo-item">Real Tech Holdings</div>
+                    <div class="logo-item">SEEDS Capital</div>
+                    <div class="logo-item">A*Star</div>
+                    <div class="logo-item">BEENEXT</div>
+                    <div class="logo-item">ABC Dream Ventures</div>
+                    <div class="logo-item">DG Ventures</div>
+                    <div class="logo-item">Origgin Ventures</div>
+                    <div class="logo-item">Avior Capital</div>
+                    <div class="logo-item">UntroD (formerly RTF)</div>
+                </div>
+            `
+        },
+        { // Slide 4 (Original Page 2 - Clients & Partners)
+            title: "Clients & Partners",
+            content: `
+                <div class="logo-grid">
+                    <div class="logo-item">Toyota Tsusho Asia Pacific</div>
+                    <div class="logo-item">IHI</div>
+                    <div class="logo-item">Daido Steel</div>
+                    <div class="logo-item">Mediacorp</div>
+                    <div class="logo-item">Singapore Government</div>
+                    <div class="logo-item">PT Profis</div>
+                    <div class="logo-item">BluePrism Inc.</div>
+                    <div class="logo-item">Partners: Google, A*Star</div>
+                </div>
+            `
+        },
+        { // Slide 5 (Original Page 3 - About Founder)
+            title: "About the Founder: Christopher Yeo",
+            content: `
+                <img src="https://i.imgur.com/N2U8j9N.png" alt="Christopher Yeo" style="width:120px; height:120px; border-radius:50%; margin-bottom:15px;">
+                <p><strong>Founder & Chief Architect, Sentient.io</strong></p>
+                <p>25+ years in tech, focused on AI solutions for enterprise transformation.</p>
+            `
+        },
+        { // Slide 6 (Original Page 3 - Founder's Track Record)
+            title: "Founder: Entrepreneurial Track Record",
+            content: `
+                <ul>
+                    <li><strong>iFusion (1994):</strong> Scaled with clients like Motorola; e-business pioneer.</li>
+                    <li><strong>Comex Frontier:</strong> Expanded across Asia-Pacific with Panasonic; acquired by Four Soft (2005).</li>
+                    <li><strong>aSpecial Media (2011):</strong> Co-founder; built interest profiling tech for media.</li>
+                </ul>
+            `
+        },
+        { // Slide 7 (Original Page 3 - Founder's Experience)
+            title: "Founder: Leadership & Advisory",
+            content: `
+                <ul>
+                    <li><strong>Leadership Experience:</strong> Senior roles at A*STAR, NUS, and Singapore Press Holdings.</li>
+                    <li><strong>Board & Advisory Roles:</strong> Board Member, Cap Vista (Singapore MINDEF); Advisory Boards: Credence Fund, Agency for Integrated Care (Singapore MOH); Mentors 15+ companies.</li>
+                    <li><strong>Academic Credentials:</strong> First-class honours in Computer Science & Mathematics.</li>
+                </ul>
+            `
+        },
+        { // Slide 8 (Original Page 4 - Management Team)
+            title: "Management Team",
+            content: `
+                <div class="flex-container">
+                    <div class="team-member">
+                        <img src="https://i.imgur.com/N2U8j9N.png" alt="Christopher Yeo" style="width:80px; height:80px; border-radius:50%;">
+                        <p><strong>Christopher Yeo</strong><br/>Founder / CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://i.imgur.com/nQG0gHk.png" alt="Eddie Leong" style="width:80px; height:80px; border-radius:50%;">
+                        <p><strong>Eddie Leong</strong><br/>CFO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://i.imgur.com/g9sZqL9.png" alt="Priya Somasundaram" style="width:80px; height:80px; border-radius:50%;">
+                        <p><strong>Priya Somasundaram</strong><br/>VP of Technology</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://i.imgur.com/4R4T9qP.png" alt="Gloria Koh" style="width:80px; height:80px; border-radius:50%;">
+                        <p><strong>Gloria Koh</strong><br/>VP of Corporate Development</p>
+                    </div>
+                </div>
+            `
+        },
+        // Placeholder images used for management team. Replace with actual if available or better placeholders.
+        { // Slide 9 (Original Page 5 - Corporate Investors Logos)
+            title: "Our Corporate Investors",
+            content: `
+                <p>A snapshot of our valued corporate investors.</p>
+                <div class="logo-grid">
+                    <div class="logo-item">a*ccelerate</div>
+                    <div class="logo-item">BEENEXT</div>
+                    <div class="logo-item">ABC Dream Ventures</div>
+                    <div class="logo-item">SEEDS Capital</div>
+                    <div class="logo-item">DG Daiwa Ventures</div>
+                    <div class="logo-item">DG Ventures</div>
+                    <div class="logo-item">DK Gate</div>
+                    <div class="logo-item">UntroD Capital</div>
+                    <div class="logo-item">Leave a Nest</div>
+                    <div class="logo-item">Avior Capital</div>
+                    <div class="logo-item">Origgin</div>
+                </div>
+            `
+        },
+        { // Slide 10 (Original Page 6 - Market Problem: Knowledge Silos)
+            title: "Market Problem: Knowledge Silos",
+            content: "<div class='icon'>🔒</div><p>Critical information trapped in disparate systems, creating bottlenecks and reducing productivity.</p>",
+        },
+        { // Slide 11 (Original Page 6 - Market Problem: Wasted Time)
+            title: "Market Problem: Wasted Time",
+            content: "<div class='icon'>⏱️</div><p>Employees spend <strong>20%+</strong> of their workweek searching for information needed to do their jobs.</p>",
+        },
+        { // Slide 12 (Original Page 6 - Market Problem: Tribal Knowledge Loss)
+            title: "Market Problem: Tribal Knowledge Loss",
+            content: "<div class='icon'>📉</div><p>Expertise leaves with departing employees, creating knowledge gaps and operational risks.</p>",
+        },
+        { // Slide 13 (Original Page 6 - Commoditization of Public Knowledge)
+            title: "The Commoditization of Public Knowledge",
+            content: "<p>As AI organizations like OpenAI continue to crawl the internet and train models like GPT, publicly available information becomes commoditized and ceases to provide competitive advantage.</p>",
+        },
+        { // Slide 14 (Original Page 6 - High-Value: Proprietary Domain Knowledge)
+            title: "High-Value: Proprietary Domain Knowledge",
+            content: "<p>Information that is valuable but not crawlable (e.g., health insurance plans in PDFs).</p>",
+        },
+        { // Slide 15 (Original Page 6 - High-Value: Interpretative Domain Knowledge)
+            title: "High-Value: Interpretative Domain Knowledge",
+            content: "<p>New insights from connecting dots across domains, requiring deep expertise.</p>",
+        },
+        { // Slide 16 (Original Page 6 - High-Value: Creative Domain Knowledge)
+            title: "High-Value: Creative Domain Knowledge",
+            content: "<p>Novel solutions and approaches that haven't yet been published or widely shared.</p>",
+        },
+        { // Slide 17 (Original Page 7 - Market Potential TAM)
+            title: "Total Addressable Market (TAM)",
+            content: "<div class='stat-highlight'>$1 Trillion</div><p>Global AI market forecasted to reach $1T by 2032 with a CAGR of 39.6%.</p><p>Enterprise AI market: 52.17% CAGR (2025-2030) | Knowledge Management AI: 25% CAGR</p>"
+        },
+        { // Slide 18 (Original Page 7 - Market Potential SAM)
+            title: "Serviceable Available Market (SAM)",
+            content: `
+                <div class='stat-highlight'>$185 Billion</div>
+                <div class="flex-container">
+                    <div>
+                        <strong>Geographic Focus:</strong>
+                        <ul><li>Southeast Asia</li><li>Japan</li><li>Europe</li><li>Broader APAC</li></ul>
+                    </div>
+                    <div>
+                        <strong>Industry Breakdown:</strong>
+                        <ul>
+                            <li>Financial Services: $42.5B</li>
+                            <li>Insurance: $24.1B</li>
+                            <li>Government: $68.5B</li>
+                            <li>Retail: $49.9B</li>
+                        </ul>
+                    </div>
+                </div>
+            `
+        },
+        { // Slide 19 (Original Page 7 - Market Potential SOM)
+            title: "Serviceable Obtainable Market (SOM)",
+            content: `
+                <div class='stat-highlight'>$3.7 Billion</div>
+                <p>Based on 2% market penetration of our SAM.</p>
+                <p><strong>Projected SOM Growth:</strong> Year 1: $370M ➔ Year 3: $1.85B ➔ Year 5: $3.7B</p>
+            `
+        },
+        { // Slide 20 (Original Page 7 & 9 - Market Growth Driver: Privacy Regs)
+            title: "Growth Driver: Privacy Regulations",
+            content: "<div class='icon'>🛡️</div><p>Increasing demand for secure, private AI solutions.</p>"
+        },
+        { // Slide 21 (Original Page 7 & 9 - Market Growth Driver: Executive Investment)
+            title: "Growth Driver: Executive Investment",
+            content: "<div class='icon'>📈</div><div class='stat-highlight'>92%</div><p>of executives planning to boost AI spending in the next 3 years.</p>"
+        },
+        { // Slide 22 (Original Page 7 & 9 - Market Growth Driver: On-Premise AI)
+            title: "Growth Driver: On-Premise AI",
+            content: "<div class='icon'>🏢</div><div class='stat-highlight'>70%</div><p>of enterprises plan to move AI models on-premises.</p>"
+        },
+        { // Slide 23 (Original Page 7 & 9 - Market Growth Driver: AI Strategy Success)
+            title: "Growth Driver: AI Strategy Success",
+            content: "<div class='icon'>🎯</div><div class='stat-highlight'>80% vs 37%</div><p>Success rate with formal AI strategy vs. without.</p>"
+        },
+        { // Slide 24 (Original Page 9 - AI Adoption Growth Trend)
+            title: "AI Adoption Growth Trend",
+            content: `
+                <p>Enterprise AI Adoption Rate (%) vs. On-Premises AI Deployment (%).</p>
+                <div class="chart-container"><canvas id="aiAdoptionChart"></canvas></div>
+                <p style="font-size:0.8em;">Source: McKinsey & Company (2025 AI in the workplace report)</p>
+            `,
+            init: () => {
+                const ctx = document.getElementById('aiAdoptionChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2020', '2021', '2022', '2023', '2024', '2025 (proj.)', '2026 (proj.)'],
+                        datasets: [{
+                            label: 'Enterprise AI Adoption Rate (%)',
+                            data: [35, 45, 58, 65, 72, 80, 85], // Approximate values from graph
+                            borderColor: 'rgb(217, 46, 38)', // Primary color
+                            tension: 0.1
+                        }, {
+                            label: 'On-Premises AI Deployment (%)',
+                            data: [20, 30, 40, 50, 60, 68, 75], // Approximate values (dotted line)
+                            borderColor: 'rgb(76, 175, 80)', // Secondary color
+                            borderDash: [5, 5],
+                            tension: 0.1
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+        },
+        { // Slide 25 (Original Page 10 - SmartChat: Key Feature 1)
+            title: "SmartChat Feature: 24/7 Natural Language Interface",
+            content: "<div class='icon'>💬</div><p>Always available conversational AI that understands complex queries.</p>"
+        },
+        { // Slide 26 (Original Page 10 - SmartChat: Key Feature 2)
+            title: "SmartChat Feature: Training & Deletion Support",
+            content: "<div class='icon'>🔧</div><p>Complete control over training data and content management.</p>"
+        },
+        { // Slide 27 (Original Page 10 - SmartChat: Key Feature 3)
+            title: "SmartChat Feature: Multi-platform Accessibility",
+            content: "<div class='icon'>💻📱</div><p>Seamless experience across desktop, mobile, and API integrations.</p>"
+        },
+        { // Slide 28 (Original Page 10 - SmartChat: Key Feature 4)
+            title: "SmartChat Feature: Private Deployment",
+            content: "<div class='icon'>🛡️</div><p>Secure, on-premises operation with complete data control.</p>"
+        },
+        { // Slide 29 (Original Page 10 - SmartChat: Key Feature 5)
+            title: "SmartChat Feature: Enterprise Customization",
+            content: "<div class='icon'>⚙️</div><p>Tailored to specific industry terminology and workflows.</p>"
+        },
+        { // Slide 30 (Original Page 10 - SmartChat: Technical Foundation 1)
+            title: "SmartChat Tech: Advanced NLP & Contextual Understanding",
+            content: "<p>State-of-the-art language models with domain-specific fine-tuning for precise understanding of enterprise context.</p>"
+        },
+        { // Slide 31 (Original Page 10 - SmartChat: Technical Foundation 2)
+            title: "SmartChat Tech: Knowledge Base Integration",
+            content: "<p>Seamless connection to enterprise systems with advanced indexing for fast and accurate information retrieval.</p>"
+        },
+        { // Slide 32 (Original Page 10 - SmartChat: Technical Foundation 3)
+            title: "SmartChat Tech: Continuous Learning",
+            content: "<p>Self-improving system that learns from interactions and feedback to enhance accuracy and relevance over time.</p>"
+        },
+        { // Slide 33 (Original Page 10 - Competitive Advantages Intro)
+            title: "SmartChat: Competitive Advantages",
+            content: "<p>How SmartChat compares to Public AI (e.g., ChatGPT) and Traditional KM Systems.</p>"
+        },
+        { // Slide 34 (Original Page 10 - Advantage: Data Privacy)
+            title: "Advantage: Data Privacy",
+            content: "<p><strong>SmartChat:</strong> Complete</p><p><strong>Public AI:</strong> Limited</p><p><strong>Traditional KM:</strong> Varies</p>"
+        },
+        { // Slide 35 (Original Page 10 - Advantage: Custom Training)
+            title: "Advantage: Custom Training",
+            content: "<p><strong>SmartChat:</strong> Extensive</p><p><strong>Public AI:</strong> Limited</p><p><strong>Traditional KM:</strong> Basic</p>"
+        },
+        { // Slide 36 (Original Page 10 - Advantage: Natural Language)
+            title: "Advantage: Natural Language",
+            content: "<p><strong>SmartChat:</strong> Advanced</p><p><strong>Public AI:</strong> Advanced</p><p><strong>Traditional KM:</strong> Limited</p>"
+        },
+        { // Slide 37 (Original Page 10 - Advantage: Enterprise Integration)
+            title: "Advantage: Enterprise Integration",
+            content: "<p><strong>SmartChat:</strong> Seamless</p><p><strong>Public AI:</strong> Limited</p><p><strong>Traditional KM:</strong> Varies</p>"
+        },
+        { // Slide 38 (Original Page 11 - The Problem)
+            title: "Problem: Finding Corporate Information",
+            content: `
+                <p>Enterprises struggle with data scattered across various digital sources, making it hard to find information just when you need it!</p>
+                <img src="https://i.imgur.com/7tJwYfL.jpeg" alt="Messy Office Desk" style="max-width: 300px; margin-top: 15px; border-radius: 8px;">
+                <p style="font-size:0.9em;">Common locations: Cloud Drives, PC Folders, Thumb Drives, Hard Disks.</p>
+            `
+            // Note: Messy desk image is a placeholder.
+        },
+        { // Slide 39 (Original Page 12 - SmartChat Demo Features)
+            title: "SmartChat Demo: Features & Capabilities",
+            content: `
+                <ul>
+                    <li>Easily available 24/7</li>
+                    <li>Engage in natural language, not like search</li>
+                    <li>Easy to train SmartChat with new documents and delete them when needed</li>
+                    <li>Personalized and intelligent responses</li>
+                    <li>Multi-channel support (web, mobile, WhatsApp, Telegram platforms)</li>
+                </ul>
+            `
+        },
+        { // Slide 40 (Original Page 12 - SmartChat Demo Tech)
+            title: "SmartChat Demo: Technical Highlights",
+            content: `
+                <ul>
+                    <li>Built on latest AI LLM technology</li>
+                    <li>Advanced natural language algorithms</li>
+                </ul>
+            `
+        },
+        { // Slide 41 (Original Page 13 - AI Edge: Private AI Engine)
+            title: "Sentient's AI Edge: Private AI Engine",
+            content: "<div class='icon'>🧠</div><p>A secure environment for enterprise proprietary knowledge contexts.</p>"
+        },
+        { // Slide 42 (Original Page 13 - AI Edge: Knowledge Graph)
+            title: "Sentient's AI Edge: Knowledge Graph Enrichment",
+            content: "<div class='icon'>🕸️</div><p>Strengthens SmartChat's proprietary knowledge relationships.</p>"
+        },
+        { // Slide 43 (Original Page 13 - AI Edge: Integrations)
+            title: "Sentient's AI Edge: Pre-built Integrations",
+            content: "<div class='icon'>🔌</div><p>Connects seamlessly with major enterprise systems.</p>"
+        },
+        { // Slide 44 (Original Page 14 - Competition Table - Simplified)
+            title: "Competition Snapshot",
+            content: `
+                <p>Comparing key features across various AI document tools.</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr><th>Feature</th><th>SmartChat (Implied)</th><th>DocsBot AI</th><th>ChatDOC</th><th>FastBots AI</th><th>ChatDocuments</th><th>docAnalyzer.ai</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>File Types</td><td>Extensive</td><td>DOCX, PDF, TXT, etc.</td><td>PDF, DOCX, TXT, etc.</td><td>DOCX, PDF, CSV, etc.</td><td>PDF, DOCX, PPTX</td><td>EPUB, RTF, ODT, etc.</td></tr>
+                            <tr><td>Image Search</td><td>Yes (Implied by Private AI)</td><td>Yes</td><td>Yes</td><td>No</td><td>Not Clear</td><td>Yes</td></tr>
+                            <tr><td>Audio/Video</td><td>Yes (Implied)</td><td>No</td><td>No</td><td>Yes (YouTube)</td><td>No</td><td>No</td></tr>
+                            <tr><td>Deployment</td><td>Private/On-Prem</td><td>Cloud + On-Prem</td><td>Cloud only</td><td>Cloud only</td><td>Cloud only</td><td>Cloud only</td></tr>
+                            <tr><td>Multilingual</td><td>Advanced</td><td>95+ lang</td><td>Basic</td><td>95+ lang</td><td>Basic</td><td>15+ lang</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:0.8em;">Note: SmartChat features are implied from previous slides and full capabilities.</p>
+            `
+        },
+        { // Slide 45 (Original Page 15 - SmartChat vs ChatGPT: Deployment)
+            title: "SmartChat vs. ChatGPT: Deployment",
+            content: "<p><strong>SmartChat:</strong> Can deploy on-premise or on private cloud.</p><p><strong>ChatGPT:</strong> Available only on public cloud.</p>"
+        },
+        { // Slide 46 (Original Page 15 - SmartChat vs ChatGPT: Training Data)
+            title: "SmartChat vs. ChatGPT: Training Data",
+            content: "<p><strong>SmartChat:</strong> Can train on millions of private enterprise documents for all queries.</p><p><strong>ChatGPT:</strong> Can use with a few enterprise documents at a time for each query.</p>"
+        },
+        { // Slide 47 (Original Page 15 - SmartChat vs ChatGPT: Data Privacy)
+            title: "SmartChat vs. ChatGPT: Data Privacy",
+            content: "<p><strong>SmartChat:</strong> Corporate Data is private.</p><p><strong>ChatGPT:</strong> May use corporate data for model re-training.</p>"
+        },
+        { // Slide 48 (Original Page 15 - SmartChat vs ChatGPT: Forgetting Info)
+            title: "SmartChat vs. ChatGPT: Forgetting Information",
+            content: "<p><strong>SmartChat:</strong> Can be made to forget specific corporate information which has been outdated.</p><p><strong>ChatGPT:</strong> Impossible to forget.</p>"
+        },
+        { // Slide 49 (Original Page 16 - Business Model Placeholder)
+            title: "Business Model",
+            content: "<p>Details to be presented by Eddie.</p>",
+        },
+        { // Slide 50 (Original Page 17 - Revenue Driver: Custom AI Solutions)
+            title: "Core Business: Custom AI Solutions",
+            content: "<p>Custom AI solutions and generative AI for major enterprises.</p>"
+        },
+        { // Slide 51 (Original Page 17 - Revenue Driver: Diverse Applications)
+            title: "Core Business: Diverse Industry Applications",
+            content: "<p>E.g., computer vision, speech technologies, predictive AI.</p>"
+        },
+        { // Slide 52 (Original Page 17 - Revenue Driver: Client Relationships)
+            title: "Core Business: Long-term Client Relationships",
+            content: "<p>Building and maintaining strong, lasting partnerships.</p>"
+        },
+        { // Slide 53 (Original Page 17 - Revenue Driver: High-Value Contracts)
+            title: "Core Business: High-Value Contracts",
+            content: "<p>Securing high-value contracts and annual renewals.</p>"
+        },
+        { // Slide 54 (Original Page 17 - Revenue Driver: Track Record)
+            title: "Core Business: Proven Track Record",
+            content: "<p>Demonstrated success in implementations.</p>"
+        },
+        { // Slide 55 (Original Page 17 - Growth Driver: SmartChat Solution)
+            title: "Growth Driver - SmartChat: Innovative Private GenAI",
+            content: "<p>An innovative private Generative AI solution.</p>"
+        },
+        { // Slide 56 (Original Page 17 - Growth Driver: SmartChat Knowledge Mgmt)
+            title: "Growth Driver - SmartChat: Enterprise Knowledge Management",
+            content: "<p>Tailored for enterprise knowledge management needs.</p>"
+        },
+        { // Slide 57 (Original Page 17 - Growth Driver: SmartChat Adoption)
+            title: "Growth Driver - SmartChat: Rapid Client Adoption",
+            content: "<p>Fast adoption across the region.</p>"
+        },
+        { // Slide 58 (Original Page 17 - Growth Driver: SmartChat Contracts)
+            title: "Growth Driver - SmartChat: Subscription Model",
+            content: "<p>Smaller contract values but larger volumes; early adoption phase with subscription model.</p>"
+        },
+        { // Slide 59 (Original Page 17 - Growth Driver: SmartChat Market Demand)
+            title: "Growth Driver - SmartChat: Large Market Demand",
+            content: "<p>A new and innovative solution addressing significant market demand.</p>"
+        },
+        { // Slide 60 (Original Page 18 - What Worked: Brand Name Customers)
+            title: "What Has Worked: Brand Name Customers",
+            content: "<div class='icon'>🌟</div><p>Acquired several large Japanese automobile brands and large Singapore-based clients.</p>"
+        },
+        { // Slide 61 (Original Page 18 - What Worked: Recurring Revenue)
+            title: "What Has Worked: Recurring Revenue",
+            content: "<div class='icon'>🔄</div><p>Attracting brand name clients happy with our products and services, ensuring recurring revenue.</p>"
+        },
+        { // Slide 62 (Original Page 18 - What Worked: Referrals)
+            title: "What Has Worked: Direct Sales through Referrals",
+            content: "<div class='icon'>🤝</div><p>Successful direct sales through referrals from clients, shareholders, and Singapore government.</p>"
+        },
+        { // Slide 63 (Original Page 18 - What Worked: High Value Products)
+            title: "What Has Worked: High Impact, High Valued Products",
+            content: "<div class='icon'>💡</div><p>Invested in an AI platform capable of hosting a variety of AI models for easy client implementation.</p>"
+        },
+        { // Slide 64 (Original Page 19 - Go-To-Market Strategy)
+            title: "Go-To-Market Strategy",
+            content: `
+                <p>A multi-pronged approach to reach Enterprise Customers with Generative AI Solutions and Custom AI Applications.</p>
+                <div class="flex-container" style="margin-top:20px;">
+                    <div class="feature-card"><h3>Distributors</h3><p>Regional distributors (Singapore to Indonesia).</p></div>
+                    <div class="feature-card"><h3>Direct Sales</h3><p>Extensive network, shareholders, internal teams, GBiz tenders.</p></div>
+                    <div class="feature-card"><h3>Active Partners</h3><p>Leads from business partners (F5, Tenacity, JETRO, etc.).</p></div>
+                    <div class="feature-card"><h3>Events</h3><p>Cost-effective lead generation (SWITCH, JPX, webinars).</p></div>
+                </div>
+            `
+        },
+        { // Slide 65 (Original Page 20 - Plan: Sales Partners)
+            title: "The Plan Forward: Grow Sales Partners",
+            content: "<p>We need to scale our sales opportunities by expanding our network of sales partners.</p>"
+        },
+        { // Slide 66 (Original Page 20 - Plan: New Geographies)
+            title: "The Plan Forward: New Geographies",
+            content: "<p>We need to scale beyond Asia to the US and Europe.</p>"
+        },
+        { // Slide 67 (Original Page 20 - Plan: GTM Assets)
+            title: "The Plan Forward: Impactful Go-to-Market Assets",
+            content: "<p>We need effective sales materials to support our sales partners.</p>"
+        },
+        { // Slide 68 (Original Page 20 - Plan: Delivery Capability)
+            title: "The Plan Forward: Delivery Capability",
+            content: "<p>We need to scale our delivery teams to operate in other regions.</p>"
+        },
+        { // Slide 69 (Original Page 21 - Traction Placeholder)
+            title: "Traction and Market Validation",
+            content: "<p>Details to be presented by Gloria.</p>",
+        },
+        { // Slide 70 (Original Page 22 - Market Validation: Japan)
+            title: "Market Validation: Japan Successes",
+            content: `
+                <img src="https://flagcdn.com/w160/jp.png" alt="Japan Flag" style="width:80px; margin-bottom:15px;">
+                <ul>
+                    <li>Steel manufacturer (top 5 in Japan)</li>
+                    <li>Automotive manufacturer (top automotive in Japan)</li>
+                    <li>Office solutions manufacturer (top 5 in Japan)</li>
+                </ul>
+            `
+        },
+        { // Slide 71 (Original Page 22 - Market Validation: Singapore)
+            title: "Market Validation: Singapore Successes",
+            content: `
+                <img src="https://flagcdn.com/w160/sg.png" alt="Singapore Flag" style="width:80px; margin-bottom:15px;">
+                <ul>
+                    <li>Broadcaster in Singapore (largest in Singapore)</li>
+                    <li>Defence Agencies in Singapore (two top defence agencies)</li>
+                    <li>Government Ministry in Singapore</li>
+                </ul>
+            `
+        },
+        { // Slide 72 (Original Page 23 - Sales Pipeline)
+            title: "Sales Pipeline: Near-Term Opportunities",
+            content: `
+                <p>Healthy Pipeline with High-Confidence:</p>
+                <ul>
+                    <li>Current qualified Pipeline: <strong>~SGD$2.5M</strong></li>
+                    <li>2 Organisations in live pilot, 1 starting soon</li>
+                    <li>2 in final negotiations</li>
+                    <li>Several more in proposal and commercial validation stage</li>
+                </ul>
+                <p><strong>Balanced Sales Motion:</strong> Pipeline evenly split.</p>
+            `
+        },
+        { // Slide 73 (Original Page 24 - SmartChat Contracts)
+            title: "SmartChat Contracts (SGD)",
+            content: `
+                <h3>Deals Won & Going Live:</h3>
+                <ul><li><span class="status-icon status-won"></span>Blue Prism (Asia)</li></ul>
+                <h3>Trials Being Conducted:</h3>
+                <ul>
+                    <li><span class="status-icon status-trial"></span>Intikom (Jakarta)</li>
+                    <li><span class="status-icon status-trial"></span>BRI Bank (Jakarta)</li>
+                    <li><span class="status-icon status-trial"></span>BNI Life Insurance</li>
+                </ul>
+                <h3>Deals Being Negotiated:</h3>
+                <ul>
+                    <li><span class="status-icon status-negotiating"></span>Goldbell Engineering (Singapore)</li>
+                    <li><span class="status-icon status-negotiating"></span>SATS Singapore (Singapore)</li>
+                    <li><span class="status-icon status-negotiating"></span>HP International (Singapore)</li>
+                    <li><span class="status-icon status-negotiating"></span>GovTech GIROC</li>
+                    <li><span class="status-icon status-negotiating"></span>WeCom</li>
+                </ul>
+            `
+        },
+        { // Slide 74 (Original Page 25 - Core Business Contracts)
+            title: "Core Business Contracts Negotiated (SGD)",
+            content: `
+                <ul>
+                    <li><span class="status-icon status-won"></span>DSTA (2nd and 3rd year) - PO in April</li>
+                    <li><span class="status-icon status-negotiating"></span>Asia Paper & Pulp : $1.5M</li>
+                    <li><span class="status-icon status-negotiating"></span>AIHEC US - AI Platform: US$500K</li>
+                    <li><span class="status-icon status-negotiating"></span>Native Endangered Languages ASR: US$500K</li>
+                    <li><span class="status-icon status-negotiating"></span>MCO MINDEF - Video Generation: $500K</li>
+                </ul>
+            `
+        },
+        { // Slide 75 (Original Page 26 - Key Financial Metrics Table)
+            title: "Key Financial Metrics (in mil SGD)",
+            content: `
+                <div class="table-container">
+                    <table>
+                        <thead><tr><th>Metric</th><th>2024</th><th>2023</th><th>2022</th><th>2021</th><th>2020</th></tr></thead>
+                        <tbody>
+                            <tr><td>Revenue</td><td>$1.42</td><td>$1.55</td><td>$1.17</td><td>$0.36</td><td>$0.19</td></tr>
+                            <tr><td>Gross Profit</td><td>$1.04</td><td>$0.74</td><td>$0.77</td><td>n.m.</td><td>n.m.</td></tr>
+                            <tr><td>Operating Expenses</td><td>($1.19)</td><td>($2.35)</td><td>($4.03)</td><td>($3.44)</td><td>($4.13)</td></tr>
+                            <tr><td>EBITA</td><td>($0.15)</td><td>($1.61)</td><td>($3.26)</td><td>($3.65)</td><td>($4.45)</td></tr>
+                            <tr><td>Net Profit</td><td>($0.20)</td><td>($1.86)</td><td>($3.60)</td><td>($4.10)</td><td>($4.56)</td></tr>
+                            <tr><td>Rev/Op Exp</td><td>$1.19</td><td>$0.66</td><td>$0.29</td><td>$0.10</td><td>$0.05</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            `
+        },
+        { // Slide 76 (Original Page 26 - Key Financial Metrics Chart)
+            title: "Financial Performance Trend",
+            content: `
+                <div class="chart-container"><canvas id="financialChart"></canvas></div>
+                <p><strong>CAGR=65% | GP Margin=73%</strong></p>
+            `,
+            init: () => {
+                const ctx = document.getElementById('financialChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2020', '2021', '2022', '2023', '2024'],
+                        datasets: [
+                            {
+                                label: 'Revenue (mil SGD)',
+                                data: [0.19, 0.36, 1.17, 1.55, 1.42],
+                                borderColor: 'rgb(75, 192, 192)',
+                                tension: 0.1
+                            },
+                            {
+                                label: 'Gross Profit (mil SGD)',
+                                data: [null, null, 0.77, 0.74, 1.04], // n.m. treated as null
+                                borderColor: 'rgb(54, 162, 235)',
+                                tension: 0.1
+                            },
+                             {
+                                label: 'Net Profit (mil SGD)',
+                                data: [-4.56, -4.10, -3.60, -1.86, -0.20],
+                                borderColor: 'rgb(255, 99, 132)', // Red for losses
+                                tension: 0.1
+                            }
+                        ]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+        },
+        { // Slide 77 (Original Page 27 - TSE Startup Hub)
+            title: "Member of Tokyo Stock Exchange Startup Hub Asia",
+            content: `
+                <p>Sentient.io is proud to be a member of the TSE Asia Startup Hub.</p>
+                <img src="https://i.imgur.com/k6f0x0c.png" alt="TSE Asia Startup Hub diagram" style="max-width:400px; margin-top:15px; border:1px solid #ccc;">
+                <p>This ecosystem encourages promising Asian companies to choose TSE for their IPOs, offering support for business development, fundraising, and IPO in Japan.</p>
+            `
+            // Placeholder for TSE diagram image
+        },
+        { // Slide 78 (Original Page 28 - Revenue Growth Trajectory)
+            title: "Revenue Growth Trajectory (USD Millions)",
+            content: `
+                <div class="chart-container"><canvas id="revenueGrowthChart"></canvas></div>
+                <p>Target: IPO in TSE to raise US$50M in 2027. 75% of Revenue from Product.</p>
+            `,
+            init: () => {
+                const ctx = document.getElementById('revenueGrowthChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar', // Changed to bar for total, lines for components
+                    data: {
+                        labels: ['FY2020', 'FY2021', 'FY2022', 'FY2023', 'FY2024P', 'FY2025P', 'FY2026P', 'FY2027P'],
+                        datasets: [
+                            {
+                                label: 'Total Revenue (mil USD)',
+                                data: [0.14, 0.26, 0.87, 1.17, 1.50, 3.00, 6.00, 10.00],
+                                backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                                borderColor: 'rgb(75, 192, 192)',
+                                order: 2
+                            },
+                            {
+                                label: 'Product Revenue (mil USD)',
+                                data: [0.02, 0.06, 0.37, 0.62, 0.90, 2.10, 4.50, 7.50],
+                                type: 'line',
+                                borderColor: 'rgb(54, 162, 235)',
+                                tension: 0.1,
+                                fill: false,
+                                order: 1
+                            },
+                            {
+                                label: 'Service Revenue (mil USD)',
+                                data: [0.12, 0.20, 0.50, 0.55, 0.60, 0.90, 1.50, 2.50],
+                                type: 'line',
+                                borderColor: 'rgb(255, 159, 64)',
+                                tension: 0.1,
+                                fill: false,
+                                order: 1
+                            }
+                        ]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } } }
+                });
+            }
+        },
+        { // Slide 79 (Original Page 29 - IPO Plan Key Details)
+            title: "IPO Plan: Key Details",
+            content: `
+                <ul>
+                    <li><strong>Target:</strong> By early 2027</li>
+                    <li><strong>Accounts for Application:</strong> Using FY2026 Accounts</li>
+                    <li><strong>Target Revenue:</strong> USD 10M</li>
+                    <li><strong>Potential IPO Market Cap:</strong> US$300M - US$600M (based on 30-60x revenue multiples)</li>
+                </ul>
+            `
+        },
+        { // Slide 80 (Original Page 29 - IPO Plan Partners)
+            title: "IPO Plan: Partners",
+            content: `
+                <div class="logo-grid">
+                    <div class="logo-item"><strong>Mother Board:</strong> JPX (Japan Depository Receipts)</div>
+                    <div class="logo-item"><strong>IPO Underwriters:</strong> Nomura, Mizuho, SBI, UBS (Combination TBC)</div>
+                    <div class="logo-item"><strong>Financial Auditors:</strong> KPMG</div>
+                    <div class="logo-item"><strong>Tokyo Legal Firm:</strong> Anderson Mori & Tomotsune</div>
+                    <div class="logo-item"><strong>JDR Trust Bank:</strong> MUFG</div>
+                </div>
+            `
+        },
+        { // Slide 81 (Original Page 30 - Achievements & Growth Trend)
+            title: "Key Achievements & Growth Trend",
+            content: `
+                <p>Expected Growth Spurt from 2025 to 2027 due to expansion of indirect Sales channels and cost control.</p>
+                <div class="chart-container"><canvas id="achievementsGrowthChart"></canvas></div>
+            `,
+            init: () => {
+                const ctx = document.getElementById('achievementsGrowthChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['FY2021', 'FY2022', 'FY2023', 'FY2024P', 'FY2025P', 'FY2026P', 'FY2027P'],
+                        datasets: [
+                            {
+                                label: 'Revenue (in millions USD)',
+                                data: [0.26, 0.87, 1.17, 1.50, 3.00, 6.00, 10.00],
+                                backgroundColor: 'rgba(76, 175, 80, 0.7)', // Green
+                                yAxisID: 'y-revenue',
+                            },
+                            {
+                                label: 'EBITA Growth (%)',
+                                data: [27, 6, 61, 116, 186, 250, 264], // Percentage values
+                                type: 'line',
+                                borderColor: 'rgb(0, 123, 255)', // Blue
+                                tension: 0.1,
+                                fill: false,
+                                yAxisID: 'y-ebita',
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            'y-revenue': {
+                                type: 'linear',
+                                display: true,
+                                position: 'left',
+                                title: { display: true, text: 'Revenue (USD Millions)' }
+                            },
+                            'y-ebita': {
+                                type: 'linear',
+                                display: true,
+                                position: 'right',
+                                title: { display: true, text: 'EBITA Growth (%)' },
+                                grid: { drawOnChartArea: false } // only want the grid lines for one axis to avoid clutter
+                            }
+                        }
+                    }
+                });
+            }
+        },
+        { // Slide 82 (Original Page 31 - Investment Opportunity Ask)
+            title: "Investment Opportunity: Series B2 Funding",
+            content: `
+                <div class="flex-container">
+                    <div class="feature-card">
+                        <h3>Amount Seeking</h3>
+                        <div class="stat-highlight">$10M</div>
+                        <p>Equity Financing</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Valuation</h3>
+                        <div class="stat-highlight">$50M</div>
+                        <p>Post Money</p>
+                    </div>
+                </div>
+            `
+        },
+        { // Slide 83 (Original Page 31 - Use of Funds)
+            title: "Use of Funds",
+            content: `
+                <div class="chart-container" style="max-height:300px;"><canvas id="useOfFundsChart"></canvas></div>
+            `,
+            init: () => {
+                const ctx = document.getElementById('useOfFundsChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Sales, Marketing (40%)', 'Geographic Exp (30%)', 'Product Dev (15%)', 'Ops, G&A (15%)'],
+                        datasets: [{
+                            label: 'Use of Funds',
+                            data: [40, 30, 15, 15],
+                            backgroundColor: [
+                                'rgba(217, 46, 38, 0.8)', // Red
+                                'rgba(76, 175, 80, 0.8)', // Green
+                                'rgba(0, 123, 255, 0.8)', // Blue
+                                'rgba(255, 193, 7, 0.8)'  // Yellow
+                            ],
+                            borderColor: '#fff',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+        },
+        { // Slide 84 (Original Page 31 - Key Milestones)
+            title: "Key Milestones",
+            content: `
+                <div class="flex-container">
+                    <div class="milestone-card"><h3>Agentic AI Platform</h3><p>Advanced next generation AI Platform.</p></div>
+                    <div class="milestone-card"><h3>SEA Market Expansion</h3><p>Enlarging Reseller Network in SEA.</p></div>
+                    <div class="milestone-card"><h3>Japan Market Expansion</h3><p>Penetrating Japan Market.</p></div>
+                    <div class="milestone-card"><h3>US and EU Market Expansion</h3><p>Initial beachhead establishment.</p></div>
+                    <div class="milestone-card"><h3>IPO Preparation</h3><p>Tokyo Stock Exchange by 2028.</p></div>
+                </div>
+            `
+        },
+        { // Slide 85 (Original Page 32 - Why Invest: Growing Market)
+            title: "Why Invest Now? Growing Market",
+            content: "<p>Many organisations are now increasing their spend in AI to lower operating costs, enhance productivity, and expand revenue streams.</p>"
+        },
+        { // Slide 86 (Original Page 32 - Why Invest: Scalable Product)
+            title: "Why Invest Now? Scalable Product",
+            content: "<p>The Sentient.io AI and Data Platform with Team Spaces scales easily in the public cloud. Primary GTM: global scaling via digital marketing.</p>"
+        },
+        { // Slide 87 (Original Page 32 - Why Invest: Revenue Scaling)
+            title: "Why Invest Now? Revenue Scaling",
+            content: "<p>Currently scaling revenue across ASEAN and Japan through digital marketing, inside sales, and experienced large enterprise sales teams.</p>"
+        },
+        { // Slide 88 (Original Page 32 - Why Invest: IPO Journey)
+            title: "Why Invest Now? IPO Journey",
+            content: "<p>Sentient.io has already begun its journey to list on the Tokyo Stock Exchange in 2025.</p>"
+        },
+        { // Slide 89 (Original Page 32 - Why Invest: Financial Controls)
+            title: "Why Invest Now? Strong Financial Controls",
+            content: "<p>Strong management and governance controls ensure close tracking of revenue and expenses.</p>"
+        },
+        { // Slide 90 (Original Page 32 - Why Invest: Customer Base)
+            title: "Why Invest Now? Strong Enterprise Customer Base",
+            content: "<p>Sentient.io has strong enterprise customers with recurring revenue.</p>"
+        },
+        { // Slide 91 (Original Page 33 - Vision Placeholder)
+            title: "Vision and Roadmap",
+            content: "<p>Details to be presented by Chris.</p>",
+        },
+        {
+            title: "Thank You",
+            content: "<p>Q & A</p><p>sentient.io - NATURALLY INTELLIGENT</p>"
+        }
+
+    ];
+
+    // --- SCRIPT LOGIC ---
+
+    function createSlideDOM(slideData, index) {
+        const slideDiv = document.createElement('div');
+        slideDiv.classList.add('slide');
+        slideDiv.dataset.index = index;
+
+        const titleEl = document.createElement('h2');
+        titleEl.innerHTML = slideData.title;
+        slideDiv.appendChild(titleEl);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('slide-content');
+        contentDiv.innerHTML = slideData.content;
+        slideDiv.appendChild(contentDiv);
+        
+        return slideDiv;
+    }
+
+    function renderSlides() {
+        slideDeck.innerHTML = ''; // Clear existing
+        slidesData.forEach((data, index) => {
+            const slideElement = createSlideDOM(data, index);
+            slideDeck.appendChild(slideElement);
+        });
+    }
+    
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        
+        // Handle exiting animation for the current slide
+        const currentActiveSlide = document.querySelector('.slide.active');
+        if (currentActiveSlide && parseInt(currentActiveSlide.dataset.index) !== index) {
+            currentActiveSlide.classList.add('exiting');
+            // Remove active and exiting classes after animation
+            setTimeout(() => {
+                currentActiveSlide.classList.remove('active', 'exiting');
+                currentActiveSlide.style.display = 'none'; // Ensure it's hidden
+            }, 500); // Match CSS transition duration
+        }
+
+        // Make the new slide active
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'flex'; // Set display before adding active for transition
+                // Timeout to allow display property to apply before transform
+                setTimeout(() => {
+                    slide.classList.add('active');
+                    slide.classList.remove('exiting'); // Ensure exiting is removed if it was the same slide
+                }, 10); 
+                
+                // If the slide has an init function (for charts), call it
+                if (slidesData[i].init && !slide.dataset.initialized) {
+                    slidesData[i].init();
+                    slide.dataset.initialized = 'true'; // Mark as initialized
+                }
+            }
+        });
+
+        currentSlideIndex = index;
+        updateNavigation();
+    }
+
+    function updateNavigation() {
+        slideCounter.textContent = `${currentSlideIndex + 1} / ${slidesData.length}`;
+        prevButton.disabled = currentSlideIndex === 0;
+        nextButton.disabled = currentSlideIndex === slidesData.length - 1;
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentSlideIndex > 0) {
+            showSlide(currentSlideIndex - 1);
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentSlideIndex < slidesData.length - 1) {
+            showSlide(currentSlideIndex + 1);
+        }
+    });
+
+    // Initial setup
+    renderSlides();
+    showSlide(0);
+});
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+JavaScript
+IGNORE_WHEN_COPYING_END
+
+To Use This:
+
+Save the files as index.html, style.css, and script.js in the same folder.
+
+Open index.html in a modern web browser.
+
+Image Placeholders: I've used i.imgur.com links for some images (founder, management, maps). You might want to download these and save them locally or replace them with your own. If you save them locally, update the src paths in script.js (e.g., src="images/christopher_yeo.png").
+
+Chart.js: It's included via CDN. If you prefer local, download it and adjust the script tag.
+
+Explanation and Features:
+
+HTML Structure: A container holds the branding, the slide deck area, and navigation. Slides are dynamically generated by JavaScript.
+
+CSS Styling:
+
+Uses CSS variables for easy theme changes.
+
+Basic professional styling with Sentient.io's red as a primary accent.
+
+Flexbox is used for layout.
+
+Slide transitions are handled with opacity and transform: translateX.
+
+Responsive: Basic media queries adjust font sizes and layout for smaller screens.
+
+JavaScript Logic:
+
+slidesData array: This is the core of the presentation content. Each object represents a slide with a title, content (HTML string), and an optional init function (used for initializing charts on specific slides).
+
+createSlideDOM: Creates the HTML elements for a single slide.
+
+renderSlides: Populates the #slide-deck with all slides.
+
+showSlide(index): Manages displaying the correct slide. It adds an active class to the current slide and an exiting class to the previous one for the transition. It also calls the init function for chart slides if they haven't been initialized yet.
+
+updateNavigation: Updates the slide counter and disables/enables Next/Prev buttons.
+
+Event listeners for Next/Prev buttons.
+
+Charts (Chart.js):
+
+Specific slides (AI Adoption, Financials, Revenue Growth, Use of Funds, Achievements) have an init function that creates a Chart.js instance.
+
+The canvas elements for charts are included in the content HTML of those slides.
+
+Interactivity:
+
+Clickable Next/Previous buttons.
+
+Slide counter.
+
+Smooth slide transitions (fade and slide).
+
+Charts will animate on their first appearance.
+
+This provides a solid foundation. You can further enhance it with more sophisticated animations, more detailed styling, or by integrating actual images/logos where placeholders are used. Remember that recreating very complex graphics from the PowerPoint purely in HTML/CSS can be time-consuming, so prioritizing key information and clarity is important.

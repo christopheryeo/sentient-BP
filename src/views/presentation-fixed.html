@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentient.io - Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #D92E26; /* Sentient.io Red */
+            --primary-light: #ff6659;
+            --primary-dark: #9f0000;
+            --secondary-color: #4CAF50; /* Sentient.io Green */
+            --secondary-light: #80e27e;
+            --secondary-dark: #087f23;
+            --text-color: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-color: #f5f7fa;
+            --slide-bg-color: #ffffff;
+            --border-color: #e1e4e8;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .presentation-container {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin: 20px;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .branding {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .branding::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+        }
+        
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        
+        .tagline {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        #slide-deck {
+            padding: 60px;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide {
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: slideIn 0.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide h1 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .slide h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .slide p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-top: 1px solid var(--border-color);
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .nav-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-button:hover:not(:disabled) {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        #slide-counter {
+            font-weight: 500;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+        
+        /* Progress bar */
+        .progress-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #f0f0f0;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Slide content styles */
+        .slide h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .slide h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .slide p {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            line-height: 1.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .slide ul {
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            padding-left: 20px;
+        }
+        
+        .slide li {
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .slide li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* Chart container */
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            position: relative;
+            height: 400px;
+        }
+        
+        /* Grid Layouts */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 50px auto 0;
+            max-width: 900px;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin: 0 0 15px 0;
+            font-size: 1.4em;
+        }
+        
+        .feature-card p {
+            margin: 0;
+            font-size: 1em;
+            color: var(--text-light);
+        }
+        
+        .mission-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            text-align: left;
+        }
+        
+        .mission-text h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .mission-text h3 {
+            color: var(--primary-dark);
+            margin: 30px 0 15px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .mission-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .presentation-container {
+                margin: 0;
+                border-radius: 0;
+                min-height: 100vh;
+            }
+            
+            #slide-deck {
+                padding: 40px 20px;
+                min-height: calc(100vh - 120px);
+            }
+            
+            .slide h1 {
+                font-size: 2em;
+            }
+            
+            .slide h2 {
+                font-size: 1.6em;
+            }
+            
+            .slide p, .slide li {
+                font-size: 1.1em;
+            }
+            
+            .nav-button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-top: 30px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-text h2, .mission-text h3 {
+                text-align: center;
+            }
+            
+            .mission-text ul {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <header class="branding">
+            <div class="logo">sentient.io</div>
+            <div class="tagline">NATURALLY INTELLIGENT</div>
+        </header>
+
+        <div id="slide-deck">
+            <!-- Slides will be inserted here by JavaScript -->
+        </div>
+
+        <div class="navigation">
+            <button id="prev-slide" class="nav-button" disabled>‹ Previous</button>
+            <div id="slide-counter">1 of 1</div>
+            <button id="next-slide" class="nav-button">Next ›</button>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Slide Data with Charts and Interactive Elements
+        const slides = [
+            {
+                title: "Welcome to Sentient.io",
+                content: `
+                    <div class="welcome-animation">
+                        <h1>Sentient.io</h1>
+                        <h2>Naturally Intelligent</h2>
+                        <p>AI-Powered Solutions for the Modern Enterprise</p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-value" data-target="100">0</div>
+                                <div class="stat-label">AI Models</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" data-target="500">0</div>
+                                <div class="stat-label">Enterprise Clients</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" data-target="99.9">0</div>
+                                <div class="stat-label">Uptime %</div>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                onEnter: function() {
+                    // Animate counting numbers
+                    const values = document.querySelectorAll('.stat-value');
+                    values.forEach(value => {
+                        const target = parseInt(value.getAttribute('data-target'));
+                        const suffix = value.textContent.includes('%') ? '%' : '+';
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        let current = 0;
+                        
+                        const updateValue = () => {
+                            current += step;
+                            if (current < target) {
+                                value.textContent = Math.floor(current) + (suffix && !value.textContent.includes('%') ? suffix : '');
+                                requestAnimationFrame(updateValue);
+                            } else {
+                                value.textContent = target + (suffix ? suffix : '');
+                            }
+                        };
+                        updateValue();
+                    });
+                }
+            },
+            {
+                title: "Our Mission & Vision",
+                content: `
+                    <div class="mission-container">
+                        <div class="mission-text">
+                            <h2>Our Mission</h2>
+                            <p>To revolutionize how businesses leverage artificial intelligence by making it accessible, understandable, and impactful for organizations of all sizes.</p>
+                            
+                            <h3>Core Values</h3>
+                            <ul>
+                                <li><strong>Innovation</strong> - Pushing the boundaries of AI technology</li>
+                                <li><strong>Accessibility</strong> - Making AI approachable for everyone</li>
+                                <li><strong>Excellence</strong> - Delivering top-tier solutions</li>
+                                <li><strong>Integrity</strong> - Building trust through transparency</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="missionChart"></canvas>
+                        </div>
+                    </div>
+                `,
+                onEnter: function() {
+                    const ctx = document.getElementById('missionChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Product Development', 'Customer Success', 'Research', 'Operations'],
+                            datasets: [{
+                                data: [35, 30, 25, 10],
+                                backgroundColor: [
+                                    'rgba(217, 46, 38, 0.8)',
+                                    'rgba(76, 175, 80, 0.8)',
+                                    'rgba(52, 152, 219, 0.8)',
+                                    'rgba(155, 89, 182, 0.8)'
+                                ],
+                                borderWidth: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'right',
+                                    labels: {
+                                        padding: 20,
+                                        font: {
+                                            size: 14
+                                        }
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Our Focus Areas',
+                                    font: {
+                                        size: 18,
+                                        weight: '500'
+                                    },
+                                    padding: {
+                                        bottom: 20
+                                    }
+                                }
+                            },
+                            cutout: '65%',
+                            animation: {
+                                animateScale: true,
+                                animateRotate: true
+                            }
+                        }
+                    });
+                }
+            },
+            {
+                title: "Why Choose Sentient.io?",
+                content: `
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🚀</div>
+                            <h3>Cutting-Edge Technology</h3>
+                            <p>Leveraging the latest AI advancements for powerful, accurate solutions.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔌</div>
+                            <h3>Easy Integration</h3>
+                            <p>Seamless integration with your existing systems and workflows.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📈</div>
+                            <h3>Scalable Solutions</h3>
+                            <p>Grow your AI capabilities as your business expands.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👨‍💻</div>
+                            <h3>Expert Support</h3>
+                            <p>Dedicated team to help you maximize value from our solutions.</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                `,
+                onEnter: function() {
+                    const ctx = document.getElementById('growthChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
+                            datasets: [{
+                                label: 'Client Growth',
+                                data: [120, 190, 300, 420, 580, 800],
+                                borderColor: 'rgba(217, 46, 38, 1)',
+                                backgroundColor: 'rgba(217, 46, 38, 0.1)',
+                                borderWidth: 3,
+                                tension: 0.3,
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Enterprise Client Growth',
+                                    font: {
+                                        size: 18,
+                                        weight: '500'
+                                    }
+                                },
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    grid: {
+                                        drawBorder: false
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        display: false
+                                    }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    ];
+
+    // DOM elements
+    let currentSlide = 0;
+    const slideDeck = document.getElementById('slide-deck');
+    const prevButton = document.getElementById('prev-slide');
+    const nextButton = document.getElementById('next-slide');
+    const slideCounter = document.getElementById('slide-counter');
+    const progressBar = document.querySelector('.progress-bar');
+    
+    // Initialize the presentation
+    function initPresentation() {
+        updateSlide();
+        updateButtons();
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', handleKeyDown);
+        
+        // Add swipe support for touch devices
+        setupSwipe();
+        
+        // Add touch device class if needed
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            document.documentElement.classList.add('touch-device');
+        }
+    }
+    
+    // Handle keyboard navigation
+    function handleKeyDown(e) {
+        switch(e.key) {
+            case 'ArrowLeft':
+            case 'ArrowUp':
+            case 'PageUp':
+                e.preventDefault();
+                prevSlide();
+                break;
+            case 'ArrowRight':
+            case 'ArrowDown':
+            case 'PageDown':
+            case ' ':
+                e.preventDefault();
+                nextSlide();
+                break;
+            case 'Home':
+                e.preventDefault();
+                goToSlide(0);
+                break;
+            case 'End':
+                e.preventDefault();
+                goToSlide(slides.length - 1);
+                break;
+        }
+    }
+    
+    // Set up touch swipe handling
+    function setupSwipe() {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        slideDeck.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        slideDeck.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+    }
+    
+    // Update slide content with animation
+    function updateSlide() {
+        const slide = slides[currentSlide];
+        const slideElement = document.createElement('div');
+        slideElement.className = 'slide';
+        slideElement.innerHTML = slide.content;
+        
+        // Fade out current slide
+        const currentSlideElement = slideDeck.querySelector('.slide');
+        if (currentSlideElement) {
+            currentSlideElement.classList.add('fade-out');
+            setTimeout(() => {
+                slideDeck.innerHTML = '';
+                slideDeck.appendChild(slideElement);
+                
+                // Force reflow to enable transition
+                void slideElement.offsetWidth;
+                slideElement.classList.add('active');
+                
+                // Call slide's onEnter function if it exists
+                if (typeof slide.onEnter === 'function') {
+                    slide.onEnter();
+                }
+            }, 300);
+        } else {
+            slideDeck.appendChild(slideElement);
+            slideElement.classList.add('active');
+            
+            // Call slide's onEnter function if it exists
+            if (typeof slide.onEnter === 'function') {
+                slide.onEnter();
+            }
+        }
+        
+        document.title = `${slide.title} | Sentient.io`;
+        updateProgress();
+        
+        // Update URL hash for deep linking
+        window.location.hash = currentSlide + 1;
+    }
+    
+    // Update navigation buttons
+    function updateButtons() {
+        prevButton.disabled = currentSlide === 0;
+        nextButton.disabled = currentSlide === slides.length - 1;
+        slideCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        
+        // Update button labels for accessibility
+        if (currentSlide === 0) {
+            prevButton.setAttribute('aria-label', 'First slide');
+        } else if (currentSlide === slides.length - 1) {
+            nextButton.setAttribute('aria-label', 'Last slide');
+        } else {
+            prevButton.setAttribute('aria-label', 'Previous slide');
+            nextButton.setAttribute('aria-label', 'Next slide');
+        }
+    }
+    
+    // Update progress bar
+    function updateProgress() {
+        const progress = ((currentSlide + 1) / slides.length) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+    
+    // Navigate to a specific slide
+    function goToSlide(index) {
+        if (index >= 0 && index < slides.length && index !== currentSlide) {
+            currentSlide = index;
+            updateSlide();
+            updateButtons();
+            return true;
+        }
+        return false;
+    }
+    
+    // Navigate to previous slide
+    function prevSlide() {
+        if (currentSlide > 0) {
+            goToSlide(currentSlide - 1);
+        }
+    }
+    
+    // Navigate to next slide
+    function nextSlide() {
+        if (currentSlide < slides.length - 1) {
+            goToSlide(currentSlide + 1);
+        }
+    }
+    
+    // Check for deep link on load
+    function checkDeepLink() {
+        const slideNumber = parseInt(window.location.hash.substring(1));
+        if (!isNaN(slideNumber) && slideNumber > 0 && slideNumber <= slides.length) {
+            goToSlide(slideNumber - 1);
+        }
+    }
+    
+    // Event listeners for navigation buttons
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+    
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', checkDeepLink);
+    
+    // Start the presentation when DOM is loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPresentation);
+    } else {
+        initPresentation();
+    }
+    
+    // Check for deep link after initialization
+    setTimeout(checkDeepLink, 100);
+</script>
+        });
+
+        // Initialize the presentation when the page loads
+        window.addEventListener('load', initPresentation);
+    </script>
+</body>
+</html>
