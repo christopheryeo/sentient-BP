@@ -27,7 +27,12 @@
 
 ## 🔄 In Progress
 
-### V1.1.0 - Enhanced Interactivity (Target: 2025-06-07)
+### V1.1.0 - Repository Organization
+- [ ] Re-organise all the various git commits with version number based git tags.
+
+## 📅 Proposed Features
+
+### V1.2.0 - Enhanced Interactivity (Target: 2025-06-07)
 - **Interactive Elements**
   - [ ] Add quiz functionality
   - [ ] Implement clickable hotspots
@@ -37,9 +42,7 @@
   - [ ] Implement scroll-triggered animations
   - [ ] Add micro-interactions
 
-## 📅 Proposed Features
-
-### V1.2.0 - Advanced Features
+### V1.3.0 - Advanced Features
 - **Analytics**
   - [ ] Track slide views
   - [ ] Measure time spent on slides
@@ -49,7 +52,7 @@
   - [ ] Keyboard navigation improvements
   - [ ] High contrast mode
 
-### V1.3.0 - Content Management
+### V1.4.0 - Content Management
 - **Dynamic Content**
   - [ ] API integration for content
   - [ ] Multi-language support

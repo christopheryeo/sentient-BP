@@ -230,7 +230,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🚀 What's Next?
 
-### V1.1.0 - Enhanced Interactivity (Planned for June 7, 2025)
+### V1.1.0 - Repository Organization
+- Re-organise all the various git commits with version number based git tags.
+
+### V1.2.0 - Enhanced Interactivity (Planned for June 7, 2025)
 - **Interactive Elements**
   - Quiz functionality
   - Clickable hotspots
@@ -240,7 +243,7 @@ This project is open source and available under the [MIT License](LICENSE).
   - Scroll-triggered effects
   - Micro-interactions
 
-[View detailed planning →](plans/1_planning/V1.1.0/) |
+[View detailed planning →](plans/1_planning/V1.2.0/) |
 
 ---
 
