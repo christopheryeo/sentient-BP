@@ -1,4 +1,4 @@
-# V1.1.0 Technical Specification
+# V0.2.0 Technical Specification
 
 ## Implementation Plan
 

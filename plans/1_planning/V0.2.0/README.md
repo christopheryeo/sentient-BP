@@ -1,4 +1,4 @@
-# V1.1.0 Planning - Enhanced Interactivity
+# V0.2.0 Planning - Repository Organization
 
 **Target Release Date**: 2025-06-07  
 **Status**: Planning  

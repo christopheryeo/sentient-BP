@@ -219,14 +219,38 @@ This project is open source and available under the [MIT License](LICENSE).
 - [Chart.js](https://www.chartjs.org/) - For interactive charts
 - [Normalize.css](https://necolas.github.io/normalize.css/) - For consistent browser styling
 
-## 📋 Version History
+## 📋 Commit History
 
-| Version   | Commit    | Description                                      |
-|-----------|-----------|--------------------------------------------------|
-| V1.1.0    | `[NEXT]`  | Enhanced interactivity and animations (Planned)  |
-| V1.0.0    | `c9fb87e`  | Initial presentation release                    |
-| V0.1.0    | `8e6ddfa`  | Simplified presentation structure               |
-| V0.0.1    | `2e4c362`  | Initial test version                            |
+| Version  | Commit    | Description                                                                 |
+|----------|-----------|-----------------------------------------------------------------------------|
+| V0.1.9   | `e4a195a` | Merge pull request #4 from christopheryeo/add-bug-log                        |
+| V0.1.8   | `4e77e5d` | Added bug-log.md for tracking bugs                                           |
+| V0.1.7   | `a720270` | Merge pull request #3 from christopheryeo/update-readme                      |
+| V0.1.6   | `56a0f4e` | Updated README.md                                                            |
+| V0.1.5   | `46981f8` | Merge pull request #2 from christopheryeo/docs-enhance-pm-guide              |
+| V0.1.4   | `7a29c2d` | Enhanced product_management.md with detailed plan structure                 |
+| V0.1.3   | `245b6c7` | Merge pull request #1 from christopheryeo/update-readme-documentation        |
+| V0.1.2   | `27c7560` | Updated README.md to document content directory                             |
+| V0.1.1   | `a4dd21b` | Updated project management and documentation                                |
+| V0.1.0   | `c9fb87e` | Created minimal index.html with basic styling                               |
+| V0.0.11  | `2e4c362` | Added simple test presentation                                              |
+| V0.0.10  | `8e6ddfa` | Replaced with minimal working presentation                                  |
+| V0.0.9   | `3c35438` | Added test.html for GitHub Pages verification                               |
+| V0.0.8   | `ad5bf43` | Simplified and cleaned up presentation structure                            |
+| V0.0.7   | `9360b55` | Refactored for GitHub Pages compatibility                                   |
+| V0.0.6   | `7395be9` | Fixed paths for GitHub Pages deployment                                     |
+| V0.0.5   | `8eeb1f8` | Fixed resource paths for GitHub Pages deployment                            |
+| V0.0.4   | `3ce15a5` | Added GitHub Pages deployment workflow                                      |
+| V0.0.3   | `7694459` | Initial files upload                                                        |
+| V0.0.2   | `063a1f4` | Created static.yml                                                          |
+| V0.0.1   | `c6e89f8` | Initial commit: Set up project structure and documentation                  |
+
+## 🔜 Upcoming Versions
+
+| Version | Status   | Planned Features                                                          |
+|---------|----------|---------------------------------------------------------------------------|
+| V0.2.0  | Planned  | Repository organization with git tags                                     |
+| V0.2.1  | Planned  | Enhanced interactivity and animations (Planned for June 7, 2025)          |
 
 ## 🚀 What's Next?
 
@@ -248,4 +272,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Created with ❤️ by Sentient.io Team
-This is my Jules
