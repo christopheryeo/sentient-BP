@@ -6,9 +6,9 @@
 📌 **Purpose**: This document serves as a living repository for all feature ideas for the Sentient.io Interactive Presentation, from initial concept through to implementation. Use it to capture, refine, and track the evolution of presentation features.
 
 ## 📋 Table of Contents
-- [✅ Completed Features](#completed-features)
-- [🔄 In Progress](#in-progress)
-- [📅 Proposed Features](#proposed-features)
+- [✅ Completed Features](#-completed-features)
+- [🔄 In Progress](#-in-progress)
+- [📅 Proposed Features](#-proposed-features)
 - [🔮 Future Considerations](#future-considerations)
 - [🗑️ Rejected Ideas](#rejected-ideas)
 
@@ -50,7 +50,7 @@
   - Created initial documentation
   - Basic version control setup
 
-## 📋 Planning
+## 🔄 In Progress
 
 ### V0.2.1 - Business Plan Slides 1-3 (Target: 2025-05-25)
 **Status**: In Progress  
@@ -79,21 +79,17 @@
   - [ ] Present competitive analysis
 
 #### Interactive Elements
-- [ ] **Navigation**
-  - [ ] Slide progress indicator
-  - [ ] Easy navigation between slides
-  - [ ] Table of contents
+- [ ] Navigation controls
+- [ ] Responsive design adjustments
+- [ ] Accessibility features
 
-#### Visual Design
-- [ ] **Branding**
-  - [ ] Consistent color scheme
-  - [ ] Professional typography
-  - [ ] High-quality visuals
+---
 
-#### Dependencies
-- [ ] Brand assets (logo, color codes)
-- [ ] Market research data
-- [ ] Financial projections
+## 📋 Planning
+
+*No active planning at the moment*
+
+
 
 ## 📅 Proposed Features
 
@@ -147,7 +143,7 @@
 |--------------------|------------------------------------------------|-------------|
 | Quiz Functionality | Not suitable for business plan presentations   | 2025-05-25 |
 | 3D Transitions     | Performance concerns on mobile devices         | 2025-05-24 |
-| Custom Cursors    | Limited UX value and potential distraction     | 2025-05-24 |
+| Custom Cursors     | Limited UX value and potential distraction     | 2025-05-24 |
 
 ---
 
