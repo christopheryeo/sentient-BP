@@ -1,20 +1,21 @@
 # Sentient.io Interactive Presentation
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](plans/_reference/CHANGELOG.md)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-0.2.0b-blue.svg)](plans/_reference/CHANGELOG.md)
 
 An interactive, multi-slide presentation for Sentient.io, built with HTML5, CSS3, and vanilla JavaScript.
 
 ## 📋 Table of Contents
-- [Features](#-features)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [Development](#-development)
-- [Project Management](#-project-management)
-- [Roadmap](#-roadmap)
-- [Version History](#version-history)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [✨ Features](#-features)
+- [🚀 Getting Started](#-getting-started)
+- [📁 Project Structure](#-project-structure)
+- [💻 Development](#-development)
+- [📊 Project Management](#-project-management)
+- [🗺️ Roadmap](#-roadmap)
+- [📜 Version History](#-version-history)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📚 Documentation](#-documentation)
 
 ## ✨ Features
 
@@ -42,8 +43,8 @@ An interactive, multi-slide presentation for Sentient.io, built with HTML5, CSS3
 ### Quick Start
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/sentient-bp.git
-   cd sentient-bp
+   git clone https://github.com/christopheryeo/sentient-BP.git
+   cd sentient-BP
    ```
 
 2. **Open in Browser**
@@ -137,17 +138,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    - Use the "Next" and "Previous" buttons to move between slides
    - Or use keyboard arrow keys for navigation
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 sentient-BP/
-├── css/
-│   └── styles.css       # Main stylesheet with responsive design
-├── js/
-│   └── main.js         # Main JavaScript with slide logic
-├── images/              # Image assets (if any)
-├── index.html           # Main HTML file
-└── README.md            # Project documentation
+├── src/                    # Source code
+│   ├── js/                 # JavaScript files
+│   ├── css/                # Stylesheets
+│   └── assets/             # Images, fonts, etc.
+├── plans/                  # Project management
+│   ├── 0_backlog/          # Future features and ideas
+│   ├── 1_planning/         # Active planning
+│   ├── 2_inprogress/       # Work in progress
+│   ├── 3_completed/        # Completed work
+│   └── _reference/         # Reference materials
+├── content/                # Generated content
+├── index.html              # Main entry point
+└── README.md               # Project documentation
 ```
 
 ## Project Structure
@@ -219,7 +226,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [Chart.js](https://www.chartjs.org/) - For interactive charts
 - [Normalize.css](https://necolas.github.io/normalize.css/) - For consistent browser styling
 
-## 📋 Commit History
+## 📜 Version History
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
