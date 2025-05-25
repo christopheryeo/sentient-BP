@@ -1,56 +1,291 @@
-# V0.2.1 Technical Specification
+# V0.2.1 Technical Implementation
 
-## Implementation Plan
+## 1. System Architecture
 
-### 1. Quiz System
-- **Components**:
-  - `Quiz.js`: Core quiz logic and state management
-  - `QuizQuestion.js`: Individual question component
-  - `QuizResults.js`: Results display component
-- **Data Structure**:
-  ```javascript
-  {
-    id: 'quiz-1',
-    questions: [
-      {
-        question: 'What is Sentient.io\'s main offering?',
-        options: ['Option 1', 'Option 2', 'Option 3'],
-        correctIndex: 1,
-        explanation: 'Explanation text...'
-      }
-    ]
+### 1.1 Core Components
+```mermaid
+graph TD
+    A[HTML5 Structure] --> B[CSS Styling]
+    A --> C[JavaScript Logic]
+    B --> D[Responsive Layout]
+    C --> E[Slide Navigation]
+    C --> F[State Management]
+    D --> G[Browser Rendering]
+```
+
+### 1.2 File Structure
+```
+src/
+├── index.html           # Entry point
+├── css/
+│   ├── base.css       # Reset and variables
+│   ├── layout.css      # Grid and flex systems
+│   └── components/     # UI components
+├── js/
+│   ├── main.js       # App initialization
+│   ├── navigation.js   # Slide controls
+│   └── utils/         # Helper functions
+└── assets/             # Static files
+```
+
+## 2. Technical Implementation
+
+### 2.1 Content Parsing & Validation
+
+#### Content Extraction
+```javascript
+// Example content extraction selectors
+const SLIDE_SELECTORS = {
+  cover: {
+    title: 'h1.slide-title',
+    subtitle: 'h2.slide-subtitle',
+    logo: '.slide-logo',
+    presenter: '.presenter-info'
+  },
+  executive: {
+    overview: '.executive-overview',
+    valueProps: '.value-propositions',
+    financials: '.financial-highlights'
+  },
+  market: {
+    data: '.market-data',
+    trends: '.market-trends',
+    competition: '.competitive-analysis'
   }
-  ```
+};
 
-### 2. Hotspot System
-- **Components**:
-  - `Hotspot.js`: Manages hotspot positions and interactions
-  - `HotspotContent.js`: Displays content on interaction
-  - `HotspotManager.js`: Coordinates multiple hotspots
-
-### 3. Animation System
-- **Frameworks**:
-  - GSAP for complex animations
-  - Animate.css for basic transitions
-  - Custom CSS animations for simple effects
-
-### 4. State Management
-- **Approach**: React Context API
-- **State Structure**:
-  ```typescript
-  interface AppState {
-    currentSlide: number;
-    quiz: {
-      [id: string]: {
-        answers: number[];
-        completed: boolean;
-      };
-    };
-    animations: {
-      reducedMotion: boolean;
-      enabled: boolean;
-    };
+// Validation rules
+const VALIDATION_RULES = {
+  requiredFields: {
+    cover: ['title', 'presenter'],
+    executive: ['overview', 'valueProps'],
+    market: ['data', 'trends']
+  },
+  maxLength: {
+    title: 100,
+    subtitle: 200,
+    contentSection: 1000
   }
+};
+```
+
+### 2.2 HTML Structure
+```html
+<!-- Base slide structure -->
+<div class="slide" id="slide-1" data-slide-type="cover">
+  <div class="slide-content">
+    <!-- Content goes here -->
+  </div>
+  <footer class="slide-footer">
+    <div class="slide-number">1/20</div>
+  </footer>
+</div>
+```
+
+### 2.3 JavaScript Modules
+
+#### navigation.js
+```javascript
+export class Navigation {
+  constructor() {
+    this.currentSlide = 0;
+    this.totalSlides = document.querySelectorAll('.slide').length;
+    this.initEventListeners();
+  }
+  
+  nextSlide() { /* ... */ }
+  prevSlide() { /* ... */ }
+  goToSlide(index) { /* ... */ }
+}
+```
+
+### 2.4 Error Handling
+
+#### Error States
+```javascript
+// Error types and fallbacks
+const ERROR_HANDLING = {
+  missingContent: {
+    selector: '.error-missing',
+    message: 'Content not available',
+    fallback: 'Please check the source document.'
+  },
+  invalidFormat: {
+    selector: '.error-format',
+    message: 'Invalid content format',
+    fallback: 'Content could not be displayed.'
+  }
+};
+
+// Fallback content generation
+function generateFallback(slideType) {
+  return `
+    <div class="error-state">
+      <h3>Unable to load ${slideType} content</h3>
+      <p>${ERROR_HANDLING.missingContent.fallback}</p>
+      <button onclick="location.reload()">Retry</button>
+    </div>
+  `;
+}
+```
+
+### 2.5 Image Handling
+
+#### Image Optimization Pipeline
+```javascript
+// Image optimization configuration
+const imageConfig = {
+  formats: ['webp', 'avif', 'original'],
+  sizes: [
+    { width: 1920, suffix: '-large' },
+    { width: 1024, suffix: '-medium' },
+    { width: 640, suffix: '-small' }
+  ],
+  quality: 80,
+  outputDir: 'static/optimized/'
+};
+
+// Usage in build process
+function optimizeImage(src) {
+  // Implementation for image optimization
+  // Returns srcset string for responsive images
+}
+```
+
+#### Lazy Loading Implementation
+```html
+<img 
+  data-src="/static/optimized/team/chris-yeo-large.webp"
+  data-srcset="/static/optimized/team/chris-yeo-small.webp 640w,
+               /static/optimized/team/chris-yeo-medium.webp 1024w,
+               /static/optimized/team/chris-yeo-large.webp 1920w"
+  sizes="(max-width: 640px) 100vw, 
+         (max-width: 1024px) 50vw,
+         33vw"
+  alt="Chris Yeo"
+  class="lazyload"
+  loading="lazy">
+```
+
+### 2.6 CSS Architecture
+```css
+/* CSS Variables */
+:root {
+  --color-primary: #3B82F6;
+  --color-text: #1F2937;
+  --spacing-unit: 1rem;
+}
+
+/* Responsive Mixins */
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) { @content; }
+}
+```
+
+## 3. Performance & Quality
+
+### 3.1 Performance Budget
+- **Per Slide**
+  - Max images: 2
+  - Max image size: 100KB each
+  - Max scripts: 1 bundle (50KB gzipped)
+  - Max styles: 1 bundle (20KB gzipped)
+- **Loading Strategy**
+  - Lazy load non-critical resources
+  - Preload critical assets
+  - Defer non-essential JavaScript
+
+### 3.2 Image Optimization
+- **Formats**:
+  - Photos: WebP with JPEG fallback
+  - Icons: SVG preferred
+  - Charts: SVG for scalability
+- **Sizes**:
+  - Desktop: max-width 1920px
+  - Tablet: max-width 1024px
+  - Mobile: max-width 640px
+
+## 4. Technical Requirements
+
+### 3.1 Browser Support
+| Browser     | Version | Notes                     |
+|-------------|---------|---------------------------|
+| Chrome      | 88+     | Full support              |
+| Firefox     | 78+     | Full support              |
+| Safari      | 14+     | Full support              |
+| Edge        | 88+     | Chromium-based            |
+| iOS Safari  | 14+     | Mobile support            |
+| Chrome Android | 88+  | Mobile support            |
+
+
+### 3.2 Performance Budget
+- Max initial load: 100KB (gzipped)
+- Max image size: 150KB per image
+- Max JavaScript: 50KB (gzipped)
+- Time to Interactive: < 2s on 3G
+
+## 4. Build & Deployment
+
+### 4.1 Development Setup
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+### 4.2 Build Pipeline
+1. Lint code (ESLint, StyleLint)
+2. Transpile JavaScript (Babel)
+3. Process CSS (PostCSS)
+4. Optimize assets
+5. Generate production build
+
+### 4.3 Environment Variables
+```env
+# .env.development
+NODE_ENV=development
+API_URL=http://localhost:3000
+
+# .env.production
+NODE_ENV=production
+API_URL=https://api.example.com
+```
+
+## 5. Dependencies
+
+### 5.1 Runtime Dependencies
+- `reveal.js`: ^4.2.0
+- `lazysizes`: ^5.3.2
+- `focus-visible`: ^5.3.0
+
+### 5.2 Development Dependencies
+- `webpack`: ^5.50.0
+- `babel-loader`: ^8.2.2
+- `postcss-preset-env`: ^7.0.0
+- `eslint`: ^8.0.0
+- `stylelint`: ^14.0.0
+
+## 6. Testing Strategy
+
+### 6.1 Unit Tests
+- Test core utilities
+- Test navigation logic
+- Test state management
+
+### 6.2 Integration Tests
+- Test slide transitions
+- Test keyboard navigation
+- Test touch events
+
+### 6.3 Performance Tests
+- Lighthouse audits
+- Bundle size analysis
+- Load time measurements
   ```
 
 ### 5. Performance Considerations

@@ -16,71 +16,138 @@
 
 ## ✅ Completed Features
 
-### V1.0.0 (2025-05-24) - Initial Release
-- **Core Presentation Framework**
-  - Responsive slide deck
-  - Keyboard and touch navigation
-  - Progress tracking
-  - Cross-browser compatibility
+### V0.2.0 (2025-05-25) - Repository Organization
+- **Version Control**
+  - Implemented semantic versioning
+  - Created git tags for all historical commits
+  - Organized commit history with proper version tracking
+  - Updated documentation with version history
+
+### V0.1.0 (2025-05-24) - Initial Release
+- **Core Presentation**
+  - Minimal index.html with basic styling
+  - Basic slide deck structure
+  - Initial project setup
+
+### V0.0.11 (2025-05-24) - Test Presentation
+- **Content**
+  - Added simple test presentation
+  - Basic slide navigation
+
+### V0.0.10 (2025-05-24) - Working Presentation
+- **Features**
+  - Minimal working presentation
   - Basic slide transitions
-  - Version-controlled deployment
 
-## 🔄 In Progress
+### V0.0.4 (2025-05-24) - Deployment
+- **Infrastructure**
+  - Added GitHub Pages deployment workflow
+  - Initial deployment configuration
 
-### V1.1.0 - Repository Organization
-- [ ] Re-organise all the various git commits with version number based git tags.
+### V0.0.1 (2025-05-24) - Project Setup
+- **Initialization**
+  - Set up project structure
+  - Created initial documentation
+  - Basic version control setup
+
+## 📋 Planning
+
+### V0.2.1 - Business Plan Slides 1-3 (Target: 2025-05-25)
+**Status**: In Planning  
+**Priority**: High
+
+#### Content Source
+- [ ] Extract and structure first three slides from `content/source.bundle.html`
+  - [ ] Parse and validate HTML content
+  - [ ] Ensure proper slide separation
+  - [ ] Preserve formatting and styling
+
+#### Slide Implementation
+- [ ] **Slide 1: Cover Slide**
+  - [ ] Extract title and subtitle
+  - [ ] Include company logo
+  - [ ] Add presenter details
+
+- [ ] **Slide 2: Executive Summary**
+  - [ ] Extract key business points
+  - [ ] Format value propositions
+  - [ ] Highlight financial metrics
+
+- [ ] **Slide 3: Market Opportunity**
+  - [ ] Extract market data
+  - [ ] Format market trends
+  - [ ] Present competitive analysis
+
+#### Interactive Elements
+- [ ] **Navigation**
+  - [ ] Slide progress indicator
+  - [ ] Easy navigation between slides
+  - [ ] Table of contents
+
+#### Visual Design
+- [ ] **Branding**
+  - [ ] Consistent color scheme
+  - [ ] Professional typography
+  - [ ] High-quality visuals
+
+#### Dependencies
+- [ ] Brand assets (logo, color codes)
+- [ ] Market research data
+- [ ] Financial projections
 
 ## 📅 Proposed Features
 
-### V1.2.0 - Enhanced Interactivity (Target: 2025-06-07)
-- **Interactive Elements**
-  - [ ] Add quiz functionality
-  - [ ] Implement clickable hotspots
-  - [ ] Add form collection
-- **Animations**
-  - [ ] Add entrance animations
-  - [ ] Implement scroll-triggered animations
-  - [ ] Add micro-interactions
+### V0.2.2 - Business Plan Slides 4-7 (Target: 2025-05-26)
+- [ ] **Slide 4**: Company Overview
+- [ ] **Slide 5**: Problem Statement
+- [ ] **Slide 6**: Solution & Value Proposition
+- [ ] **Slide 7**: Market Analysis
 
-### V1.3.0 - Advanced Features
-- **Analytics**
-  - [ ] Track slide views
-  - [ ] Measure time spent on slides
-  - [ ] Collect user engagement metrics
-- **Accessibility**
-  - [ ] Screen reader support
-  - [ ] Keyboard navigation improvements
-  - [ ] High contrast mode
+### V0.2.3 - Business Plan Slides 8-11 (Target: 2025-05-27)
+- [ ] **Slide 8**: Target Market
+- [ ] **Slide 9**: Competitive Analysis
+- [ ] **Slide 10**: Business Model
+- [ ] **Slide 11**: Revenue Streams
 
-### V1.4.0 - Content Management
-- **Dynamic Content**
-  - [ ] API integration for content
-  - [ ] Multi-language support
-  - [ ] Content versioning
-- **Theming**
-  - [ ] Multiple color schemes
-  - [ ] Custom branding options
-  - [ ] Dark/light mode
+### V0.2.4 - Business Plan Slides 12-15 (Target: 2025-05-28)
+- [ ] **Slide 12**: Sales & Marketing Strategy
+- [ ] **Slide 13**: Operations Plan
+- [ ] **Slide 14**: Technology Stack
+- [ ] **Slide 15**: Financial Projections (3-5 years)
+
+### V0.2.5 - Business Plan Slides 16-19 (Target: 2025-05-29)
+- [ ] **Slide 16**: Funding Requirements
+- [ ] **Slide 17**: Use of Funds
+- [ ] **Slide 18**: Milestones & Timeline
+- [ ] **Slide 19**: Team & Advisors
+
+### V0.2.6 - Final Touches (Target: 2025-05-30)
+- [ ] **Slide 20**: Contact & Next Steps
+- [ ] **Presentation Features**
+  - [ ] Table of Contents
+  - [ ] Slide transitions
+  - [ ] Print/export functionality
+  - [ ] Responsive design
 
 ## 🔮 Future Considerations
-- **AI-Powered Features**
-  - Voice-controlled navigation
-  - AI presenter assistant
-  - Automated content suggestions
-- **Collaboration**
-  - Multi-user presentation mode
-  - Live audience interaction
-  - Real-time collaboration
+- **Advanced Features**
+  - Interactive financial models
+  - Dynamic data visualization
+  - Export to multiple formats (PDF/PPT/Word)
+  - Multi-language support
+  - Investor presentation mode
 - **Integration**
-  - Video conferencing tools
-  - Learning management systems
-  - Marketing automation platforms
+  - CRM system connectivity
+  - Financial data sources
+  - Team collaboration tools
 
 ## 🗑️ Rejected Ideas
-| Idea | Reason for Rejection | Date |
-|------|----------------------|------|
-| 3D transitions | Performance concerns on mobile | 2025-05-24 |
-| Custom cursors | Limited UX value | 2025-05-24 |
+
+| Feature            | Reason for Rejection                           | Date        |
+|--------------------|------------------------------------------------|-------------|
+| Quiz Functionality | Not suitable for business plan presentations   | 2025-05-25 |
+| 3D Transitions     | Performance concerns on mobile devices         | 2025-05-24 |
+| Custom Cursors    | Limited UX value and potential distraction     | 2025-05-24 |
 
 ---
 

@@ -223,6 +223,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.0   | `955cdfb` | Created git tags as versions and adjusted plans                              |
 | V0.1.9   | `e4a195a` | Merge pull request #4 from christopheryeo/add-bug-log                        |
 | V0.1.8   | `4e77e5d` | Added bug-log.md for tracking bugs                                           |
 | V0.1.7   | `a720270` | Merge pull request #3 from christopheryeo/update-readme                      |
@@ -249,15 +250,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version | Status   | Planned Features                                                          |
 |---------|----------|---------------------------------------------------------------------------|
-| V0.2.0  | Planned  | Repository organization with git tags                                     |
 | V0.2.1  | Planned  | Enhanced interactivity and animations (Planned for June 7, 2025)          |
 
 ## 🚀 What's Next?
 
-### V1.1.0 - Repository Organization
-- Re-organise all the various git commits with version number based git tags.
-
-### V1.2.0 - Enhanced Interactivity (Planned for June 7, 2025)
+### V0.2.1 - Enhanced Interactivity (Planned for June 7, 2025)
 - **Interactive Elements**
   - Quiz functionality
   - Clickable hotspots
