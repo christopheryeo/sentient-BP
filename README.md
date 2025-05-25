@@ -258,7 +258,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version | Status   | Target Date | Key Deliverables (Slides)               |
 |---------|----------|-------------|-----------------------------------------|
-| V0.2.1  | Planning | 2025-05-25  | **1-3**: Cover, Exec Summary, Market    |
+| V0.2.1  | In Progress | 2025-05-25  | **1-3**: Cover, Exec Summary, Market    |
 | V0.2.2  | Planned  | 2025-05-26  | **4-7**: Company, Product, GTM          |
 | V0.2.3  | Planned  | 2025-05-27  | **8-10**: Financials, Team              |
 
