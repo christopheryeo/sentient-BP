@@ -223,46 +223,39 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
-| V0.2.0   | `955cdfb` | Created git tags as versions and adjusted plans                              |
-| V0.1.9   | `e4a195a` | Merge pull request #4 from christopheryeo/add-bug-log                        |
-| V0.1.8   | `4e77e5d` | Added bug-log.md for tracking bugs                                           |
-| V0.1.7   | `a720270` | Merge pull request #3 from christopheryeo/update-readme                      |
-| V0.1.6   | `56a0f4e` | Updated README.md                                                            |
-| V0.1.5   | `46981f8` | Merge pull request #2 from christopheryeo/docs-enhance-pm-guide              |
-| V0.1.4   | `7a29c2d` | Enhanced product_management.md with detailed plan structure                 |
-| V0.1.3   | `245b6c7` | Merge pull request #1 from christopheryeo/update-readme-documentation        |
-| V0.1.2   | `27c7560` | Updated README.md to document content directory                             |
-| V0.1.1   | `a4dd21b` | Updated project management and documentation                                |
-| V0.1.0   | `c9fb87e` | Created minimal index.html with basic styling                               |
-| V0.0.11  | `2e4c362` | Added simple test presentation                                              |
-| V0.0.10  | `8e6ddfa` | Replaced with minimal working presentation                                  |
-| V0.0.9   | `3c35438` | Added test.html for GitHub Pages verification                               |
-| V0.0.8   | `ad5bf43` | Simplified and cleaned up presentation structure                            |
-| V0.0.7   | `9360b55` | Refactored for GitHub Pages compatibility                                   |
-| V0.0.6   | `7395be9` | Fixed paths for GitHub Pages deployment                                     |
-| V0.0.5   | `8eeb1f8` | Fixed resource paths for GitHub Pages deployment                            |
-| V0.0.4   | `3ce15a5` | Added GitHub Pages deployment workflow                                      |
-| V0.0.3   | `7694459` | Initial files upload                                                        |
-| V0.0.2   | `063a1f4` | Created static.yml                                                          |
-| V0.0.1   | `c6e89f8` | Initial commit: Set up project structure and documentation                  |
+| V0.2.0a  | `07b3c20` | Finalised features and design planning                                      |
+| V0.2.0   | `955cdfb` | Created git tags as versions and adjusted plans                            |
+| V0.1.9   | `e4a195a` | Merge pull request #4 from christopheryeo/add-bug-log                      |
+| V0.1.8   | `4e77e5d` | Added bug-log.md for tracking bugs                                         |
+| V0.1.7   | `a720270` | Merge pull request #3 from christopheryeo/update-readme                    |
+| V0.1.6   | `56a0f4e` | Updated README.md                                                          |
+| V0.1.5   | `46981f8` | Merge pull request #2 from christopheryeo/docs-enhance-pm-guide            |
+| V0.1.4   | `7a29c2d` | Enhanced product_management.md with detailed plan structure               |
+| V0.1.3   | `245b6c7` | Merge pull request #1 from christopheryeo/update-readme-documentation      |
+| V0.1.2   | `27c7560` | Updated README.md to document content directory                           |
+| V0.1.1   | `a4dd21b` | Updated project management and documentation                              |
+| V0.1.0   | `c9fb87e` | Created minimal index.html with basic styling                             |
+| V0.0.11  | `2e4c362` | Added simple test presentation                                            |
+| V0.0.10  | `8e6ddfa` | Replaced with minimal working presentation                                |
+| V0.0.9   | `3c35438` | Added test.html for GitHub Pages verification                             |
+| V0.0.8   | `ad5bf43` | Simplified and cleaned up presentation structure                          |
+| V0.0.7   | `9360b55` | Refactored for GitHub Pages compatibility                                 |
+| V0.0.6   | `7395be9` | Fixed paths for GitHub Pages deployment                                   |
+| V0.0.5   | `8eeb1f8` | Fixed resource paths for GitHub Pages deployment                          |
+| V0.0.4   | `3ce15a5` | Added GitHub Pages deployment workflow                                    |
+| V0.0.3   | `7694459` | Initial files upload                                                      |
+| V0.0.2   | `063a1f4` | Created static.yml                                                        |
+| V0.0.1   | `c6e89f8` | Initial commit: Set up project structure and documentation                |
 
 ## 🔜 Upcoming Versions
 
-| Version | Status   | Planned Features                                                          |
-|---------|----------|---------------------------------------------------------------------------|
-| V0.2.1  | Planned  | Enhanced interactivity and animations (Planned for June 7, 2025)          |
+| Version | Status   | Target Date | Key Deliverables (Slides)               |
+|---------|----------|-------------|-----------------------------------------|
+| V0.2.1  | Planning | 2025-05-25  | **1-3**: Cover, Exec Summary, Market    |
+| V0.2.2  | Planned  | 2025-05-26  | **4-7**: Company, Product, GTM          |
+| V0.2.3  | Planned  | 2025-05-27  | **8-10**: Financials, Team              |
 
-## 🚀 What's Next?
-
-### V0.2.1 - Enhanced Interactivity (Planned for June 7, 2025)
-- **Interactive Elements**
-  - Quiz functionality
-  - Clickable hotspots
-  - Form collection
-- **Animations**
-  - Entrance animations
-  - Scroll-triggered effects
-  - Micro-interactions
+For the complete roadmap and detailed planning, see our [Feature Ideas and Roadmap](plans/0_backlog/feature-ideas.md).
 
 [View detailed planning →](plans/1_planning/V1.2.0/) |
 
