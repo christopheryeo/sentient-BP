@@ -230,6 +230,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.0b  | `01ffc4f` | Moved V0.2.1 to in progress section                                         |
 | V0.2.0a  | `07b3c20` | Finalised features and design planning                                      |
 | V0.2.0   | `955cdfb` | Created git tags as versions and adjusted plans                            |
 | V0.1.9   | `e4a195a` | Merge pull request #4 from christopheryeo/add-bug-log                      |
@@ -256,11 +257,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔜 Upcoming Versions
 
-| Version | Status   | Target Date | Key Deliverables (Slides)               |
-|---------|----------|-------------|-----------------------------------------|
+| Version | Status      | Target Date | Key Deliverables (Slides)               |
+|---------|-------------|-------------|-----------------------------------------|
 | V0.2.1  | In Progress | 2025-05-25  | **1-3**: Cover, Exec Summary, Market    |
-| V0.2.2  | Planned  | 2025-05-26  | **4-7**: Company, Product, GTM          |
-| V0.2.3  | Planned  | 2025-05-27  | **8-10**: Financials, Team              |
+| V0.2.2  | Planned     | 2025-05-26  | **4-7**: Company, Product, GTM          |
+| V0.2.3  | Planned     | 2025-05-27  | **8-10**: Financials, Team              |
 
 For the complete roadmap and detailed planning, see our [Feature Ideas and Roadmap](plans/0_backlog/feature-ideas.md).
 
