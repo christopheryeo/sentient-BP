@@ -1,7 +1,7 @@
 # Sentient.io Interactive Presentation
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-0.2.0b-blue.svg)](plans/_reference/CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.2.0c-blue.svg)](plans/_reference/CHANGELOG.md)
 
 An interactive, multi-slide presentation for Sentient.io, built with HTML5, CSS3, and vanilla JavaScript.
 
@@ -230,6 +230,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.0c  | `a1e1531` | Confirmed plans directory consistencies and removed V1.0.0                  |
 | V0.2.0b  | `01ffc4f` | Moved V0.2.1 to in progress section                                         |
 | V0.2.0a  | `07b3c20` | Finalised features and design planning                                      |
 | V0.2.0   | `955cdfb` | Created git tags as versions and adjusted plans                            |
