@@ -55,7 +55,7 @@
 
 ### 3. Slide Designs
 
-#### Cover Slide
+#### Slide 1: Title Slide - Sentient.io revolutionizes enterprise knowledge management through private AI deployment
 - **Layout**: Full-bleed header with centered content
 - **Elements**:
   - **Logo**: `sentient-logo.png` (top-left, max-height: 60px)
@@ -66,7 +66,7 @@
     - Photo: `chris-yeo.png` (circular, 80x80px)
     - Name and title in small text
 
-#### Executive Summary
+#### Slide 2: About the Founder - Christopher Yeo brings 25+ years of proven entrepreneurial success and AI expertise to enterprise transformation
 - **Layout**: 3-column grid with header
 - **Background**: `smartchat-illustration.png` as a subtle watermark
 - **Sections**:
@@ -92,7 +92,7 @@
   - Name and title
   - Brief 1-2 line description
 
-#### Market Opportunity
+#### Slide 3: Management Team - Sentient.io management team combines deep AI expertise with proven enterprise sales execution
 - **Layout**: Two-column with footer
 - **Visual Elements**:
   - Left: Data visualization using elements from `smartchat-illustration.svg`
@@ -149,6 +149,14 @@
   - Click for company details
   - Filter by category
   - Toggle between metrics
+
+#### Slide 4: Market Problem - Enterprises face critical knowledge management challenges that existing solutions cannot address at scale
+- **Layout**: Placeholder for layout description
+- **Elements**: Placeholder for elements description
+
+#### Slide 5: Market Potential - Asia-Pacific AI market represents $7.5B opportunity with 65% CAGR driving Sentient.io's expansion strategy
+- **Layout**: Placeholder for layout description
+- **Elements**: Placeholder for elements description
 
 ## Interactive Elements & Accessibility
 

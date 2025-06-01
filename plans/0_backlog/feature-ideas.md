@@ -52,12 +52,12 @@
 
 ## 🔄 In Progress
 
-### V0.2.1 - Business Plan Slides 1-3 (Target: 2025-05-25)
+### V0.2.1 - Business Plan Slides 1-5 (Target: 2025-05-25)
 **Status**: In Progress  
 **Priority**: High
 
 #### Content Source
-- [ ] Extract and structure first three slides from `content/source.bundle.html`
+- [ ] Extract and structure first five slides from `content/source.bundle.html`
   - [ ] Parse and validate HTML content
   - [ ] Ensure proper slide separation
   - [ ] Preserve formatting and styling
@@ -78,6 +78,16 @@
   - [ ] Format market trends
   - [ ] Present competitive analysis
 
+- [ ] **Slide 4: Market Problem - Enterprises face critical knowledge management challenges that existing solutions cannot address at scale**
+  - [ ] Extract company mission and vision
+  - [ ] Detail company history
+  - [ ] Outline team structure
+
+- [ ] **Slide 5: Market Potential - Asia-Pacific AI market represents $7.5B opportunity with 65% CAGR driving Sentient.io's expansion strategy**
+  - [ ] Define the core problem
+  - [ ] Explain customer pain points
+  - [ ] Quantify the problem's impact
+
 #### Interactive Elements
 - [ ] Navigation controls
 - [ ] Responsive design adjustments
@@ -93,9 +103,7 @@
 
 ## 📅 Proposed Features
 
-### V0.2.2 - Business Plan Slides 4-7 (Target: 2025-05-26)
-- [ ] **Slide 4**: Company Overview
-- [ ] **Slide 5**: Problem Statement
+### V0.2.2 - Business Plan Slides 6-7 (Target: 2025-05-26)
 - [ ] **Slide 6**: Solution & Value Proposition
 - [ ] **Slide 7**: Market Analysis
 

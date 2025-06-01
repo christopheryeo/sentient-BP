@@ -42,24 +42,26 @@ const SLIDE_SELECTORS = {
     logo: '.slide-logo',
     presenter: '.presenter-info'
   },
-  executive: {
-    overview: '.executive-overview',
-    valueProps: '.value-propositions',
-    financials: '.financial-highlights'
+  founder_slide: { // Was 'executive'
+    title: 'h1.slide2-title', // Generic title selector for Slide 2
+    content: '.slide2-content'  // Generic content selector for Slide 2
   },
-  market: {
-    data: '.market-data',
-    trends: '.market-trends',
-    competition: '.competitive-analysis'
-  }
+  team_slide: { // Was 'market'
+    title: 'h1.slide3-title',   // Generic title selector for Slide 3
+    content: '.slide3-content'    // Generic content selector for Slide 3
+  },
+  slide4: { title: 'h1.slide4-title', content: '.slide4-content' },
+  slide5: { title: 'h1.slide5-title', content: '.slide5-content' }
 };
 
 // Validation rules
 const VALIDATION_RULES = {
   requiredFields: {
     cover: ['title', 'presenter'],
-    executive: ['overview', 'valueProps'],
-    market: ['data', 'trends']
+    founder_slide: ['title', 'content'], // Was 'executive'
+    team_slide: ['title', 'content'],    // Was 'market'
+    slide4: ['title', 'content'],
+    slide5: ['title', 'content']
   },
   maxLength: {
     title: 100,
