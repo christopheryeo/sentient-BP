@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentient.io - Private AI for Enterprise Knowledge Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            color: #060200;
+            background: #FFFFFF;
+        }
+        
+        /* McKinsey Typography Standards */
+        .title-font {
+            font-family: Georgia, serif;
+            font-weight: bold;
+        }
+        
+        .body-font {
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+        
+        /* Container and Layout */
+        .slide {
+            min-height: 100vh;
+            padding: 60px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #E5E5E5;
+            position: relative;
+        }
+        
+        /* McKinsey Header Style */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #163E93;
+        }
+        
+        .company-logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #163E93;
+        }
+        
+        /* Title slide logo - larger and more prominent */
+        .title-slide .slide-header {
+            border-bottom: none;
+            margin-bottom: 60px;
+        }
+        
+        .title-slide .company-logo {
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-symbol {
+            width: 50px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Recreate the Sentient.io logo with layered diamonds */
+        .diamond-stack {
+            position: relative;
+            width: 40px;
+            height: 30px;
+        }
+        
+        .diamond {
+            position: absolute;
+            width: 28px;
+            height: 16px;
+            transform: rotate(45deg);
+            border-radius: 2px;
+        }
+        
+        .diamond.red {
+            background: #B71C1C;
+            top: 0;
+            left: 6px;
+            z-index: 3;
+        }
+        
+        .diamond.beige {
+            background: #D4B896;
+            top: 6px;
+            left: 6px;
+            z-index: 2;
+        }
+        
+        .diamond.green {
+            background: #8BC34A;
+            top: 12px;
+            left: 6px;
+            z-index: 1;
+        }
+        
+        .slide-number {
+            font-size: 14px;
+            color: #666666;
+        }
+        
+        /* Action Title - McKinsey Style */
+        .action-title {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: #163E93;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            max-width: 80%;
+        }
+        
+        /* Subtitle */
+        .subtitle {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        /* Content Grid - McKinsey Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .content-single {
+            grid-column: 1 / -1;
+        }
+        
+        /* Text Block */
+        .text-block {
+            background: #FFFFFF;
+            padding: 0;
+        }
+        
+        .text-block h3 {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #163E93;
+            margin-bottom: 15px;
+        }
+        
+        .text-block p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #060200;
+            margin-bottom: 12px;
+        }
+        
+        .text-block ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .text-block li {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        /* McKinsey Table Style */
+        .mckinsey-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            border: 1px solid #CCCCCC;
+        }
+        
+        .mckinsey-table th {
+            background: #F0F0F0;
+            font-weight: bold;
+            font-size: 14px;
+            color: #060200;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #CCCCCC;
+        }
+        
+        .mckinsey-table td {
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #CCCCCC;
+            vertical-align: top;
+        }
+        
+        .mckinsey-table tr:nth-child(even) {
+            background: #FAFAFA;
+        }
+        
+        /* Key Statistics Box */
+        .stats-box {
+            background: #F8F9FA;
+            border: 1px solid #E5E5E5;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            border-right: 1px solid #E5E5E5;
+            padding-right: 15px;
+        }
+        
+        .stat-item:last-child {
+            border-right: none;
+        }
+        
+        .stat-value {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #163E93;
+            display: block;
+        }
+        
+        .stat-label {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #666666;
+            margin-top: 5px;
+        }
+        
+        /* Problem Framework Box */
+        .framework-box {
+            border: 2px solid #163E93;
+            padding: 25px;
+            margin: 30px 0;
+            background: #FFFFFF;
+        }
+        
+        .framework-title {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #163E93;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .framework-item {
+            border-left: 3px solid #30A3DA;
+            padding-left: 15px;
+        }
+        
+        .framework-item h4 {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #163E93;
+            margin-bottom: 8px;
+        }
+        
+        .framework-item p {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #060200;
+        }
+        
+        /* Navigation */
+        .slide-nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        
+        .nav-button {
+            padding: 8px 15px;
+            background: #FFFFFF;
+            border: 1px solid #163E93;
+            color: #163E93;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-button:hover,
+        .nav-button.active {
+            background: #163E93;
+            color: #FFFFFF;
+        }
+        
+        /* Footer - McKinsey Style */
+        .slide-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 80px;
+            right: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #666666;
+            border-top: 1px solid #E5E5E5;
+            padding-top: 10px;
+        }
+        
+        .source-text {
+            font-style: italic;
+        }
+        
+        .confidential-text {
+            color: #666666;
+        }
+        
+        /* Call-out Box */
+        .callout-box {
+            background: #E8F4FD;
+            border-left: 4px solid #30A3DA;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .callout-box h4 {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #163E93;
+            margin-bottom: 10px;
+        }
+        
+        .callout-box p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #060200;
+            line-height: 1.5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 30px;
+            }
+            
+            .action-title {
+                font-size: 24px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .framework-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .slide-footer {
+                left: 30px;
+                right: 30px;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Clean, minimal focus styles */
+        button:focus,
+        .nav-button:focus {
+            outline: 2px solid #30A3DA;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="slide-nav">
+        <button class="nav-button active" onclick="scrollToSlide(1)">1</button>
+        <button class="nav-button" onclick="scrollToSlide(2)">2</button>
+        <button class="nav-button" onclick="scrollToSlide(3)">3</button>
+        <button class="nav-button" onclick="scrollToSlide(4)">4</button>
+        <button class="nav-button" onclick="scrollToSlide(5)">5</button>
+    </div>
+
+    <!-- Slide 1: Title Slide -->
+    <div id="slide1" class="slide title-slide">
+        <div class="slide-header">
+            <div class="company-logo">
+                <div class="logo-symbol">
+                    <div class="diamond-stack">
+                        <div class="diamond red"></div>
+                        <div class="diamond beige"></div>
+                        <div class="diamond green"></div>
+                    </div>
+                </div>
+                <span>sentient.io</span>
+            </div>
+            <div class="slide-number">1</div>
+        </div>
+        
+        <div class="action-title">
+            Sentient.io revolutionizes enterprise knowledge management through private AI deployment
+        </div>
+        
+        <div class="subtitle">
+            Enterprise-grade Private AI solution that transforms how organizations access, utilize, and secure their institutional knowledge
+        </div>
+        
+        <div class="stats-box">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">$10M</span>
+                    <div class="stat-label">Series B2 funding target</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$50M</span>
+                    <div class="stat-label">Post-money valuation</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$2.5M</span>
+                    <div class="stat-label">Current pipeline (SGD)</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">2028</span>
+                    <div class="stat-label">Target IPO year</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="callout-box">
+            <h4>Investment Opportunity</h4>
+            <p>Expected ROI of 6-12x based on Tokyo Stock Exchange IPO by 2028 with projected valuation of $300-600M USD. Join the leaders in Private AI for enterprise knowledge management.</p>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="source-text">Source: Sentient.io management presentation</div>
+            <div class="confidential-text">Sentient.io | Confidential and Proprietary</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: About the Founder -->
+    <div id="slide2" class="slide">
+        <div class="slide-header">
+            <div class="company-logo">Sentient.io</div>
+            <div class="slide-number">2</div>
+        </div>
+        
+        <div class="action-title">
+            Christopher Yeo brings 25+ years of proven entrepreneurial success and AI expertise to enterprise transformation
+        </div>
+        
+        <div class="content-grid">
+            <div class="text-block">
+                <h3>Entrepreneurial Track Record</h3>
+                <ul>
+                    <li><strong>iFusion (1994):</strong> Scaled with clients like Motorola; pioneered e-business solutions</li>
+                    <li><strong>Comex Frontier:</strong> Expanded across Asia-Pacific with Panasonic; acquired by Four Soft (2005)</li>
+                    <li><strong>aSpecial Media (2011):</strong> Co-founder; built interest profiling technology for media companies</li>
+                </ul>
+                
+                <h3>Academic Credentials</h3>
+                <p>First-class honours in Computer Science & Mathematics from University of Waikato</p>
+            </div>
+            
+            <div class="text-block">
+                <h3>Leadership & Advisory Experience</h3>
+                <ul>
+                    <li><strong>Board Member:</strong> Cap Vista (Singapore MINDEF)</li>
+                    <li><strong>Advisory Boards:</strong> Credence Fund, Agency for Integrated Care (Singapore MOH)</li>
+                    <li><strong>Mentorship:</strong> 15+ companies across technology and AI sectors</li>
+                    <li><strong>Senior Roles:</strong> A*STAR, NUS, Singapore Press Holdings</li>
+                </ul>
+                
+                <h3>Current Focus</h3>
+                <p>25+ years in technology, specialized in AI solutions for enterprise transformation and knowledge management</p>
+            </div>
+        </div>
+        
+        <div class="callout-box">
+            <h4>Proven Serial Entrepreneur</h4>
+            <p>Christopher has successfully founded, scaled, and exited multiple technology companies, with deep expertise in enterprise software, AI platforms, and Asia-Pacific market expansion.</p>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="source-text">Source: Company records, LinkedIn, Crunchbase</div>
+            <div class="confidential-text">Sentient.io | Confidential and Proprietary</div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Management Team -->
+    <div id="slide3" class="slide">
+        <div class="slide-header">
+            <div class="company-logo">Sentient.io</div>
+            <div class="slide-number">3</div>
+        </div>
+        
+        <div class="action-title">
+            Sentient.io management team combines deep AI expertise with proven enterprise sales execution
+        </div>
+        
+        <table class="mckinsey-table">
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Key Capabilities</th>
+                    <th>Experience</th>
+                    <th>Market Focus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Executive Leadership</strong></td>
+                    <td>Strategic vision, fundraising, international expansion</td>
+                    <td>25+ years tech entrepreneurship</td>
+                    <td>Singapore, Japan, Indonesia</td>
+                </tr>
+                <tr>
+                    <td><strong>Science & Research</strong></td>
+                    <td>AI/ML algorithms, NLP, knowledge graphs</td>
+                    <td>PhD-level researchers</td>
+                    <td>Global AI advancement</td>
+                </tr>
+                <tr>
+                    <td><strong>Sales & Business Dev</strong></td>
+                    <td>Enterprise sales, government relations</td>
+                    <td>Government, defense, manufacturing</td>
+                    <td>APAC enterprise clients</td>
+                </tr>
+                <tr>
+                    <td><strong>Engineering & Operations</strong></td>
+                    <td>Cloud infrastructure, security, integrations</td>
+                    <td>Mission-critical deployments</td>
+                    <td>Enterprise IT systems</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="stats-box">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">22</span>
+                    <div class="stat-label">Total team members</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">5</span>
+                    <div class="stat-label">Board members</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">8</span>
+                    <div class="stat-label">Years of operations</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">3</span>
+                    <div class="stat-label">Core markets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-block">
+            <h3>Corporate Investors & Strategic Partners</h3>
+            <p>Backed by leading corporate investors who provide strategic market access, validation, and deep industry expertise across target verticals including government, defense, manufacturing, and financial services.</p>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="source-text">Source: Sentient.io internal records, team profiles</div>
+            <div class="confidential-text">Sentient.io | Confidential and Proprietary</div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Market Problem -->
+    <div id="slide4" class="slide">
+        <div class="slide-header">
+            <div class="company-logo">Sentient.io</div>
+            <div class="slide-number">4</div>
+        </div>
+        
+        <div class="action-title">
+            Enterprises face critical knowledge management challenges that existing solutions cannot address at scale
+        </div>
+        
+        <div class="framework-box">
+            <div class="framework-title">Enterprise Knowledge Management Challenge Framework</div>
+            <div class="framework-grid">
+                <div class="framework-item">
+                    <h4>Information Fragmentation</h4>
+                    <p>Corporate data scattered across cloud drives, PC folders, thumb drives, and hard disks, making retrieval nearly impossible when needed</p>
+                </div>
+                <div class="framework-item">
+                    <h4>Productivity Loss</h4>
+                    <p>Employees spend significant time searching for information, delaying critical business decisions and reducing operational efficiency</p>
+                </div>
+                <div class="framework-item">
+                    <h4>Security & Compliance Risks</h4>
+                    <p>Traditional AI solutions require uploading sensitive data to public clouds, creating unacceptable security vulnerabilities</p>
+                </div>
+                <div class="framework-item">
+                    <h4>Scale & Context Limitations</h4>
+                    <p>Current solutions cannot handle enterprise-scale document volumes or understand complex knowledge relationships</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-box">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">85%</span>
+                    <div class="stat-label">Enterprises adopting AI</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">92%</span>
+                    <div class="stat-label">Concerned about data privacy</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">78%</span>
+                    <div class="stat-label">Need better knowledge mgmt</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$7.5B</span>
+                    <div class="stat-label">Total addressable market</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="callout-box">
+            <h4>Core Problem Statement</h4>
+            <p>"Finding Corporate Information just when you need it!" - The fundamental challenge every enterprise faces in the digital age, where knowledge workers spend up to 30% of their time searching for information.</p>
+        </div>
+        
+        <div class="content-single">
+            <div class="text-block">
+                <h3>Market Drivers</h3>
+                <p>Key trends accelerating demand for enterprise AI solutions include increasing data volumes, remote work requirements, regulatory compliance needs, and competitive pressure for faster decision-making. Organizations require solutions that can process millions of documents while maintaining complete data privacy and security.</p>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="source-text">Source: McKinsey AI in the workplace report (2025), Fortune Business Insights, Gartner</div>
+            <div class="confidential-text">Sentient.io | Confidential and Proprietary</div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Market Potential -->
+    <div id="slide5" class="slide">
+        <div class="slide-header">
+            <div class="company-logo">Sentient.io</div>
+            <div class="slide-number">5</div>
+        </div>
+        
+        <div class="action-title">
+            Asia-Pacific AI market represents $7.5B opportunity with 65% CAGR driving Sentient.io's expansion strategy
+        </div>
+        
+        <div class="stats-box">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">$3.9B</span>
+                    <div class="stat-label">Singapore AI Market</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$2.3B</span>
+                    <div class="stat-label">Indonesia AI Market</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$1.3B</span>
+                    <div class="stat-label">Japan AI Market</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$1.0B</span>
+                    <div class="stat-label">Other APAC Markets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="text-block">
+                <h3>Target Markets: Geographic Focus</h3>
+                <table class="mckinsey-table" style="margin-top: 15px;">
+                    <thead>
+                        <tr>
+                            <th>Market</th>
+                            <th>Size (USD)</th>
+                            <th>Key Drivers</th>
+                            <th>Entry Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Singapore</strong></td>
+                            <td>$3.9B</td>
+                            <td>Government digitalization, Smart Nation initiative</td>
+                            <td>Direct sales, established presence</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Indonesia</strong></td>
+                            <td>$2.3B</td>
+                            <td>Large enterprise base, digital transformation</td>
+                            <td>Partner-led expansion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Japan</strong></td>
+                            <td>$1.3B</td>
+                            <td>Manufacturing automation, aging workforce</td>
+                            <td>Strategic co-sell partnerships</td>
+                        </tr>
+                        <tr>
+                            <td><strong>US & EU</strong></td>
+                            <td>$1.0B+</td>
+                            <td>Enterprise AI adoption, compliance requirements</td>
+                            <td>Key beachheads, lighthouse clients</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="text-block">
+                <h3>Industry Focus Areas</h3>
+                <ul>
+                    <li><strong>Government & Defense:</strong> High-security requirements, proven track record with Singapore agencies</li>
+                    <li><strong>Manufacturing:</strong> Quality control, supply chain optimization, proven success in Japan automotive</li>
+                    <li><strong>Financial Services:</strong> Regulatory compliance, risk management, document processing</li>
+                    <li><strong>Insurance:</strong> Claims processing, underwriting, customer service automation</li>
+                    <li><strong>Retail & E-commerce:</strong> Customer insights, inventory optimization, personalization</li>
+                </ul>
+                
+                <h3>Market Growth Drivers</h3>
+                <ul>
+                    <li>Increasing enterprise AI adoption (85% of organizations)</li>
+                    <li>Growing data privacy and security concerns (92% of enterprises)</li>
+                    <li>Remote work driving knowledge management needs</li>
+                    <li>Regulatory compliance requirements across industries</li>
+                    <li>Competitive pressure for faster decision-making</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="framework-box">
+            <div class="framework-title">Market Validation Evidence</div>
+            <div class="framework-grid">
+                <div class="framework-item">
+                    <h4>Proven Enterprise Demand</h4>
+                    <p>Current pipeline of $2.5M SGD with active negotiations across government, manufacturing, and financial services sectors</p>
+                </div>
+                <div class="framework-item">
+                    <h4>Geographic Diversification</h4>
+                    <p>Successfully operating in Singapore, Indonesia, and Japan with established client relationships and proven revenue streams</p>
+                </div>
+                <div class="framework-item">
+                    <h4>Industry Validation</h4>
+                    <p>Live deployments with top-tier clients including Japan's largest automotive manufacturers and Singapore government agencies</p>
+                </div>
+                <div class="framework-item">
+                    <h4>Revenue Growth Trajectory</h4>
+                    <p>65% CAGR demonstrates strong market adoption and validates product-market fit across multiple verticals</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="callout-box">
+            <h4>Total Addressable Market Opportunity</h4>
+            <p>$7.5B across core APAC markets provides substantial runway for growth. Private AI for enterprise knowledge management represents an underserved segment with significant competitive advantages over public cloud solutions.</p>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="source-text">Source: Fortune Business Insights (2024), Statista (2024), Acute Market Reports (2024)</div>
+            <div class="confidential-text">Sentient.io | Confidential and Proprietary</div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSlide(slideNumber) {
+            const slide = document.getElementById(`slide${slideNumber}`);
+            if (slide) {
+                slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            
+            // Update active navigation button
+            document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.nav-button')[slideNumber - 1].classList.add('active');
+        }
+
+        // Update active navigation on scroll
+        function updateActiveNav() {
+            const slides = document.querySelectorAll('.slide');
+            const navButtons = document.querySelectorAll('.nav-button');
+            
+            let current = 1;
+            slides.forEach((slide, index) => {
+                const rect = slide.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    current = index + 1;
+                }
+            });
+            
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            if (navButtons[current - 1]) {
+                navButtons[current - 1].classList.add('active');
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', updateActiveNav);
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', updateActiveNav);
+    </script>
+</body>
+</html>
