@@ -13,6 +13,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Interactive elements and animations
 - Project management documentation
 
+## [0.2.2] - 2025-05-25
+### Fixed
+- Corrected `plans/0_backlog/feature-ideas.md` and `plans/3_completed/V0.2.1/design.md` to fully align with the completion of slides 1-15 and to clarify future slide plans.
+
+## [0.2.1] - 2025-05-25
+### Added
+- Completed development of slides 1-15, provided by Claude 4 in a single iteration.
+- Updated all relevant project documentation (READMEs, feature ideas, V0.2.1 planning documents) to reflect this completion.
+- Moved V0.2.1 from 'inprogress' to 'completed' in the plans directory structure.
+
 ## [1.0.0] - 2025-05-24
 ### Added
 - Initial release of the Sentient.io Interactive Presentation
