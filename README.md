@@ -230,6 +230,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.2   | `0f8c137` | Documentation corrections and updates for V0.2.1                             |
+| V0.2.1   | `0f8c137` | Completed slides 1-15, updated documentation and moved V0.2.1 to completed  |
 | V0.2.0e  | `e5b0354` | Added full BP presentation to source.bundle.html                            |
 | V0.2.0d  | `395c6a9` | Updated source.bundle.html with code generated from Claude 4                |
 | V0.2.0c  | `a1e1531` | Confirmed plans directory consistencies and removed V1.0.0                  |
@@ -239,7 +241,7 @@ This project is open source and available under the [MIT License](LICENSE).
 | V0.1.9   | `e4a195a` | Merge pull request #4 from christopheryeo/add-bug-log                      |
 | V0.1.8   | `4e77e5d` | Added bug-log.md for tracking bugs                                         |
 | V0.1.7   | `a720270` | Merge pull request #3 from christopheryeo/update-readme                    |
-| V0.1.6   | `56a0f4e` | Updated README.md                                                          |
+| V0.1.6   | `56a0f4e` | Appended 'This is my Jules' to README.md                                   |
 | V0.1.5   | `46981f8` | Merge pull request #2 from christopheryeo/docs-enhance-pm-guide            |
 | V0.1.4   | `7a29c2d` | Enhanced product_management.md with detailed plan structure               |
 | V0.1.3   | `245b6c7` | Merge pull request #1 from christopheryeo/update-readme-documentation      |
@@ -250,19 +252,18 @@ This project is open source and available under the [MIT License](LICENSE).
 | V0.0.10  | `8e6ddfa` | Replaced with minimal working presentation                                |
 | V0.0.9   | `3c35438` | Added test.html for GitHub Pages verification                             |
 | V0.0.8   | `ad5bf43` | Simplified and cleaned up presentation structure                          |
-| V0.0.7   | `9360b55` | Refactored for GitHub Pages compatibility                                 |
+| V0.0.7   | `9360b55` | Refactored to use inline CSS/JS for better GitHub Pages compatibility     |
 | V0.0.6   | `7395be9` | Fixed paths for GitHub Pages deployment                                   |
 | V0.0.5   | `8eeb1f8` | Fixed resource paths for GitHub Pages deployment                          |
 | V0.0.4   | `3ce15a5` | Added GitHub Pages deployment workflow                                    |
-| V0.0.3   | `7694459` | Initial files upload                                                      |
-| V0.0.2   | `063a1f4` | Created static.yml                                                        |
+| V0.0.3   | `7694459` | Initial file upload                                                       |
+| V0.0.2   | `063a1f4` | Created static.yml for GitHub Pages                                       |
 | V0.0.1   | `c6e89f8` | Initial commit: Set up project structure and documentation                |
 
 ## 🔜 Upcoming Versions
 
 | Version | Status      | Target Date | Key Deliverables (Slides)               |
 |---------|-------------|-------------|-----------------------------------------|
-| V0.2.1  | Completed   | 2025-05-25  | Slides 1-15: Full business plan presentation content developed by Claude 4 in one go. |
 | V0.2.2  | Planned     | 2025-05-26  | **4-7**: Company, Product, GTM          |
 | V0.2.3  | Planned     | 2025-05-27  | **8-10**: Financials, Team              |
 
