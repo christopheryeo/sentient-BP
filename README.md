@@ -230,6 +230,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.0e  | `e5b0354` | Added full BP presentation to source.bundle.html                            |
+| V0.2.0d  | `395c6a9` | Updated source.bundle.html with code generated from Claude 4                |
 | V0.2.0c  | `a1e1531` | Confirmed plans directory consistencies and removed V1.0.0                  |
 | V0.2.0b  | `01ffc4f` | Moved V0.2.1 to in progress section                                         |
 | V0.2.0a  | `07b3c20` | Finalised features and design planning                                      |
