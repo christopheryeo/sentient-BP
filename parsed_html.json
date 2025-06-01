@@ -1,0 +1,2165 @@
+[
+    {
+        "slide_id": "slide1",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Sentient.io revolutionizes enterprise knowledge management through private AI deployment"
+            },
+            {
+                "type": "subtitle",
+                "text": "Enterprise-grade Private AI solution that transforms how organizations access, utilize, and secure their institutional knowledge"
+            },
+            {
+                "type": "stat_value",
+                "text": "$10M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Series B2 funding target"
+            },
+            {
+                "type": "stat_value",
+                "text": "$50M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Post-money valuation"
+            },
+            {
+                "type": "stat_value",
+                "text": "$2.5M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Current pipeline (SGD)"
+            },
+            {
+                "type": "stat_value",
+                "text": "2028"
+            },
+            {
+                "type": "stat_label",
+                "text": "Target IPO year"
+            },
+            {
+                "type": "callout_box",
+                "text": "Investment Opportunity | Expected ROI of 6-12x based on Tokyo Stock Exchange IPO by 2028 with projected valuation of $300-600M USD. Join the leaders in Private AI for enterprise knowledge management."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide2",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Christopher Yeo brings 25+ years of proven entrepreneurial success and AI expertise to enterprise transformation"
+            },
+            {
+                "type": "list_item",
+                "text": "iFusion (1994): Scaled with clients like Motorola; pioneered e-business solutions"
+            },
+            {
+                "type": "list_item",
+                "text": "Comex Frontier: Expanded across Asia-Pacific with Panasonic; acquired by Four Soft (2005)"
+            },
+            {
+                "type": "list_item",
+                "text": "aSpecial Media (2011): Co-founder; built interest profiling technology for media companies"
+            },
+            {
+                "type": "paragraph",
+                "text": "First-class honours in Computer Science & Mathematics from University of Waikato"
+            },
+            {
+                "type": "list_item",
+                "text": "Board Member: Cap Vista (Singapore MINDEF)"
+            },
+            {
+                "type": "list_item",
+                "text": "Advisory Boards: Credence Fund, Agency for Integrated Care (Singapore MOH)"
+            },
+            {
+                "type": "list_item",
+                "text": "Mentorship: 15+ companies across technology and AI sectors"
+            },
+            {
+                "type": "list_item",
+                "text": "Senior Roles: A*STAR, NUS, Singapore Press Holdings"
+            },
+            {
+                "type": "paragraph",
+                "text": "25+ years in technology, specialized in AI solutions for enterprise transformation and knowledge management"
+            },
+            {
+                "type": "callout_box",
+                "text": "Proven Serial Entrepreneur | Christopher has successfully founded, scaled, and exited multiple technology companies, with deep expertise in enterprise software, AI platforms, and Asia-Pacific market expansion."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide3",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Sentient.io management team combines deep AI expertise with proven enterprise sales execution"
+            },
+            {
+                "type": "table_header",
+                "text": "Function"
+            },
+            {
+                "type": "table_header",
+                "text": "Key Capabilities"
+            },
+            {
+                "type": "table_header",
+                "text": "Experience"
+            },
+            {
+                "type": "table_header",
+                "text": "Market Focus"
+            },
+            {
+                "type": "table_cell",
+                "text": "Executive Leadership"
+            },
+            {
+                "type": "table_cell",
+                "text": "Strategic vision, fundraising, international expansion"
+            },
+            {
+                "type": "table_cell",
+                "text": "25+ years tech entrepreneurship"
+            },
+            {
+                "type": "table_cell",
+                "text": "Singapore, Japan, Indonesia"
+            },
+            {
+                "type": "table_cell",
+                "text": "Science & Research"
+            },
+            {
+                "type": "table_cell",
+                "text": "AI/ML algorithms, NLP, knowledge graphs"
+            },
+            {
+                "type": "table_cell",
+                "text": "PhD-level researchers"
+            },
+            {
+                "type": "table_cell",
+                "text": "Global AI advancement"
+            },
+            {
+                "type": "table_cell",
+                "text": "Sales & Business Dev"
+            },
+            {
+                "type": "table_cell",
+                "text": "Enterprise sales, government relations"
+            },
+            {
+                "type": "table_cell",
+                "text": "Government, defense, manufacturing"
+            },
+            {
+                "type": "table_cell",
+                "text": "APAC enterprise clients"
+            },
+            {
+                "type": "table_cell",
+                "text": "Engineering & Operations"
+            },
+            {
+                "type": "table_cell",
+                "text": "Cloud infrastructure, security, integrations"
+            },
+            {
+                "type": "table_cell",
+                "text": "Mission-critical deployments"
+            },
+            {
+                "type": "table_cell",
+                "text": "Enterprise IT systems"
+            },
+            {
+                "type": "stat_value",
+                "text": "22"
+            },
+            {
+                "type": "stat_label",
+                "text": "Total team members"
+            },
+            {
+                "type": "stat_value",
+                "text": "5"
+            },
+            {
+                "type": "stat_label",
+                "text": "Board members"
+            },
+            {
+                "type": "stat_value",
+                "text": "8"
+            },
+            {
+                "type": "stat_label",
+                "text": "Years of operations"
+            },
+            {
+                "type": "stat_value",
+                "text": "3"
+            },
+            {
+                "type": "stat_label",
+                "text": "Core markets"
+            },
+            {
+                "type": "paragraph",
+                "text": "Backed by leading corporate investors who provide strategic market access, validation, and deep industry expertise across target verticals including government, defense, manufacturing, and financial services."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide4",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Enterprises face critical knowledge management challenges that existing solutions cannot address at scale"
+            },
+            {
+                "type": "framework_item",
+                "text": "Information Fragmentation | Corporate data scattered across cloud drives, PC folders, thumb drives, and hard disks, making retrieval nearly impossible when needed"
+            },
+            {
+                "type": "framework_item",
+                "text": "Productivity Loss | Employees spend significant time searching for information, delaying critical business decisions and reducing operational efficiency"
+            },
+            {
+                "type": "framework_item",
+                "text": "Security & Compliance Risks | Traditional AI solutions require uploading sensitive data to public clouds, creating unacceptable security vulnerabilities"
+            },
+            {
+                "type": "framework_item",
+                "text": "Scale & Context Limitations | Current solutions cannot handle enterprise-scale document volumes or understand complex knowledge relationships"
+            },
+            {
+                "type": "stat_value",
+                "text": "85%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Enterprises adopting AI"
+            },
+            {
+                "type": "stat_value",
+                "text": "92%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Concerned about data privacy"
+            },
+            {
+                "type": "stat_value",
+                "text": "78%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Need better knowledge mgmt"
+            },
+            {
+                "type": "stat_value",
+                "text": "$7.5B"
+            },
+            {
+                "type": "stat_label",
+                "text": "Total addressable market"
+            },
+            {
+                "type": "callout_box",
+                "text": "Core Problem Statement | \"Finding Corporate Information just when you need it!\" - The fundamental challenge every enterprise faces in the digital age, where knowledge workers spend up to 30% of their time searching for information."
+            },
+            {
+                "type": "paragraph",
+                "text": "Key trends accelerating demand for enterprise AI solutions include increasing data volumes, remote work requirements, regulatory compliance needs, and competitive pressure for faster decision-making. Organizations require solutions that can process millions of documents while maintaining complete data privacy and security."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide5",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Asia-Pacific AI market represents $7.5B opportunity with 65% CAGR driving Sentient.io's expansion strategy"
+            },
+            {
+                "type": "stat_value",
+                "text": "$3.9B"
+            },
+            {
+                "type": "stat_label",
+                "text": "Singapore AI Market"
+            },
+            {
+                "type": "stat_value",
+                "text": "$2.3B"
+            },
+            {
+                "type": "stat_label",
+                "text": "Indonesia AI Market"
+            },
+            {
+                "type": "stat_value",
+                "text": "$1.3B"
+            },
+            {
+                "type": "stat_label",
+                "text": "Japan AI Market"
+            },
+            {
+                "type": "stat_value",
+                "text": "$1.0B"
+            },
+            {
+                "type": "stat_label",
+                "text": "Other APAC Markets"
+            },
+            {
+                "type": "table_header",
+                "text": "Market"
+            },
+            {
+                "type": "table_header",
+                "text": "Size (USD)"
+            },
+            {
+                "type": "table_header",
+                "text": "Key Drivers"
+            },
+            {
+                "type": "table_header",
+                "text": "Entry Strategy"
+            },
+            {
+                "type": "table_cell",
+                "text": "Singapore"
+            },
+            {
+                "type": "table_cell",
+                "text": "$3.9B"
+            },
+            {
+                "type": "table_cell",
+                "text": "Government digitalization, Smart Nation initiative"
+            },
+            {
+                "type": "table_cell",
+                "text": "Direct sales, established presence"
+            },
+            {
+                "type": "table_cell",
+                "text": "Indonesia"
+            },
+            {
+                "type": "table_cell",
+                "text": "$2.3B"
+            },
+            {
+                "type": "table_cell",
+                "text": "Large enterprise base, digital transformation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Partner-led expansion"
+            },
+            {
+                "type": "table_cell",
+                "text": "Japan"
+            },
+            {
+                "type": "table_cell",
+                "text": "$1.3B"
+            },
+            {
+                "type": "table_cell",
+                "text": "Manufacturing automation, aging workforce"
+            },
+            {
+                "type": "table_cell",
+                "text": "Strategic co-sell partnerships"
+            },
+            {
+                "type": "table_cell",
+                "text": "US & EU"
+            },
+            {
+                "type": "table_cell",
+                "text": "$1.0B+"
+            },
+            {
+                "type": "table_cell",
+                "text": "Enterprise AI adoption, compliance requirements"
+            },
+            {
+                "type": "table_cell",
+                "text": "Key beachheads, lighthouse clients"
+            },
+            {
+                "type": "list_item",
+                "text": "Government & Defense: High-security requirements, proven track record with Singapore agencies"
+            },
+            {
+                "type": "list_item",
+                "text": "Manufacturing: Quality control, supply chain optimization, proven success in Japan automotive"
+            },
+            {
+                "type": "list_item",
+                "text": "Financial Services: Regulatory compliance, risk management, document processing"
+            },
+            {
+                "type": "list_item",
+                "text": "Insurance: Claims processing, underwriting, customer service automation"
+            },
+            {
+                "type": "list_item",
+                "text": "Retail & E-commerce: Customer insights, inventory optimization, personalization"
+            },
+            {
+                "type": "list_item",
+                "text": "Increasing enterprise AI adoption (85% of organizations)"
+            },
+            {
+                "type": "list_item",
+                "text": "Growing data privacy and security concerns (92% of enterprises)"
+            },
+            {
+                "type": "list_item",
+                "text": "Remote work driving knowledge management needs"
+            },
+            {
+                "type": "list_item",
+                "text": "Regulatory compliance requirements across industries"
+            },
+            {
+                "type": "list_item",
+                "text": "Competitive pressure for faster decision-making"
+            },
+            {
+                "type": "framework_item",
+                "text": "Proven Enterprise Demand | Current pipeline of $2.5M SGD with active negotiations across government, manufacturing, and financial services sectors"
+            },
+            {
+                "type": "framework_item",
+                "text": "Geographic Diversification | Successfully operating in Singapore, Indonesia, and Japan with established client relationships and proven revenue streams"
+            },
+            {
+                "type": "framework_item",
+                "text": "Industry Validation | Live deployments with top-tier clients including Japan's largest automotive manufacturers and Singapore government agencies"
+            },
+            {
+                "type": "framework_item",
+                "text": "Revenue Growth Trajectory | 65% CAGR demonstrates strong market adoption and validates product-market fit across multiple verticals"
+            },
+            {
+                "type": "callout_box",
+                "text": "Total Addressable Market Opportunity | $7.5B across core APAC markets provides substantial runway for growth. Private AI for enterprise knowledge management represents an underserved segment with significant competitive advantages over public cloud solutions."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide6",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "SmartChat transforms enterprise knowledge access through natural language AI while maintaining complete data privacy"
+            },
+            {
+                "type": "list_item",
+                "text": "24/7 Availability: Always accessible for instant knowledge retrieval"
+            },
+            {
+                "type": "list_item",
+                "text": "Natural Language Interface: Engage in conversations, not search-like queries"
+            },
+            {
+                "type": "list_item",
+                "text": "Easy Document Training: Simple upload and management system"
+            },
+            {
+                "type": "list_item",
+                "text": "Personalized Responses: Intelligent, context-aware answers"
+            },
+            {
+                "type": "list_item",
+                "text": "Multi-Channel Support: Web, mobile, WhatsApp, Telegram platforms"
+            },
+            {
+                "type": "list_item",
+                "text": "Accelerated Decision-Making: Find the right answer, instantly"
+            },
+            {
+                "type": "list_item",
+                "text": "Enhanced Customer Service: Contextual, human-like engagement"
+            },
+            {
+                "type": "list_item",
+                "text": "Boost Productivity: Automate repetitive queries and knowledge retrieval"
+            },
+            {
+                "type": "list_item",
+                "text": "Strengthen Compliance: Maintain strict control over sensitive data"
+            },
+            {
+                "type": "list_item",
+                "text": "Latest AI LLM Technology: Built on cutting-edge Large Language Models"
+            },
+            {
+                "type": "list_item",
+                "text": "Knowledge Graph Enrichment: Advanced relationships understanding"
+            },
+            {
+                "type": "list_item",
+                "text": "Private AI Engine: Secure environment for proprietary knowledge"
+            },
+            {
+                "type": "list_item",
+                "text": "Pre-built Integrations: Ready connectors for enterprise systems"
+            },
+            {
+                "type": "list_item",
+                "text": "Advanced NLP: Sophisticated natural language processing"
+            },
+            {
+                "type": "list_item",
+                "text": "On-Premise: Complete control within your infrastructure"
+            },
+            {
+                "type": "list_item",
+                "text": "Private Cloud: Dedicated cloud environment"
+            },
+            {
+                "type": "list_item",
+                "text": "Hybrid: Flexible deployment across environments"
+            },
+            {
+                "type": "callout_box",
+                "text": "SmartChat Demo Highlights | Live demonstrations show SmartChat processing millions of enterprise documents, understanding complex relationships, and delivering precise answers in natural language conversations. The platform learns from organizational knowledge while maintaining complete data privacy."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide7",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Sentient.io's private AI deployment provides superior enterprise value compared to public cloud alternatives"
+            },
+            {
+                "type": "table_header",
+                "text": "Feature"
+            },
+            {
+                "type": "table_header",
+                "text": "SmartChat"
+            },
+            {
+                "type": "table_header",
+                "text": "ChatGPT"
+            },
+            {
+                "type": "table_header",
+                "text": "Enterprise Impact"
+            },
+            {
+                "type": "table_cell",
+                "text": "Deployment Options"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 On-premise + Private Cloud"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c Public Cloud Only"
+            },
+            {
+                "type": "table_cell",
+                "text": "Complete data sovereignty"
+            },
+            {
+                "type": "table_cell",
+                "text": "Data Privacy"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 100% Private"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u26a0\ufe0f May use for model training"
+            },
+            {
+                "type": "table_cell",
+                "text": "Regulatory compliance assured"
+            },
+            {
+                "type": "table_cell",
+                "text": "Document Scale"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Millions of Documents"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c Few documents per query"
+            },
+            {
+                "type": "table_cell",
+                "text": "Enterprise-wide knowledge access"
+            },
+            {
+                "type": "table_cell",
+                "text": "Forget Function"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Can forget outdated info"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c Impossible to forget"
+            },
+            {
+                "type": "table_cell",
+                "text": "Information lifecycle management"
+            },
+            {
+                "type": "table_cell",
+                "text": "Enterprise Integration"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Pre-built connectors"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c Limited integration"
+            },
+            {
+                "type": "table_cell",
+                "text": "Seamless workflow integration"
+            },
+            {
+                "type": "list_item",
+                "text": "Private AI Engine: Environment designed for enterprise proprietary knowledge contexts"
+            },
+            {
+                "type": "list_item",
+                "text": "Knowledge Graph Enrichment: Strengthens relationships and context understanding"
+            },
+            {
+                "type": "list_item",
+                "text": "Pre-built Integrations: Major enterprise systems connectivity"
+            },
+            {
+                "type": "list_item",
+                "text": "Multilingual Processing: 95+ languages support for global operations"
+            },
+            {
+                "type": "list_item",
+                "text": "Security First: No corporate data leaves enterprise environment"
+            },
+            {
+                "type": "list_item",
+                "text": "Enterprise Scale: Handle millions of documents with context"
+            },
+            {
+                "type": "list_item",
+                "text": "Regulatory Compliance: Built for highly regulated industries"
+            },
+            {
+                "type": "list_item",
+                "text": "Proven Track Record: Live deployments with government and Fortune 500"
+            }
+        ]
+    },
+    {
+        "slide_id": "slide8",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Comprehensive competitive analysis demonstrates SmartChat's superior enterprise capabilities"
+            },
+            {
+                "type": "table_header",
+                "text": "Feature"
+            },
+            {
+                "type": "table_header",
+                "text": "SmartChat"
+            },
+            {
+                "type": "table_header",
+                "text": "DocsBot AI"
+            },
+            {
+                "type": "table_header",
+                "text": "ChatDOC"
+            },
+            {
+                "type": "table_header",
+                "text": "FastBots AI"
+            },
+            {
+                "type": "table_header",
+                "text": "docAnalyzer.ai"
+            },
+            {
+                "type": "table_cell",
+                "text": "File Types Supported"
+            },
+            {
+                "type": "table_cell",
+                "text": "DOCX, XLSX, PDF, TXT, HTML, Video, Audio"
+            },
+            {
+                "type": "table_cell",
+                "text": "DOCX, XLSX, PDF, TXT, HTML, Notion"
+            },
+            {
+                "type": "table_cell",
+                "text": "PDF, DOCX, TXT, Markdown, scanned"
+            },
+            {
+                "type": "table_cell",
+                "text": "DOCX, XLSX, PDF, CSV, YouTube"
+            },
+            {
+                "type": "table_cell",
+                "text": "EPUB, RTF, ODT, DOCX, TXT"
+            },
+            {
+                "type": "table_cell",
+                "text": "Image Search"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Advanced"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Yes"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Yes"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c No"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Yes"
+            },
+            {
+                "type": "table_cell",
+                "text": "Audio/Video Integration"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Full Support"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c No"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c No"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 YouTube only"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c No"
+            },
+            {
+                "type": "table_cell",
+                "text": "Deployment Options"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Cloud + On-Premise"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Cloud + On-Premise"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c Cloud only"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c Cloud only"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c Cloud only"
+            },
+            {
+                "type": "table_cell",
+                "text": "Question Categorization"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Advanced AI"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c No"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c No"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c No"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u26a0\ufe0f Basic tags"
+            },
+            {
+                "type": "table_cell",
+                "text": "Feedback Mechanism"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Comprehensive"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udc4d / \ud83d\udc4e only"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c None"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u274c None"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u26a0\ufe0f Limited"
+            },
+            {
+                "type": "table_cell",
+                "text": "Multilingual Support"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 95+ languages"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 95+ languages"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Basic"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 95+ languages"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 15+ languages"
+            },
+            {
+                "type": "table_cell",
+                "text": "Enterprise Features"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Full suite"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u26a0\ufe0f Limited"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u26a0\ufe0f Limited"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u26a0\ufe0f Limited"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u26a0\ufe0f Limited"
+            },
+            {
+                "type": "callout_box",
+                "text": "Key Competitive Advantages | SmartChat is the only solution offering complete enterprise deployment flexibility, advanced multimedia processing, and comprehensive feedback mechanisms while maintaining the highest security standards for regulated industries."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide9",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Dual revenue strategy combining high-value custom solutions with scalable SmartChat subscriptions drives sustainable growth"
+            },
+            {
+                "type": "table_header",
+                "text": "Revenue Stream"
+            },
+            {
+                "type": "table_header",
+                "text": "Current %"
+            },
+            {
+                "type": "table_header",
+                "text": "Target % (2026)"
+            },
+            {
+                "type": "table_header",
+                "text": "Growth Strategy"
+            },
+            {
+                "type": "table_cell",
+                "text": "Custom AI Solutions"
+            },
+            {
+                "type": "table_cell",
+                "text": "75%"
+            },
+            {
+                "type": "table_cell",
+                "text": "25%"
+            },
+            {
+                "type": "table_cell",
+                "text": "High-value enterprise contracts"
+            },
+            {
+                "type": "table_cell",
+                "text": "SmartChat Subscriptions"
+            },
+            {
+                "type": "table_cell",
+                "text": "25%"
+            },
+            {
+                "type": "table_cell",
+                "text": "75%"
+            },
+            {
+                "type": "table_cell",
+                "text": "Volume-based rapid adoption"
+            },
+            {
+                "type": "list_item",
+                "text": "Direct Sales: Enterprise teams, government relations"
+            },
+            {
+                "type": "list_item",
+                "text": "Regional Distributors: Singapore to Indonesia expansion"
+            },
+            {
+                "type": "list_item",
+                "text": "Strategic Partners: F5, Tenacity, Leave-A-Nest, JETRO"
+            },
+            {
+                "type": "list_item",
+                "text": "Events & Digital: SWITCH, JPX, webinars, content marketing"
+            },
+            {
+                "type": "list_item",
+                "text": "Brand Name Customers: Several large Japanese automobile brands, Singapore-based clients"
+            },
+            {
+                "type": "list_item",
+                "text": "High Impact Products: AI platform hosting variety of models for easy implementation"
+            },
+            {
+                "type": "list_item",
+                "text": "Recurring Revenue: Brand name clients providing recurring revenue streams"
+            },
+            {
+                "type": "list_item",
+                "text": "Direct Sales Success: Referrals from clients, shareholders, Singapore government"
+            },
+            {
+                "type": "list_item",
+                "text": "Recurring Revenue: 75% of total revenue base"
+            },
+            {
+                "type": "list_item",
+                "text": "Client Retention: 90%+ retention rate"
+            },
+            {
+                "type": "list_item",
+                "text": "Gross Margins: 73% and improving"
+            },
+            {
+                "type": "list_item",
+                "text": "Scalability: Platform approach enables rapid scaling"
+            },
+            {
+                "type": "stat_value",
+                "text": "6yrs"
+            },
+            {
+                "type": "stat_label",
+                "text": "MediaCorp partnership"
+            },
+            {
+                "type": "stat_value",
+                "text": "3yrs"
+            },
+            {
+                "type": "stat_label",
+                "text": "DSTA engagement"
+            },
+            {
+                "type": "stat_value",
+                "text": "73%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Gross margin achieved"
+            },
+            {
+                "type": "stat_value",
+                "text": "90%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Client retention rate"
+            }
+        ]
+    },
+    {
+        "slide_id": "slide10",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Successful enterprise deployments across diverse industries validate SmartChat's market-leading capabilities"
+            },
+            {
+                "type": "framework_item",
+                "text": "Steel Manufacturing (Japan) | Top 5 steel manufacturer - quality inspection AI system with 1000x reduction in false rejection rates"
+            },
+            {
+                "type": "framework_item",
+                "text": "Automotive Manufacturing (Japan) | Leading automotive manufacturer - AI for supply chain optimization and operational efficiency"
+            },
+            {
+                "type": "framework_item",
+                "text": "Broadcasting (Singapore) | Largest broadcaster - video transcription and translation for 6+ years of successful partnership"
+            },
+            {
+                "type": "framework_item",
+                "text": "Defense Agencies (Singapore) | Two top defense agencies - confidential AI implementations with highest security clearances"
+            },
+            {
+                "type": "framework_item",
+                "text": "Office Solutions (Japan) | Top 5 office solutions manufacturer - customer service AI enhancing client engagement"
+            },
+            {
+                "type": "framework_item",
+                "text": "Government Ministry (Singapore) | Government Ministry implementation - classified project demonstrating public sector trust"
+            },
+            {
+                "type": "list_item",
+                "text": "Singapore: Government and defense sector penetration"
+            },
+            {
+                "type": "list_item",
+                "text": "Japan: Manufacturing and automotive industry success"
+            },
+            {
+                "type": "list_item",
+                "text": "Indonesia: Financial services and enterprise expansion"
+            },
+            {
+                "type": "list_item",
+                "text": "Diverse Verticals: Manufacturing, government, media, defense"
+            },
+            {
+                "type": "list_item",
+                "text": "Implementation Success Rate: 100% successful deployments"
+            },
+            {
+                "type": "list_item",
+                "text": "Client Retention: 90%+ retention across all verticals"
+            },
+            {
+                "type": "list_item",
+                "text": "ROI Demonstration: Measurable productivity improvements"
+            },
+            {
+                "type": "list_item",
+                "text": "Security Compliance: Zero security incidents across all deployments"
+            },
+            {
+                "type": "list_item",
+                "text": "Mission-Critical Applications: AI integrated into core business processes"
+            },
+            {
+                "type": "list_item",
+                "text": "Long-term Partnerships: Multi-year contracts with renewal rates"
+            },
+            {
+                "type": "list_item",
+                "text": "High-value Use Cases: Substantial ROI and operational impact"
+            },
+            {
+                "type": "list_item",
+                "text": "Large-scale Interest: Enterprise-wide deployment potential"
+            },
+            {
+                "type": "list_item",
+                "text": "Proven Scalability: Solutions scale across different markets"
+            },
+            {
+                "type": "list_item",
+                "text": "Cultural Adaptation: Success across diverse business cultures"
+            },
+            {
+                "type": "list_item",
+                "text": "Regulatory Compliance: Meeting different jurisdictional requirements"
+            },
+            {
+                "type": "list_item",
+                "text": "Technology Transfer: Successful knowledge transfer to new markets"
+            }
+        ]
+    },
+    {
+        "slide_id": "slide11",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Healthy sales pipeline of $2.5M demonstrates strong market demand with high-confidence near-term opportunities"
+            },
+            {
+                "type": "stat_value",
+                "text": "$2.5M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Current qualified pipeline (SGD)"
+            },
+            {
+                "type": "stat_value",
+                "text": "5"
+            },
+            {
+                "type": "stat_label",
+                "text": "Organizations in final negotiations"
+            },
+            {
+                "type": "stat_value",
+                "text": "3"
+            },
+            {
+                "type": "stat_label",
+                "text": "Live pilots being conducted"
+            },
+            {
+                "type": "stat_value",
+                "text": "50%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Pipeline split direct vs. partners"
+            },
+            {
+                "type": "table_header",
+                "text": "Organization"
+            },
+            {
+                "type": "table_header",
+                "text": "Status"
+            },
+            {
+                "type": "table_header",
+                "text": "Sector"
+            },
+            {
+                "type": "table_header",
+                "text": "Timeline"
+            },
+            {
+                "type": "table_cell",
+                "text": "Blue Prism (Asia)"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 Won - Going Live"
+            },
+            {
+                "type": "table_cell",
+                "text": "Technology"
+            },
+            {
+                "type": "table_cell",
+                "text": "Implementing"
+            },
+            {
+                "type": "table_cell",
+                "text": "Intikom (Jakarta)"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Trial Conducting"
+            },
+            {
+                "type": "table_cell",
+                "text": "Technology"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q1 2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "BRI Bank (Jakarta)"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Trial Conducting"
+            },
+            {
+                "type": "table_cell",
+                "text": "Financial Services"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q1 2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "BNI Life Insurance"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Trial Conducting"
+            },
+            {
+                "type": "table_cell",
+                "text": "Insurance"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q1 2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "Goldbell Engineering"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Contract Negotiation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Engineering"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q4 2024"
+            },
+            {
+                "type": "table_cell",
+                "text": "SATS Singapore"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Contract Negotiation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Logistics"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q1 2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "HP International"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Contract Negotiation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Technology"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q1 2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "GovTech GIROC"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Contract Negotiation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Government"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q2 2025"
+            },
+            {
+                "type": "table_header",
+                "text": "Organization"
+            },
+            {
+                "type": "table_header",
+                "text": "Value (SGD)"
+            },
+            {
+                "type": "table_header",
+                "text": "Status"
+            },
+            {
+                "type": "table_header",
+                "text": "Sector"
+            },
+            {
+                "type": "table_cell",
+                "text": "DSTA (Years 2&3)"
+            },
+            {
+                "type": "table_cell",
+                "text": "Confidential"
+            },
+            {
+                "type": "table_cell",
+                "text": "\u2705 PO in April"
+            },
+            {
+                "type": "table_cell",
+                "text": "Defense"
+            },
+            {
+                "type": "table_cell",
+                "text": "Asia Paper & Pulp"
+            },
+            {
+                "type": "table_cell",
+                "text": "$1.5M"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 Negotiation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Manufacturing"
+            },
+            {
+                "type": "table_cell",
+                "text": "AIHEC US"
+            },
+            {
+                "type": "table_cell",
+                "text": "US$500K"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 AI Platform"
+            },
+            {
+                "type": "table_cell",
+                "text": "Technology"
+            },
+            {
+                "type": "table_cell",
+                "text": "Endangered Languages"
+            },
+            {
+                "type": "table_cell",
+                "text": "US$500K"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe0 ASR Project"
+            },
+            {
+                "type": "table_cell",
+                "text": "Government"
+            },
+            {
+                "type": "table_cell",
+                "text": "MCO MINDEF"
+            },
+            {
+                "type": "table_cell",
+                "text": "$500K"
+            },
+            {
+                "type": "table_cell",
+                "text": "\ud83d\udfe3 Proposal"
+            },
+            {
+                "type": "table_cell",
+                "text": "Defense"
+            },
+            {
+                "type": "callout_box",
+                "text": "Pipeline Quality & Conversion | Balanced sales motion with even split between direct and partner channels. High-confidence opportunities based on established relationships and proven pilot success rates. Expected conversion rate of 70%+ based on historical performance."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide12",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Strong revenue growth trajectory with improving margins demonstrates clear path to profitability"
+            },
+            {
+                "type": "table_header",
+                "text": "Year"
+            },
+            {
+                "type": "table_header",
+                "text": "Revenue (SGD M)"
+            },
+            {
+                "type": "table_header",
+                "text": "Gross Profit (SGD M)"
+            },
+            {
+                "type": "table_header",
+                "text": "Operating Expenses (SGD M)"
+            },
+            {
+                "type": "table_header",
+                "text": "EBITDA (SGD M)"
+            },
+            {
+                "type": "table_header",
+                "text": "Rev/Op Expense Ratio"
+            },
+            {
+                "type": "table_cell",
+                "text": "2020"
+            },
+            {
+                "type": "table_cell",
+                "text": "$0.19"
+            },
+            {
+                "type": "table_cell",
+                "text": "n.m."
+            },
+            {
+                "type": "table_cell",
+                "text": "($4.13)"
+            },
+            {
+                "type": "table_cell",
+                "text": "($4.45)"
+            },
+            {
+                "type": "table_cell",
+                "text": "5%"
+            },
+            {
+                "type": "table_cell",
+                "text": "2021"
+            },
+            {
+                "type": "table_cell",
+                "text": "$0.36"
+            },
+            {
+                "type": "table_cell",
+                "text": "n.m."
+            },
+            {
+                "type": "table_cell",
+                "text": "($3.44)"
+            },
+            {
+                "type": "table_cell",
+                "text": "($3.65)"
+            },
+            {
+                "type": "table_cell",
+                "text": "10%"
+            },
+            {
+                "type": "table_cell",
+                "text": "2022"
+            },
+            {
+                "type": "table_cell",
+                "text": "$1.17"
+            },
+            {
+                "type": "table_cell",
+                "text": "$0.77"
+            },
+            {
+                "type": "table_cell",
+                "text": "($4.03)"
+            },
+            {
+                "type": "table_cell",
+                "text": "($3.26)"
+            },
+            {
+                "type": "table_cell",
+                "text": "29%"
+            },
+            {
+                "type": "table_cell",
+                "text": "2023"
+            },
+            {
+                "type": "table_cell",
+                "text": "$1.55"
+            },
+            {
+                "type": "table_cell",
+                "text": "$0.74"
+            },
+            {
+                "type": "table_cell",
+                "text": "($2.35)"
+            },
+            {
+                "type": "table_cell",
+                "text": "($1.61)"
+            },
+            {
+                "type": "table_cell",
+                "text": "66%"
+            },
+            {
+                "type": "table_cell",
+                "text": "2024"
+            },
+            {
+                "type": "table_cell",
+                "text": "$1.42"
+            },
+            {
+                "type": "table_cell",
+                "text": "$1.04"
+            },
+            {
+                "type": "table_cell",
+                "text": "($1.19)"
+            },
+            {
+                "type": "table_cell",
+                "text": "($0.15)"
+            },
+            {
+                "type": "table_cell",
+                "text": "119%"
+            },
+            {
+                "type": "stat_value",
+                "text": "65%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Revenue CAGR (2020-2024)"
+            },
+            {
+                "type": "stat_value",
+                "text": "73%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Gross profit margin (2024)"
+            },
+            {
+                "type": "stat_value",
+                "text": "119%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Rev/Op expense ratio"
+            },
+            {
+                "type": "stat_value",
+                "text": "90%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Client retention rate"
+            },
+            {
+                "type": "table_header",
+                "text": "Year"
+            },
+            {
+                "type": "table_header",
+                "text": "Revenue Target"
+            },
+            {
+                "type": "table_header",
+                "text": "Key Drivers"
+            },
+            {
+                "type": "table_header",
+                "text": "Market Focus"
+            },
+            {
+                "type": "table_cell",
+                "text": "2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "$3-4M SGD"
+            },
+            {
+                "type": "table_cell",
+                "text": "SEA expansion, SmartChat scaling"
+            },
+            {
+                "type": "table_cell",
+                "text": "Singapore, Indonesia"
+            },
+            {
+                "type": "table_cell",
+                "text": "2026"
+            },
+            {
+                "type": "table_cell",
+                "text": "$6-7M SGD"
+            },
+            {
+                "type": "table_cell",
+                "text": "75% product revenue focus"
+            },
+            {
+                "type": "table_cell",
+                "text": "Japan acceleration"
+            },
+            {
+                "type": "table_cell",
+                "text": "2027"
+            },
+            {
+                "type": "table_cell",
+                "text": "$10M USD"
+            },
+            {
+                "type": "table_cell",
+                "text": "IPO preparation milestone"
+            },
+            {
+                "type": "table_cell",
+                "text": "US & EU entry"
+            },
+            {
+                "type": "list_item",
+                "text": "Recurring Revenue: 75% of total revenue base with high retention"
+            },
+            {
+                "type": "list_item",
+                "text": "Gross Margin Improvement: Consistent improvement to 73%"
+            },
+            {
+                "type": "list_item",
+                "text": "Operational Efficiency: Revenue/expense ratio reaching 119%"
+            },
+            {
+                "type": "list_item",
+                "text": "Path to Profitability: Clear trajectory with improving metrics"
+            },
+            {
+                "type": "list_item",
+                "text": "Strong Governance: Robust financial controls and tracking"
+            },
+            {
+                "type": "list_item",
+                "text": "Enterprise Customer Base: High-value, long-term contracts"
+            },
+            {
+                "type": "list_item",
+                "text": "Revenue Quality: Diversified across sectors and geographies"
+            },
+            {
+                "type": "list_item",
+                "text": "Growth Sustainability: Scalable platform supporting expansion"
+            },
+            {
+                "type": "callout_box",
+                "text": "Key Financial Milestone | Expected growth spurt from 2025 to 2027 driven by expansion of indirect sales channels, cost control, and transition to 75% product revenue from SmartChat subscriptions supporting IPO readiness."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide13",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "$10M Series B2 funding round accelerates market expansion and positions Sentient.io for 2028 IPO success"
+            },
+            {
+                "type": "stat_value",
+                "text": "$10M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Series B2 funding amount"
+            },
+            {
+                "type": "stat_value",
+                "text": "$50M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Post-money valuation"
+            },
+            {
+                "type": "stat_value",
+                "text": "20%"
+            },
+            {
+                "type": "stat_label",
+                "text": "Equity offered"
+            },
+            {
+                "type": "stat_value",
+                "text": "6-12x"
+            },
+            {
+                "type": "stat_label",
+                "text": "Expected investor ROI"
+            },
+            {
+                "type": "framework_item",
+                "text": "Market Expansion - 40% ($4.0M) | SEA market penetration, Japan strategic partnerships, US & EU beachhead establishment"
+            },
+            {
+                "type": "framework_item",
+                "text": "Team Scaling - 30% ($3.0M) | Expand implementation teams beyond Singapore, hire client success leaders in key markets"
+            },
+            {
+                "type": "framework_item",
+                "text": "Product Development - 20% ($2.0M) | Advanced Agentic AI Platform development, enhanced SmartChat capabilities"
+            },
+            {
+                "type": "framework_item",
+                "text": "Sales & Marketing - 10% ($1.0M) | Channel partner enablement, marketing automation, inside sales team development"
+            },
+            {
+                "type": "list_item",
+                "text": "Growing Market: Organizations increasing AI spend for productivity and cost reduction"
+            },
+            {
+                "type": "list_item",
+                "text": "Scalable Product: Cloud-native platform designed for global scaling through digital marketing"
+            },
+            {
+                "type": "list_item",
+                "text": "Revenue Scaling: Proven ability to scale revenue across ASEAN and Japan markets"
+            },
+            {
+                "type": "list_item",
+                "text": "IPO Journey: Clear path to Tokyo Stock Exchange listing by 2028"
+            },
+            {
+                "type": "list_item",
+                "text": "Strong Governance: Experienced management with robust financial controls"
+            },
+            {
+                "type": "list_item",
+                "text": "Enterprise Focus: Strong customer base with recurring revenue model"
+            },
+            {
+                "type": "list_item",
+                "text": "Market Leadership: First-mover advantage in private AI for enterprises"
+            },
+            {
+                "type": "list_item",
+                "text": "Proven Traction: $2.5M pipeline with high-confidence conversion rates"
+            },
+            {
+                "type": "callout_box",
+                "text": "Expected Return Profile | Based on Tokyo Stock Exchange IPO by 2028 with projected valuation of $300-600M USD (30-60x revenue multiple), investors can expect 6-12x return on investment within 3-4 years."
+            }
+        ]
+    },
+    {
+        "slide_id": "slide14",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Four-phase execution strategy positions Sentient.io for market leadership and sustainable growth"
+            },
+            {
+                "type": "table_header",
+                "text": "Phase"
+            },
+            {
+                "type": "table_header",
+                "text": "Timeline"
+            },
+            {
+                "type": "table_header",
+                "text": "Strategic Focus"
+            },
+            {
+                "type": "table_header",
+                "text": "Key Milestones"
+            },
+            {
+                "type": "table_header",
+                "text": "Success Metrics"
+            },
+            {
+                "type": "table_cell",
+                "text": "Revenue Expansion"
+            },
+            {
+                "type": "table_cell",
+                "text": "2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "Convert high-touch projects to recurring SmartChat subscriptions"
+            },
+            {
+                "type": "table_cell",
+                "text": "$3-4M revenue target"
+            },
+            {
+                "type": "table_cell",
+                "text": "License revenue growth per account"
+            },
+            {
+                "type": "table_cell",
+                "text": "Geographic Growth"
+            },
+            {
+                "type": "table_cell",
+                "text": "2025-2026"
+            },
+            {
+                "type": "table_cell",
+                "text": "SEA partner-led sales, Japan co-sell, US beachheads"
+            },
+            {
+                "type": "table_cell",
+                "text": "Multi-market expansion"
+            },
+            {
+                "type": "table_cell",
+                "text": "Geographic revenue diversification"
+            },
+            {
+                "type": "table_cell",
+                "text": "Go-to-Market Readiness"
+            },
+            {
+                "type": "table_cell",
+                "text": "2026"
+            },
+            {
+                "type": "table_cell",
+                "text": "Channel enablement, industry playbooks, sales automation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Scalable GTM infrastructure"
+            },
+            {
+                "type": "table_cell",
+                "text": "Partner channel productivity"
+            },
+            {
+                "type": "table_cell",
+                "text": "Delivery Capability"
+            },
+            {
+                "type": "table_cell",
+                "text": "2026-2027"
+            },
+            {
+                "type": "table_cell",
+                "text": "Global implementation teams, localized support"
+            },
+            {
+                "type": "table_cell",
+                "text": "Client success scaling"
+            },
+            {
+                "type": "table_cell",
+                "text": "Implementation efficiency metrics"
+            },
+            {
+                "type": "list_item",
+                "text": "SEA Markets: Partner-led expansion through distributor networks in Indonesia and broader ASEAN"
+            },
+            {
+                "type": "list_item",
+                "text": "Japan Acceleration: Strategic co-sell partnerships leveraging existing automotive and manufacturing relationships"
+            },
+            {
+                "type": "list_item",
+                "text": "US & EU Entry: Key beachheads and lighthouse client development for market validation"
+            },
+            {
+                "type": "list_item",
+                "text": "Channel Development: Build reseller network with enablement kits and certification programs"
+            },
+            {
+                "type": "list_item",
+                "text": "Agentic AI Platform: Next-generation AI platform with advanced agent capabilities"
+            },
+            {
+                "type": "list_item",
+                "text": "SmartChat Enhancement: Improved NLP, better enterprise integrations, enhanced security"
+            },
+            {
+                "type": "list_item",
+                "text": "Industry Solutions: Vertical-specific solutions for government, manufacturing, financial services"
+            },
+            {
+                "type": "list_item",
+                "text": "Platform Partnerships: Technology integration with major enterprise software vendors"
+            },
+            {
+                "type": "framework_item",
+                "text": "Q3 2025 - Platform Enhancement | Launch Advanced Agentic AI Platform with next-generation capabilities"
+            },
+            {
+                "type": "framework_item",
+                "text": "Q4 2025 - SEA Expansion | Establish strong presence in Indonesia and expand reseller network"
+            },
+            {
+                "type": "framework_item",
+                "text": "Q2 2026 - Japan Market | Accelerate Japan market penetration through strategic partnerships"
+            },
+            {
+                "type": "framework_item",
+                "text": "Q4 2026 - US & EU Launch | Establish initial beachheads in US and European markets"
+            }
+        ]
+    },
+    {
+        "slide_id": "slide15",
+        "content": [
+            {
+                "type": "action_title",
+                "text": "Tokyo Stock Exchange IPO by 2028 provides clear exit strategy with projected $300-600M valuation"
+            },
+            {
+                "type": "table_header",
+                "text": "Milestone"
+            },
+            {
+                "type": "table_header",
+                "text": "Target Date"
+            },
+            {
+                "type": "table_header",
+                "text": "Key Requirements"
+            },
+            {
+                "type": "table_header",
+                "text": "Success Criteria"
+            },
+            {
+                "type": "table_cell",
+                "text": "Series B2 Completion"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q2 2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "$10M funding, board expansion"
+            },
+            {
+                "type": "table_cell",
+                "text": "Investor validation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Revenue Acceleration"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q4 2025"
+            },
+            {
+                "type": "table_cell",
+                "text": "$4M+ revenue run rate"
+            },
+            {
+                "type": "table_cell",
+                "text": "Growth trajectory validation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Product Revenue Focus"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q4 2026"
+            },
+            {
+                "type": "table_cell",
+                "text": "75% revenue from SmartChat"
+            },
+            {
+                "type": "table_cell",
+                "text": "Scalable business model"
+            },
+            {
+                "type": "table_cell",
+                "text": "IPO Preparation"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q2 2027"
+            },
+            {
+                "type": "table_cell",
+                "text": "$10M USD revenue target"
+            },
+            {
+                "type": "table_cell",
+                "text": "IPO readiness achieved"
+            },
+            {
+                "type": "table_cell",
+                "text": "Tokyo Stock Exchange"
+            },
+            {
+                "type": "table_cell",
+                "text": "Q1 2028"
+            },
+            {
+                "type": "table_cell",
+                "text": "Public listing completion"
+            },
+            {
+                "type": "table_cell",
+                "text": "Successful market debut"
+            },
+            {
+                "type": "list_item",
+                "text": "Exchange: Tokyo Stock Exchange Mother Board (Japan Depository Receipts)"
+            },
+            {
+                "type": "list_item",
+                "text": "Underwriters: Combination of Nomura, Mizuho, SBI, UBS (to be confirmed Q1 2027)"
+            },
+            {
+                "type": "list_item",
+                "text": "Financial Auditors: Major international accounting firm"
+            },
+            {
+                "type": "list_item",
+                "text": "Legal: Tokyo-based legal firm specializing in IPOs"
+            },
+            {
+                "type": "list_item",
+                "text": "JDR Trust Bank: Depository services for international investors"
+            },
+            {
+                "type": "list_item",
+                "text": "Revenue Multiple: 30-60x based on AI SaaS comparables"
+            },
+            {
+                "type": "list_item",
+                "text": "Market Position: Premium valuation for APAC market leadership"
+            },
+            {
+                "type": "list_item",
+                "text": "Geographic Diversification: Enhanced valuation through multi-market presence"
+            },
+            {
+                "type": "list_item",
+                "text": "Growth Profile: Sustainable 30%+ annual growth trajectory"
+            },
+            {
+                "type": "stat_value",
+                "text": "$10M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Target revenue (USD) for IPO"
+            },
+            {
+                "type": "stat_value",
+                "text": "$300-600M"
+            },
+            {
+                "type": "stat_label",
+                "text": "Projected IPO valuation (USD)"
+            },
+            {
+                "type": "stat_value",
+                "text": "2028"
+            },
+            {
+                "type": "stat_label",
+                "text": "Target IPO year"
+            },
+            {
+                "type": "stat_value",
+                "text": "6-12x"
+            },
+            {
+                "type": "stat_label",
+                "text": "Expected investor returns"
+            },
+            {
+                "type": "callout_box",
+                "text": "Why Tokyo Stock Exchange? | Strategic choice based on strong Japan market presence, favorable regulatory environment for AI companies, and access to technology-focused investor base. TSE provides optimal platform for continued APAC expansion and global growth."
+            },
+            {
+                "type": "framework_item",
+                "text": "Market Leadership | Establish dominant position in APAC private AI market with 75% product revenue"
+            },
+            {
+                "type": "framework_item",
+                "text": "Global Expansion | Accelerate US and European market entry with IPO capital and credibility"
+            },
+            {
+                "type": "framework_item",
+                "text": "Technology Innovation | Continue R&D investment in next-generation AI and agentic platforms"
+            },
+            {
+                "type": "framework_item",
+                "text": "Strategic Acquisitions | Pursue complementary technology and market access acquisitions"
+            }
+        ]
+    }
+]
