@@ -38,6 +38,15 @@ transformation and knowledge management
 
 ## Sentient.io management team combines deep AI expertise with proven enterprise sales execution
 
+### Executive Leadership
+
+- **Christopher Yeo** – Founder / CEO – Chief architect behind Sentient.io, with over 25 years of experience in the technology industry, including key leadership roles at Singapore Press Holdings where he pioneered digital transformation initiatives across media platforms.
+- **Eddie Leong** – CFO – Brings extensive experience in financial strategy and IT project management, with a distinguished track record in Government Investment Corporation where he led large-scale digital transformation programs and financial system implementations.
+- **Priya Somasundaram** – Technology, VP – A technology leader with deep expertise in full-stack engineering, Priya previously led critical IT infrastructure projects at Singapore Press Holdings, driving innovation in media technology solutions.
+- **Gloria Koh** – Corporate Development, VP – Specializes in Asia-Pacific retail market, business strategy and projections, trade operations, and marketing communications.
+
+### Functional Expertise
+
 | Function | Key Capabilities | Experience | Market Focus |
 | --- | --- | --- | --- |
 | Executive Leadership | Strategic vision, fundraising, international expansion | 25+ years tech entrepreneurship | Singapore, Japan, Indonesia |
@@ -45,17 +54,12 @@ transformation and knowledge management
 | Sales & Business Dev | Enterprise sales, government relations | Government, defense, manufacturing | APAC enterprise clients |
 | Engineering & Operations | Cloud infrastructure, security, integrations | Mission-critical deployments | Enterprise IT systems |
 
-**22:** Total team members
-
-**5:** Board members
-
-**8:** Years of operations
-
+**22:** Total team members  
+**5:** Board members  
+**8:** Years of operations  
 **3:** Core markets
 
-Backed by leading corporate investors who provide strategic market access,
-validation, and deep industry expertise across target verticals including
-government, defense, manufacturing, and financial services.
+Backed by leading corporate investors who provide strategic market access, validation, and deep industry expertise across target verticals including government, defense, manufacturing, and financial services.
 
 ---
 

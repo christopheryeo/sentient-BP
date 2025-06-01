@@ -67,13 +67,66 @@
 
 ## 📅 Proposed Features
 
-### V0.2.5 - Business Plan Slides 16-19 (Target: 2025-05-29)
+### V0.2.3 - Founder Slide Update (Target: 2025-06-03)
+- [ ] **Founder Slide**: Add Christopher Yeo's photo
+  - [ ] Source and optimize high-quality headshot
+  - [ ] Ensure proper sizing and placement
+  - [ ] Add professional styling and border
+  - [ ] Verify accessibility with alt text
+
+### V0.2.4 - Management Team Photos & Bios (Target: 2025-06-04)
+- [ ] **Management Team Section**: Add professional photos and detailed bios
+  - [ ] Source high-quality headshots for all team members
+    - [ ] Christopher Yeo (Founder/CEO)
+    - [ ] Eddie Leong (CFO)
+    - [ ] Priya Somasundaram (VP Technology)
+    - [ ] Gloria Koh (VP Corporate Development)
+  - [ ] Write/refine professional bios for each team member
+  - [ ] Design team layout with photos and bios
+  - [ ] Ensure responsive design for all device sizes
+  - [ ] Add hover effects or interactive elements
+  - [ ] Verify accessibility (alt text, keyboard navigation)
+  - [ ] Test loading performance with images
+
+### V0.2.5 - Company Facts Slide (Target: 2025-06-05)
+- [ ] **Company Facts Slide**: Create an engaging company overview
+  - [ ] Add key company metrics:
+    - [ ] Founded: May 2017
+    - [ ] Headquarters: Singapore
+    - [ ] Founder & CEO: Christopher Yeo
+    - [ ] Team: 22+ employees
+    - [ ] Years in Operation: 8
+    - [ ] Core Markets: 3 (Singapore, Japan, Indonesia)
+  - [ ] Include investor logos (SEEDS Capital, A*STAR, etc.)
+  - [ ] Add client/partner highlights
+  - [ ] Design with clean, modern layout
+  - [ ] Ensure mobile responsiveness
+  - [ ] Add subtle animations/transitions
+  - [ ] Include call-to-action element
+
+
+### V0.2.6 - Navigation UI Update (Target: 2025-06-06)
+- [ ] **Replace top navigation with slide buttons**
+  - [ ] Remove existing slide number navigation from top-right
+  - [ ] Add translucent Previous/Next buttons to each slide
+  - [ ] Style buttons with hover effects and smooth transitions
+  - [ ] Ensure buttons are fixed on desktop and mobile-friendly
+  - [ ] Add keyboard navigation support (left/right arrows)
+  - [ ] Implement smooth scrolling between slides
+  - [ ] Add visual feedback for current slide position
+  - [ ] Test touch interactions for mobile devices
+  - [ ] Ensure accessibility (keyboard nav, ARIA labels)
+  - [ ] Add subtle animation for button appearance/disappearance
+  - [ ] Update documentation for new navigation pattern
+
+
+### V0.2.7 - Business Plan Slides 16-19 (Target: 2025-06-05)
 - [ ] **Slide 16**: Funding Requirements
 - [ ] **Slide 17**: Use of Funds
 - [ ] **Slide 18**: Milestones & Timeline
 - [ ] **Slide 19**: Team & Advisors
 
-### V0.2.6 - Business Plan Slides 20 and Final Touches (Target: 2025-05-30)
+### V0.2.8 - Business Plan Slides 20 and Final Touches (Target: 2025-06-06)
 - [ ] **Slide 20**: Contact & Next Steps
 - [ ] **Presentation Features**
   - [ ] Table of Contents
