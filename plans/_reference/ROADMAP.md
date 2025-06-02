@@ -9,6 +9,7 @@ Create the most engaging, accessible, and effective presentation platform for sh
 ## 🚀 Up Next (Q2-Q3 2025)
 
 ### Core Features
+- [ ] **V0.2.4 - Management Team Photos & Bios**
 - [ ] **V1.1.0 - Enhanced Interactivity**
   - Quiz functionality
   - Clickable hotspots
