@@ -3,6 +3,7 @@
 This roadmap provides a high-level overview of our vision, direction, and planned features for the Sentient.io Interactive Presentation. It's a living document that will be updated as we progress.
 
 ## 🎯 Vision
+[TODO: The Vision section below needs to be updated with the detailed write-up on Vision and Approach from the founder's slide. Please replace or augment the existing text with the new content.]
 Create the most engaging, accessible, and effective presentation platform for showcasing Sentient.io's capabilities and values.
 
 ## 🚀 Up Next (Q2-Q3 2025)
