@@ -421,6 +421,105 @@
             outline: 2px solid #30A3DA;
             outline-offset: 2px;
         }
+
+        /* Management Team Styles */
+        .team-executive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .team-member-card {
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            padding: 20px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .team-member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 2px solid #163E93;
+        }
+
+        .team-member-card h4 {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #163E93;
+            margin-bottom: 5px;
+        }
+
+        .team-member-card .title {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #333333;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .team-member-card .bio {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #444444;
+            text-align: left;
+        }
+
+        .section-subtitle { /* For 'Executive Leadership' and 'Functional Expertise' */
+            font-family: Georgia, serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #163E93;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        /* Final Slide Contact Info Styles */
+        .contact-info-box {
+            background: #E8F4FD; /* Light blue, similar to callout-box */
+            border-left: 4px solid #163E93; /* Darker blue for emphasis */
+            padding: 25px;
+            margin-top: 30px;
+            margin-bottom: 20px; /* Space before footer */
+        }
+
+        .contact-info-box h3 {
+            font-family: Georgia, serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: #163E93;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .contact-info-box p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #060200;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .contact-info-box .contact-details {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+        .contact-info-box .contact-details strong {
+            color: #163E93;
+        }
+
     </style>
 </head>
 <body>
@@ -564,6 +663,35 @@
             Sentient.io management team combines deep AI expertise with proven enterprise sales execution
         </div>
 
+        <h3 class="section-subtitle">Executive Leadership</h3>
+        <div class="team-executive-grid">
+            <div class="team-member-card">
+                <img src="static/images/chris-yeo.png" alt="Photo of Christopher Yeo" class="team-member-photo">
+                <h4>Christopher Yeo</h4>
+                <p class="title">Founder / CEO</p>
+                <p class="bio">Chief architect behind Sentient.io, with over 25 years of experience in the technology industry, including key leadership roles at Singapore Press Holdings where he pioneered digital transformation initiatives across media platforms.</p>
+            </div>
+            <div class="team-member-card">
+                <img src="static/images/eddie-leong.png" alt="Photo of Eddie Leong" class="team-member-photo">
+                <h4>Eddie Leong</h4>
+                <p class="title">CFO</p>
+                <p class="bio">Brings extensive experience in financial strategy and IT project management, with a distinguished track record in Government Investment Corporation where he led large-scale digital transformation programs and financial system implementations.</p>
+            </div>
+            <div class="team-member-card">
+                <img src="static/images/priya-somasundaram.png" alt="Photo of Priya Somasundaram" class="team-member-photo">
+                <h4>Priya Somasundaram</h4>
+                <p class="title">Technology, VP</p>
+                <p class="bio">A technology leader with deep expertise in full-stack engineering, Priya previously led critical IT infrastructure projects at Singapore Press Holdings, driving innovation in media technology solutions.</p>
+            </div>
+            <div class="team-member-card">
+                <img src="static/images/gloria-koh.png" alt="Photo of Gloria Koh" class="team-member-photo">
+                <h4>Gloria Koh</h4>
+                <p class="title">Corporate Development, VP</p>
+                <p class="bio">Specializes in Asia-Pacific retail market, business strategy and projections, trade operations, and marketing communications.</p>
+            </div>
+        </div>
+
+        <h3 class="section-subtitle">Functional Expertise</h3>
         <table class="mckinsey-table">
             <thead>
                 <tr>
@@ -1763,7 +1891,7 @@
 </div>
 
 <div class="action-title">
-    Tokyo Stock Exchange IPO by 2028 provides clear exit strategy with projected $300-600M valuation
+    Positioned for Success: Tokyo Stock Exchange IPO by 2028 with Projected $300-600M Valuation
 </div>
 
 <div class="content-grid">
@@ -1878,6 +2006,16 @@
             <h4>Strategic Acquisitions</h4>
             <p>Pursue complementary technology and market access acquisitions</p>
         </div>
+    </div>
+</div>
+
+<div class="contact-info-box">
+    <h3>Thank You & Next Steps</h3>
+    <p>We appreciate your time and consideration. We welcome any questions you may have.</p>
+    <div class="contact-details">
+        <p><strong>Website:</strong> <a href="http://www.sentient.io" target="_blank">www.sentient.io</a></p>
+        <p><strong>General Inquiries:</strong> <a href="mailto:info@sentient.io">info@sentient.io</a></p>
+        <p><strong>Investor Relations:</strong> <a href="mailto:chris.yeo@sentient.io">chris.yeo@sentient.io</a> (Christopher Yeo, CEO)</p>
     </div>
 </div>
 

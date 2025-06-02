@@ -98,9 +98,13 @@ The Management Team section will present the Sentient.io leadership team with pr
   - Text: #333333 (primary), #666666 (secondary)
 
 ## 6. Assets Required
-- High-resolution headshots for all team members
-- Professional bios (150 words max each)
-- Company logo variations
+- High-resolution headshots for all team members:
+  - Christopher Yeo (Founder/CEO)
+  - Eddie Leong (CFO)
+  - Priya Somasundaram (VP Technology)
+  - Gloria Koh (VP Corporate Development)
+- Professional bios (150 words max each) for all team members listed above.
+- Company logo variations (though likely not directly used in this specific component, good to have available for overall presentation consistency).
 
 ## 7. Accessibility
 - Alt text for all images
