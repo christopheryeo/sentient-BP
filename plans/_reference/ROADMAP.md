@@ -2,58 +2,59 @@
 
 This roadmap provides a high-level overview of our vision, direction, and planned features for the Sentient.io Interactive Presentation. It's a living document that will be updated as we progress.
 
+## 🔜 Upcoming Versions
+
+| Version | Status      | Target Date | Key Deliverables                     |
+|---------|-------------|-------------|-------------------------------------|
+| V0.2.4  | Planning    | 2025-06-04  | Management Team Photos & Bios       |
+| V0.2.5  | Planned     | 2025-06-05  | Company Facts Slide                 |
+| V0.3.0  | Planned     | 2025-Q3     | Navigation Improvements             |
+
+*Last updated: 2025-06-03*
+
 ## 🎯 Vision
-[TODO: The Vision section below needs to be updated with the detailed write-up on Vision and Approach from the founder's slide. Please replace or augment the existing text with the new content.]
 Create the most engaging, accessible, and effective presentation platform for showcasing Sentient.io's capabilities and values.
 
-## 🚀 Up Next (Q2-Q3 2025)
+## 🚀 Current Focus (Q2 2025)
 
-### Core Features
-- [ ] **V0.2.4 - Management Team Photos & Bios**
-- [ ] **V1.1.0 - Enhanced Interactivity**
-  - Quiz functionality
-  - Clickable hotspots
-  - Form collection
-  - Advanced animations
+### V0.2.4 - Management Team Photos & Bios (Target: 2025-06-04)
+- [ ] **Management Team Section**: Add professional photos and detailed bios
+  - [ ] Source high-quality headshots for all team members
+    - [ ] Christopher Yeo (Founder/CEO)
+    - [ ] Eddie Leong (CFO)
+    - [ ] Priya Somasundaram (VP Technology)
+    - [ ] Gloria Koh (VP Corporate Development)
+  - [ ] Write/refine professional bios for each team member
+  - [ ] Design team layout with photos and bios
+  - [ ] Ensure responsive design for all device sizes
+  - [ ] Add hover effects or interactive elements
+  - [ ] Verify accessibility (alt text, keyboard navigation)
+  - [ ] Test loading performance with images
 
-### Technical Improvements
-- [ ] Performance optimizations
-- [ ] Enhanced accessibility features
-- [ ] Improved mobile experience
+### V0.2.5 - Company Facts Slide (Target: 2025-06-05)
+- [ ] **Company Facts Slide**: Create an engaging company overview
+  - [ ] Add key company metrics:
+    - [ ] Founded: May 2017
+    - [ ] Headquarters: Singapore
+    - [ ] Founder & CEO: Christopher Yeo
+  - [ ] Include key statistics and achievements
+  - [ ] Design with visual elements and icons
+  - [ ] Ensure mobile responsiveness
 
-## 📅 Planned (Q3-Q4 2025)
+## 📅 Upcoming Features
 
-### V1.2.0 - Analytics & Insights
-- User engagement metrics
-- Slide performance tracking
-- Heatmaps
-- Exportable reports
+### V0.3.0 - Navigation Improvements
+- [ ] **Replace top navigation with slide buttons**
+  - [ ] Remove existing slide number navigation from top-right
+  - [ ] Add translucent Previous/Next buttons to each slide
+  - [ ] Style buttons with hover effects and smooth transitions
+  - [ ] Ensure buttons are fixed on desktop and mobile-friendly
 
-### V1.3.0 - Content Management
-- API integration
-- Multi-language support
-- Content versioning
-- Custom theming
-
-## 🔮 Future Vision (2026+)
-
-### AI-Powered Features
-- Voice navigation
-- AI presentation assistant
-- Automated content suggestions
-- Real-time translation
-
-### Collaboration
-- Multi-presenter mode
-- Live audience interaction
-- Real-time collaboration
-- Commenting and feedback
-
-### Integration
-- Video conferencing tools
-- Learning management systems
-- Marketing automation platforms
-- CRM integration
+### Future Enhancements
+- [ ] AI presentation assistant
+- [ ] Multi-presenter mode
+- [ ] Live audience interaction
+- [ ] Video conferencing integration
 
 ## 📊 Success Metrics
 - User engagement time

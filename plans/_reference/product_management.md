@@ -18,6 +18,10 @@ Welcome to the Sentient.io Interactive Presentation project management guide. Th
 
 ```
 sentient-BP/
+├── content/                 # Core presentation content and assets
+│   ├── content.md          # Main content file (Markdown format)
+│   ├── source.bundle.html  # Processed HTML bundle with styling
+│   └── McKinsey Slide Layout Deep Dive.pdf  # Design reference
 ├── plans/                   # Project management documents
 │   ├── 0_backlog/          # Future features and ideas
 │   ├── 1_planning/         # Active planning documents
@@ -83,8 +87,9 @@ The standard subdirectories within `plans/` are:
         *   `feature_spec_template.md`
         *   `tech_spec_template.md`
         *   `bug_report_template.md`
-        *   `completed_version_readme_template.md`
         *   `wip_readme_template.md`
+        *   `CHANGELOG_TEMPLATE.md`
+        *   `ROADMAP_TEMPLATE.md`
     *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
@@ -109,7 +114,8 @@ This detailed structure, when consistently applied, will significantly improve p
 4. **Completed**
    - Move to `3_completed/` when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
    - Include post-implementation review, if applicable (e.g., for feature releases).
-   - Update feature log (`completed_features_log.md`) and `CHANGELOG.md` accordingly, clearly stating the nature of the release.
+   - Update `plans/_reference/CHANGELOG.md` with all changes, clearly stating the nature of the release.
+   - Ensure all changes are properly documented in the changelog, following the Keep a Changelog format.
 
 ## Documentation Standards
 
@@ -139,6 +145,51 @@ This detailed structure, when consistently applied, will significantly improve p
 - Include details in the body if needed
 - Reference issue numbers when applicable
 - **Note on Versioning**: Semantic versioning (MAJOR.MINOR.PATCH) is followed. PATCH versions may include bug fixes or documentation-only releases (e.g., V0.2.2), which are important for project maintenance and clarity, even if they don't introduce new features. MINOR versions typically add new features, and MAJOR versions signify significant changes or milestones.
+
+### Feature and Version Tracking
+
+#### ROADMAP.md
+- **Location**: `plans/_reference/ROADMAP.md`
+- **Purpose**: Serves as the single source of truth for current and future development plans
+- **Contents**:
+  - Upcoming versions with status and target dates
+  - Current focus with detailed task lists
+  - Planned features and improvements
+  - Technical debt and future considerations
+- **Update Frequency**: During planning meetings and when priorities change
+- **Ownership**: Maintained by the product team with input from all stakeholders
+
+#### CHANGELOG.md
+- **Location**: `plans/_reference/CHANGELOG.md`
+- **Purpose**: Records all notable changes made to the project
+- **Format**: Follows [Keep a Changelog](https://keepachangelog.com/) format
+- **Contents**:
+  - Versioned releases with dates and commit hashes
+  - Categorized changes (Added, Changed, Deprecated, Removed, Fixed, Security)
+  - Links to relevant issues/PRs
+- **Update Frequency**: With each release or significant change
+- **Ownership**: Maintained by the development team
+
+#### README.md
+- **Location**: Project root directory
+- **Purpose**: Serves as the main entry point and high-level project documentation
+- **Contents**:
+  - Project overview and purpose
+  - Quick start guide
+  - Key features and screenshots
+  - Basic setup instructions
+  - Links to detailed documentation
+  - Current status and version badge
+  - Links to ROADMAP.md and CHANGELOG.md
+- **Update Frequency**: When major features are added or significant changes occur
+- **Ownership**: Maintained by the core team with input from all contributors
+
+#### Workflow
+1. New features are added to ROADMAP.md under appropriate version sections
+2. As work begins, detailed tasks are added to the relevant version in ROADMAP.md
+3. Upon completion, changes are recorded in CHANGELOG.md
+4. README.md is updated to reflect major changes and new features
+5. All documentation is kept in sync with the current state of the project
 
 ## AI Collaboration
 
@@ -198,6 +249,69 @@ Constraints:
   - Performance
   - Security
   - Documentation
+
+## Content Directory Structure
+
+The `content/` directory is the central repository for all presentation content and related assets. It follows this structure:
+
+### 1. content.md
+- **Purpose**: Primary content file containing all presentation text and structure
+- **Format**: Markdown with custom extensions for presentation-specific elements
+- **Sections**:
+  - Executive summary
+  - Problem statement
+  - Solution overview
+  - Market analysis
+  - Product features
+  - Team information
+  - Financial projections
+  - Roadmap and milestones
+
+### 2. source.bundle.html
+- **Purpose**: Processed HTML bundle containing the complete presentation
+- **Features**:
+  - Responsive design
+  - Interactive elements
+  - Styled according to McKinsey presentation standards
+  - Includes all necessary CSS and JavaScript
+- **Structure**:
+  - Slide-based layout
+  - Consistent header/footer
+  - Source attribution
+  - Confidentiality notices
+
+### 3. McKinsey Slide Layout Deep Dive.pdf
+- **Purpose**: Reference document for slide design standards
+- **Contents**:
+  - Slide templates
+  - Color schemes
+  - Typography guidelines
+  - Layout specifications
+  - Data visualization standards
+
+### Content Update Workflow
+1. Update `content.md` with new content
+2. Process through the presentation generator
+3. Review `source.bundle.html` for visual fidelity
+4. Verify cross-browser compatibility
+5. Update version control
+
+### Best Practices for Content Management
+1. **Version Control**:
+   - Keep content and presentation logic separate
+   - Use semantic versioning for major updates
+   - Maintain changelog for content updates
+
+2. **Accessibility**:
+   - Ensure proper heading hierarchy
+   - Include alt text for all images
+   - Maintain sufficient color contrast
+   - Test with screen readers
+
+3. **Performance**:
+   - Optimize images and assets
+   - Minimize external dependencies
+   - Implement lazy loading where appropriate
 
 ## Templates & Examples
 
