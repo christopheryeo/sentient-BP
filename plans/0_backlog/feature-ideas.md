@@ -65,8 +65,8 @@
 ### V0.2.3 - Founder Slide Update (Target: 2025-06-03)
 - [ ] **Founder Slide**: Add Christopher Yeo's photo
   - [ ] Source and optimize high-quality headshot
-  - [ ] Ensure proper sizing and placement
-  - [ ] Add professional styling and border
+  - [x] Ensure proper sizing and placement - Chris Yeo photo image was now enlarged and looking good.
+  - [x] Add professional styling and border - Chris Yeo photo image was now enlarged and looking good.
   - [ ] Verify accessibility with alt text
 
 ---

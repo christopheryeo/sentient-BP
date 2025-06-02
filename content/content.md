@@ -33,6 +33,8 @@ First-class honours in Computer Science & Mathematics from University of Waikato
 25+ years in technology, specialized in AI solutions for enterprise
 transformation and knowledge management
 
+Christopher Yeo is the Founder and CEO of Sentient.io, where he spearheads the development of the Agentic AI Platform—a next-generation system that empowers developers to build intelligent, goal-driven applications using modular, domain-specific AI agents. With a strong belief in democratizing AI, the platform enables developers with minimal AI or data science expertise to integrate agentic workflows via simple APIs, allowing software to simulate reasoning, decision-making, and action in real-world contexts. Inspired by his lifelong vision to create a personal digital assistant—one that could help with everyday tasks like planning, learning, and decision-making—Chris has expanded this vision into the enterprise space through scalable, interactive AI systems. He is particularly passionate about the future of software development powered by AI, including the use of AI-integrated development environments (AI IDEs) and remote AI agents that collaborate with human developers to write, debug, and optimize code autonomously. His work is redefining how applications are built—moving from static programming to dynamic, agentic co-creation between humans and machines.
+
 > **Proven Serial Entrepreneur**
 > Christopher has successfully founded, scaled, and exited multiple technology companies, with deep expertise in enterprise software, AI platforms, and Asia-Pacific market expansion.
 
