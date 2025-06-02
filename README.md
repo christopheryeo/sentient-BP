@@ -270,7 +270,7 @@ This project is open source and available under the [MIT License](LICENSE).
 | Version | Status      | Target Date | Key Deliverables (Slides)               |
 |---------|-------------|-------------|-----------------------------------------|
 | V0.2.2  | Planned     | 2025-05-26  | **4-7**: Company, Product, GTM          |
-| V0.2.3  | Planned     | 2025-05-27  | **8-10**: Financials, Team              |
+| V0.2.3  | In Progress | 2025-06-03  | **8-10**: Financials, Team              |
 
 For the complete roadmap and detailed planning, see our [Feature Ideas and Roadmap](plans/0_backlog/feature-ideas.md).
 

@@ -62,6 +62,13 @@
 
 ## 🔄 In Progress
 
+### V0.2.3 - Founder Slide Update (Target: 2025-06-03)
+- [ ] **Founder Slide**: Add Christopher Yeo's photo
+  - [ ] Source and optimize high-quality headshot
+  - [ ] Ensure proper sizing and placement
+  - [ ] Add professional styling and border
+  - [ ] Verify accessibility with alt text
+
 ---
 
 ## 📋 Planning
@@ -71,13 +78,6 @@
 
 
 ## 📅 Proposed Features
-
-### V0.2.3 - Founder Slide Update (Target: 2025-06-03)
-- [ ] **Founder Slide**: Add Christopher Yeo's photo
-  - [ ] Source and optimize high-quality headshot
-  - [ ] Ensure proper sizing and placement
-  - [ ] Add professional styling and border
-  - [ ] Verify accessibility with alt text
 
 ### V0.2.4 - Management Team Photos & Bios (Target: 2025-06-04)
 - [ ] **Management Team Section**: Add professional photos and detailed bios

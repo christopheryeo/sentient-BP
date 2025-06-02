@@ -368,6 +368,19 @@
             line-height: 1.5;
         }
 
+        .founder-photo {
+          max-width: 200px;
+          height: auto;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+          margin-bottom: 15px;
+          /* Consider adding float or display properties if text wrapping is desired, e.g.
+          float: left;
+          margin-right: 15px;
+          */
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .slide {
@@ -493,6 +506,7 @@
 
         <div class="content-grid">
             <div class="text-block">
+                <img src="static/images/chris-yeo.png" alt="Headshot of Christopher Yeo, Founder and CEO of Sentient.io" class="founder-photo">
                 <h3>Entrepreneurial Track Record</h3>
                 <ul>
                     <li><strong>iFusion (1994):</strong> Scaled with clients like Motorola; pioneered e-business solutions</li>
