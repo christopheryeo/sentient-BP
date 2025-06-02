@@ -1,7 +1,7 @@
 # Sentient.io Interactive Presentation
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-0.2.1-blue.svg)](plans/_reference/CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.2.3-blue.svg)](plans/_reference/CHANGELOG.md)
 
 An interactive, multi-slide presentation for Sentient.io, built with HTML5, CSS3, and vanilla JavaScript.
 
@@ -132,7 +132,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-📅 *Last Updated: May 24, 2025*
+📅 *Last Updated: 2025-06-02*
 
 3. **Navigate**
    - Use the "Next" and "Previous" buttons to move between slides
@@ -230,6 +230,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.3   | `xxxxxxx` | Completed founder slide update (prompt 4) and documentation                 |
 | V0.2.2g  | `342183e` | Updated Chris Yeo's biography with additional employment history            |
 | V0.2.2f  | `6260588` | Reviewed and finalized documentation for V0.2.2                              |
 | V0.2.2e  | `bccab7f` | Planned next versions (V0.2.3-V0.2.8) with detailed feature breakdowns       |
@@ -272,7 +273,7 @@ This project is open source and available under the [MIT License](LICENSE).
 | Version | Status      | Target Date | Key Deliverables (Slides)               |
 |---------|-------------|-------------|-----------------------------------------|
 | V0.2.2  | Planned     | 2025-05-26  | **4-7**: Company, Product, GTM          |
-| V0.2.3  | In Progress | 2025-06-03  | **8-10**: Financials, Team              |
+| V0.2.3  | Completed   | 2025-06-02  | **8-10**: Financials, Team              |
 
 For the complete roadmap and detailed planning, see our [Feature Ideas and Roadmap](plans/0_backlog/feature-ideas.md).
 

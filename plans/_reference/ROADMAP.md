@@ -63,11 +63,11 @@ Create the most engaging, accessible, and effective presentation platform for sh
 
 ## 📝 How We Work
 - **Sprints**: 2-week development cycles
-- **Releases**: Monthly feature updates. Note: The project also includes documentation-only or minor bugfix releases (e.g., V0.2.2) which may not be explicitly listed on this feature-focused roadmap but are tracked in the `CHANGELOG.md`. These releases are crucial for maintaining project health and clarity.
+- **Releases**: Monthly feature updates. Note: The project also includes documentation-only or minor bugfix/content releases (e.g., V0.2.2, V0.2.3) which may not be explicitly listed on this feature-focused roadmap but are tracked in the `CHANGELOG.md`. These releases are crucial for maintaining project health and clarity.
 - **Feedback**: Continuous user feedback integration
 
 ## 🤝 Contributing
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📅 Last Updated
-May 24, 2025
+2025-06-02
