@@ -230,13 +230,15 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
-| V0.2.3   | `xxxxxxx` | Completed founder slide update (prompt 4) and documentation                 |
-| V0.2.2g  | `342183e` | Updated Chris Yeo's biography with additional employment history            |
-| V0.2.2f  | `6260588` | Reviewed and finalized documentation for V0.2.2                              |
-| V0.2.2e  | `bccab7f` | Planned next versions (V0.2.3-V0.2.8) with detailed feature breakdowns       |
+| V0.2.3   | `33980da` | Merged PR #23: Enhanced Vision & Approach section and completed V0.2.3 docs |
+| V0.2.2i  | `f651ad8` | Established new product management process using prompt.md and McKinsey Slide Layout |
+| V0.2.2h  | `3c449a7` | Increased Chris Yeo's photo size for better visibility                       |
+| V0.2.2g  | `342183e` | Updated Chris Yeo bio with additional employment history                    |
+| V0.2.2f  | `6260588` | Reviewed documentation of V0.2.2                                            |
+| V0.2.2e  | `bccab7f` | Planned next few versions                                                   |
 | V0.2.2d  | `43eacfd` | Cleaned up project files and removed temporary files                        |
 | V0.2.2c  | `28ba832` | Cleaned up project files                                                   |
-| V0.2.2b  | `9e78f1b` | Added comprehensive business plan content to content.md                      |
+| V0.2.2b  | `9e78f1b` | Created content.md with comprehensive business plan content                 |
 | V0.2.2a  | `d1c6378` | Improved Markdown linting and formatting in content.md                       |
 | V0.2.2   | `c7af4de` | Documentation corrections and updates for V0.2.1                             |
 | V0.2.1   | `0f8c137` | Completed slides 1-15, updated documentation and moved V0.2.1 to completed  |
