@@ -1,101 +1,86 @@
-# V0.2.4 - Founder Slide Implementation Prompts
+# V0.2.4 - Management Team Photos & Bios Implementation
 
-> **PROMPT 4 COMPLETED**: Vision and Approach Enhancement
-> **NEXT PROMPT TO EXECUTE**: 5. Documentation Updates
+> **NEXT PROMPT TO EXECUTE**: 1. Team Section Implementation
 
-This document contains all prompts used with AI coding assistants (like Google Jules) to implement the features and fixes for version V0.2.4.
+This document contains all prompts used with AI coding assistants (like Google Jules) to implement the Management Team Photos & Bios feature for version V0.2.4.
 
 ## Purpose
-- Track AI-assisted development prompts for reproducibility
-- Document the thought process behind implementation decisions
-- Provide context for future maintenance and updates
-- Ensure consistency in AI collaboration
+- Track AI-assisted development prompts for the management team section
+- Document implementation decisions and design rationale
+- Ensure consistency in AI collaboration and code quality
+- Provide context for future maintenance
 
 ## Implementation Prompts
 
-### 1. Founder Photo Implementation
+### 1. Team Section Layout
 ```
-Add a professional headshot of the founder (Chris Yeo) to the 'About the Founder' slide.
-The image file is named 'chris-yeo.png' and is located in the static/images/ directory.
-Please ensure:
-1. The image is properly sized and centered
-2. It has a subtle border and shadow
-3. Alt text is included for accessibility
-4. The image is responsive on all screen sizes
-```
-
-### 2. Photo Size Adjustment
-```
-The founder's photo on the 'About the Founder' slide needs to be 70% larger.
-Current size is 200px, please adjust to 340px while maintaining aspect ratio.
-Update both the HTML and any related CSS to ensure proper display.
+Create a responsive team section layout for the management team with the following requirements:
+1. Grid-based layout that adjusts based on screen size (4 columns on desktop, 2 on tablet, 1 on mobile)
+2. Each team member card should include:
+   - Photo container (circular mask, 200x200px)
+   - Name and title
+   - Brief bio (truncated with 'Read more')
+   - Subtle hover effect (slight scale and shadow)
+3. Ensure proper spacing and alignment
+4. Add smooth transitions for interactive elements
+5. Make sure it's accessible (keyboard navigation, screen reader friendly)
 ```
 
-### 3. Employment History Update
+### 2. Team Member Cards
 ```
-Update Christopher Yeo's employment history to include:
-1. A*STAR entry with focus on IP commercialization
-2. Singapore Press Holdings entry
-3. Ensure proper chronological order
-
-Update both content.md and index.html to maintain consistency.
-```
-
-### 4. Vision and Approach Enhancement
-```
-Please enhance the 'Vision and Approach' section of the founder slide by making it 50% more concise while maintaining all key points and impact. The content and layout must strictly adhere to McKinsey slide standards as defined in 'content/McKinsey Slide Layout Deep Dive.pdf'.
-
-Content Requirements:
-1. More scannable and readable from a distance (minimum 24pt font for body text)
-2. Focused on the most impactful statements (maximum 5-7 bullet points)
-3. Structured with clear, concise bullet points (one idea per bullet)
-4. Maintain the professional and visionary tone
-5. Keep all essential technical and business value propositions
-6. Use consistent formatting and parallel structure
-
-McKinsey Layout Standards to Follow:
-- Clear hierarchy of information (Headline, Subhead, Body)
-- Left-aligned text with proper line spacing (1.0-1.5)
-- Generous white space (minimum 0.5" margins)
-- Consistent bullet point style and indentation
-- High contrast between text and background
-- Limited color palette (2-3 colors max)
-- Visual balance and alignment
-- Data visualization where applicable
-
-Current content for reference:
-[Include current Vision and Approach content here]
-
-Please provide:
-1. The revised version of the content
-2. Explanation of key changes made
-3. How the new version adheres to McKinsey standards
-4. Any recommended visual elements or data visualizations that could enhance the slide
+Implement individual team member cards with the following specifications:
+1. Create a reusable card component in JavaScript
+2. Each card should display:
+   - Circular profile photo (200x200px)
+   - Name (H3)
+   - Position (H4)
+   - Short bio (max 150 characters visible, expandable)
+3. Include loading states for images
+4. Add subtle animations on hover and focus
+5. Ensure proper contrast and readability
 ```
 
-### 5. Documentation Updates
+### 3. Photo Optimization
+```
+Optimize team member photos with the following requirements:
+1. Convert all images to WebP format
+2. Generate responsive image sets (1x, 2x, 3x)
+3. Implement lazy loading
+4. Add proper alt text for accessibility
+5. Include a default placeholder image for missing photos
+```
+
+### 4. Interactive Bio Expansion
+```
+Implement an interactive bio expansion feature:
+1. Show truncated bio with 'Read more' link
+2. Smooth expand/collapse animation
+3. Ensure proper ARIA attributes for accessibility
+4. Handle focus management
+5. Make it keyboard navigable
 ```
 Update the following documentation to reflect the V0.2.4 changes:
 1. README.md version history
-2. Any relevant design documentation
-3. Ensure all file paths and references are accurate
+2. Team member documentation
+3. Ensure all image assets are properly documented
 ```
 
 ## Review Process
-1. All prompts should be reviewed by a team member before implementation
-2. Actual implementation should be verified against the prompt requirements
-3. Any deviations from the prompt should be documented with reasoning
+1. Review all team member cards for consistency and accuracy
+2. Verify responsive behavior across different devices
+3. Check accessibility compliance (keyboard navigation, screen readers)
+4. Test image loading performance
 
 ## Best Practices for AI Collaboration
-1. Always include context about the project and current state
-2. Be specific about requirements and constraints
-3. Ask for explanations of any non-obvious implementation choices
-4. Request code to be well-commented for future maintenance
-5. Ask about potential edge cases and error handling
+1. Provide clear requirements for each team member's content
+2. Specify image dimensions and format requirements
+3. Request responsive design considerations
+4. Ask for accessibility best practices implementation
+5. Inquire about performance optimization techniques
 
 ## Version Control Integration
-- All changes should be committed with descriptive messages
-- Reference the relevant prompt ID in commit messages when applicable
+- All image assets should be properly named and organized
+- Commit messages should reference team member additions/updates
 - Tag releases according to semantic versioning
 
 ---
