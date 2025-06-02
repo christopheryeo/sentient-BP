@@ -48,6 +48,7 @@ The standard subdirectories within `plans/` are:
         *   `README.md`: An overview of the version/feature, its goals, and key deliverables.
         *   `design.md` or `ui_ux_spec.md`: Detailed design specifications, wireframes, mockups, or user flow diagrams.
         *   `tech-spec.md`: Technical specifications, including architecture, data models, API changes, and impact on existing systems.
+        *   `prompt.md`: Documentation of all AI prompts used for implementation (see [AI Collaboration](#ai-collaboration) for details).
         *   Other relevant planning documents (e.g., `requirements.md`, `user-stories.md`).
     *   **Directory Naming**: Use semantic versioning for general releases (e.g., `V1.0.0`, `V1.1.0`, `V2.0.0`). For feature-specific planning that might span multiple minor versions or is a significant standalone piece of work, consider `VMAJOR.MINOR_feature-name/` (e.g., `V1.2_search-implementation/`).
     *   **File Naming**: Use standard names like `README.md`, `design.md`, `tech-spec.md`. For other documents, use descriptive kebab-case.
@@ -141,6 +142,31 @@ This detailed structure, when consistently applied, will significantly improve p
 
 ## AI Collaboration
 
+### Prompt Management
+
+For each version or feature implementation, maintain a `prompt.md` file that documents all AI interactions. This ensures:
+- Reproducibility of AI-assisted development
+- Clear communication of requirements to AI assistants
+- Consistent approach to AI collaboration across the team
+- Knowledge transfer for future maintenance
+
+#### Prompt File Structure
+Each `prompt.md` should include:
+1. **Version/Feature Overview**: Brief description of what's being implemented
+2. **Implementation Prompts**: All prompts used with AI assistants
+3. **Review Process**: How prompts were reviewed and validated
+4. **Best Practices**: Any lessons learned about effective prompting
+5. **Version Control**: How changes are tracked and committed
+
+#### Best Practices for AI Prompts
+1. **Be Specific**: Clearly define requirements and constraints
+2. **Provide Context**: Include relevant code snippets or file references
+3. **Request Explanations**: Ask AI to explain non-obvious implementation choices
+4. **Document Assumptions**: Note any assumptions made during implementation
+5. **Review Outputs**: Always review and validate AI-generated code
+
+Example structure is available in `plans/2_inprogress/V0.2.3/prompt.md`
+
 ### Working with AI
 - Be specific in your prompts
 - Break down complex tasks
@@ -179,8 +205,28 @@ Constraints:
 ```markdown
 # [Feature Name]
 
-## Overview
-[Brief description]
+## Version Control
+
+### Commit Messages
+- Reference relevant prompt IDs or feature numbers
+- Include the version number in the commit message when applicable
+- Follow conventional commit message format: `type(scope): description`
+
+### Tags
+- Use semantic versioning (e.g., v0.2.3)
+- Tag all releases with corresponding version numbers
+- Include release notes in the tag annotation
+
+### Branching Strategy
+- `main`: Production-ready code
+- `feature/*`: New features or significant changes
+- `fix/*`: Bug fixes
+- `docs/*`: Documentation updates
+
+### AI-Generated Code
+- Document which parts were AI-generated in commit messages
+- Include the prompt used in the commit message or reference the prompt.md file
+- Ensure all AI-generated code is reviewed before merging to main
 
 ## Requirements
 - [ ] Requirement 1

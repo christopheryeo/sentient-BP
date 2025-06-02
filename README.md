@@ -230,6 +230,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.2g  | `342183e` | Updated Chris Yeo's biography with additional employment history            |
+| V0.2.2f  | `6260588` | Reviewed and finalized documentation for V0.2.2                              |
 | V0.2.2e  | `bccab7f` | Planned next versions (V0.2.3-V0.2.8) with detailed feature breakdowns       |
 | V0.2.2d  | `43eacfd` | Cleaned up project files and removed temporary files                        |
 | V0.2.2c  | `28ba832` | Cleaned up project files                                                   |
