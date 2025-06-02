@@ -106,9 +106,9 @@ This detailed structure, when consistently applied, will significantly improve p
    - Regular commits with clear messages
 
 4. **Completed**
-   - Move to `3_completed/` when done
-   - Include post-implementation review
-   - Update feature log
+   - Move to `3_completed/` when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
+   - Include post-implementation review, if applicable (e.g., for feature releases).
+   - Update feature log (`completed_features_log.md`) and `CHANGELOG.md` accordingly, clearly stating the nature of the release.
 
 ## Documentation Standards
 
@@ -137,6 +137,7 @@ This detailed structure, when consistently applied, will significantly improve p
 - Keep the first line under 50 characters
 - Include details in the body if needed
 - Reference issue numbers when applicable
+- **Note on Versioning**: Semantic versioning (MAJOR.MINOR.PATCH) is followed. PATCH versions may include bug fixes or documentation-only releases (e.g., V0.2.2), which are important for project maintenance and clarity, even if they don't introduce new features. MINOR versions typically add new features, and MAJOR versions signify significant changes or milestones.
 
 ## AI Collaboration
 

@@ -55,6 +55,8 @@
   - Created initial documentation
   - Basic version control setup
 
+**Note on V0.2.2 (Documentation Release):** Version V0.2.2, completed on 2025-05-26, was a dedicated documentation-only release. This version focused on organizing and updating project documentation and did not include the implementation of new features from the backlog. This was a planned step to ensure all documentation is up-to-date before proceeding with further feature development.
+
 ## 🔄 In Progress
 
 ---
