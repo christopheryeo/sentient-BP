@@ -425,9 +425,17 @@
         /* Management Team Styles */
         .team-executive-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
+            /* Default to 1 column for mobile */
+            grid-template-columns: 1fr;
+        }
+
+        /* Media query for larger screens (tablets and desktops) */
+        @media (min-width: 769px) {
+            .team-executive-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .team-member-card {
@@ -711,7 +719,7 @@
                 <tr>
                     <td><strong>Science & Research</strong></td>
                     <td>AI/ML algorithms, NLP, knowledge graphs</td>
-                    <td>PhD-level researchers</td>
+                    <td>Experienced AI specialists</td>
                     <td>Global AI advancement</td>
                 </tr>
                 <tr>

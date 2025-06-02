@@ -58,7 +58,7 @@ transformation and knowledge management
 | Function | Key Capabilities | Experience | Market Focus |
 | --- | --- | --- | --- |
 | Executive Leadership | Strategic vision, fundraising, international expansion | 25+ years tech entrepreneurship | Singapore, Japan, Indonesia |
-| Science & Research | AI/ML algorithms, NLP, knowledge graphs | PhD-level researchers | Global AI advancement |
+| Science & Research | AI/ML algorithms, NLP, knowledge graphs | Experienced AI specialists | Global AI advancement |
 | Sales & Business Dev | Enterprise sales, government relations | Government, defense, manufacturing | APAC enterprise clients |
 | Engineering & Operations | Cloud infrastructure, security, integrations | Mission-critical deployments | Enterprise IT systems |
 
