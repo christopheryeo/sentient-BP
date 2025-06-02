@@ -76,11 +76,8 @@
 
 ## 📋 Planning
 
-*No active planning at the moment*
-
-## 📅 Proposed Features
-
 ### V0.2.4 - Management Team Photos & Bios (Target: 2025-06-04)
+**Status**: Planning
 - [ ] **Management Team Section**: Add professional photos and detailed bios
   - [ ] Source high-quality headshots for all team members
     - [ ] Christopher Yeo (Founder/CEO)
@@ -93,6 +90,8 @@
   - [ ] Add hover effects or interactive elements
   - [ ] Verify accessibility (alt text, keyboard navigation)
   - [ ] Test loading performance with images
+
+## 📅 Proposed Features
 
 ### V0.2.5 - Company Facts Slide (Target: 2025-06-05)
 - [ ] **Company Facts Slide**: Create an engaging company overview
