@@ -19,6 +19,8 @@
 
 - iFusion (1994): Scaled with clients like Motorola; pioneered e-business solutions
 - Comex Frontier: Expanded across Asia-Pacific with Panasonic; acquired by Four Soft (2005)
+- A*STAR: Led commercialization of AI and data science intellectual property
+- Singapore Press Holdings: Led digital transformation initiatives for Singapore's leading media organization
 - aSpecial Media (2011): Co-founder; built interest profiling technology for media companies
 
 First-class honours in Computer Science & Mathematics from University of Waikato
