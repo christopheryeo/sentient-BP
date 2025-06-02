@@ -232,10 +232,10 @@ This project is open source and available under the [MIT License](LICENSE).
 |----------|-----------|-----------------------------------------------------------------------------|
 | V0.2.2e  | `bccab7f` | Planned next versions (V0.2.3-V0.2.8) with detailed feature breakdowns       |
 | V0.2.2d  | `43eacfd` | Cleaned up project files and removed temporary files                        |
-| V0.2.2c  | `28ba832` | Synced markdown with HTML content and improved documentation structure      |
+| V0.2.2c  | `28ba832` | Cleaned up project files                                                   |
 | V0.2.2b  | `9e78f1b` | Added comprehensive business plan content to content.md                      |
 | V0.2.2a  | `d1c6378` | Improved Markdown linting and formatting in content.md                       |
-| V0.2.2   | `0f8c137` | Documentation corrections and updates for V0.2.1                             |
+| V0.2.2   | `c7af4de` | Documentation corrections and updates for V0.2.1                             |
 | V0.2.1   | `0f8c137` | Completed slides 1-15, updated documentation and moved V0.2.1 to completed  |
 | V0.2.0e  | `e5b0354` | Added full BP presentation to source.bundle.html                            |
 | V0.2.0d  | `395c6a9` | Updated source.bundle.html with code generated from Claude 4                |
