@@ -2,13 +2,21 @@
 
 This roadmap provides a high-level overview of our vision, direction, and planned features for the Sentient.io Interactive Presentation. It's a living document that will be updated as we progress.
 
+## 📦 Recent Releases
+
+### V0.2.4 - Management Team & Final Slide Styling (2025-06-04)
+- ✅ Management team section with photos and bios
+- ✅ Final slide styling and design improvements
+- ✅ New project management workflows
+- ✅ Automated version management processes
+
 ## 🔜 Upcoming Versions
 
 | Version | Status      | Target Date | Key Deliverables                     |
 |---------|-------------|-------------|-------------------------------------|
-| V0.2.4  | Planning    | 2025-06-04  | Management Team Photos & Bios       |
-| V0.2.5  | Planned     | 2025-06-05  | Company Facts Slide                 |
+| V0.2.5  | In Progress | 2025-06-05  | Company Facts Slide                 |
 | V0.3.0  | Planned     | 2025-Q3     | Navigation Improvements             |
+| V0.4.0  | Planned     | 2025-Q3     | Interactive Demos                   |
 
 *Last updated: 2025-06-03*
 
@@ -17,22 +25,19 @@ Create the most engaging, accessible, and effective presentation platform for sh
 
 ## 🚀 Current Focus (Q2 2025)
 
-### V0.2.4 - Management Team Photos & Bios (Target: 2025-06-04)
-- [ ] **Management Team Section**: Add professional photos and detailed bios
-  - [ ] Source high-quality headshots for all team members
-    - [ ] Christopher Yeo (Founder/CEO)
-    - [ ] Eddie Leong (CFO)
-    - [ ] Priya Somasundaram (VP Technology)
-    - [ ] Gloria Koh (VP Corporate Development)
-  - [ ] Write/refine professional bios for each team member
-  - [ ] Design team layout with photos and bios
-  - [ ] Ensure responsive design for all device sizes
-  - [ ] Add hover effects or interactive elements
-  - [ ] Verify accessibility (alt text, keyboard navigation)
-  - [ ] Test loading performance with images
-
 ### V0.2.5 - Company Facts Slide (Target: 2025-06-05)
 - [ ] **Company Facts Slide**: Create an engaging company overview
+  - [ ] Add key company metrics:
+    - [ ] Founded: May 2017
+    - [ ] Headquarters: Singapore
+    - [ ] Founder & CEO: Christopher Yeo
+    - [ ] Team: 30+ professionals
+  - [ ] Design clean, modern layout
+  - [ ] Add visual elements (icons, charts)
+  - [ ] Ensure mobile responsiveness
+  - [ ] Add subtle animations
+  - [ ] Verify accessibility standards
+  - [ ] Optimize for fast loading
   - [ ] Add key company metrics:
     - [ ] Founded: May 2017
     - [ ] Headquarters: Singapore
