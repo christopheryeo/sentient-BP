@@ -126,13 +126,11 @@
 
 ## Questions:
 1. What are the main features to be included?
-   - *Reference the 'Key Deliverables' in ROADMAP.md*
-   - Are there any additional features not listed in the roadmap?
+   - Company Facts Slide, as per roadmap. No additional features.
 2. Are there any technical constraints or dependencies?
-   - *Check if any roadmap items have known technical requirements*
+   - None.
 3. What are the success criteria for this version?
-   - *Reference the roadmap's success metrics if available*
-   - Are there any specific OKRs or KPIs for this release?
+   - Rely on overall project success metrics. No specific OKRs/KPIs for this slide.
 
 ## File Updates:
 1. Create `requirements.md` in version directory
@@ -144,6 +142,7 @@
 2. Create initial task list
 3. Set up tracking for requirements
 
+**Phase 2 completed on 2024-07-26. Requirements gathered and documented in `requirements.md`, `tasks.md`, and `design/constraints.md`.**
 ---
 
 # Phase 3: Technical Design
