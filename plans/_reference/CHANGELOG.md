@@ -9,14 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
-| V0.2.4a  | `673e5a6` | Planning for V0.2.4 management team slides and final slide styling           |
-| V0.2.3b  | `5381819` | Prepared for V0.2.4 development                                             |
+| V0.2.4d  | `8742deb` | Automated run processes - cleanup and finalization                         |
+| V0.2.4e  | `5cdfbe4` | Automated run processes - initial setup                                    |
+| V0.2.4f  | `6f24438` | Enhanced project management with new templates and workflows                |
+| V0.2.4g  | `5068a08` | Merge pull request #26: Update management display text                      |
+| V0.2.4h  | `f14ad67` | Refactor: Update management team display and content                        |
+| V0.2.4k  | `3434b77` | Merge pull request #25: Management team final slide implementation           |
+| V0.2.4j  | `4233f8a` | Implemented V0.2.4 changes including management team and final slide styling |
+| V0.2.4i  | `ebe1f09` | Merge pull request #24: Add prompt.md for V0.2.4                            |
+| V0.2.4a  | `673e5a6` | Planning for V0.2.4 management team slides and final slide styling          |
+| V0.2.3b  | `5381819` | Prepared for V0.2.4 development                                            |
 | V0.2.3   | `33980da` | Merged PR #23: Enhanced Vision & Approach section and completed V0.2.3 docs |
 | V0.2.2i  | `f651ad8` | Established new product management process using prompt.md and McKinsey Slide Layout |
-| V0.2.2h  | `3c449a7` | Increased Chris Yeo's photo size for better visibility                       |
-| V0.2.2g  | `342183e` | Updated Chris Yeo bio with additional employment history                    |
-| V0.2.2f  | `6260588` | Reviewed documentation of V0.2.2                                            |
-| V0.2.2e  | `bccab7f` | Planned next few versions                                                   |
+| V0.2.2h  | `3c449a7` | Increased Chris Yeo's photo size for better visibility                      |
+| V0.2.2g  | `342183e` | Updated Chris Yeo bio with additional employment history                   |
+| V0.2.2f  | `6260588` | Reviewed documentation of V0.2.2                                           |
+| V0.2.2e  | `bccab7f` | Planned next few versions                                                  |
 | V0.2.2d  | `43eacfd` | Cleaned up project files and removed temporary files                        |
 | V0.2.2c  | `28ba832` | Cleaned up project files                                                   |
 | V0.2.2b  | `9e78f1b` | Created content.md with comprehensive business plan content                 |
