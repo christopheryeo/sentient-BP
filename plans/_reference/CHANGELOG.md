@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.5a  | `af7a14a` | Enhanced version management with automated workflow using questions.md       |
 | V0.2.5   | `0dc6846` | Phase 3 Technical Design for Company Facts Slide                           |
 | V0.2.4k  | `e6c0073` | Corrected Git Version History                                              |
 | V0.2.4j  | `5e63351` | Move V0.2.4 from 1_planning to 3_completed                                 |

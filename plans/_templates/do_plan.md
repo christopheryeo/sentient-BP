@@ -10,10 +10,10 @@
    - Ensure git is initialized and configured
    - Check for required permissions in the repository
 
-2. **Validate questions.md**
-   - Verify all required fields are populated
-   - Set default values for optional fields
-   - If any required information is missing, log error and exit with clear instructions
+2. **Load questions.md**
+   - Read and parse the YAML configuration from questions.md
+   - Use the values as defaults for all operations
+   - If questions.md is missing, create it with default values
 
 3. **Environment Setup**
    - Create required directories if they don't exist

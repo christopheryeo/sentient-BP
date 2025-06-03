@@ -130,6 +130,37 @@ Each version directory in `1_planning/` should include:
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
+### questions.md Workflow
+
+The `questions.md` file serves as the central configuration for version creation and management. It's used by the automated workflow to create new versions with minimal manual input.
+
+#### Key Files:
+- `questions.md`: Contains YAML configuration with all version parameters
+- `do_plan.md`: Main execution script that reads from `questions.md`
+- `create_version.md`: Workflow template that uses values from `questions.md`
+
+#### Workflow:
+1. **Configuration**: Update `questions.md` with desired values
+   - Set version numbers, milestones, and other parameters
+   - Configure team assignments and ownership
+   - Define any custom workflows or processes
+
+2. **Execution**: Run `do_plan.md`
+   - The script reads configuration from `questions.md`
+   - Creates the version directory structure
+   - Initializes all necessary files with the configured values
+
+3. **Automation**:
+   - No manual input is required during execution
+   - All values are taken from `questions.md`
+   - Progress is logged for tracking
+
+#### Best Practices:
+- Keep `questions.md` under version control
+- Document any non-obvious parameters
+- Use comments to explain complex configurations
+- Maintain backward compatibility when updating the format
+
 ## Workflow
 
 1. **Backlog**

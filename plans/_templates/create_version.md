@@ -17,11 +17,12 @@ KEY FEATURES:
 USAGE INSTRUCTIONS:
 1. Execute the version creation process by running: "Execute do_plan.md" with your AI assistant
    - This will automatically:
+     - Read values from `questions.md` as defaults
      - Create the version directory (e.g., `plans/1_planning/VX.Y.Z/`)
      - Copy and initialize this template
-     - Set up all necessary files
-2. The AI will guide you through the workflow phases
-3. All file operations and documentation will be handled automatically
+     - Set up all necessary files using values from `questions.md`
+2. The AI will execute the workflow phases using the pre-defined values
+3. All file operations and documentation will be handled automatically using the configuration from `questions.md`
 
 PHASES:
 1. Planning & Design (Automated)
@@ -289,7 +290,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 4. Generate initial task list
 5. Prepare for development kickoff
 
-*Note: This combined phase is fully automated. The AI will gather all required information from ROADMAP.md and existing documentation without requiring user input.*
+*Note: This combined phase is fully automated. The AI will gather all required information from `questions.md` and ROADMAP.md without requiring user input. Values from `questions.md` will be used as defaults throughout the process.*
 
 ---
 
