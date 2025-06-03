@@ -29,6 +29,25 @@ An interactive, multi-slide presentation for Sentient.io, built with HTML5, CSS3
 
 ### Technical Highlights
 - Built with vanilla JavaScript (no frameworks)
+
+## 🎨 Slide Style Guide
+
+All presentations follow the McKinsey presentation standards defined in `content/Style.md`. Key aspects include:
+
+- **Structured Thinking**: MECE organization and Pyramid Principle
+- **Visual Design**: Consistent color palette and typography
+- **Data Visualization**: Clear, impactful charts and graphs
+- **Documentation**: Proper source attribution and version control
+
+For AI-assisted slide generation, ensure the prompt includes:
+```
+Follow the McKinsey presentation standards from content/Style.md, including:
+1. MECE organization and Pyramid Principle
+2. Data-driven content with proper visualization
+3. Consistent use of brand colors and typography
+4. Clear, action-oriented slide titles
+5. Proper source attribution for all data
+```
 - Uses CSS Grid and Flexbox for layouts
 - Mobile-first responsive design
 - Accessible UI components

@@ -24,9 +24,8 @@ sentient-BP/
 │   └── McKinsey Slide Layout Deep Dive.pdf  # Design reference
 ├── plans/                   # Project management documents
 │   ├── 0_backlog/          # Future features and ideas
-│   ├── 1_planning/         # Active planning documents
-│   ├── 2_inprogress/       # Work in progress
-│   ├── 3_completed/        # Completed work
+│   ├── 1_planning/         # All active and completed versions
+│   │   └── VX.Y.Z/        # Version directories with status tracking
 │   ├── _reference/         # Reference materials
 │   └── _templates/         # Document templates
 ├── src/                    # Source code
@@ -52,25 +51,9 @@ The standard subdirectories within `plans/` are:
         *   `README.md`: An overview of the version/feature, its goals, and key deliverables.
         *   `design.md` or `ui_ux_spec.md`: Detailed design specifications, wireframes, mockups, or user flow diagrams.
         *   `tech-spec.md`: Technical specifications, including architecture, data models, API changes, and impact on existing systems.
-        *   `prompt.md`: Documentation of all AI prompts used for implementation (see [AI Collaboration](#ai-collaboration) for details).
         *   Other relevant planning documents (e.g., `requirements.md`, `user-stories.md`).
     *   **Directory Naming**: Use semantic versioning for general releases (e.g., `V1.0.0`, `V1.1.0`, `V2.0.0`). For feature-specific planning that might span multiple minor versions or is a significant standalone piece of work, consider `VMAJOR.MINOR_feature-name/` (e.g., `V1.2_search-implementation/`).
     *   **File Naming**: Use standard names like `README.md`, `design.md`, `tech-spec.md`. For other documents, use descriptive kebab-case.
-
-*   **`2_inprogress/`**:
-    *   **Purpose**: Tracks features or versions that are currently under active development. This directory provides a snapshot of ongoing work.
-    *   **Content**: Similar to `1_planning/`, it should be organized into version-specific or feature-specific subdirectories. These directories would typically be moved from `1_planning/` once development starts.
-        *   The documents within (e.g., `README.md`, `tech-spec.md`) should be updated to reflect the current status, any changes made during development, and progress tracking (e.g., task lists with completed items).
-        *   May also include developer notes or logs specific to the ongoing work.
-    *   **Note**: It's crucial to keep these documents live and updated throughout the development cycle.
-
-*   **`3_completed/`**:
-    *   **Purpose**: Archives all documentation related to features or versions that have been completed, tested, and released (or deployed).
-    *   **Content**: Organized into version-specific subdirectories, mirroring the structure from `1_planning/` or `2_inprogress/`. These directories are moved here once a version/feature is finalized.
-        *   Documents should reflect the final state of the delivered work.
-        *   Should include a `spec.md` or `final_spec.md` that details exactly what was delivered.
-        *   May also include a `release_notes.md` specific to that version or a `post_mortem.md` if any valuable lessons were learned.
-    *   **Directory Naming**: Follows the same naming convention as `1_planning/` (e.g., `V1.0.0/`).
 
 *   **`_reference/`**:
     *   **Purpose**: Stores general project reference materials that are not tied to a specific version or feature lifecycle but are relevant for the overall project.
@@ -88,8 +71,61 @@ The standard subdirectories within `plans/` are:
         *   `tech_spec_template.md`
         *   `bug_report_template.md`
         *   `wip_readme_template.md`
-        *   `CHANGELOG_TEMPLATE.md`
-        *   `ROADMAP_TEMPLATE.md`
+    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
+
+This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
+
+## Status Tracking
+
+Each version directory in `1_planning/` includes a `status.md` file that tracks its progress through these stages:
+
+1. **Planning** (Default)
+   - New versions start here
+   - All planning documents are created
+   - Status is tracked in `status.md`
+
+2. **In Progress**
+   - Development has started
+   - Status is automatically updated
+   - All changes are version controlled
+
+3. **Completed**
+   - Version is released
+   - Final documentation is updated
+   - Status is marked complete
+
+### Status File Format
+```markdown
+# Version Status
+- **Current Status**: [Planning/In Progress/Completed]
+- **Created**: [timestamp]
+- **Last Updated**: [timestamp]
+
+## Status History
+- [timestamp] - Status changed to [status]
+```
+
+This approach eliminates the need for directory movements while maintaining clear status tracking for each version.
+
+## Version Documentation
+
+Each version directory in `1_planning/` should include:
+- `status.md` - Tracks version status and history
+- `release_notes.md` - Specific to that version
+- `post_mortem.md` - If any valuable lessons were learned
+
+**Directory Naming**: Use semantic versioning (e.g., `V1.0.0`)
+
+        *   `coding_standards.md`, `style_guide.md`, etc.
+    *   **File Naming**: Descriptive kebab-case names.
+
+*   **`_templates/`**:
+    *   **Purpose**: Contains standardized templates for various documents used in the project management process. This helps maintain consistency and ensures all necessary information is captured.
+    *   **Content**: Examples include:
+        *   `feature_spec_template.md`
+        *   `tech_spec_template.md`
+        *   `bug_report_template.md`
+        *   `wip_readme_template.md`
     *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
@@ -107,17 +143,26 @@ This detailed structure, when consistently applied, will significantly improve p
    - Get stakeholder approval before implementation
 
 3. **In Progress**
-   - Move to `2_inprogress/` when work begins
+   - Update status to 'In Progress' when work begins
    - Update documentation as development progresses
    - Regular commits with clear messages
 
 4. **Completed**
-   - Move to `3_completed/` when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
+   - Update status to 'Completed' when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
    - Include post-implementation review, if applicable (e.g., for feature releases).
    - Update `plans/_reference/CHANGELOG.md` with all changes, clearly stating the nature of the release.
    - Ensure all changes are properly documented in the changelog, following the Keep a Changelog format.
 
 ## Documentation Standards
+
+### Slide Documentation
+All presentations must follow the McKinsey presentation standards defined in `content/Style.md`. This includes:
+- Consistent use of the defined color palette and typography
+- Adherence to layout and spacing guidelines
+- Proper source attribution for all data and visual elements
+- Clear, action-oriented slide titles
+- MECE (Mutually Exclusive, Collectively Exhaustive) organization
+- Data-driven content with proper visualization
 
 ### File Naming
 - Use kebab-case for all filenames
@@ -193,21 +238,7 @@ This detailed structure, when consistently applied, will significantly improve p
 
 ## AI Collaboration
 
-### Prompt Management
-
-For each version or feature implementation, maintain a `prompt.md` file that documents all AI interactions. This ensures:
-- Reproducibility of AI-assisted development
-- Clear communication of requirements to AI assistants
-- Consistent approach to AI collaboration across the team
-- Knowledge transfer for future maintenance
-
-#### Prompt File Structure
-Each `prompt.md` should include:
-1. **Version/Feature Overview**: Brief description of what's being implemented
-2. **Implementation Prompts**: All prompts used with AI assistants
-3. **Review Process**: How prompts were reviewed and validated
-4. **Best Practices**: Any lessons learned about effective prompting
-5. **Version Control**: How changes are tracked and committed
+### Best Practices for AI Prompts
 
 #### Best Practices for AI Prompts
 1. **Be Specific**: Clearly define requirements and constraints
@@ -216,7 +247,7 @@ Each `prompt.md` should include:
 4. **Document Assumptions**: Note any assumptions made during implementation
 5. **Review Outputs**: Always review and validate AI-generated code
 
-Example structure is available in `plans/2_inprogress/V0.2.3/prompt.md`
+Example structure is available in `plans/1_planning/V0.2.3/prompt.md`
 
 ### Working with AI
 - Be specific in your prompts
@@ -336,12 +367,12 @@ Execute do_plan.md
 - Write access to the repository
 - Internet connection (for AI functionality)
 
-### Version Planning Template (plan_version.md)
+### Version Planning Template (create_version.md)
 
-The `plan_version.md` template is a comprehensive guide for managing software versions throughout their entire lifecycle. It's designed to be used with AI assistance and follows a phased approach from planning to post-release.
+The `create_version.md` template is a comprehensive guide for managing software versions throughout their entire lifecycle. It's designed to be used with AI assistance and follows a phased approach from planning to post-release.
 
 #### Location
-- Template: `plans/_templates/plan_version.md`
+- Template: `plans/_templates/create_version.md`
 - Usage: Copy to `plans/1_planning/VX.Y.Z/` when starting a new version
 
 #### Directory Structure Created
@@ -379,7 +410,7 @@ plans/1_planning/VX.Y.Z/
 
 #### How to Use
 1. Copy the template to your version directory
-2. Run `Execute plan_version.md` with your AI assistant
+2. Run `Execute create_version.md` with your AI assistant
 3. Follow the interactive prompts
 4. The AI will handle file creation and updates
 
@@ -407,7 +438,7 @@ plans/1_planning/VX.Y.Z/
 
 ### AI-Generated Code
 - Document which parts were AI-generated in commit messages
-- Include the prompt used in the commit message or reference the prompt.md file
+- Include the prompt used in the commit message
 - Ensure all AI-generated code is reviewed before merging to main
 
 ## Requirements

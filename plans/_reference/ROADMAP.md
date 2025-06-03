@@ -31,20 +31,17 @@ Create the most engaging, accessible, and effective presentation platform for sh
     - [ ] Founded: May 2017
     - [ ] Headquarters: Singapore
     - [ ] Founder & CEO: Christopher Yeo
-    - [ ] Team: 30+ professionals
+    - [ ] Team: 15+ professionals
   - [ ] Design clean, modern layout
-  - [ ] Add visual elements (icons, charts)
+  - [ ] Add visual elements:
+    - [ ] Singapore location map: `/static/images/Singapore.png`
+    - [ ] Company logo: `/static/images/sentient-logo.png`
+    - [ ] Icons for key metrics
   - [ ] Ensure mobile responsiveness
   - [ ] Add subtle animations
   - [ ] Verify accessibility standards
   - [ ] Optimize for fast loading
-  - [ ] Add key company metrics:
-    - [ ] Founded: May 2017
-    - [ ] Headquarters: Singapore
-    - [ ] Founder & CEO: Christopher Yeo
   - [ ] Include key statistics and achievements
-  - [ ] Design with visual elements and icons
-  - [ ] Ensure mobile responsiveness
 
 ## 📅 Upcoming Features
 

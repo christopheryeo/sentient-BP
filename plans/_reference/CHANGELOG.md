@@ -9,32 +9,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
-| V0.2.5  | TBD       | Planning for Company Facts Slide                                      |
-| V0.2.4j  | `5e63351` | Move V0.2.4 from 1_planning to 3_completed                                  |
-| V0.2.4i  | `696163d` | Reviewed git list                                                           |
-| V0.2.4h  | `8742deb` | Automated run processes - cleanup and finalization                          |
-| V0.2.4g  | `5cdfbe4` | Automated run processes - initial setup                                     |
-| V0.2.4f  | `6f24438` | Enhanced project management with new templates and workflows                |
-| V0.2.4e  | `5068a08` | Merge pull request #26: Update management display text                      |
-| V0.2.4d  | `f14ad67` | Refactor: Update management team display and content                        |
-| V0.2.4c  | `3434b77` | Merge pull request #25: Management team final slide implementation           |
-| V0.2.4b  | `4233f8a` | Implemented V0.2.4 changes including management team and final slide styling |
-| V0.2.4a  | `673e5a6` | Planning for V0.2.4 management team slides and final slide styling          |
-| V0.2.3c  | `ebe1f09` | Merge pull request #24: Add prompt.md for V0.2.4                            |
-| V0.2.3b  | `5381819` | Prepared for V0.2.4 development                                            |
-| V0.2.3   | `33980da` | Merged PR #23: Enhanced Vision & Approach section                           |
-| V0.2.2h  | `f651ad8` | Established new product management process using prompt.md and McKinsey Slide Layout |
-| V0.2.2g  | `3c449a7` | Increased Chris Yeo's photo size for better visibility                     |
-| V0.2.2f  | `342183e` | Updated Chris Yeo bio with additional employment history                  |
-| V0.2.2e  | `6260588` | Reviewed documentation of V0.2.2                                          |
-| V0.2.2d  | `bccab7f` | Planned next few versions                                                 |
-| V0.2.2c  | `43eacfd` | Cleaned up project files and removed temporary files                      |
-| V0.2.2b  | `28ba832` | Cleaned up project files                                                  |
-| V0.2.2a  | `d1c6378` | Improved Markdown linting and formatting in content.md                     |
-| V0.2.2   | `c7af4de` | Documentation corrections and updates for V0.2.1                           |
-| V0.2.1   | `0f8c137` | Completed slides 1-15, updated documentation                               |
-| V0.2.0e  | `e5b0354` | Added full BP presentation to source.bundle.html                           |
-| V0.2.0d  | `395c6a9` | Updated source.bundle.html with code from Claude 4                         |
+| V0.2.5   | `0dc6846` | Phase 3 Technical Design for Company Facts Slide                           |
+| V0.2.4k  | `e6c0073` | Corrected Git Version History                                              |
+| V0.2.4j  | `5e63351` | Move V0.2.4 from 1_planning to 3_completed                                 |
+| V0.2.4i  | `696163d` | Reviewed git list                                                          |
+| V0.2.4h  | `8742deb` | Automated run processes - cleanup and finalization                         |
+| V0.2.4g  | `5cdfbe4` | Automated run processes - initial setup                                    |
+| V0.2.4f  | `6f24438` | Enhanced project management with new templates and workflows               |
+| V0.2.4e  | `5068a08` | Merge pull request #26: Update management display text                     |
+| V0.2.4d  | `f14ad67` | Refactor: Update management team display and content                       |
+| V0.2.4c  | `3434b77` | Merge pull request #25: Management team final slide implementation          |
+| V0.2.4b  | `4233f8a` | Implemented V0.2.4 changes including management team and final slide styling|
+| V0.2.4a  | `673e5a6` | Planning for V0.2.4 management team slides and final slide styling         |
+| V0.2.3c  | `ebe1f09` | Merge pull request #24: Update version planning workflow                    |
+| V0.2.3b  | `5381819` | Prepared for V0.2.4 development                                           |
+| V0.2.3   | `33980da` | Merged PR #23: Enhanced Vision & Approach section                          |
+| V0.2.2i  | `f651ad8` | Established new product management process                            |
+| V0.2.2h  | `f651ad8` | Established McKinsey Slide Layout                                         |
+| V0.2.2g  | `3c449a7` | Increased Chris Yeo's photo size for better visibility                    |
+| V0.2.2f  | `342183e` | Updated Chris Yeo bio with additional employment history                 |
+| V0.2.2e  | `6260588` | Reviewed documentation of V0.2.2                                         |
+| V0.2.2d  | `bccab7f` | Planned next few versions                                                |
+| V0.2.2c  | `43eacfd` | Cleaned up project files and removed temporary files                     |
+| V0.2.2b  | `28ba832` | Cleaned up project files                                                 |
+| V0.2.2a  | `d1c6378` | Improved Markdown linting and formatting in content.md                    |
+| V0.2.2   | `c7af4de` | Documentation corrections and updates for V0.2.1                          |
+| V0.2.1   | `0f8c137` | Completed slides 1-15, updated documentation                              |
+| V0.2.0e  | `e5b0354` | Added full BP presentation to source.bundle.html                          |
+| V0.2.0d  | `395c6a9` | Updated source.bundle.html with code from Claude 4                        |
 | V0.2.0c  | `a1e1531` | Confirmed plans directory consistencies and removed V1.0.0                 |
 | V0.2.0b  | `01ffc4f` | Moved V0.2.1 to in progress section                                        |
 | V0.2.0a  | `07b3c20` | Finalised features and design planning                                     |
@@ -147,7 +149,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [V0.2.3c] - 2025-06-02
 ### Added
-- prompt.md for V0.2.4 planning
+- Updated version planning workflow
 - Documentation updates
 - Version preparation
 
@@ -177,7 +179,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [V0.2.2h] - 2025-06-02
 ### Added
 - **Product Management Process**:
-  - Implemented new process using prompt.md
+  - Implemented new version management process
   - Integrated McKinsey Slide Layout standards
   - Updated documentation for new workflow
 
