@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.5  | TBD       | Planning for Company Facts Slide                                      |
 | V0.2.4j  | `5e63351` | Move V0.2.4 from 1_planning to 3_completed                                  |
 | V0.2.4i  | `696163d` | Reviewed git list                                                           |
 | V0.2.4h  | `8742deb` | Automated run processes - cleanup and finalization                          |
@@ -63,6 +64,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > **Note**: For detailed information about recent versions, see the sections below.
 
 ## 📝 Version Details
+
+## [V0.2.5] - 2025-06-05 (Target)
+### Added
+- Started planning for the 'Company Facts Slide'.
+- Created version planning directory `plans/1_planning/V0.2.5/`.
+- Key objectives include:
+  - Engaging company overview
+  - Key company metrics (Founded: May 2017, HQ: Singapore, CEO: Christopher Yeo, Team: 30+)
+  - Clean, modern layout with visual elements
+  - Mobile responsiveness, animations, accessibility, and fast loading.
+- Key Stakeholder: Chris Yeo.
 
 ## [Unreleased]
 ### Added
