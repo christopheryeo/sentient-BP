@@ -315,6 +315,74 @@ The `content/` directory is the central repository for all presentation content 
 
 ## Templates & Examples
 
+### Starting a New Version (do_plan.md)
+
+To begin a new version planning process, simply tell your AI assistant:
+```
+Execute do_plan.md
+```
+
+**Location**: `plans/_templates/do_plan.md`
+
+**What it does**:
+- Automatically checks ROADMAP.md for the next version
+- Creates and initializes a new version directory
+- Guides you through each planning phase
+- Updates all necessary files (roadmap, changelog, etc.)
+- Handles version control commits
+
+**Requirements**:
+- AI assistant with file execution capabilities
+- Write access to the repository
+- Internet connection (for AI functionality)
+
+### Version Planning Template (plan_version.md)
+
+The `plan_version.md` template is a comprehensive guide for managing software versions throughout their entire lifecycle. It's designed to be used with AI assistance and follows a phased approach from planning to post-release.
+
+#### Location
+- Template: `plans/_templates/plan_version.md`
+- Usage: Copy to `plans/1_planning/VX.Y.Z/` when starting a new version
+
+#### Directory Structure Created
+When executed, this template will create and manage the following structure:
+
+```
+plans/1_planning/VX.Y.Z/
+├── comms/               # Communication materials
+│   ├── announcements/   # Release announcements
+│   └── updates/         # Status updates
+├── design/              # Design documents
+│   ├── architecture.md  # System architecture
+│   ├── api.md          # API specifications
+│   └── constraints.md  # Technical constraints
+├── docs/                # Documentation
+│   ├── user_guide.md   # End-user documentation
+│   └── api/            # API documentation
+├── testing/            # Test documentation
+│   ├── test_cases.md   # Test scenarios
+│   └── strategy.md     # Testing approach
+├── decisions/          # Key decisions log
+├── issues/             # Bug reports and issues
+├── README.md           # Version overview
+├── requirements.md     # Feature requirements
+├── tasks.md           # Task tracking
+├── risks.md           # Risk assessment
+└── retrospective.md   # Post-release review
+```
+
+#### Key Features
+- **AI-Assisted Execution**: Can be executed with a single command
+- **Phased Approach**: 10 distinct phases from planning to post-release
+- **Comprehensive Documentation**: Ensures all aspects are documented
+- **Version Control Ready**: Includes guidance for Git integration
+
+#### How to Use
+1. Copy the template to your version directory
+2. Run `Execute plan_version.md` with your AI assistant
+3. Follow the interactive prompts
+4. The AI will handle file creation and updates
+
 ### Feature Specification
 ```markdown
 # [Feature Name]
