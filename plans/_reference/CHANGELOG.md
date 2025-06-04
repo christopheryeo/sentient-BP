@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.5d  | `TBD`     | Updated documentation for run.log and CHANGELOG.md behavior                  |
 | V0.2.5c  | `fa7f0c1` | Added code verification capabilities and updated documentation              |
 | V0.2.5b  | `db1ee3d` | Fixed issues with questions.md and updated documentation                  |
 | V0.2.5a  | `af7a14a` | Enhanced version management with automated workflow using questions.md       |

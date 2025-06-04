@@ -48,15 +48,13 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - CI/CD pipeline definitions
   - Automated testing and deployment
 
-### 6. Log Files
-- `run.log`
-  - Execution logs and runtime information
-  - Timestamped records of all operations
-  - System and process status updates
-- `learn.log`
-  - Records learnings and insights from execution
-  - Captures patterns and improvements
-  - Used for continuous process enhancement
+### 6. Log Files (Planned Features)
+- `run.log` (Planned)
+  - Will log errors and AI decisions
+  - Implementation details to be determined in future updates
+- `learn.log` (Planned)
+  - Will record learnings and insights from execution
+  - Implementation details to be determined in future updates
 
 ### 7. Version Control
 - `.gitignore`
@@ -298,90 +296,46 @@ Yes, `do_plan.md` and `create_version.md` are designed to create and manage only
    - `.gitignore`
    - `CHANGELOG.md`
 
-No other files should be created by these processes. Any additional files would be outside the scope of these scripts and would need to be managed separately.
-
 ## 7. Can do_plan.md and create_version.md be executed by the AI without stopping for human approval or responses?
 
-Yes, both `do_plan.md` and `create_version.md` are designed to run automatically without requiring human intervention, provided that all prerequisites are met. Here's how automated execution works:
-
-### Automated Execution Flow
-1. **Pre-requisites**:
-   - `questions.md` must be fully populated with required information
-   - `ROADMAP.md` must exist and be accessible
-   - Git must be properly initialized and configured
-   - Required permissions for file operations must be set
-
-2. **Non-Interactive Operation**:
-   - Both files are designed to run without interactive input
-   - All decisions are made based on the configuration in `questions.md`
-   - Error conditions are handled automatically with appropriate logging
-
-3. **Phase-based Execution**:
-   - `create_version.md` follows a strict phase-based approach
-   - Each phase validates its own requirements before proceeding
-   - Status is tracked in `TASKS.md`
-   - Progress is logged for monitoring
-
-4. **Error Handling**:
-   - Non-critical issues are logged and execution continues
-   - Critical errors stop execution and log detailed error information
-   - Error recovery processes are built into each phase
-
-5. **Logging and Status**:
-   - All operations are logged for audit purposes
-   - Status is tracked in `TASKS.md`
-   - Learnings are captured in `learn.log` for continuous improvement
-
-This fully automated approach ensures consistent and reliable version management while eliminating the need for manual intervention during execution.
-
+Yes, both `do_plan.md` and `create_version.md` are designed for fully automated execution without requiring human intervention. They are structured to run end-to-end, making decisions and taking actions based on the configuration in `questions.md` and other input files.
 
 ## 8. Where are run.log and learn.log used for logging in do_plan.md and create_version.md?
 
-### learn.log Usage:
+### Logging Implementation (Planned Features)
+1. `run.log` (Planned):
+   - Will record execution start/end times
+   - Will log major decision points and errors
+   - Implementation details to be determined
 
-1. **In do_plan.md**:
-   - Used to document key learnings during execution
-   - Captured in the "Update Project Files" phase
+2. `learn.log` (Planned):
+   - Will capture patterns and optimizations
+   - Will document system behavior and improvements
+   - Implementation details to be determined
 
-2. **In create_version.md**:
-   - Automatically captures learnings throughout the version creation process
-   - Used to store insights and improvements from each phase
-   - Referenced in multiple phases to maintain context:
-     - Phase 1: Appends planning learnings
-     - Phase 4: Captures implementation learnings
-     - Phase 5: Documents testing learnings
-     - Final Phase: Consolidates all learnings
-   - Used to inform future phases with previous learnings
+## 9. Which files are referenced in the workflow but not created by do_plan.md or create_version.md?
 
-### run.log Usage:
-
-While `run.log` is not currently implemented in the templates, its intended purpose (as defined in Q1) is to:
-1. Record execution logs and runtime information
-2. Maintain timestamped records of all operations
-3. Track system and process status updates
-
-### Implementation Notes:
-- `learn.log` is actively used for continuous improvement
-- `run.log` is defined in the file structure but not yet implemented in the workflow
-- Both logs are designed to support the automated execution and learning cycle
-- The logs help maintain context between different phases of execution
-
-## 9. Are any other files being used that are not either do_plan.md, create_version.md or any of the files listed in the answer to Q1?
-
-Yes, the following files are referenced in the workflow but not created by either `do_plan.md` or `create_version.md`:
+The following files are referenced in the workflow but not created by either `do_plan.md` or `create_version.md`:
 
 ### Core Project Files (in project root):
 1. `ROADMAP.md` - Tracks version planning and status
-2. `CHANGELOG.md` - Maintains version history and changes
-3. `questions.md` - Contains version configuration and parameters
+2. `CHANGELOG.md` - Auto-updated by scripts with date/time-stamped entries
+3. `questions.md` - Required pre-created configuration file
+4. `product_management.md` - Main documentation reference for file management
 
-### Version-Specific Files (in version directory):
-4. `design.md` - Stores UI/UX specifications
-5. `testing/results/` - Directory for test results
-6. `docs/` - Additional documentation and assets
+### Core Documentation Files:
+1. `VERSION_PLAN.md` - Version overview and objectives
+2. `TASKS.md` - Task tracking and assignments
+3. `TECH_SPEC.md` - Technical specifications and architecture
+4. `RELEASE_NOTES.md` - Release information and changes
+
+### Supporting Directories:
+1. `docs/` - For additional documentation and assets
 
 ### Integration Files:
-7. `.github/workflows/` - CI/CD pipeline configurations
+1. `.github/workflows/` - CI/CD pipeline definitions
+2. `run.log` - Runtime execution logs (when implemented)
+3. `learn.log` - Learning and improvement logs
 8. `run.log` - Runtime execution logs (when implemented)
 9. `learn.log` - Learning and improvement logs
 
