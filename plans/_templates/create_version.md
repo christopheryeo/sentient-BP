@@ -229,7 +229,6 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
   - `design.md`: Design specifications and UI/UX details
   - `tech-spec.md`: Technical implementation details
   - `TASKS.md`: Tracks progress (Planning/In Progress/Completed) and tasks
-  - `dependencies.md`: Technical dependencies and requirements
 - Initialize status in `TASKS.md` with initial status: 'Planning'
 
 ### 1.3 Validation
@@ -289,9 +288,8 @@ plans/1_planning/VX.Y.Z/
 4. Generate initial task list starting with code investigation
 5. Execute Task 1: Code Impact Analysis
    - Analyze codebase for required changes
-   - Document findings in `DEVELOPMENT.md`
    - Update `TASKS.md` with specific implementation tasks
-6. Track progress in `VERSION.md`
+6. Track progress in `TASKS.md`
 7. Prepare for development kickoff
 
 *Note: This combined phase is fully automated. The AI will gather all required information from `questions.md` and ROADMAP.md without requiring user input. Values from `questions.md` will be used as defaults throughout the process.*
@@ -306,7 +304,7 @@ plans/1_planning/VX.Y.Z/
    - Update `README.md` with milestone details
    - Set initial status in `TASKS.md`
    - Populate `tech-spec.md` with technical requirements
-   - Update `design.md` with UI/UX specifications from `questions.md`
+   - Update `tech-spec.md` with UI/UX specifications from `questions.md`
 
 2. **Validation**
    - Ensure all milestones have target dates
@@ -343,10 +341,7 @@ plans/1_planning/VX.Y.Z/
 
 ## File Updates (Automated):
 1. Update `tasks.md` with current status
-2. Sync `development_guide.md` with latest standards
-3. Generate initial `testing/strategy.md` based on requirements
-4. Create feature plans for complex items
-5. Append Phase 1 learnings to `learn.log`
+2. Append Phase 1 learnings to `learn.log`
 
 ## Learning & Reflection (Automated):
 ```
@@ -593,9 +588,7 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
 5. Review and update future version timelines if needed
 
 ## File Updates:
-1. Create `retrospective.md`
-2. Update `ROADMAP.md` with next steps
-3. Archive project documentation
+1. Update `ROADMAP.md` with next steps
 
 ## Actions:
 1. Monitor production

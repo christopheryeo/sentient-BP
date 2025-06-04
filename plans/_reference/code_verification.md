@@ -59,7 +59,9 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
 
 ### 7. Version Control
 - `.gitignore`
-- `CHANGELOG.md` (updated)
+- `CHANGELOG.md`
+
+---
 
 ## 2. Do the files do_plan.md and create_version.md read information from the file questions.md?
 
@@ -154,10 +156,10 @@ Yes, both `do_plan.md` and `create_version.md` extensively interact with `questi
 Each phase includes:
 - Automatic verification checks
 - Required file updates
-- Progress tracking in status.md
+- Progress tracking in TASKS.md
 - Learning capture for continuous improvement
 - Integration with version control
-- Automated logging to version_creation.log
+- Automated logging to learn.log
 
 ## 4. Are the tasks in tasks.md that create_version.md creates executed?
 
@@ -177,10 +179,10 @@ Yes, tasks in `tasks.md` are executed during Phase 3 (Implementation) of `create
    - Automated tests are run for each task
    - Changes are committed with descriptive messages
 
-4. **Status Updates**
-   - Task status is updated in `tasks.md`
-   - Overall progress is tracked in `status.md`
-   - Any issues are logged in `version_creation.log`
+4. **Status and Logging**
+   - Task status and overall progress are tracked in `TASKS.md`
+   - Execution details and issues are logged in `learn.log`
+   - Both files are updated in real-time during execution
 
 5. **Automation**
    - Task execution is fully automated
@@ -188,6 +190,8 @@ Yes, tasks in `tasks.md` are executed during Phase 3 (Implementation) of `create
    - The system handles errors and rollbacks if needed
 
 This ensures that all tasks are executed in a controlled and verifiable manner.
+
+---
 
 ## 5. Is the first task to be executed the one that lists all code that will be changed by the subsequent tasks?
 
@@ -267,35 +271,6 @@ While `run.log` is not currently implemented in the templates, its intended purp
 - Both logs are designed to support the automated execution and learning cycle
 - The logs help maintain context between different phases of execution
 
-## 8. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
-
-Yes, `do_plan.md` and `create_version.md` are designed to create and manage only the files and directories specified in Q1. Here's the complete list of files and directories that are created:
-
-1. **Version Directory**
-   - `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the semantic version number)
-
-2. **Core Documentation Files**
-   - `VERSION_PLAN.md` - Version overview and objectives
-   - `TASKS.md` - Task tracking and assignments
-   - `TECH_SPEC.md` - Technical specifications and architecture
-   - `RELEASE_NOTES.md` - Release information and changes
-
-3. **Supporting Directories**
-   - `docs/` - For additional documentation and assets
-
-4. **Configuration**
-   - `questions.md` - Version configuration and parameters
-
-5. **Automation (if configured)**
-   - `.github/workflows/` - CI/CD pipeline definitions
-
-6. **Log Files**
-   - `run.log` - Execution logs and runtime information
-   - `learn.log` - Records learnings and insights
-
-7. **Version Control**
-   - `.gitignore`
-   - `CHANGELOG.md`
 
 ## 8. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
 
@@ -327,6 +302,8 @@ Yes, `do_plan.md` and `create_version.md` are designed to create and manage only
    - `.gitignore`
    - `CHANGELOG.md`
 
+---
+
 ## 9. Which files are referenced in the workflow but not created by do_plan.md or create_version.md?
 
 The following files are referenced in the workflow but not created by either `do_plan.md` or `create_version.md`:
@@ -346,6 +323,39 @@ The following files are referenced in the workflow but not created by either `do
 ### Supporting Directories:
 1. `docs/` - For additional documentation and assets
 
+## 10. How does the learning and reflection mechanism work across phases in create_version.md?
+
+`create_version.md` implements a continuous learning cycle across all phases:
+
+1. **Learning at the End of Each Phase**:
+   - Each phase includes a "Learning & Reflection" section
+   - Learnings are saved to `learn.log`
+   - Structured format includes:
+     - What Went Well
+     - Challenges Faced
+     - Key Insights
+
+2. **Reading Learnings at Phase Start**:
+   - Each phase after the first includes a "Learning from Previous Phases" section
+   - References reading from `learn.log`
+   - Placeholder: `[Previous phases' learnings will be automatically inserted here from learn.log]`
+
+3. **Automated File Updates**:
+   - Each phase's "File Updates" section includes appending to `learn.log`
+   - Example: `Append Phase X learnings to learn.log`
+
+4. **Consistent Structure**:
+   - All six phases follow this pattern
+   - Ensures continuous learning and improvement
+   - Creates a feedback loop between phases
+
+5. **Implementation**:
+   - Learnings are timestamped and categorized by phase
+   - The system maintains a running log in `learn.log`
+   - Each phase builds upon learnings from previous ones
+
+This mechanism ensures knowledge is captured, stored, and applied throughout the version management process, creating a continuous improvement cycle.
+
 ### Integration Files:
 1. `.github/workflows/` - CI/CD pipeline definitions
 2. `run.log` - Runtime execution logs (when implemented)
@@ -356,4 +366,5 @@ The following files are referenced in the workflow but not created by either `do
 These files are either read from or written to during the version creation process but are not created by the main workflow scripts. They are expected to exist in their respective locations as part of the project structure.
 
 **Note**: The workflow strictly adheres to the file creation policy defined in Q1, only creating or modifying the explicitly listed files. All other files are treated as read-only or append-only for logging purposes.
+
 
