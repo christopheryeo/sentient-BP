@@ -68,7 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 📝 Version Details
 
-## [V0.2.5] - 2025-06-05 (Target)
+## [V0.2.5] - 2025-06-03 (Target)
 ### Added
 - Started planning for the 'Company Facts Slide'.
 - Created version planning directory `plans/1_planning/V0.2.5/`.
@@ -80,6 +80,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Key Stakeholder: Chris Yeo.
 
 ## [Unreleased]
+
+## [V0.2.5] - 2025-06-03
+
+### Added
+- Initial planning structure for version V0.2.5.
+- Key Deliverable: Company Facts Slide.
+
 ### Added
 - Initial project setup
 - Core presentation framework

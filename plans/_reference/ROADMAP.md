@@ -3,6 +3,7 @@
 This roadmap provides a high-level overview of our vision, direction, and planned features for the Sentient.io Interactive Presentation. It's a living document that will be updated as we progress.
 
 ## 📦 Recent Releases
+|V0.2.5| Completed | 2025-06-03 | Company Facts Slide                 |
 
 ### V0.2.4 - Management Team & Final Slide Styling (2025-06-04)
 - ✅ Management team section with photos and bios
@@ -14,7 +15,6 @@ This roadmap provides a high-level overview of our vision, direction, and planne
 
 | Version | Status      | Target Date | Key Deliverables                     |
 |---------|-------------|-------------|-------------------------------------|
-| V0.2.5  | In Progress | 2025-06-05  | Company Facts Slide                 |
 | V0.3.0  | Planned     | 2025-Q3     | Navigation Improvements             |
 | V0.4.0  | Planned     | 2025-Q3     | Interactive Demos                   |
 
