@@ -48,13 +48,14 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - CI/CD pipeline definitions
   - Automated testing and deployment
 
-### 6. Log Files (Planned Features)
+### 6. Log Files
 - `run.log` (Planned)
   - Will log errors and AI decisions
   - Implementation details to be determined in future updates
-- `learn.log` (Planned)
-  - Will record learnings and insights from execution
-  - Implementation details to be determined in future updates
+- `learn.log` (Active)
+  - Records learnings and insights from execution
+  - Used throughout the version creation process
+  - Captures key insights for continuous improvement
 
 ### 7. Version Control
 - `.gitignore`
@@ -296,22 +297,35 @@ Yes, `do_plan.md` and `create_version.md` are designed to create and manage only
    - `.gitignore`
    - `CHANGELOG.md`
 
-## 7. Can do_plan.md and create_version.md be executed by the AI without stopping for human approval or responses?
+## 8. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
 
-Yes, both `do_plan.md` and `create_version.md` are designed for fully automated execution without requiring human intervention. They are structured to run end-to-end, making decisions and taking actions based on the configuration in `questions.md` and other input files.
+Yes, `do_plan.md` and `create_version.md` are designed to create and manage only the files and directories specified in Q1. Here's the complete list of files and directories that are created:
 
-## 8. Where are run.log and learn.log used for logging in do_plan.md and create_version.md?
+1. **Version Directory**
+   - `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the semantic version number)
 
-### Logging Implementation (Planned Features)
-1. `run.log` (Planned):
-   - Will record execution start/end times
-   - Will log major decision points and errors
-   - Implementation details to be determined
+2. **Core Documentation Files**
+   - `VERSION_PLAN.md` - Version overview and objectives
+   - `TASKS.md` - Task tracking and assignments
+   - `TECH_SPEC.md` - Technical specifications and architecture
+   - `RELEASE_NOTES.md` - Release information and changes
 
-2. `learn.log` (Planned):
-   - Will capture patterns and optimizations
-   - Will document system behavior and improvements
-   - Implementation details to be determined
+3. **Supporting Directories**
+   - `docs/` - For additional documentation and assets
+
+4. **Configuration**
+   - `questions.md` - Version configuration and parameters
+
+5. **Automation (if configured)**
+   - `.github/workflows/` - CI/CD pipeline definitions
+
+6. **Log Files**
+   - `run.log` - Execution logs and runtime information (planned)
+   - `learn.log` - Records learnings and insights (active)
+
+7. **Version Control**
+   - `.gitignore`
+   - `CHANGELOG.md`
 
 ## 9. Which files are referenced in the workflow but not created by do_plan.md or create_version.md?
 
