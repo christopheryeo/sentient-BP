@@ -43,7 +43,7 @@
    - Populate `README.md` with version details from ROADMAP.md
    - Validate all required information is in `questions.md`
    - If any required fields are missing:
-     - Log detailed error to `version_creation.log`
+     - Log detailed error to `run.log`
      - Exit with clear error message
    - Begin executing `create_version.md` starting with Phase 1
    - For each phase:
@@ -51,7 +51,7 @@
      - Update relevant standard files
      - Update `status.md` when changing phases
      - Commit changes with descriptive messages
-     - Log all actions to `version_creation.log`
+     - Log all actions to `run.log`
 
 4. **Update Project Files**
    - Update ROADMAP.md with new version details and status
@@ -97,10 +97,10 @@
    - Verify all changes were applied
    - Update ROADMAP.md and CHANGELOG.md
    - Generate execution summary in `version_summary.md`
-   - Log completion status to `version_creation.log`
+   - Log completion status to `run.log`
 
 ## Error Handling & Logging
-- **Single Log File**: All logs go to `version_creation.log` with timestamps
+- **Single Log File**: All logs go to `run.log` with timestamps
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.
@@ -121,7 +121,7 @@
   - Sufficient permissions for file operations
 
 - **Outputs**:
-  - `version_creation.log`: Complete execution log with timestamps
+  - `run.log`: Complete execution log with timestamps
   - `status.md`: Current status and progress
   - Git commits for all changes
 

@@ -116,7 +116,7 @@ The status is automatically updated during phase transitions and includes timest
 ### General Guidelines
 - **Phased Execution**: Follow the phased approach strictly without pausing
 - **File Management**: Update all standard files at each phase automatically
-- **Documentation**: All AI interactions are logged in `version_creation.log` with [AI] prefix
+- **Documentation**: All AI interactions are logged in `run.log` with [AI] prefix
 - **Error Handling**: Non-blocking errors are logged; critical errors stop execution
 
 ### Commit Message Format
@@ -133,7 +133,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 3. Git must be properly configured
 
 ### Error Handling & Logging
-- **Single Log File**: All logs go to `version_creation.log` with timestamps
+- **Single Log File**: All logs go to `run.log` with timestamps
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.

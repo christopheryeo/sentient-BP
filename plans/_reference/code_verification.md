@@ -366,4 +366,26 @@ While `run.log` is not currently implemented in the templates, its intended purp
 - Both logs are designed to support the automated execution and learning cycle
 - The logs help maintain context between different phases of execution
 
+## 9. Are any other files being used that are not either do_plan.md, create_version.md or any of the files listed in the answer to Q1?
+
+Yes, the following files are referenced in the workflow but not created by either `do_plan.md` or `create_version.md`:
+
+### Core Project Files (in project root):
+1. `ROADMAP.md` - Tracks version planning and status
+2. `CHANGELOG.md` - Maintains version history and changes
+3. `questions.md` - Contains version configuration and parameters
+
+### Version-Specific Files (in version directory):
+4. `design.md` - Stores UI/UX specifications
+5. `testing/results/` - Directory for test results
+6. `docs/` - Additional documentation and assets
+
+### Integration Files:
+7. `.github/workflows/` - CI/CD pipeline configurations
+8. `run.log` - Runtime execution logs (when implemented)
+9. `learn.log` - Learning and improvement logs
+
+These files are either read from or written to during the version creation process but are not created by the main workflow scripts. They are expected to exist in their respective locations as part of the project structure.
+
+**Note**: The workflow strictly adheres to the file creation policy defined in Q1, only creating or modifying the explicitly listed files. All other files are treated as read-only or append-only for logging purposes.
 
