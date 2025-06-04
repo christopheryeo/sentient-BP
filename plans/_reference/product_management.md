@@ -298,19 +298,35 @@ Constraints:
 
 ## Quality Assurance
 
+### Code Verification
+
+#### `code_verification.md`
+- **Purpose**: Combines both the verification checklist and results in a single file
+- **Location**: `plans/_reference/code_verification.md`
+- **Usage**:
+  - Serves as the master checklist for all code verification activities
+  - Tracks verification results and findings in one place
+  - Used by both AI and human developers to ensure consistent code quality
+  - Covers structure, code quality, security, performance, testing, and dependencies
+  - Includes sections for both verification criteria and their results
+- **Note**: This consolidated approach replaces the previous split between `code_verification.md` and `verification_results.md`
+
 ### Testing
 - Write tests for all new features
 - Maintain test coverage above 80%
 - Run tests before each commit
 - Document test cases
+- Reference test results in `verification_results.md`
 
 ### Code Review
 - At least one reviewer required
-- Check for:
-  - Code quality
-  - Performance
-  - Security
-  - Documentation
+- Check against standards in `code_verification.md`
+- Document findings in `verification_results.md`
+- Verify:
+  - Code quality and style compliance
+  - Performance considerations
+  - Security best practices
+  - Complete and accurate documentation
 
 ## Content Directory Structure
 

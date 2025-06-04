@@ -29,16 +29,17 @@
 2. **Setup Version Directory**
    - Create a new directory: `plans/1_planning/VX.Y.Z/` (using semantic versioning)
    - Create standard files in the new directory:
-     - `README.md`: Version overview and goals
-     - `design.md`: Design specifications and UI/UX details
-     - `tech-spec.md`: Technical implementation details
-     - `status.md`: Tracks progress (Planning/In Progress/Completed)
+     - `VERSION_PLAN.md`: Version overview, goals, and high-level design
+     - `TASKS.md`: Task tracking, status, and deployment checklist
+     - `TECH_SPEC.md`: Technical specifications and architecture
+     - `RELEASE_NOTES.md`: Release notes and test results
+     - `docs/`: Directory for additional documentation
    - Copy templates:
      - `plans/_templates/create_version.md`
      - `plans/_templates/questions.md`
 
 3. **Initialize Version Planning**
-   - Update `status.md` with initial status: 'Planning'
+   - Update `TASKS.md` with initial status: 'Planning'
    - Populate `README.md` with version details from ROADMAP.md
    - Validate all required information is in `questions.md`
    - If any required fields are missing:

@@ -63,14 +63,14 @@ All slide content must adhere to the McKinsey presentation standards defined in 
 
 ## Status Tracking
 
-Each version directory includes a `status.md` file that tracks progress through these stages:
+Each version directory tracks progress through these stages in `TASKS.md`:
 1. **Planning** (Default)
 2. **In Progress** (Starts at Phase 3)
 3. **Completed** (After Phase 6)
 
 The status is automatically updated during phase transitions and includes timestamps for each state change.
 
-### Example status.md:
+### Example status section in TASKS.md:
 ```markdown
 # Version Status
 - **Current Status**: Planning
@@ -137,7 +137,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.
-- **Status Tracking**: `status.md` tracks:
+- **Status Tracking**: `TASKS.md` tracks:
   - Current phase and progress
   - Last completed action
   - Next steps
@@ -183,7 +183,8 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
   1. Stop execution
   2. Clearly describe the issue
   3. Suggest solutions
-  4. Wait for user input before proceeding
+  4. Only wait for user input if the error is critical and requires human intervention
+- For non-critical issues, log them and continue with the next phase
 
 ### Progress Tracking
 - After completing each phase:
@@ -227,68 +228,71 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
   - `README.md`: Version overview and goals (from ROADMAP.md)
   - `design.md`: Design specifications and UI/UX details
   - `tech-spec.md`: Technical implementation details
-  - `status.md`: Tracks progress (Planning/In Progress/Completed)
-  - `risks.md`: Risk assessment and mitigation plans
+  - `TASKS.md`: Tracks progress (Planning/In Progress/Completed) and tasks
   - `dependencies.md`: Technical dependencies and requirements
-- Initialize `status.md` with initial status: 'Planning'
+- Initialize status in `TASKS.md` with initial status: 'Planning'
 
-### 1.3 Risk Assessment & Mitigation
-1. **Risk Identification**
-   - Technical risks (new technologies, complexity)
-   - Resource risks (team availability, dependencies)
-   - Timeline risks (dependencies, external factors)
-   - Quality risks (testing coverage, technical debt)
-
-2. **Risk Mitigation**
-   - Document each risk in `risks.md`
-   - Assign risk owners
-   - Define mitigation strategies
-   - Set review dates for high-priority risks
-
-3. **Dependency Management**
-   - List all technical dependencies in `dependencies.md`
-   - Verify version compatibility
-   - Document upgrade paths if needed
-   - Check for security vulnerabilities
-
-### 1.4 Validation
+### 1.3 Validation
 - Verify all required information is present in ROADMAP.md
 - Check for version conflicts
 - Validate technical requirements
-- Confirm risk assessment is complete
 - Verify dependency validation is documented
 
-## File Structure & Setup
-1. Create version directory: `plans/1_planning/VX.Y.Z/`
-2. Initialize directory structure:
-   ```
-   plans/1_planning/VX.Y.Z/
-   ├── comms/
-   ├── design/
-   │   ├── architecture.md
-   │   ├── api.md
-   │   └── constraints.md
-   ├── docs/
-   ├── requirements.md
-   ├── tasks.md
-   └── risks.md
-   ```
+## File Structure
 
-## File Updates (Automated)
-1. `README.md` - Version overview and objectives
-2. `ROADMAP.md` - Update version status and details
-3. `CHANGELOG.md` - Add new version section
-4. `design/architecture.md` - System design documentation
-5. `design/api.md` - API specifications
-6. `requirements.md` - Feature and requirement details
-7. `risks.md` - Risk assessment and mitigation
+```
+plans/1_planning/VX.Y.Z/
+├── VERSION_PLAN.md       # Version overview, goals, and high-level design
+├── TASKS.md             # Task list, status tracking, and deployment checklist
+├── TECH_SPEC.md         # Technical specs, architecture, and requirements
+├── RELEASE_NOTES.md     # Release notes and test results
+└── docs/               # Additional documentation and assets
+```
+
+### File Descriptions:
+1. **VERSION_PLAN.md**
+   - Version overview and objectives
+   - High-level design decisions
+   - Scope and success criteria
+   - Links to related resources
+
+2. **TASKS.md**
+   - Task list with status tracking
+   - Current version status and progress
+   - Deployment checklist
+   - Rollback procedures
+
+3. **TECH_SPEC.md**
+   - Technical requirements and specifications
+   - System architecture
+   - API specifications
+   - Design constraints
+   - Dependencies
+
+4. **RELEASE_NOTES.md**
+   - Release summary
+   - New features and changes
+   - Known issues
+   - Test results summary
+   - Upgrade instructions
+
+5. **docs/**
+   - Additional supporting documentation
+   - Design assets
+   - Meeting notes
+   - Reference materials
 
 ## Actions (Automated)
 1. Set up version control branch
-2. Initialize all documentation files
+2. Initialize consolidated documentation structure
 3. Conduct automated technical analysis
-4. Generate initial task list
-5. Prepare for development kickoff
+4. Generate initial task list starting with code investigation
+5. Execute Task 1: Code Impact Analysis
+   - Analyze codebase for required changes
+   - Document findings in `DEVELOPMENT.md`
+   - Update `TASKS.md` with specific implementation tasks
+6. Track progress in `VERSION.md`
+7. Prepare for development kickoff
 
 *Note: This combined phase is fully automated. The AI will gather all required information from `questions.md` and ROADMAP.md without requiring user input. Values from `questions.md` will be used as defaults throughout the process.*
 
@@ -300,12 +304,12 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 1. **Automatic Processing**
    - Extract milestones from ROADMAP.md
    - Update `README.md` with milestone details
-   - Set initial status in `status.md`
+   - Set initial status in `TASKS.md`
    - Populate `tech-spec.md` with technical requirements
    - Update `design.md` with UI/UX specifications from `questions.md`
 
 2. **Validation**
-   - Ensure all milestones have owners and target dates
+   - Ensure all milestones have target dates
    - Verify dependencies between milestones
    - Check for resource conflicts
 
@@ -324,24 +328,21 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 - Technical requirements and constraints (from Phase 1)
 - System architecture (from Phase 1)
 
-## Questions for User Confirmation:
+## Automatic Verification Checks:
 1. **Milestone Review**
-   - Current milestones: [Auto-populated from Phase 1]
-   - Any changes needed? [ ] Yes [ ] No
-   - If yes, please specify:
+   - Verify milestones from Phase 1 are complete and well-defined
+   - Log any incomplete or unclear milestones as WARN
 
-2. **Team Assignments**
-   - Based on previous assignments: [Auto-populated from similar past versions]
-   - Any changes to component ownership? [ ] Yes [ ] No
-   - If yes, please specify:
+2. **Task Status**
+   - Verify all tasks have proper status in TASKS.md
+   - Log any tasks without status as WARN
 
 3. **Development Standards**
-   - Current standards: [Auto-populated from organization defaults]
-   - Any exceptions needed? [ ] Yes [ ] No
-   - If yes, please specify:
+   - Verify development standards are documented in TECH_SPEC.md
+   - Log any missing or unclear standards as WARN
 
 ## File Updates (Automated):
-1. Update `tasks.md` with assigned owners
+1. Update `tasks.md` with current status
 2. Sync `development_guide.md` with latest standards
 3. Generate initial `testing/strategy.md` based on requirements
 4. Create feature plans for complex items
@@ -353,21 +354,45 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ## What Went Well
 - Successful setup of development environment
-- Clear task assignments established
+- Clear task status tracking established
 - Development standards documented
 
 ## Challenges Faced
 - Potential delays in environment setup
-- Need for clarification on some task assignments
+- Need for clarification on some task statuses
 
 ## Key Insights
 - Early environment setup prevents later delays
-- Clear ownership improves accountability
+- Clear status tracking improves visibility
 ```
 
 ---
 
 # Phase 3: Implementation
+
+### 3.1 Automated Task Execution
+1. **Initial Code Analysis**
+   - [ ] Perform comprehensive analysis of the codebase
+   - [ ] Identify all necessary changes and modifications
+   - [ ] Document analysis results including:
+     - Files requiring modification
+     - Specific changes needed
+     - Dependencies and impacts
+
+2. **Task Generation**
+   - [ ] Generate specific implementation tasks based on analysis
+   - [ ] Organize tasks in logical execution order
+   - [ ] Document task dependencies and relationships
+
+3. **Task Execution**
+   - [ ] Execute tasks in the predefined sequence
+   - [ ] Update task status upon completion
+   - [ ] Verify code changes against requirements and design
+
+4. **Code Updates & Testing**
+   - [ ] Apply code changes based on the analysis
+   - [ ] Run automated tests to verify changes
+   - [ ] Commit changes with descriptive messages
 
 ## Status Update: In Progress
 - Updating status to **In Progress**
@@ -381,25 +406,32 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ## Information from Previous Phases:
 - Current milestone progress
-- Open tasks and owners
+- Open tasks and their status
 - Known issues and risks
 
-## Questions for User Confirmation:
-1. **Progress Update**
-   - Current status: [Auto-calculated % complete]
-   - Any blocking issues? [ ] Yes [ ] No
-   - If yes, please describe:
+## Automatic Verification Checks:
+1. **Implementation Status Check**
+   - Verify implementation progress in TASKS.md
+   - Log any blocking issues as WARN with details
 
-2. **Requirements**
-   - Current requirements: [From Phase 1]
-   - Any changes needed? [ ] Yes [ ] No
-   - If yes, please specify:
+2. **Requirements Validation**
+   - Verify all requirements from Phase 1 are properly documented in TECH_SPEC.md
+   - Log any missing or ambiguous requirements as WARN
 
 ## File Updates (Automated):
-1. Update `tasks.md` with progress
-2. Log technical decisions in `decisions/`
-3. Update `risks.md` with new findings
-4. Append Phase 3 learnings to `learn.log`
+1. **Core Documentation**
+   - Update `VERSION_PLAN.md` with version overview and objectives
+   - Maintain `TASKS.md` with current task status and assignments
+   - Update `TECH_SPEC.md` with technical specifications
+   - Keep `RELEASE_NOTES.md` current with version highlights
+
+2. **Supporting Documentation**
+   - Store additional documentation in `docs/` directory
+   - Maintain version configuration in `questions.md`
+   - Update CI/CD workflows in `.github/workflows/` if configured
+   - Keep version control files (`.gitignore`, `CHANGELOG.md`) up to date
+
+Note: Only the files and directories listed in Q1 of code_verification.md should be created or modified.
 
 ## Learning & Reflection (Automated):
 ```
@@ -433,16 +465,13 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 - Known issues and risks
 - Quality metrics
 
-## Questions for User Confirmation:
-1. **Test Results Review**
-   - Current coverage: [Auto-calculated %]
-   - Any critical issues found? [ ] Yes [ ] No
-   - If yes, please reference issue numbers:
-
-2. **Quality Gates**
-   - Current status: [Pass/Warning/Fail]
-   - Any quality concerns? [ ] Yes [ ] No
-   - If yes, please describe:
+## Automatic Verification Checks:
+1. Design Alignment Check
+   - Verify design matches requirements in TECH_SPEC.md
+   - Log any discrepancies as WARN
+2. Dependencies Documentation Check
+   - Ensure all dependencies are documented in TECH_SPEC.md
+   - Log any missing dependencies as WARN
 
 ## File Updates (Automated):
 1. Update test results in `testing/results/`
@@ -482,16 +511,13 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 - Known risks and mitigations
 - Rollback procedures
 
-## Questions for User Confirmation:
-1. **Deployment Readiness**
-   - All pre-deployment checks: [Auto-validated status]
-   - Any deployment concerns? [ ] Yes [ ] No
-   - If yes, please describe:
-
-2. **Documentation**
-   - All documentation updates: [Auto-validated status]
-   - Any missing items? [ ] Yes [ ] No
-   - If yes, please specify:
+## Automatic Verification Checks:
+1. Deployment Checklist Check
+   - Verify deployment checklist is complete in TASKS.md
+   - Log any incomplete items as WARN
+2. Rollback Verification Check
+   - Confirm rollback procedures are tested and documented
+   - Log any untested rollback procedures as WARN
 
 ## File Updates (Automated):
 1. Generate deployment checklist
@@ -529,7 +555,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
    - Rollback on failure with detailed logs
 
 2. **Documentation Updates**
-   - Update `status.md` to 'Completed'
+   - Update status in `TASKS.md` to 'Completed'
    - Finalize all version documentation
    - Update ROADMAP.md with completion status
    - Generate CHANGELOG.md entry
@@ -564,46 +590,6 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 - Continuous monitoring is crucial post-release
 - Clear support procedures improve user experience
 - Documented learnings improve future releases
-```
-
----
-
-# Phase 9: Release
-
-## Questions:
-1. What is the release process?
-2. Who needs to be notified?
-3. What is the rollback plan?
-
-## File Updates:
-1. Tag release in version control
-2. Update production documentation
-3. Archive release artifacts
-
-## Actions:
-1. Deploy to production
-2. Verify deployment
-3. Send release notifications
-4. Update issue tracker
-
----
-
-# Phase 10: Post-Release
-
-## Questions:
-1. Is the release stable in production?
-   - *Check monitoring dashboards and error logs*
-2. What were the key learnings?
-   - Document any deviations from the original roadmap
-3. What improvements can be made for next time?
-   - Update ROADMAP.md with any timeline adjustments
-   - Document any roadmap items that need to be reprioritized
-
-## ROADMAP.md Integration Tasks:
-1. Move the completed version from 'Upcoming Versions' to 'Recent Releases'
-2. Update the status to 'Completed' with the actual release date
-3. Add a brief summary of what was delivered
-4. Cross-reference the CHANGELOG.md for detailed changes
 5. Review and update future version timelines if needed
 
 ## File Updates:
