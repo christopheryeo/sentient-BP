@@ -297,29 +297,17 @@ This fully automated approach ensures consistent and reliable version management
 
 ## 8. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
 
-No, `do_plan.md` and `create_version.md` create additional files beyond those listed in Q1. Here's a comprehensive list of all files and directories created by the templates:
+Yes, the files mentioned in Q1 represent a comprehensive list of all files and directories created by `do_plan.md` and `create_version.md`. The list in Q1 has been updated to include:
 
-1. **Files Listed in Q1**
-   - `VERSION_PLAN.md` - Version overview and objectives
-   - `TASKS.md` - Task tracking and assignments
-   - `TECH_SPEC.md` - Technical specifications and architecture
-   - `RELEASE_NOTES.md` - Release information and changes
-   - `docs/` - Directory for additional documentation and assets
-   - `questions.md` - Version configuration and parameters
-   - `.github/workflows/` - CI/CD pipeline definitions (if configured)
-   - `run.log` - Execution logs and runtime information (planned)
-   - `learn.log` - Records learnings and insights from execution
+- Core documentation files (`VERSION_PLAN.md`, `TASKS.md`, etc.)
+- The copied template files (`create_version.md` in the version directory)
+- Supporting directories (`docs/`, `testing/results/`)
+- Configuration files (`questions.md` - copied or created)
+- Log files (`learn.log` and planned `run.log`)
 
-2. **Additional Files Created**
-   - A version-specific copy of `create_version.md` in the version directory
-   - `CHANGELOG.md` - Release history and changes (mentioned in Q1 under Version Control)
-   - `.gitignore` - Git ignore configuration (mentioned in Q1 under Version Control)
+The files listed under "Referenced and Updated Files" in Q1 (such as `.github/workflows/`, `.gitignore`, and `CHANGELOG.md`) are not created by these templates but are only referenced or updated during the process.
 
-3. **Files Generated During Execution**
-   - Testing results directory: `testing/results/` (created during Phase 5)
-   - Various reports and documentation in the `docs/` directory
-
-The templates are designed to primarily work with the files listed in Q1, but they do create or modify additional files as needed during the version creation process. The core functionality and main outputs are captured in the Q1 file list, but the complete set of files affected is broader.
+This distinction between "created" files and "referenced/updated" files is important for understanding the scope and impact of the automated version management process.
 
 ---
 
@@ -332,12 +320,15 @@ The following files are referenced in the workflow but not created by either `do
 2. `content/Style.md` - Referenced for McKinsey presentation standards and styling guidelines
 3. The template files themselves:
    - `plans/_templates/create_version.md` - Referenced and copied, but the original template is not created
+   - `plans/_templates/do_plan.md` - Referenced but not created by the workflow itself
    - `plans/_templates/questions.md` - Referenced and potentially copied if not existing
+4. Version control files that are referenced and updated but not created:
+   - `.github/workflows/` - CI/CD pipeline definitions (referenced if configured)
+   - `.gitignore` - Git ignore configuration (referenced and potentially updated)
+   - `CHANGELOG.md` - Release history (referenced and updated with new versions)
 
-### Clarification on Other Files:
-- `questions.md` in the version directory may be created if not existing, or referenced if already present
-- `CHANGELOG.md` is referenced and updated but may also be created if not existing
-- Core documentation files (`VERSION_PLAN.md`, `TASKS.md`, etc.) are created by the templates, not just referenced
+### Clarification on Log Files:
+- Both `learn.log` and `run.log` are created by the templates (with `run.log` being planned), not just referenced, so they are correctly listed in Q1 under "Log Files"
 
 ## 10. How does the learning and reflection mechanism work across phases in create_version.md?
 
