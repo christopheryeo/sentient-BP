@@ -37,7 +37,7 @@ NOTES:
 - All file paths are relative to the project root
 - Learning is automatically captured in learn.log
 - Progress is tracked across sessions
-- Manual review is required at key decision points
+- Automated validation is performed at key decision points
 -->
 
 # AI Product Version Management - AI Prompts
@@ -85,17 +85,16 @@ The status is automatically updated during phase transitions and includes timest
 
 ### For Users:
 1. **Execute this plan**: Simply tell your AI assistant: "Execute create_version.md"
-2. **Follow along**: The AI will guide you through each phase, asking questions and executing tasks
-3. **Provide input**: Just answer the questions when prompted - the AI will handle the rest
+2. **No input required**: The AI will automatically execute all phases using configuration from `questions.md`
+3. **Review results**: Check the generated files and logs after completion
 
 ### For AI Assistants:
 **IMPORTANT**: When executing this file, follow these steps exactly:
 1. **Read the entire file first** to understand the full scope
 2. **Phase by phase**: Work through each section in order
 3. **For each phase**:
-   - Ask the user the listed questions
-   - Update this file with their answers (replace placeholders in square brackets)
-   - Execute the specified actions
+   - Read all required information from `questions.md` and `ROADMAP.md`
+   - Execute the specified actions automatically
    - Update/create any specified files
    - Document decisions/changes
    - Only proceed to next phase when current phase is complete
@@ -116,7 +115,7 @@ The status is automatically updated during phase transitions and includes timest
 ### General Guidelines
 - **Phased Execution**: Follow the phased approach strictly without pausing
 - **File Management**: Update all standard files at each phase automatically
-- **Documentation**: All AI interactions are logged in `run.log` with [AI] prefix
+- **Documentation**: All AI interactions will be logged in `run.log` with [AI] prefix (planned feature)
 - **Error Handling**: Non-blocking errors are logged; critical errors stop execution
 
 ### Commit Message Format
@@ -133,7 +132,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 3. Git must be properly configured
 
 ### Error Handling & Logging
-- **Single Log File**: All logs go to `run.log` with timestamps
+- **Single Log File**: All logs will go to `run.log` with timestamps (planned feature)
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.
@@ -149,8 +148,8 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ### File Management
 1. **Initial Setup**
-   - Copy this file from `plans/_templates/` to your version directory (e.g., `plans/1_planning/VX.Y.Z/`)
-   - Rename it to match your version (e.g., `V1.0.0_plan.md`)
+   - Copy this template from `plans/_templates/create_version.md` to your version directory (e.g., `plans/1_planning/VX.Y.Z/`)
+   - Create a new file named `VERSION_PLAN.md` in the version directory with the version-specific content
 
 ### Execution Rules for AI
 1. **Phased Execution**
@@ -158,10 +157,10 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
    - Never skip ahead or combine phases
    - Verify completion of each phase before proceeding
 
-2. **User Interaction**
-   - Ask one question at a time
-   - Wait for and carefully record user responses
-   - Confirm understanding before proceeding
+2. **Configuration Processing**:
+   - Read all configuration from `questions.md`
+   - Use default values when specific values are not provided
+   - Log all decisions and parameter values used
 
 3. **File Operations**
    - Always work in the correct version directory
@@ -183,7 +182,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
   1. Stop execution
   2. Clearly describe the issue
   3. Suggest solutions
-  4. Only wait for user input if the error is critical and requires human intervention
+  4. Log critical errors and exit with appropriate error code
 - For non-critical issues, log them and continue with the next phase
 
 ### Progress Tracking
@@ -225,9 +224,8 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ### 1.2 Standard Files Setup
 - Ensure all standard files exist in version directory:
-  - `README.md`: Version overview and goals (from ROADMAP.md)
-  - `design.md`: Design specifications and UI/UX details
-  - `tech-spec.md`: Technical implementation details
+  - `VERSION_PLAN.md`: Version overview and goals (from ROADMAP.md)
+  - `TECH_SPEC.md`: Technical specifications including design, architecture, API documentation, and implementation details
   - `TASKS.md`: Tracks progress (Planning/In Progress/Completed) and tasks
 - Initialize status in `TASKS.md` with initial status: 'Planning'
 
@@ -301,10 +299,10 @@ plans/1_planning/VX.Y.Z/
 ### 2.1 Milestone Review
 1. **Automatic Processing**
    - Extract milestones from ROADMAP.md
-   - Update `README.md` with milestone details
+   - Update `VERSION_PLAN.md` with milestone details
    - Set initial status in `TASKS.md`
-   - Populate `tech-spec.md` with technical requirements
-   - Update `tech-spec.md` with UI/UX specifications from `questions.md`
+   - Populate `TECH_SPEC.md` with technical requirements
+   - Update `TECH_SPEC.md` with UI/UX specifications from `questions.md`
 
 2. **Validation**
    - Ensure all milestones have target dates
@@ -376,6 +374,7 @@ plans/1_planning/VX.Y.Z/
 
 2. **Task Generation**
    - [ ] Generate specific implementation tasks based on analysis
+   - [ ] Reference requirements and specifications from `TECH_SPEC.md` for each task
    - [ ] Organize tasks in logical execution order
    - [ ] Document task dependencies and relationships
 
@@ -425,6 +424,7 @@ plans/1_planning/VX.Y.Z/
    - Maintain version configuration in `questions.md`
    - Update CI/CD workflows in `.github/workflows/` if configured
    - Keep version control files (`.gitignore`, `CHANGELOG.md`) up to date
+   - Append Phase 3 learnings to `learn.log`
 
 Note: Only the files and directories listed in Q1 of code_verification.md should be created or modified.
 

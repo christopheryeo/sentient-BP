@@ -88,7 +88,7 @@ Yes, both `do_plan.md` and `create_version.md` extensively interact with `questi
    - Uses these values throughout the version creation process
 
 2. **Documentation**
-   - Updates files like `design.md` with specifications from `questions.md`
+   - Updates files like `TECH_SPEC.md` with specifications from `questions.md`
    - Uses team member information from `questions.md`
 
 3. **Automation**
@@ -103,7 +103,7 @@ Yes, both `do_plan.md` and `create_version.md` extensively interact with `questi
 
 ## 3. What are the phases in create_version.md?
 
-`create_version.md` contains the following 6 phases with detailed workflows:
+`create_version.md` contains the following 7 phases, with detailed workflows for the first 6:
 
 1. **Phase 1: Comprehensive Planning & Design (Automated)**
    - Version information extraction from ROADMAP.md
@@ -153,6 +153,10 @@ Yes, both `do_plan.md` and `create_version.md` extensively interact with `questi
    - Learning capture in learn.log
    - ROADMAP.md status updates
 
+7. **Phase 7: Retrospective & Roadmap Update**
+   - Referenced in the template introduction but not implemented as a separate detailed section
+   - Aspects of this phase are incorporated into Phase 6's post-release activities
+
 Each phase includes:
 - Automatic verification checks
 - Required file updates
@@ -166,8 +170,9 @@ Each phase includes:
 Yes, tasks in `tasks.md` are executed during Phase 3 (Implementation) of `create_version.md`. Here's how it works:
 
 1. **Task Generation**
-   - Tasks are automatically generated in `tasks.md` during earlier phases
+   - Tasks are automatically generated in `TASKS.md` during earlier phases
    - Each task is tracked by status
+   - Tasks reference requirements and specifications in `TECH_SPEC.md`
 
 2. **Task Execution**
    - Tasks are executed in the order they appear in `tasks.md`
@@ -252,55 +257,59 @@ This fully automated approach ensures consistent and reliable version management
    - Automatically captures learnings throughout the version creation process
    - Used to store insights and improvements from each phase
    - Referenced in multiple phases to maintain context:
-     - Phase 1: Appends planning learnings
-     - Phase 4: Captures implementation learnings
-     - Phase 5: Documents testing learnings
-     - Final Phase: Consolidates all learnings
-   - Used to inform future phases with previous learnings
+     - Phase 2: Appends Phase 1's planning learnings
+     - Phase 4: Appends Phase 4's implementation learnings
+     - Phase 5: Appends Phase 5's testing learnings
+     - Phase 6: Appends final learnings (not phase-specific)
+   - Previous phases' learnings are automatically inserted from learn.log in each phase
 
 ### run.log Usage:
 
-While `run.log` is not currently implemented in the templates, its intended purpose (as defined in Q1) is to:
-1. Record execution logs and runtime information
-2. Maintain timestamped records of all operations
-3. Track system and process status updates
+`run.log` is planned for implementation and is referenced in both templates:
+
+1. **In do_plan.md**:
+   - Will log detailed errors during execution
+   - Will track all actions with timestamps
+   - Will record completion status of operations
+   - Described as "Complete execution log with timestamps"
+
+2. **In create_version.md**:
+   - Will log all AI interactions with [AI] prefix
+   - Will contain all logs with timestamps
+   - Will serve as a centralized logging system
 
 ### Implementation Notes:
 - `learn.log` is actively used for continuous improvement
-- `run.log` is defined in the file structure but not yet implemented in the workflow
+- `run.log` is consistently referenced as a "planned feature" in both templates
 - Both logs are designed to support the automated execution and learning cycle
 - The logs help maintain context between different phases of execution
 
 
 ## 8. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
 
-Yes, `do_plan.md` and `create_version.md` are designed to create and manage only the files and directories specified in Q1. Here's the complete list of files and directories that are created:
+No, `do_plan.md` and `create_version.md` create additional files beyond those listed in Q1. Here's a comprehensive list of all files and directories created by the templates:
 
-1. **Version Directory**
-   - `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the semantic version number)
-
-2. **Core Documentation Files**
+1. **Files Listed in Q1**
    - `VERSION_PLAN.md` - Version overview and objectives
    - `TASKS.md` - Task tracking and assignments
    - `TECH_SPEC.md` - Technical specifications and architecture
    - `RELEASE_NOTES.md` - Release information and changes
-
-3. **Supporting Directories**
-   - `docs/` - For additional documentation and assets
-
-4. **Configuration**
+   - `docs/` - Directory for additional documentation and assets
    - `questions.md` - Version configuration and parameters
-
-5. **Automation (if configured)**
-   - `.github/workflows/` - CI/CD pipeline definitions
-
-6. **Log Files**
+   - `.github/workflows/` - CI/CD pipeline definitions (if configured)
    - `run.log` - Execution logs and runtime information (planned)
-   - `learn.log` - Records learnings and insights (active)
+   - `learn.log` - Records learnings and insights from execution
 
-7. **Version Control**
-   - `.gitignore`
-   - `CHANGELOG.md`
+2. **Additional Files Created**
+   - A version-specific copy of `create_version.md` in the version directory
+   - `CHANGELOG.md` - Release history and changes (mentioned in Q1 under Version Control)
+   - `.gitignore` - Git ignore configuration (mentioned in Q1 under Version Control)
+
+3. **Files Generated During Execution**
+   - Testing results directory: `testing/results/` (created during Phase 5)
+   - Various reports and documentation in the `docs/` directory
+
+The templates are designed to primarily work with the files listed in Q1, but they do create or modify additional files as needed during the version creation process. The core functionality and main outputs are captured in the Q1 file list, but the complete set of files affected is broader.
 
 ---
 
@@ -308,20 +317,17 @@ Yes, `do_plan.md` and `create_version.md` are designed to create and manage only
 
 The following files are referenced in the workflow but not created by either `do_plan.md` or `create_version.md`:
 
-### Core Project Files (in project root):
-1. `ROADMAP.md` - Tracks version planning and status
-2. `CHANGELOG.md` - Auto-updated by scripts with date/time-stamped entries
-3. `questions.md` - Required pre-created configuration file
-4. `product_management.md` - Main documentation reference for file management
+### Project Files Referenced But Not Created:
+1. `ROADMAP.md` - Referenced extensively for version planning and status tracking
+2. `content/Style.md` - Referenced for McKinsey presentation standards and styling guidelines
+3. The template files themselves:
+   - `plans/_templates/create_version.md` - Referenced and copied, but the original template is not created
+   - `plans/_templates/questions.md` - Referenced and potentially copied if not existing
 
-### Core Documentation Files:
-1. `VERSION_PLAN.md` - Version overview and objectives
-2. `TASKS.md` - Task tracking and assignments
-3. `TECH_SPEC.md` - Technical specifications and architecture
-4. `RELEASE_NOTES.md` - Release information and changes
-
-### Supporting Directories:
-1. `docs/` - For additional documentation and assets
+### Clarification on Other Files:
+- `questions.md` in the version directory may be created if not existing, or referenced if already present
+- `CHANGELOG.md` is referenced and updated but may also be created if not existing
+- Core documentation files (`VERSION_PLAN.md`, `TASKS.md`, etc.) are created by the templates, not just referenced
 
 ## 10. How does the learning and reflection mechanism work across phases in create_version.md?
 

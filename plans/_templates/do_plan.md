@@ -40,18 +40,18 @@
 
 3. **Initialize Version Planning**
    - Update `TASKS.md` with initial status: 'Planning'
-   - Populate `README.md` with version details from ROADMAP.md
+   - Populate `VERSION_PLAN.md` with version details from ROADMAP.md
    - Validate all required information is in `questions.md`
    - If any required fields are missing:
-     - Log detailed error to `run.log`
+     - Log detailed error to `run.log` (planned feature)
      - Exit with clear error message
    - Begin executing `create_version.md` starting with Phase 1
    - For each phase:
      - Use answers from `questions.md`
      - Update relevant standard files
-     - Update `status.md` when changing phases
+     - Update `TASKS.md` when changing phases
      - Commit changes with descriptive messages
-     - Log all actions to `run.log`
+     - Log all actions to `run.log` (planned feature)
 
 4. **Update Project Files**
    - Update ROADMAP.md with new version details and status
@@ -66,11 +66,11 @@
      ```
      Where type is one of: feat, fix, docs, style, refactor, test, chore
 
-5. **Peer Review & Finalization**
-   - Request peer review from team members
-   - Address any feedback or issues found
-   - Update documentation based on review feedback
-   - Update `status.md` with review outcomes
+5. **Automated Review & Finalization**
+   - Run automated validation checks on all documentation
+   - Verify consistency across all generated files
+   - Apply automatic fixes for any detected issues
+   - Update `TASKS.md` with review outcomes
    - Create final commit with review updates
    - Mark version as 'Ready for Release' in ROADMAP.md
 
@@ -96,15 +96,15 @@
 3. **Post-Execution**
    - Verify all changes were applied
    - Update ROADMAP.md and CHANGELOG.md
-   - Generate execution summary in `version_summary.md`
-   - Log completion status to `run.log`
+   - Generate execution summary in `RELEASE_NOTES.md`
+   - Log completion status to `run.log` (planned feature)
 
 ## Error Handling & Logging
-- **Single Log File**: All logs go to `run.log` with timestamps
+- **Single Log File**: All logs will go to `run.log` with timestamps (planned feature)
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.
-- **Status Tracking**: `status.md` tracks:
+- **Status Tracking**: `TASKS.md` tracks:
   - Current phase and progress
   - Last completed action
   - Next steps
@@ -121,8 +121,8 @@
   - Sufficient permissions for file operations
 
 - **Outputs**:
-  - `run.log`: Complete execution log with timestamps
-  - `status.md`: Current status and progress
+  - `run.log`: Complete execution log with timestamps (planned feature)
+  - `TASKS.md`: Current status and progress
   - Git commits for all changes
 
 - **Recovery**:
