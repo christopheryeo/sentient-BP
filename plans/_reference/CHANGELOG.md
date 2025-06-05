@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.5j  | `ace3fe9` | Fixed documentation issues in code_verification.md                          |
 | V0.2.5i  | `1b43fe4` | Fixed some code discrepancies                                               |
 | V0.2.5h  | `0481aef` | Enhancement #3 to code verification                                          |
 | V0.2.5g  | `7e3e0b2` | Fixed issues with code verification                                          |
