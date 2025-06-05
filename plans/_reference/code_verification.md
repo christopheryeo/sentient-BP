@@ -49,6 +49,13 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
 - `questions.md` (copied or created if not existing)
   - Version configuration
   - Team assignments
+
+### 5. Completion Files
+- `completion_checklist.md` (copied from `finish_version.md` template)
+  - Version completion guide
+  - Documentation update instructions
+  - ROADMAP.md and CHANGELOG.md update procedures
+  - Directory movement instructions from `1_planning/` to `2_completed/`
   - Project parameters
 
 ### 5. Referenced and Updated Files
@@ -112,66 +119,55 @@ Yes, both `do_plan.md` and `create_version.md` extensively interact with `questi
 
 ## 3. What are the phases in create_version.md?
 
-`create_version.md` contains the following 7 phases, with detailed workflows for the first 6:
+`create_version.md` contains the following 6 phases:
 
-1. **Phase 1: Comprehensive Planning & Design (Automated)**
+1. **Phase 1: Planning & Design (Automated)**
    - Version information extraction from ROADMAP.md
    - Standard files setup (README.md, design.md, tech-spec.md, etc.)
    - Risk assessment and mitigation planning
    - Validation of requirements and dependencies
    - Initial task list generation in tasks.md
-   - Automatic version control branch setup
 
 2. **Phase 2: Development Kickoff**
    - Milestone extraction and validation from ROADMAP.md
    - Team assignments from questions.md
-   - Updates to README.md, status.md, and tech-spec.md
+   - Updates to README.md and tech-spec.md
    - Development environment verification
-   - Automated generation of development_guide.md
-   - Creation of testing/strategy.md
+   - Documentation of development standards
 
 3. **Phase 3: Implementation**
-   - Automated code impact analysis
+   - Code impact analysis
    - Task execution from tasks.md
-   - Code changes tracked in code_changes.md
-   - Automated testing integration
-   - Continuous integration verification
+   - Implementation of slide changes in HTML structure
    - Documentation updates for all changes
+   - Verification of slide architecture and navigation
 
-4. **Phase 4: Testing & QA**
-   - Test case execution and validation
-   - Automated quality gates
-   - Bug tracking and resolution workflow
-   - Test coverage analysis and reporting
-   - Performance benchmarking
-   - Security vulnerability scanning
+4. **Phase 4: Code Review & Documentation**
+   - Code quality checks
+   - Verification of coding standards
+   - Documentation updates
+   - Inline code comments review
+   - README updates as needed
 
-5. **Phase 5: Deployment Preparation**
-   - Deployment checklist verification
-   - Environment validation and provisioning
-   - Rollback procedure testing
-   - Pre-deployment smoke tests
-   - Final documentation review
-   - Stakeholder sign-off automation
+5. **Phase 5: Final Verification**
+   - HTML structure verification
+   - Slide ID and numbering checks
+   - Navigation button validation
+   - Image path verification
+   - CHANGELOG.md updates
 
-6. **Phase 6: Release & Post-Release**
-   - Automated version release process
-   - Post-deployment monitoring setup
-   - Documentation updates and archiving
-   - Automated retrospective generation
+6. **Phase 6: Implementation Review**
+   - Final code review
+   - Documentation completeness check
+   - Technical debt documentation
+   - Future development planning
    - Learning capture in learn.log
-   - ROADMAP.md status updates
-
-7. **Phase 7: Retrospective & Roadmap Update**
-   - Referenced in the template introduction but not implemented as a separate detailed section
-   - Aspects of this phase are incorporated into Phase 6's post-release activities
 
 Each phase includes:
-- Automatic verification checks
 - Required file updates
 - Progress tracking in TASKS.md
 - Learning capture for continuous improvement
-- Integration with version control
+- Documentation updates
 - Automated logging to learn.log
 
 ## 4. Are the tasks in tasks.md that create_version.md creates executed?
@@ -179,63 +175,70 @@ Each phase includes:
 Yes, tasks in `tasks.md` are executed during Phase 3 (Implementation) of `create_version.md`. Here's how it works:
 
 1. **Task Generation**
-   - Tasks are automatically generated in `TASKS.md` during earlier phases
+   - Tasks are defined in `TASKS.md` during earlier phases
    - Each task is tracked by status
    - Tasks reference requirements and specifications in `TECH_SPEC.md`
 
 2. **Task Execution**
    - Tasks are executed in the order they appear in `tasks.md`
-   - The system updates task status upon completion
-   - Progress is tracked in real-time
+   - Updates to task status are made upon completion
+   - Progress is tracked throughout the implementation
 
 3. **Verification**
    - Code changes are verified against requirements
-   - Automated tests are run for each task
+   - Slide ID and numbering consistency is checked
    - Changes are committed with descriptive messages
 
 4. **Status and Logging**
    - Task status and overall progress are tracked in `TASKS.md`
    - Execution details and issues are logged in `learn.log`
-   - Both files are updated in real-time during execution
+   - Both files are updated during implementation
 
-5. **Automation**
-   - Task execution is fully automated
-   - No manual intervention is required
-   - The system handles errors and rollbacks if needed
+5. **HTML Structure Verification**
+   - Slide structure is verified for consistency
+   - Navigation elements are tested
+   - Image paths are checked for correctness
 
-This ensures that all tasks are executed in a controlled and verifiable manner.
+This ensures that all tasks are executed in a controlled and verifiable manner, focusing on the HTML application structure and content.
 
 ---
 
 ## 5. Is the first task to be executed the one that lists all code that will be changed by the subsequent tasks?
 
-Yes, a critical early task, explicitly "Task 1: Code Impact Analysis" executed during **Phase 1 (Comprehensive Planning & Design)** of `create_version.md`, is designed to analyze and document all required code changes. While the main execution of implementation tasks occurs in Phase 3, this initial analysis task paves the way. Here's how it works:
+Yes, a critical early task, "Initial Code Analysis" performed during **Phase 3 (Implementation)** of `create_version.md`, is designed to analyze and document required code changes. This analysis task is part of the implementation phase as follows:
 
-1.  **Initial Analysis**: This early task performs a comprehensive analysis of the codebase to identify all necessary changes.
-2.  **Documentation**: It documents the analysis results, including:
-    *   Files requiring modification
-    *   Specific changes needed
-    *   Dependencies and impacts.
-    (This information is used to populate `TASKS.md` which guides Phase 3).
-3.  **Task Generation**: Based on this analysis, `create_version.md` (during Phase 1) updates `TASKS.md` with specific implementation tasks that will be executed in sequence during Phase 3.
+1. **Initial Code Analysis**: This early task performs an analysis of the codebase to identify necessary changes specific to slide implementation, focusing on:
+   * HTML structure review
+   * Slide ID sequence verification
+   * Navigation button consistency
+   * Image path conventions
 
-This approach ensures all code changes are properly planned and documented before the main implementation phase begins, providing a clear roadmap for the development process.
+2. **Documentation**: It documents the analysis results, including:
+   * Files requiring modification
+   * Specific changes needed
+   * Dependencies and impacts
+   * Slide architecture considerations
+
+3. **Task Execution**: Based on this analysis, the implementation proceeds with specific tasks focused on ensuring proper slide integration and consistency across the presentation structure.
+
+This approach ensures code changes are properly planned and documented before full implementation, providing a clear roadmap for the development process while focusing on the HTML-based slide architecture.
 
 ## 6. Can do_plan.md and create_version.md be executed by the AI without stopping for human approval or responses?
 
-Yes, both `do_plan.md` and `create_version.md` are designed to run automatically without requiring human intervention, provided that all prerequisites are met. Here's how automated execution works:
+Yes, both `do_plan.md` and `create_version.md` are designed to run automatically without requiring human intervention, provided that all prerequisites are met. Here's how automated execution works in the current implementation:
 
 ### Automated Execution Flow
 1. **Pre-requisites**:
    - `questions.md` must be fully populated with required information
    - `ROADMAP.md` must exist and be accessible
-   - Git must be properly initialized and configured
    - Required permissions for file operations must be set
+   - HTML structure and slide architecture must be understood
 
 2. **Non-Interactive Operation**:
    - Both files are designed to run without interactive input
    - All decisions are made based on the configuration in `questions.md`
-   - Error conditions are handled automatically with appropriate logging
+   - Error conditions are logged with appropriate messages
+   - Focus is on HTML application modifications without deployment requirements
 
 3. **Phase-based Execution**:
    - `create_version.md` follows a strict phase-based approach
@@ -255,45 +258,30 @@ Yes, both `do_plan.md` and `create_version.md` are designed to run automatically
 
 This fully automated approach ensures consistent and reliable version management while eliminating the need for manual intervention during execution.
 
-## 7. Where are run.log and learn.log used for logging in do_plan.md and create_version.md?
+## 7. Where are learn.log used for logging in do_plan.md and create_version.md?
 
-### learn.log Usage:
+### learn.log Usage in current 6-phase implementation:
 
 1. **In do_plan.md**:
    - Used to document key learnings during execution
    - Captured in the "Update Project Files" phase
 
 2. **In create_version.md**:
-   - Automatically captures learnings throughout the version creation process
+   - Captures learnings throughout the version creation process
    - Each phase has its own Learning & Reflection section that contributes to learn.log:
-      - Phase 1: Appends Phase 1's planning learnings
-      - Phase 2: Appends Phase 2's design learnings
-      - Phase 3: Appends Phase 3's implementation learnings
-      - Phase 4: Appends Phase 4's testing learnings
-      - Phase 5: Appends Phase 5's deployment learnings
-      - Phase 6: Appends final release learnings
-   - Phases 2, 3, 4, and 5 of `create_version.md` read previous phases' learnings from learn.log; Phase 6 does not explicitly state this.
-
-### run.log Usage:
-
-`run.log` is planned for implementation and is referenced in both templates:
-
-1. **In do_plan.md**:
-   - Will log detailed errors during execution
-   - Will track all actions with timestamps
-   - Will record completion status of operations
-   - Described as "Complete execution log with timestamps"
-
-2. **In create_version.md**:
-   - Will log all AI interactions with [AI] prefix
-   - Will contain all logs with timestamps
-   - Will serve as a centralized logging system
+      - Phase 1: Appends Planning & Design learnings
+      - Phase 2: Appends Development Kickoff learnings
+      - Phase 3: Appends Implementation learnings
+      - Phase 4: Appends Code Review & Documentation learnings
+      - Phase 5: Appends Final Verification learnings
+      - Phase 6: Appends Implementation Review learnings
+   - Focus is on documenting code structure and HTML application modifications
 
 ### Implementation Notes:
 - `learn.log` is actively used for continuous improvement
-- `run.log` is consistently referenced as a "planned feature" in both templates
-- Both logs are designed to support the automated execution and learning cycle
-- The logs help maintain context between different phases of execution
+- The log helps maintain context between different phases of execution
+- Focus is on documenting code quality and HTML structure improvements
+- Captures insights for slide architecture management and navigation consistency
 
 
 ## 8. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
@@ -304,7 +292,7 @@ Yes, the files mentioned in Q1 represent a comprehensive list of all files and d
 - The copied template files (`create_version.md` in the version directory)
 - Supporting directories (`docs/`, `testing/results/`)
 - Configuration files (`questions.md` - copied or created)
-- Log files (`learn.log` and planned `run.log`)
+- Log file (`learn.log`)
 
 The files listed under "Referenced and Updated Files" in Q1 (such as `.github/workflows/`, `.gitignore`, and `CHANGELOG.md`) are not created by these templates but are only referenced or updated during the process.
 
@@ -329,7 +317,7 @@ The following files are referenced in the workflow but not created by either `do
    - `CHANGELOG.md` - Release history (referenced and updated with new versions)
 
 ### Clarification on Log Files:
-- Both `learn.log` and `run.log` are created by the templates (with `run.log` being planned), not just referenced, so they are correctly listed in Q1 under "Log Files"
+- `learn.log` is created by the templates, not just referenced, so it is correctly listed in Q1 under "Log Files"
 
 ## 10. How does the learning and reflection mechanism work across phases in create_version.md?
 

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Debugger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #163E93;
+        }
+        .debug-info {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .slide-info {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        button {
+            padding: 8px 15px;
+            background: #163E93;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        #check-img {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 300px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slide Debugger</h1>
+    
+    <div class="controls">
+        <button onclick="listAllSlides()">List All Slides</button>
+        <button onclick="checkNavigation()">Check Navigation</button>
+        <button onclick="clearCache()">Clear Cache Instructions</button>
+    </div>
+    
+    <div class="debug-info" id="debug-output">
+        Click a button above to start debugging
+    </div>
+    
+    <div id="check-img">
+        <h3>Image Path Check</h3>
+        <p>Testing Company Logo:</p>
+        <img src="static/images/sentient-logo.png" alt="Company Logo Test">
+        
+        <p>Testing Singapore Flag:</p>
+        <img src="static/images/Singapore.png" alt="Singapore Flag Test">
+    </div>
+    
+    <script>
+        function listAllSlides() {
+            const output = document.getElementById('debug-output');
+            const slides = document.querySelectorAll('.slide');
+            
+            if (!slides || slides.length === 0) {
+                output.innerHTML = '<p>No slides found on this page. This is just a diagnostic tool.</p>' +
+                                  '<p>Please go to <a href="/">main page</a> and use browser developer tools (F12) to inspect the slides.</p>';
+                return;
+            }
+            
+            let html = '<h2>Slides Found:</h2>';
+            
+            slides.forEach((slide, index) => {
+                const id = slide.id;
+                const slideNumber = slide.querySelector('.slide-number')?.textContent || 'No slide number';
+                const title = slide.querySelector('h2')?.textContent || 'No title found';
+                
+                html += `
+                    <div class="slide-info">
+                        <p><strong>Index:</strong> ${index}</p>
+                        <p><strong>ID:</strong> ${id}</p>
+                        <p><strong>Slide Number:</strong> ${slideNumber}</p>
+                        <p><strong>Title/Content:</strong> ${title}</p>
+                    </div>
+                `;
+            });
+            
+            output.innerHTML = html;
+        }
+        
+        function checkNavigation() {
+            const output = document.getElementById('debug-output');
+            const navButtons = document.querySelectorAll('.nav-button');
+            
+            if (!navButtons || navButtons.length === 0) {
+                output.innerHTML = '<p>No navigation buttons found on this page. This is just a diagnostic tool.</p>' +
+                                  '<p>Please go to <a href="/">main page</a> and use browser developer tools (F12) to inspect the navigation.</p>';
+                return;
+            }
+            
+            let html = '<h2>Navigation Buttons:</h2>';
+            
+            navButtons.forEach((button, index) => {
+                const isActive = button.classList.contains('active');
+                const slideNum = button.textContent;
+                const onClick = button.getAttribute('onclick');
+                
+                html += `
+                    <div class="slide-info">
+                        <p><strong>Button ${index + 1}:</strong> ${slideNum}</p>
+                        <p><strong>Active:</strong> ${isActive ? 'Yes' : 'No'}</p>
+                        <p><strong>OnClick:</strong> ${onClick}</p>
+                    </div>
+                `;
+            });
+            
+            html += '<h2>How to Check in Browser:</h2>';
+            html += `
+                <p>On the main page, open your browser's developer tools (F12 or Right-click > Inspect).</p>
+                <p>In the Console, run these commands to check slides:</p>
+                <pre>document.querySelectorAll('.slide').forEach((s,i) => console.log(i, s.id, s));</pre>
+                <p>To check if slide2 exists:</p>
+                <pre>console.log(document.getElementById('slide2'));</pre>
+                <p>To check Company Facts slide:</p>
+                <pre>console.log(document.getElementById('company-facts'));</pre>
+            `;
+            
+            output.innerHTML = html;
+        }
+        
+        function clearCache() {
+            const output = document.getElementById('debug-output');
+            
+            let html = '<h2>Clear Browser Cache Instructions:</h2>';
+            html += `
+                <p>Your browser may be showing a cached version of the page. Try these steps:</p>
+                <ol>
+                    <li><strong>Hard Refresh:</strong> Press Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)</li>
+                    <li><strong>Clear Cache:</strong>
+                        <ul>
+                            <li>Chrome: Settings > Privacy and security > Clear browsing data</li>
+                            <li>Firefox: Options > Privacy & Security > Cookies and Site Data > Clear Data</li>
+                            <li>Safari: Preferences > Advanced > Show Develop menu > Develop > Empty Caches</li>
+                        </ul>
+                    </li>
+                    <li><strong>Incognito/Private Mode:</strong> Open the main page in a private/incognito window</li>
+                    <li><strong>Try Different Browser:</strong> If possible, test in another browser</li>
+                </ol>
+                <p>After clearing cache, restart your browser and try again.</p>
+            `;
+            
+            output.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

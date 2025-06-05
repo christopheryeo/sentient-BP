@@ -3,8 +3,15 @@
 This roadmap provides a high-level overview of our vision, direction, and planned features for the Sentient.io Interactive Presentation. It's a living document that will be updated as we progress.
 
 ## 📦 Recent Releases
+|V0.2.6| Completed | 2025-06-06 | Company Facts Slide                  |
 |V0.2.5| Completed | 2025-06-05 | Code Verification System             |
 |V0.2.4| Completed | 2025-06-04 | Management Team & Final Slide Styling |
+
+### V0.2.6 - Company Facts Slide (2025-06-06)
+- ✅ Added comprehensive company facts and metrics
+- ✅ Designed modern, responsive layout
+- ✅ Integrated location map and visual elements
+- ✅ Ensured accessibility and performance
 
 ### V0.2.5 - Code Verification System (2025-06-05)
 - ✅ Implemented comprehensive code verification
@@ -22,7 +29,7 @@ This roadmap provides a high-level overview of our vision, direction, and planne
 
 | Version | Status      | Target Date | Key Deliverables                     |
 |---------|-------------|-------------|-------------------------------------|
-| V0.2.6  | Completed   | 2025-06-07  | Company Facts Slide                 |
+| V0.2.7  | In Progress | 2025-06-07  | Company Facts Table Improvements     |
 | V0.3.0  | Planned     | 2025-Q3     | Navigation Improvements             |
 | V0.4.0  | Planned     | 2025-Q3     | Interactive Demos                   |
 
@@ -33,23 +40,15 @@ Create the most engaging, accessible, and effective presentation platform for sh
 
 ## 🚀 Current Focus (Q2 2025)
 
-### V0.2.6 - Company Facts Slide (Completed - Released [CURRENT_TIMESTAMP_DATE], Target: 2025-06-07)
-- [ ] **Company Facts Slide**: Create an engaging company overview
-  - [ ] Add key company metrics:
-    - [ ] Founded: May 2017
-    - [ ] Headquarters: Singapore
-    - [ ] Founder & CEO: Christopher Yeo
-    - [ ] Team: 15+ professionals
-  - [ ] Design clean, modern layout
-  - [ ] Add visual elements:
-    - [ ] Singapore location map: `/static/images/Singapore.png`
-    - [ ] Company logo: `/static/images/sentient-logo.png`
-    - [ ] Icons for key metrics
-  - [ ] Ensure mobile responsiveness
-  - [ ] Add subtle animations
-  - [ ] Verify accessibility standards
-  - [ ] Optimize for fast loading
-  - [ ] Include key statistics and achievements
+### V0.2.7 - Company Facts Table Improvements (Target: 2025-06-07)
+- [ ] **Enhance Company Facts Table**
+  - [ ] Improve table layout and responsiveness
+  - [ ] Optimize for mobile viewing
+  - [ ] Add subtle animations and transitions
+  - [ ] Ensure accessibility compliance
+  - [ ] Verify cross-browser compatibility
+
+### V0.3.0 - Navigation Improvements (Target: 2025-Q3)
 
 ## 📅 Upcoming Features
 

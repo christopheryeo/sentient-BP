@@ -40,9 +40,11 @@
    - Copy templates:
      - `plans/_templates/create_version.md`
      - `plans/_templates/questions.md`
+     - `plans/_templates/finish_version.md` (copied as `completion_checklist.md`)
 
 3. **Initialize Version Planning**
    - Update `TASKS.md` with initial status: 'Planning'
+   - Rename `finish_version.md` to `completion_checklist.md` in the version directory
    - Populate `VERSION_PLAN.md` with version details from ROADMAP.md
    - Validate all required information is in `questions.md`
    - If any required fields are missing:

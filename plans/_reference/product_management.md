@@ -11,6 +11,36 @@
 - [Templates & Examples](#templates--examples)
 - [Best Practices](#best-practices)
 
+## Version Completion Process
+
+To complete a version and mark it as done, follow these steps:
+
+1. **Run the Completion Process**
+   - Execute the `finish_plan.md` template using your AI assistant
+   - The assistant will:
+     - Locate the current version in `plans/1_planning/`
+     - Find and execute the version's `completion_checklist.md`
+     - Guide you through the completion process
+
+2. **Automatic Updates**
+   - The `completion_checklist.md` will automatically:
+     - Update ROADMAP.md to mark the version as completed
+     - Move the version directory to `plans/2_completed/`
+     - Update CHANGELOG.md with release notes
+     - Ensure all documentation is properly updated
+
+3. **Verification**
+   - The AI assistant will verify that:
+     - All planned features are implemented
+     - Documentation is up to date
+     - Version numbers are consistent
+     - The version directory has been moved correctly
+
+4. **Completion**
+   - Once all steps are completed, the version will be marked as done
+   - The version will appear in the "Recent Releases" section of ROADMAP.md
+   - The version directory will be in `plans/2_completed/` for reference
+
 ## Detailed Steps for Starting a New Version
 
 To start the development of the next app version, follow these steps, which involve both manual preparation and AI-assisted automation:

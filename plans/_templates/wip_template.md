@@ -6,8 +6,7 @@ This template is used to document new features during the planning phase. It hel
 ## How to Use
 1. Copy this template to `plans/1_planning/[feature-name]/`
 2. Fill in each section below
-3. Move to `2_inprogress/` when development starts
-4. Update this document as needed during development
+3. Update this document as needed during development
 
 ## Basic Information
 - **Feature Name**: [Short, descriptive name]

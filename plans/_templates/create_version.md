@@ -28,10 +28,9 @@ PHASES:
 1. Planning & Design (Automated)
 2. Development Kickoff
 3. Implementation
-4. Testing & QA
-5. Deployment Preparation
-6. Release & Post-Release
-7. Retrospective & Roadmap Update
+4. Code Review & Documentation
+5. Final Verification
+6. Implementation Review
 
 NOTES:
 - All file paths are relative to the project root
@@ -60,6 +59,25 @@ All slide content must adhere to the McKinsey presentation standards defined in 
    - All claims must be data-driven
    - Keep text concise and scannable
    - Use consistent heading hierarchy
+
+## Slide Architecture Overview
+
+**IMPORTANT**: Understanding the current architecture is critical to successful implementation.
+
+- **Current Implementation**: Slides are implemented in HTML format directly in `index.html`
+- **Navigation System**: Uses ID-based navigation with JavaScript function `scrollToSlide()`
+- **Important Note**: Do NOT add slides to the JavaScript array in `script.js` as this is not the active implementation
+
+### Known Technical Issues
+
+Be aware that this project has two different slide implementation approaches:
+
+1. **Active Implementation**: Static HTML structure in `index.html`
+2. **Inactive Implementation**: Dynamic JavaScript generation in `script.js`
+
+This architectural inconsistency should be addressed in a future refactoring. Until then, all slide changes must be made in `index.html`.
+
+**Future Recommendation**: Consolidate to a single implementation approach.
 
 ## Status Tracking
 
@@ -244,8 +262,6 @@ plans/1_planning/VX.Y.Z/
 ├── TECH_SPEC.md         # Technical specs, architecture, and requirements
 ├── RELEASE_NOTES.md     # Release notes and test results
 ├── docs/               # Additional documentation and assets
-├── testing/
-│   └── results/         # Test execution outputs and QA verification
 ├── learn.log            # Learnings and insights from execution
 └── run.log              # (Planned) Errors and AI decisions
 ```
@@ -283,14 +299,11 @@ plans/1_planning/VX.Y.Z/
    - Meeting notes
    - Reference materials
 
-6. **testing/results/**
-   - Test execution outputs
-   - QA verification artifacts
-7. **learn.log**
+6. **learn.log**
    - Records learnings and insights from execution
    - Used throughout the version creation process
    - Captures key insights for continuous improvement
-8. **run.log** (Planned)
+7. **run.log** (Planned)
    - Will log errors and AI decisions
    - Implementation details to be determined in future updates
 
@@ -377,6 +390,25 @@ plans/1_planning/VX.Y.Z/
 ---
 
 # Phase 3: Implementation
+
+### 3.0 Slide Implementation Guidelines
+
+#### Adding a New Slide
+1. In `index.html`, locate the position where the slide should be added
+2. Create a new div with the pattern: `<div id="slideX" class="slide">`
+3. Ensure ID numbers are sequential (check existing IDs to determine next available number)
+4. Update all subsequent slide IDs and slide numbers to maintain sequential order
+5. Add a navigation button in the `.slide-nav` section
+6. Add slide content following the established pattern
+7. Use relative image paths (e.g., `static/images/example.png`), not absolute paths
+
+#### Implementation Verification
+When modifying the HTML app, ensure:
+- Slide IDs are sequential and unique
+- Slide numbers in headers match their IDs
+- Navigation buttons are added for new slides
+- All image paths use relative URLs (e.g., `static/images/example.png`)
+- Content follows the design guidelines from Style.md
 
 ### 3.1 AI Task Alignment Review
 **Purpose**: Ensure all tasks align with technical specifications and version plan before execution.
@@ -492,7 +524,7 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
 
 ---
 
-# Phase 4: Testing & QA
+# Phase 4: Code Review & Documentation
 
 ## Learning from Previous Phases:
 ```
@@ -500,145 +532,111 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
 ```
 
 ## Information from Previous Phases:
-- Test strategy and coverage goals
+- Implementation status
 - Known issues and risks
-- Quality metrics
+- Documentation requirements
 
-## Automatic Verification Checks:
-1. Design Alignment Check
-   - Verify design matches requirements in TECH_SPEC.md
-   - Log any discrepancies as WARN
-2. Dependencies Documentation Check
-   - Ensure all dependencies are documented in TECH_SPEC.md
-   - Log any missing dependencies as WARN
+## Code Quality Check
+1. **Code Review**
+   - [ ] Verify all changes follow project standards
+   - [ ] Ensure consistent coding style
+   - [ ] Check for any remaining TODOs or FIXMEs
+
+2. **Documentation**
+   - [ ] Update inline code comments
+   - [ ] Ensure all new features are documented
+   - [ ] Update README if needed
 
 ## File Updates (Automated):
-1. Update test results in `testing/results/`
-2. Sync issues with tracking system
-3. Update quality dashboards
-4. Append Phase 4 learnings to `learn.log`
-
-## Learning & Reflection (Automated):
-```
-# Phase 4 Learnings - [Date]
-
-## What Went Well
-- Comprehensive test coverage achieved
-- Effective bug tracking and triage
-- Clear quality metrics established
-
-## Challenges Faced
-- Some edge cases not initially considered
-- Performance bottlenecks identified
-
-## Key Insights
-- Early testing prevents costly fixes later
-- Clear metrics improve quality assessment
-```
+1. Update documentation in `docs/`
+2. Update inline code comments
+3. Append Phase 4 learnings to `learn.log`
 
 ---
 
-# Phase 5: Deployment Preparation
+# Phase 5: Final Verification
 
 ## Learning from Previous Phases:
 ```
 [Previous phases' learnings will be automatically inserted here from learn.log]
 ```
 
-## Information from Previous Phases:
-- Deployment requirements
-- Known risks and mitigations
-- Rollback procedures
+## Code Consistency Check
+1. **HTML Structure**
+   - [ ] Verify all slide IDs are sequential
+   - [ ] Check all navigation buttons work correctly
+   - [ ] Ensure all image paths are relative
 
-## Automatic Verification Checks:
-1. Deployment Checklist Check
-   - Verify deployment checklist is complete in TASKS.md
-   - Log any incomplete items as WARN
-2. Rollback Verification Check
-   - Confirm rollback procedures are tested and documented
-   - Log any untested rollback procedures as WARN
+2. **Documentation**
+   - [ ] Update CHANGELOG.md with changes
+   - [ ] Ensure all new features are documented
 
 ## File Updates (Automated):
-1. Generate deployment checklist
-2. Update release documentation
-3. Prepare rollback procedures
-4. Append Phase 5 learnings to `learn.log`
+1. Update CHANGELOG.md
+2. Finalize all documentation
+3. Append Phase 5 learnings to `learn.log`
 
 ## Learning & Reflection (Automated):
 ```
 # Phase 5 Learnings - [Date]
 
 ## What Went Well
-- Comprehensive deployment checklist created
-- Clear rollback procedures established
+- Code review process effective
 - Documentation complete and up-to-date
+- Consistent coding style maintained
 
 ## Challenges Faced
-- Some deployment dependencies identified late
-- Need for additional environment validation
+- Some areas needed additional documentation
+- Minor inconsistencies identified and fixed
 
 ## Key Insights
-- Detailed checklists prevent deployment issues
-- Clear rollback procedures reduce risk
+- Regular code reviews improve quality
+- Good documentation saves time in the long run
 ```
 
 ---
 
-# Phase 6: Release & Post-Release
+# Phase 6: Implementation Review
 
-### 6.1 Release Execution
-1. **Automated Deployment**
-   - Run pre-deployment checks
-   - Execute deployment scripts
-   - Verify deployment status
-   - Rollback on failure with detailed logs
+## Learning from Previous Phases:
+```
+[Previous phases' learnings will be automatically inserted here from learn.log]
+```
 
-2. **Documentation Updates**
-   - Update status in `TASKS.md` to 'Completed'
-   - Finalize all version documentation
-   - Update ROADMAP.md with completion status
-   - Generate CHANGELOG.md entry
-   - Create release notes in `release_notes.md`
+## Review Process
+1. **Code Review**
+   - Verify all changes meet requirements
+   - Ensure consistent style and patterns
+   - Check for any remaining issues
 
-3. **Post-Release**
-   - Archive project files
-   - Update any dependent documentation
-   - Generate final reports
-   - Log deployment details
+2. **Documentation Review**
+   - Verify all features are documented
+   - Update any outdated documentation
+   - Ensure README is up to date
 
-## File Updates (Automated):
-1. Update release documentation
-2. Log post-release issues
-3. Update ROADMAP.md with release details
-4. Append final learnings to `learn.log`
+## Final Steps:
+1. Update `ROADMAP.md` with completed items
+2. Document any remaining technical debt
+3. Plan next steps for future development
 
 ## Learning & Reflection (Automated):
 ```
-# Phase 6 Learnings - [Date]
+# Final Implementation Review - [Date]
 
 ## What Went Well
-- Successful production deployment
-- Effective monitoring in place
-- Clear support procedures followed
+- Successful implementation of all features
+- Code quality maintained throughout
+- Documentation kept up to date
 
 ## Challenges Faced
-- Minor post-release issues identified
-- Need for additional monitoring metrics
+- Some areas required additional refinement
+- Learning curve with certain aspects
 
 ## Key Insights
-- Continuous monitoring is crucial post-release
-- Clear support procedures improve user experience
-- Documented learnings improve future releases
-5. Review and update future version timelines if needed
-
-## File Updates:
-1. Update `ROADMAP.md` with next steps
-
-## Actions:
-1. Monitor production
-2. Conduct retrospective
-3. Document lessons learned
-4. Plan next steps
+- Regular check-ins maintain momentum
+- Documentation is crucial for future maintenance
+- Clear requirements lead to better outcomes
+```
 
 ---
 
