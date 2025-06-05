@@ -3,7 +3,14 @@
 This roadmap provides a high-level overview of our vision, direction, and planned features for the Sentient.io Interactive Presentation. It's a living document that will be updated as we progress.
 
 ## 📦 Recent Releases
-|V0.2.5| Completed | 2025-06-03 | Company Facts Slide                 |
+|V0.2.5| Completed | 2025-06-05 | Code Verification System             |
+|V0.2.4| Completed | 2025-06-04 | Management Team & Final Slide Styling |
+
+### V0.2.5 - Code Verification System (2025-06-05)
+- ✅ Implemented comprehensive code verification
+- ✅ Added AI Task Alignment Review
+- ✅ Automated version management workflow
+- ✅ Enhanced documentation and testing
 
 ### V0.2.4 - Management Team & Final Slide Styling (2025-06-04)
 - ✅ Management team section with photos and bios
@@ -15,17 +22,18 @@ This roadmap provides a high-level overview of our vision, direction, and planne
 
 | Version | Status      | Target Date | Key Deliverables                     |
 |---------|-------------|-------------|-------------------------------------|
+| V0.2.6  | In Progress | 2025-06-07  | Company Facts Slide                 |
 | V0.3.0  | Planned     | 2025-Q3     | Navigation Improvements             |
 | V0.4.0  | Planned     | 2025-Q3     | Interactive Demos                   |
 
-*Last updated: 2025-06-03*
+*Last updated: 2025-06-05*
 
 ## 🎯 Vision
 Create the most engaging, accessible, and effective presentation platform for showcasing Sentient.io's capabilities and values.
 
 ## 🚀 Current Focus (Q2 2025)
 
-### V0.2.5 - Company Facts Slide (Target: 2025-06-05)
+### V0.2.6 - Company Facts Slide (In Progress - Target: 2025-06-07)
 - [ ] **Company Facts Slide**: Create an engaging company overview
   - [ ] Add key company metrics:
     - [ ] Founded: May 2017
