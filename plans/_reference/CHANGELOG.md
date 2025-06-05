@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.6   | `[SIMULATED_HASH]` | Released Company Facts Slide feature.                                       |
 | V0.2.6b  | `320ef91` | Updated product management and versioning documentation                      |
 | V0.2.6a  | `acd925f` | Reviewed product roadmap, next version is company facts                      |
 | V0.2.5l  | `9bb9f07` | Added AI Task Alignment Review in create_version.md                          |
@@ -107,6 +108,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Corrected version history in documentation
 - Fixed formatting in version management templates
 - Addressed documentation inconsistencies
+
+## [V0.2.6] - [CURRENT_TIMESTAMP_DATE] (Target: 2025-06-07)
+
+### Added
+- **Company Facts Slide**:
+  - Implemented and integrated an engaging company overview slide.
+  - Displays key company metrics: Founded (May 2017), Headquarters (Singapore), Founder & CEO (Christopher Yeo), Team (15+ professionals).
+  - Includes visual elements: Singapore location map (`/static/images/Singapore.png`) and company logo (`/static/images/sentient-logo.png`).
+  - Features a clean, modern layout adhering to `content/Style.md`.
+  - Ensures mobile responsiveness and basic accessibility standards.
+  - Optimized for fast loading with subtle animations.
+- Created version planning documents in `plans/1_planning/V0.2.6/`.
+
+### Changed
+- Updated `plans/_reference/ROADMAP.md` to mark V0.2.6 as 'Completed'.
+- Updated status in `plans/1_planning/V0.2.6/TASKS.md` to 'Completed'.
+- Finalized `plans/1_planning/V0.2.6/VERSION_PLAN.md` and `plans/1_planning/V0.2.6/RELEASE_NOTES.md`.
 
 ## [V0.2.5] - 2025-06-05
 
