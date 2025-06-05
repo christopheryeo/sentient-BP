@@ -209,16 +209,17 @@ This ensures that all tasks are executed in a controlled and verifiable manner.
 
 ## 5. Is the first task to be executed the one that lists all code that will be changed by the subsequent tasks?
 
-Yes, the first task in the implementation phase is designed to analyze and document all required code changes. Here's how it works:
+Yes, a critical early task, explicitly "Task 1: Code Impact Analysis" executed during **Phase 1 (Comprehensive Planning & Design)** of `create_version.md`, is designed to analyze and document all required code changes. While the main execution of implementation tasks occurs in Phase 3, this initial analysis task paves the way. Here's how it works:
 
-1. **Initial Analysis**: The first task performs a comprehensive analysis of the codebase to identify all necessary changes
-2. **Documentation**: It documents the analysis results, including:
-   - Files requiring modification
-   - Specific changes needed
-   - Dependencies and impacts
-3. **Task Generation**: Based on this analysis, it generates specific implementation tasks that will be executed in sequence
+1.  **Initial Analysis**: This early task performs a comprehensive analysis of the codebase to identify all necessary changes.
+2.  **Documentation**: It documents the analysis results, including:
+    *   Files requiring modification
+    *   Specific changes needed
+    *   Dependencies and impacts.
+    (This information is used to populate `TASKS.md` which guides Phase 3).
+3.  **Task Generation**: Based on this analysis, `create_version.md` (during Phase 1) updates `TASKS.md` with specific implementation tasks that will be executed in sequence during Phase 3.
 
-This approach ensures all code changes are properly planned and documented before implementation begins, providing a clear roadmap for the development process.
+This approach ensures all code changes are properly planned and documented before the main implementation phase begins, providing a clear roadmap for the development process.
 
 ## 6. Can do_plan.md and create_version.md be executed by the AI without stopping for human approval or responses?
 
