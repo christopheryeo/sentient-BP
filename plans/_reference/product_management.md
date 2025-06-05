@@ -1,6 +1,7 @@
 # Sentient.io Presentation - Project Management Guide
 
 ## Table of Contents
+- [Starting a New Version](#detailed-steps-for-starting-a-new-version)
 - [Project Structure](#project-structure)
 - [Workflow](#workflow)
 - [Documentation Standards](#documentation-standards)
@@ -9,6 +10,70 @@
 - [Quality Assurance](#quality-assurance)
 - [Templates & Examples](#templates--examples)
 - [Best Practices](#best-practices)
+
+## Detailed Steps for Starting a New Version
+
+To start the development of the next app version, follow these steps, which involve both manual preparation and AI-assisted automation:
+
+**1. Prerequisites (Manual Setup)**
+
+Before initiating the automated process, you need to prepare two key files:
+
+*   **Update `plans/_reference/ROADMAP.md`**:
+    *   Ensure the `ROADMAP.md` file is updated with the details for the new version. This includes:
+        *   The new version number (e.g., V0.3.0).
+        *   The target date for the version release.
+        *   A clear list of key deliverables and objectives for this version.
+    *   The AI assistant will read from this file to understand the scope and details of the new version.
+
+*   **Prepare `questions.md`**:
+    *   A `questions.md` file is used to configure various aspects of the version setup and subsequent development phases.
+    *   When a new version process is initiated, a template for this file, located at `plans/_templates/questions.md`, will be copied into the new version's specific directory (e.g., `plans/1_planning/VX.Y.Z/questions.md`).
+    *   You must pre-populate this `questions.md` file in the new version's directory with all the required information and configuration values that will be used as defaults throughout the automated process.
+
+**2. Initiating the Process (User Action)**
+
+*   To begin, instruct your AI assistant (e.g., Jules) to: **"Execute `do_plan.md`"**.
+*   `do_plan.md` is a master script template located at `plans/_templates/do_plan.md` that orchestrates the setup of the new version.
+
+**3. Automated Setup (AI Execution of `do_plan.md`)**
+
+Upon receiving the instruction, the AI assistant will perform the following automated steps by executing the logic within `do_plan.md`:
+
+*   **Review `ROADMAP.md`**: The AI first checks `plans/_reference/ROADMAP.md` to identify the next planned version, its target date, and key deliverables.
+*   **Create Version-Specific Directory**: A new directory for the version will be created, following a naming convention like `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the new version number).
+*   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a set of standard files necessary for managing the version's lifecycle:
+    *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
+    *   `TASKS.md`: Used for tracking tasks, current status, and includes a deployment checklist.
+    *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
+    *   `RELEASE_NOTES.md`: To be filled with release notes and test results.
+    *   `questions.md`: A copy of `plans/_templates/questions.md` is placed here, which you should have pre-populated (as mentioned in Prerequisites).
+    *   `docs/`: A subdirectory is created for any additional documentation or assets related to this version.
+*   **Initialize `TASKS.md`**: The status in the newly created `TASKS.md` file will be set to 'Planning'.
+*   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
+
+**4. Starting the Development Workflow (AI Execution of `VERSION_PLAN.md`)**
+
+*   Once the setup is complete, the AI assistant will automatically begin executing Phase 1 of the newly created `VERSION_PLAN.md` (which is the content from `plans/_templates/create_version.md`) within the new version's directory (e.g., `plans/1_planning/VX.Y.Z/VERSION_PLAN.md`).
+*   This `VERSION_PLAN.md` outlines a multi-phase process for the new version, typically including:
+    *   Phase 1: Comprehensive Planning & Design (Automated)
+    *   Phase 2: Development Kickoff
+    *   Phase 3: Implementation
+    *   And subsequent phases for testing, deployment, and release.
+*   The AI will follow the instructions within this `VERSION_PLAN.md`, using the configuration you provided in `questions.md`, to guide the development lifecycle.
+
+**5. Project File Updates (Automated)**
+
+Throughout this process, several key project files are updated automatically:
+
+*   `plans/_reference/ROADMAP.md`:
+    *   The status of the new version will be updated to 'In Planning' during Phase 1 of `VERSION_PLAN.md`.
+    *   Later, it will be updated with the completion status upon release.
+*   `plans/_reference/CHANGELOG.md`: A new section for the version will be added to the `CHANGELOG.md` to document changes as development progresses and upon release.
+
+By following these steps, the development process for a new application version is systematically initiated, leveraging automation to ensure consistency and adherence to the defined project management structure.
+---
+This guide is based on the information found in `README.md`, `plans/_templates/create_version.md`, and `plans/_templates/do_plan.md`.
 
 ## Introduction
 
@@ -461,70 +526,6 @@ plans/1_planning/VX.Y.Z/
 3. Follow the interactive prompts
 4. The AI will handle file creation and updates
 
-
-### Detailed Steps for Starting a New Version
-
-To start the development of the next app version, follow these steps, which involve both manual preparation and AI-assisted automation:
-
-**1. Prerequisites (Manual Setup)**
-
-Before initiating the automated process, you need to prepare two key files:
-
-*   **Update `plans/_reference/ROADMAP.md`**:
-    *   Ensure the `ROADMAP.md` file is updated with the details for the new version. This includes:
-        *   The new version number (e.g., V0.3.0).
-        *   The target date for the version release.
-        *   A clear list of key deliverables and objectives for this version.
-    *   The AI assistant will read from this file to understand the scope and details of the new version.
-
-*   **Prepare `questions.md`**:
-    *   A `questions.md` file is used to configure various aspects of the version setup and subsequent development phases.
-    *   When a new version process is initiated, a template for this file, located at `plans/_templates/questions.md`, will be copied into the new version's specific directory (e.g., `plans/1_planning/VX.Y.Z/questions.md`).
-    *   You must pre-populate this `questions.md` file in the new version's directory with all the required information and configuration values that will be used as defaults throughout the automated process.
-
-**2. Initiating the Process (User Action)**
-
-*   To begin, instruct your AI assistant (e.g., Jules) to: **"Execute `do_plan.md`"**.
-*   `do_plan.md` is a master script template located at `plans/_templates/do_plan.md` that orchestrates the setup of the new version.
-
-**3. Automated Setup (AI Execution of `do_plan.md`)**
-
-Upon receiving the instruction, the AI assistant will perform the following automated steps by executing the logic within `do_plan.md`:
-
-*   **Review `ROADMAP.md`**: The AI first checks `plans/_reference/ROADMAP.md` to identify the next planned version, its target date, and key deliverables.
-*   **Create Version-Specific Directory**: A new directory for the version will be created, following a naming convention like `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the new version number).
-*   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a set of standard files necessary for managing the version's lifecycle:
-    *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
-    *   `TASKS.md`: Used for tracking tasks, current status, and includes a deployment checklist.
-    *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
-    *   `RELEASE_NOTES.md`: To be filled with release notes and test results.
-    *   `questions.md`: A copy of `plans/_templates/questions.md` is placed here, which you should have pre-populated (as mentioned in Prerequisites).
-    *   `docs/`: A subdirectory is created for any additional documentation or assets related to this version.
-*   **Initialize `TASKS.md`**: The status in the newly created `TASKS.md` file will be set to 'Planning'.
-*   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
-
-**4. Starting the Development Workflow (AI Execution of `VERSION_PLAN.md`)**
-
-*   Once the setup is complete, the AI assistant will automatically begin executing Phase 1 of the newly created `VERSION_PLAN.md` (which is the content from `plans/_templates/create_version.md`) within the new version's directory (e.g., `plans/1_planning/VX.Y.Z/VERSION_PLAN.md`).
-*   This `VERSION_PLAN.md` outlines a multi-phase process for the new version, typically including:
-    *   Phase 1: Comprehensive Planning & Design (Automated)
-    *   Phase 2: Development Kickoff
-    *   Phase 3: Implementation
-    *   And subsequent phases for testing, deployment, and release.
-*   The AI will follow the instructions within this `VERSION_PLAN.md`, using the configuration you provided in `questions.md`, to guide the development lifecycle.
-
-**5. Project File Updates (Automated)**
-
-Throughout this process, several key project files are updated automatically:
-
-*   `plans/_reference/ROADMAP.md`:
-    *   The status of the new version will be updated to 'In Planning' during Phase 1 of `VERSION_PLAN.md`.
-    *   Later, it will be updated with the completion status upon release.
-*   `plans/_reference/CHANGELOG.md`: A new section for the version will be added to the `CHANGELOG.md` to document changes as development progresses and upon release.
-
-By following these steps, the development process for a new application version is systematically initiated, leveraging automation to ensure consistency and adherence to the defined project management structure.
----
-This guide is based on the information found in `README.md`, `plans/_templates/create_version.md`, and `plans/_templates/do_plan.md`.
 
 ### Feature Specification
 ```markdown
