@@ -291,3 +291,111 @@ tr:nth-child(even) {
         max-width: 90%;
     }
 }
+
+/* Company Facts Slide Specific Styles */
+.company-facts-slide h2 {
+    margin-bottom: 25px; /* Existing slide h2 has margin-bottom: 20px, add a bit more */
+    color: var(--primary-color); /* Consistent with existing slide h2 */
+}
+
+.facts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items overall */
+    gap: 20px; /* Space between items */
+    width: 100%;
+    align-items: flex-start; /* Align items to the start of the cross axis */
+}
+
+.fact-item {
+    background-color: #f9f9f9; /* Light background for each fact item */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color, #e0e0e0);
+    flex-basis: calc(50% - 20px); /* Two items per row, considering gap */
+    min-width: 280px; /* Minimum width before wrapping */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.fact-item.logo-item {
+    background-color: transparent; /* No background for logo container */
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%; /* Logo takes full width initially on smaller layouts if needed */
+    margin-bottom: 10px;
+}
+
+.company-logo-facts-slide {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px; /* Space below logo */
+}
+
+.fact-label {
+    font-weight: bold;
+    color: var(--secondary-color, #4CAF50); /* Use secondary color or a default */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.fact-value {
+    color: var(--text-color, #333);
+    font-size: 1.1em;
+}
+
+.inline-flag-image {
+    height: 1em; /* Adjust size to fit inline with text */
+    width: auto;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.fact-item.full-width {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 15px;
+}
+
+.fact-item.full-width p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-style: italic;
+}
+
+/* Responsive adjustments for facts container */
+@media (max-width: 768px) {
+    .fact-item {
+        flex-basis: calc(100% - 20px); /* Full width on smaller screens */
+    }
+
+    .fact-item.logo-item {
+        order: -1; /* Ensure logo is at the top on mobile */
+    }
+
+    .company-logo-facts-slide {
+        max-width: 180px;
+    }
+}
+
+/* Subtle animation for the slide content appearing */
+.company-facts-slide .facts-container {
+    animation: fadeInFacts 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInFacts {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

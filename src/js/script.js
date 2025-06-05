@@ -10,6 +10,39 @@ const slidesData = [
             <p>AI-Powered Solutions for the Modern Enterprise</p>
         `
     },
+    {
+        title: "About Sentient.io",
+        content: `
+            <div class="slide-content company-facts-slide" id="company-facts">
+              <h2>About Sentient.io</h2>
+              <div class="facts-container">
+                <div class="fact-item logo-item">
+                  <img src="/static/images/sentient-logo.png" alt="Sentient.io Logo" class="company-logo-facts-slide">
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Founded:</span>
+                  <span class="fact-value">May 2017</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Headquarters:</span>
+                  <span class="fact-value">Singapore <img src="/static/images/Singapore.png" alt="Singapore" class="inline-flag-image"></span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Founder & CEO:</span>
+                  <span class="fact-value">Christopher Yeo</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Team Size:</span>
+                  <span class="fact-value">15+ professionals</span>
+                </div>
+                <!-- Placeholder for other key statistics or achievements -->
+                <div class="fact-item full-width">
+                  <p>Pioneering AI solutions to empower businesses globally.</p>
+                </div>
+              </div>
+            </div>
+        `
+    }
     // Add more slides here following the same pattern
     // Example:
     // {
