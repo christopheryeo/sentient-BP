@@ -30,23 +30,36 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - Known issues
   - Upgrade instructions
 
+- `create_version.md` (copied from template)
+  - Version-specific execution plan
+  - Phased implementation instructions
+  - Progress tracking
+
 ### 3. Supporting Directories
 - `docs/`
   - Additional documentation
   - Meeting notes
   - Design assets
   - Reference materials
+- `testing/results/`
+  - Test execution outputs
+  - QA verification artifacts
 
 ### 4. Configuration
-- `questions.md` (if not already existing)
+- `questions.md` (copied or created if not existing)
   - Version configuration
   - Team assignments
   - Project parameters
 
-### 5. Automation Files
-- `.github/workflows/` (if configured)
+### 5. Referenced and Updated Files
+- `.github/workflows/` (referenced and updated if configured)
   - CI/CD pipeline definitions
   - Automated testing and deployment
+- `.gitignore` (referenced and updated if needed)
+  - Version control exclusions
+- `CHANGELOG.md` (referenced and updated)
+  - Release history and changes
+  - Version tracking
 
 ### 6. Log Files
 - `run.log` (Planned)
@@ -56,10 +69,6 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - Records learnings and insights from execution
   - Used throughout the version creation process
   - Captures key insights for continuous improvement
-
-### 7. Version Control
-- `.gitignore`
-- `CHANGELOG.md`
 
 ---
 
@@ -255,13 +264,14 @@ This fully automated approach ensures consistent and reliable version management
 
 2. **In create_version.md**:
    - Automatically captures learnings throughout the version creation process
-   - Used to store insights and improvements from each phase
-   - Referenced in multiple phases to maintain context:
-     - Phase 2: Appends Phase 1's planning learnings
-     - Phase 4: Appends Phase 4's implementation learnings
-     - Phase 5: Appends Phase 5's testing learnings
-     - Phase 6: Appends final learnings (not phase-specific)
-   - Previous phases' learnings are automatically inserted from learn.log in each phase
+   - Each phase has its own Learning & Reflection section that contributes to learn.log:
+      - Phase 1: Appends Phase 1's planning learnings
+      - Phase 2: Appends Phase 2's design learnings
+      - Phase 3: Appends Phase 3's implementation learnings
+      - Phase 4: Appends Phase 4's testing learnings
+      - Phase 5: Appends Phase 5's deployment learnings
+      - Phase 6: Appends final release learnings
+   - Each phase after Phase 1 reads previous phases' learnings from learn.log
 
 ### run.log Usage:
 
@@ -334,25 +344,28 @@ The following files are referenced in the workflow but not created by either `do
 `create_version.md` implements a continuous learning cycle across all phases:
 
 1. **Learning at the End of Each Phase**:
-   - Each phase includes a "Learning & Reflection" section
+   - Phases 2-6 include dedicated "Learning & Reflection" sections
+   - Phase 1 has its learnings explicitly appended by Phase 2
    - Learnings are saved to `learn.log`
-   - Structured format includes:
+   - Structured format generally includes:
      - What Went Well
      - Challenges Faced
      - Key Insights
 
 2. **Reading Learnings at Phase Start**:
-   - Each phase after the first includes a "Learning from Previous Phases" section
+   - Phases 2-5 include a "Learning from Previous Phases" section
+   - Phase 6 does not include this section
    - References reading from `learn.log`
    - Placeholder: `[Previous phases' learnings will be automatically inserted here from learn.log]`
 
 3. **Automated File Updates**:
-   - Each phase's "File Updates" section includes appending to `learn.log`
+   - All phases include appending to `learn.log` in their "File Updates" sections
+   - Phase 1's learnings are explicitly appended by Phase 2
    - Example: `Append Phase X learnings to learn.log`
 
-4. **Consistent Structure**:
-   - All six phases follow this pattern
-   - Ensures continuous learning and improvement
+4. **Varied but Consistent Structure**:
+   - Core learning capture and logging mechanisms are present for all phases
+   - The pattern of reading and writing learnings is maintained throughout
    - Creates a feedback loop between phases
 
 5. **Implementation**:
@@ -366,8 +379,6 @@ This mechanism ensures knowledge is captured, stored, and applied throughout the
 1. `.github/workflows/` - CI/CD pipeline definitions
 2. `run.log` - Runtime execution logs (when implemented)
 3. `learn.log` - Learning and improvement logs
-8. `run.log` - Runtime execution logs (when implemented)
-9. `learn.log` - Learning and improvement logs
 
 These files are either read from or written to during the version creation process but are not created by the main workflow scripts. They are expected to exist in their respective locations as part of the project structure.
 
