@@ -243,7 +243,11 @@ plans/1_planning/VX.Y.Z/
 ├── TASKS.md             # Task list, status tracking, and deployment checklist
 ├── TECH_SPEC.md         # Technical specs, architecture, and requirements
 ├── RELEASE_NOTES.md     # Release notes and test results
-└── docs/               # Additional documentation and assets
+├── docs/               # Additional documentation and assets
+├── testing/
+│   └── results/         # Test execution outputs and QA verification
+├── learn.log            # Learnings and insights from execution
+└── run.log              # (Planned) Errors and AI decisions
 ```
 
 ### File Descriptions:
@@ -278,6 +282,17 @@ plans/1_planning/VX.Y.Z/
    - Design assets
    - Meeting notes
    - Reference materials
+
+6. **testing/results/**
+   - Test execution outputs
+   - QA verification artifacts
+7. **learn.log**
+   - Records learnings and insights from execution
+   - Used throughout the version creation process
+   - Captures key insights for continuous improvement
+8. **run.log** (Planned)
+   - Will log errors and AI decisions
+   - Implementation details to be determined in future updates
 
 ## Actions (Automated)
 1. Set up version control branch

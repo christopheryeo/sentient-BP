@@ -34,6 +34,9 @@
      - `TECH_SPEC.md`: Technical specifications and architecture
      - `RELEASE_NOTES.md`: Release notes and test results
      - `docs/`: Directory for additional documentation
+     - `testing/results/`: Directory for test execution outputs and QA artifacts
+     - `learn.log`: Log file for learnings and insights from execution
+     - `run.log`: (Planned) Log file for errors and AI decisions (implementation details TBD)
    - Copy templates:
      - `plans/_templates/create_version.md`
      - `plans/_templates/questions.md`
