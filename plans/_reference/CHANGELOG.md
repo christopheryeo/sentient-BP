@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version  | Commit    | Description                                                                 |
 |----------|-----------|-----------------------------------------------------------------------------|
+| V0.2.5l  | `9bb9f07` | Added AI Task Alignment Review in create_version.md                          |
 | V0.2.5k  | `54e456a` | Fixed Q8 and Q9 in code_verification.md to accurately reflect file creation |
 | V0.2.5j  | `ace3fe9` | Fixed documentation issues in code_verification.md                          |
 | [Untagged]| `381b1ee` | Updated CHANGELOG.md with V0.2.5i version                                   |
