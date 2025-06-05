@@ -82,36 +82,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 📝 Version Details
 
-## [V0.2.6] - 2025-06-05
+## [V0.2.6] - 2025-06-07 (Planned)
+
+### Planned
+- **Company Facts Slide**:
+  - Engaging company overview
+  - Key company metrics (Founded: May 2017, HQ: Singapore, CEO: Christopher Yeo, Team: 30+)
+  - Clean, modern layout with visual elements
+  - Mobile responsiveness, animations, and accessibility
+  - Optimized for fast loading
 
 ### Added
 - Enhanced product management documentation with detailed versioning workflow
 - Updated versioning templates and guidelines
-- Added comprehensive documentation for starting new versions
+- Comprehensive documentation for starting new versions
 - Improved version management processes and automation
 
 ### Changed
-- Updated CHANGELOG.md to reflect recent version changes
-- Refined version planning documentation
 - Streamlined version creation workflow
+- Refined version planning documentation
+- Updated CHANGELOG.md structure
 
 ### Fixed
 - Corrected version history in documentation
 - Fixed formatting in version management templates
 - Addressed documentation inconsistencies
-
-## [V0.2.5] - 2025-06-05
-### Added
-- Planning for the 'Company Facts Slide'.
-- Created version planning directory `plans/1_planning/V0.2.6/`.
-- Key objectives include:
-  - Engaging company overview
-  - Key company metrics (Founded: May 2017, HQ: Singapore, CEO: Christopher Yeo, Team: 30+)
-  - Clean, modern layout with visual elements
-  - Mobile responsiveness, animations, accessibility, and fast loading.
-- Key Stakeholder: Chris Yeo.
-
-## [Unreleased]
 
 ## [V0.2.5] - 2025-06-05
 
@@ -120,13 +115,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Automated version management workflow
 - AI Task Alignment Review in create_version.md
 - Documentation and testing infrastructure
+- Initial project setup and presentation framework
 
-### Added
-- Initial project setup
-- Core presentation framework
-- Responsive slide navigation
-- Interactive elements and animations
-- Project management documentation
+### Fixed
+- Version control and documentation inconsistencies
+- Formatting in version management templates
+- Project structure verification
+
+## [Unreleased]
 
 ## [V0.2.4j] - 2025-06-03
 ### Added
