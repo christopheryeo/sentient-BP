@@ -271,7 +271,7 @@ This fully automated approach ensures consistent and reliable version management
       - Phase 4: Appends Phase 4's testing learnings
       - Phase 5: Appends Phase 5's deployment learnings
       - Phase 6: Appends final release learnings
-   - Each phase after Phase 1 reads previous phases' learnings from learn.log
+   - Phases 2, 3, 4, and 5 of `create_version.md` read previous phases' learnings from learn.log; Phase 6 does not explicitly state this.
 
 ### run.log Usage:
 
@@ -365,14 +365,5 @@ The following files are referenced in the workflow but not created by either `do
    - Each phase builds upon learnings from previous ones
 
 This mechanism ensures knowledge is captured, stored, and applied throughout the version management process, creating a continuous improvement cycle.
-
-### Integration Files:
-1. `.github/workflows/` - CI/CD pipeline definitions
-2. `run.log` - Runtime execution logs (when implemented)
-3. `learn.log` - Learning and improvement logs
-
-These files are either read from or written to during the version creation process but are not created by the main workflow scripts. They are expected to exist in their respective locations as part of the project structure.
-
-**Note**: The workflow strictly adheres to the file creation policy defined in Q1, only creating or modifying the explicitly listed files. All other files are treated as read-only or append-only for logging purposes.
 
 
