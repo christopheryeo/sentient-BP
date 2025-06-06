@@ -30,6 +30,7 @@ This roadmap provides a high-level overview of our vision, direction, and planne
 | Version | Status      | Target Date | Key Deliverables                     |
 |---------|-------------|-------------|-------------------------------------|
 | V0.2.7  | In Progress | 2025-06-07  | Company Facts Table Improvements     |
+| V0.2.8  | Planned     | 2025-06-08  | Company Facts Slide UI Adjustments |
 | V0.3.0  | Planned     | 2025-Q3     | Navigation Improvements             |
 | V0.4.0  | Planned     | 2025-Q3     | Interactive Demos                   |
 
@@ -47,6 +48,13 @@ Create the most engaging, accessible, and effective presentation platform for sh
   - [ ] Add subtle animations and transitions
   - [ ] Ensure accessibility compliance
   - [ ] Verify cross-browser compatibility
+
+### V0.2.8 - Company Facts Slide UI Adjustments (Target: 2025-06-08)
+- [ ] **Update Company Facts Slide UI**
+  - [ ] Resize Sentient logo to 20% of current size and position at top-left.
+  - [ ] Position company facts text to the right of the Singapore image.
+  - [ ] Ensure font consistency with other slides.
+  - [ ] Add "(Facts)" text to the slide.
 
 ### V0.3.0 - Navigation Improvements (Target: 2025-Q3)
 
