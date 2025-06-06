@@ -56,8 +56,6 @@ Create the most engaging, accessible, and effective presentation platform for sh
   - [ ] Ensure font consistency with other slides.
   - [ ] Add "(Facts)" text to the slide.
 
-### V0.3.0 - Navigation Improvements (Target: 2025-Q3)
-
 ## 📅 Upcoming Features
 
 ### V0.3.0 - Navigation Improvements
