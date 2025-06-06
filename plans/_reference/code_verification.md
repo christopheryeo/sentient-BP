@@ -311,6 +311,7 @@ The following files are referenced in the workflow but not created by either `do
    - `plans/_templates/create_version.md` - Referenced and copied, but the original template is not created
    - `plans/_templates/do_plan.md` - Referenced but not created by the workflow itself
    - `plans/_templates/questions.md` - Referenced and potentially copied if not existing
+   - `plans/_templates/finish_version.md` - Referenced and copied (as completion_checklist.md), but the original template is not created
 4. Version control files that are referenced and updated but not created:
    - `.github/workflows/` - CI/CD pipeline definitions (referenced if configured)
    - `.gitignore` - Git ignore configuration (referenced and potentially updated)
@@ -334,7 +335,7 @@ The following files are referenced in the workflow but not created by either `do
 
 2. **Reading Learnings at Phase Start**:
    - Phases 2-5 include a "Learning from Previous Phases" section
-   - Phase 6 does not include this section
+   - Phase 6 also includes this placeholder section
    - References reading from `learn.log`
    - Placeholder: `[Previous phases' learnings will be automatically inserted here from learn.log]`
 
