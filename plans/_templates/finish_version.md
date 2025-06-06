@@ -7,7 +7,6 @@ This guide will help you properly complete the current version by updating all n
 ### 1. Code Review
 - [ ] All code changes have been reviewed
 - [ ] Code follows project style guidelines
-- [ ] No debugging code or console.log statements remain
 - [ ] All new features are properly documented
 
 ### 2. Documentation Updates
@@ -38,7 +37,6 @@ This guide will help you properly complete the current version by updating all n
 ### 3. Code & Implementation
 - [ ] Verify all planned features are complete
 - [ ] Ensure code meets style guidelines
-- [ ] Remove debugging code/console logs
 - [ ] Update README.md with new features
 - [ ] Verify code documentation is complete
 - [ ] Check version numbers across files
