@@ -43,6 +43,7 @@ Create the most engaging, accessible, and effective presentation platform for sh
 
 ### V0.2.7 - Company Facts Table Improvements (Target: 2025-06-07)
 - [ ] **Enhance Company Facts Table**
+  - [ ] Resize Sentient logo to 20% of current size and position at top-left.
   - [ ] Improve table layout and responsiveness
   - [ ] Optimize for mobile viewing
   - [ ] Add subtle animations and transitions
@@ -51,7 +52,6 @@ Create the most engaging, accessible, and effective presentation platform for sh
 
 ### V0.2.8 - Company Facts Slide UI Adjustments (Target: 2025-06-08)
 - [ ] **Update Company Facts Slide UI**
-  - [ ] Resize Sentient logo to 20% of current size and position at top-left.
   - [ ] Position company facts text to the right of the Singapore image.
   - [ ] Ensure font consistency with other slides.
   - [ ] Add "(Facts)" text to the slide.
