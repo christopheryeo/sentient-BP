@@ -113,6 +113,7 @@ This project uses vanilla JavaScript and doesn't require a build step. Simply ed
 2. Test all interactive elements
 3. Verify responsiveness across different screen sizes
 4. Check accessibility using browser developer tools
+5. Run `node testing/check_unique_ids.js` to ensure no duplicate element IDs
 
 ## 📊 Project Management
 
