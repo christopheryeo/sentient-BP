@@ -314,23 +314,10 @@ plans/1_planning/VX.Y.Z/
 1. Set up version control branch
 2. Initialize consolidated documentation structure
 3. Conduct automated technical analysis
-4. Generate initial task list for `TASKS.md` based on the granular outputs of the code investigation and Code Impact Analysis.
-      - Each task should represent a single, distinct coding action that can be independently implemented and verified. Examples include:
-        - "Create function `calculateDiscount(price, discount_rate)` in `utils.js`."
-        - "Add `<div class="user-profile">` inside `<header>` in `index.html`.""
-        - "Modify CSS rule `.button` in `style.css` to include `background-color: #007bff;`."
-        - "Define new configuration key `MAX_USERS` in `config.json`."
-      - Tasks should be clearly phrased, indicating the action, the target (e.g., file, function, class), and specifics of the change.
-      - These tasks will populate the implementation phase sections of `TASKS.md`.
+4. Generate initial task list starting with code investigation
 5. Execute Task 1: Code Impact Analysis
-   - Analyze codebase to identify all required changes at a granular level. This includes, but is not limited to:
-     - Specific functions/methods to be created, modified, or deleted.
-     - Precise HTML structural changes (e.g., new elements, attribute changes on existing elements).
-     - Detailed CSS changes (e.g., new classes, properties for existing classes, selectors).
-     - Any configuration file adjustments.
-     - Individual data transformations or manipulations.
-   - The output of this analysis should be a list of discrete, actionable coding steps.
-   - Update `TASKS.md` by creating entries for each of these granular, step-by-step implementation tasks, following the formatting guidance detailed above (under "Generate initial task list...").
+   - Analyze codebase for required changes
+   - Update `TASKS.md` with specific implementation tasks
 6. Track progress in `TASKS.md`
 7. Prepare for development kickoff
 
