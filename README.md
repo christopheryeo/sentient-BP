@@ -181,7 +181,7 @@ sentient-BP/
 │   └── styles.css       # Main stylesheet
 ├── js/
 │   └── main.js         # Main JavaScript file
-├── images/              # Image assets
+├── static/images/       # Image assets
 ├── index.html           # Main HTML file
 └── README.md            # Project documentation
 ```
