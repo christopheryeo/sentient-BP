@@ -119,49 +119,32 @@ Yes, both `do_plan.md` and `create_version.md` extensively interact with `questi
 
 ## 3. What are the phases in create_version.md?
 
-`create_version.md` contains the following 6 phases:
 
-1. **Phase 1: Planning & Design (Automated)**
+`create_version.md` contains the following 4 phases:
+
+1. **Phase 1: Comprehensive Planning & Design (Automated)**
    - Version information extraction from ROADMAP.md
-   - Standard files setup (README.md, design.md, tech-spec.md, etc.)
-   - Risk assessment and mitigation planning
+   - Standard files setup in the version directory
+   - Automated task list generation in TASKS.md
    - Validation of requirements and dependencies
-   - Initial task list generation in tasks.md
 
 2. **Phase 2: Development Kickoff**
-   - Milestone extraction and validation from ROADMAP.md
+   - Milestone review and validation
    - Team assignments from questions.md
-   - Updates to README.md and tech-spec.md
    - Development environment verification
    - Documentation of development standards
 
-3. **Phase 3: Implementation**
-   - Code impact analysis
-   - Task execution from tasks.md
-   - Implementation of slide changes in HTML structure
-   - Documentation updates for all changes
+3. **Phase 3: Iterative Feature Development & Implementation**
+   - Code impact analysis with granular task creation
+   - Implementation of tasks from TASKS.md
+   - HTML and JavaScript updates for slides
    - Verification of slide architecture and navigation
 
-4. **Phase 4: Code Review & Documentation**
-   - Code quality checks
-   - Verification of coding standards
-   - Documentation updates
-   - Inline code comments review
-   - README updates as needed
-
-5. **Phase 5: Final Verification**
-   - HTML structure verification
-   - Slide ID and numbering checks
-   - Navigation button validation
-   - Image path verification
-   - CHANGELOG.md updates
-
-6. **Phase 6: Implementation Review**
-   - Final code review
-   - Documentation completeness check
-   - Technical debt documentation
-   - Future development planning
-   - Learning capture in learn.log
+4. **Phase 4: Holistic Review, Testing, Documentation & Finalization**
+   - Comprehensive code review and testing
+   - Batch update of documentation and release notes
+   - Final validation of HTML structure and navigation
+   - Updating ROADMAP.md and CHANGELOG.md
 
 Each phase includes:
 - Required file updates
@@ -260,7 +243,7 @@ This fully automated approach ensures consistent and reliable version management
 
 ## 7. Where are learn.log used for logging in do_plan.md and create_version.md?
 
-### learn.log Usage in current 6-phase implementation:
+### learn.log Usage in current 4-phase implementation:
 
 1. **In do_plan.md**:
    - Used to document key learnings during execution
@@ -333,7 +316,7 @@ The following files are referenced in the workflow but not created by either `do
 `create_version.md` implements a continuous learning cycle across all phases:
 
 1. **Learning at the End of Each Phase**:
-   - Phases 2-6 include dedicated "Learning & Reflection" sections
+   - Phases 2-4 include dedicated "Learning & Reflection" sections
    - Phase 1 has its learnings explicitly appended by Phase 2
    - Learnings are saved to `learn.log`
    - Structured format generally includes:
@@ -342,8 +325,8 @@ The following files are referenced in the workflow but not created by either `do
      - Key Insights
 
 2. **Reading Learnings at Phase Start**:
-   - Phases 2-5 include a "Learning from Previous Phases" section
-   - Phase 6 also includes this placeholder section
+   - Phases 2-4 include a "Learning from Previous Phases" section
+   - Phase 4 also includes this placeholder section
    - References reading from `learn.log`
    - Placeholder: `[Previous phases' learnings will be automatically inserted here from learn.log]`
 
