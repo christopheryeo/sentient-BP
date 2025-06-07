@@ -242,10 +242,13 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ### 1.2 Standard Files Setup
 - Ensure all standard files exist in version directory:
-  - `VERSION_PLAN.md`: Version overview and goals (from ROADMAP.md)
+  - `VERSION_PLAN.md`: Version overview, goals (from ROADMAP.md), and high-level progress checkboxes (e.g., for planning, design, implementation, verification). Initialize with checkboxes for key sections like 'Overall Planning', 'Technical Design', 'UX Design', 'Implementation Milestones', 'Testing', 'Documentation'.
   - `TECH_SPEC.md`: Technical specifications including design, architecture, API documentation, and implementation details
-  - `TASKS.md`: Tracks progress (Planning/In Progress/Completed) and tasks
-- Initialize status in `TASKS.md` with initial status: 'Planning'
+  - `TASKS.md`: Tracks progress through the 6 high-level phases (Planning & Design, Development Kickoff, Implementation, Code Review & Documentation, Final Verification, Implementation Review). It will show the status of each phase.
+  - `completion_checklist.md`: A dynamic checklist of key milestones and deliverables for the version. Initialized with high-level items.
+- Initialize `TASKS.md` to list the 6 standard phases, with the 'Planning & Design' phase marked as 'In Progress' and others as 'To Do'.
+- Initialize `completion_checklist.md` with top-level checklist items such as: '[ ] Overall Planning Complete', '[ ] Design Phase Finalized', '[ ] All Core Features Implemented', '[ ] Testing Phase Passed', '[ ] Documentation Complete', '[ ] Final Review Approved'.
+- Initialize `VERSION_PLAN.md` with unchecked checkboxes for all defined high-level sections.
 
 ### 1.3 Validation
 - Verify all required information is present in ROADMAP.md
@@ -331,6 +334,7 @@ plans/1_planning/VX.Y.Z/
    - Set initial status in `TASKS.md`
    - Populate `TECH_SPEC.md` with technical requirements
    - Update `TECH_SPEC.md` with UI/UX specifications from `questions.md`
+   - Review and update checkboxes in `VERSION_PLAN.md` to reflect completion of initial planning, requirements gathering, and design specifications.
 
 2. **Validation**
    - Ensure all milestones have target dates
@@ -368,6 +372,7 @@ plans/1_planning/VX.Y.Z/
 ## File Updates (Automated):
 1. Update `tasks.md` with current status
 2. Append Phase 1 learnings to `learn.log`
+3. Review and update `completion_checklist.md`: Refine checklist items based on detailed planning, add sub-tasks if necessary, and mark any pre-development milestones (e.g., 'Detailed Requirements Documented', 'Resource Allocation Confirmed').
 
 ## Learning & Reflection (Automated):
 ```
@@ -490,10 +495,11 @@ When modifying the HTML app, ensure:
 
 ## File Updates (Automated):
 1. **Core Documentation**
-   - Update `VERSION_PLAN.md` with version overview and objectives
-   - Maintain `TASKS.md` with current task status and assignments
+   - Update `VERSION_PLAN.md` by marking relevant high-level checkboxes as implementation milestones are achieved (e.g., 'Technical Design Finalized', 'Core Feature X Implemented').
+   - Update `TASKS.md` to reflect the current phase's progress (e.g., mark 'Implementation' as 'In Progress', and upon completion of Phase 2, mark 'Development Kickoff' as 'Completed'). Ensure phase start/completion dates are noted.
    - Update `TECH_SPEC.md` with technical specifications
    - Keep `RELEASE_NOTES.md` current with version highlights
+   - Update `completion_checklist.md` by marking items as 'In Progress' or '[x]' upon achievement of major implementation milestones (e.g., '[x] Core Feature X Implemented', '[ ] API for Y Developed - In Progress'). Add new items as they emerge.
 
 2. **Supporting Documentation**
    - Store additional documentation in `docs/` directory
@@ -550,7 +556,9 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
 ## File Updates (Automated):
 1. Update documentation in `docs/`
 2. Update inline code comments
-3. Append Phase 4 learnings to `learn.log`
+3. Update `VERSION_PLAN.md` by marking checkboxes for completed code reviews and documentation milestones.
+4. Update `completion_checklist.md` to reflect the status of code reviews, testing progress, and documentation tasks (e.g., '[x] Peer Review for Module Z Complete', '[ ] Technical Documentation Drafted').
+5. Append Phase 4 learnings to `learn.log`
 
 ---
 
@@ -574,7 +582,9 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
 ## File Updates (Automated):
 1. Update CHANGELOG.md
 2. Finalize all documentation
-3. Append Phase 5 learnings to `learn.log`
+3. Update `VERSION_PLAN.md` by marking relevant checkboxes upon successful final verification and test completion.
+4. Update `completion_checklist.md` with the status of all final verification tasks, test results, and approvals (e.g., '[x] All Critical Tests Passed', '[ ] User Acceptance Testing Sign-off').
+5. Append Phase 5 learnings to `learn.log`
 
 ## Learning & Reflection (Automated):
 ```
@@ -617,7 +627,9 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
 ## Final Steps:
 1. Update `ROADMAP.md` with completed items
 2. Document any remaining technical debt
-3. Plan next steps for future development
+3. Ensure all high-level objectives in `VERSION_PLAN.md` are checked off as complete.
+4. Conduct a final review of `completion_checklist.md` to ensure all items are marked complete, verifying all version objectives and deliverables have been met.
+5. Plan next steps for future development
 
 ## Learning & Reflection (Automated):
 ```
