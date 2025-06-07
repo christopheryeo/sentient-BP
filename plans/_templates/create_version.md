@@ -25,12 +25,10 @@ USAGE INSTRUCTIONS:
 3. All file operations and documentation will be handled automatically using the configuration from `questions.md`
 
 PHASES:
-1. Planning & Design (Automated)
+1. Comprehensive Planning & Design (Automated)
 2. Development Kickoff
-3. Implementation
-4. Code Review & Documentation
-5. Final Verification
-6. Implementation Review
+3. Iterative Feature Development & Implementation
+4. Holistic Review, Testing, Documentation & Finalization
 
 NOTES:
 - All file paths are relative to the project root
