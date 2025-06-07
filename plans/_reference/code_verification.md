@@ -205,21 +205,21 @@ This ensures that all tasks are executed in a controlled and verifiable manner, 
 
 ## 5. Is the first task to be executed the one that lists all code that will be changed by the subsequent tasks?
 
-Yes, a critical early task, "Initial Code Analysis" performed during **Phase 3 (Implementation)** of `create_version.md`, is designed to analyze and document required code changes. This analysis task is part of the implementation phase as follows:
+Yes, a critical early task, referred to as "Initial Code Analysis" (and specified as "Code Impact Analysis" in the template), performed during **Phase 1 (Comprehensive Planning & Design (Automated))** of `create_version.md`, is designed to analyze and document required code changes. This analysis task is part of the implementation phase as follows:
 
-1. **Initial Code Analysis**: This early task performs an analysis of the codebase to identify necessary changes specific to slide implementation, focusing on:
-   * HTML structure review
-   * Slide ID sequence verification
-   * Navigation button consistency
-   * Image path conventions
+1.  **Initial Code Analysis / Code Impact Analysis**: This early task performs an analysis of the codebase to identify necessary changes specific to slide implementation, focusing on:
+    *   HTML structure review
+    *   Slide ID sequence verification
+    *   Navigation button consistency
+    *   Image path conventions
 
-2. **Documentation**: It documents the analysis results, including:
-   * Files requiring modification
-   * Specific changes needed
-   * Dependencies and impacts
-   * Slide architecture considerations
+2.  **Documentation**: It documents the analysis results, including:
+    *   Files requiring modification
+    *   Specific changes needed
+    *   Dependencies and impacts
+    *   Slide architecture considerations
 
-3. **Task Execution**: Based on this analysis, the implementation proceeds with specific tasks focused on ensuring proper slide integration and consistency across the presentation structure.
+3.  **Task Generation**: Based on this analysis, `TASKS.md` is populated with granular tasks for the implementation phase, ensuring proper slide integration and consistency.
 
 This approach ensures code changes are properly planned and documented before full implementation, providing a clear roadmap for the development process while focusing on the HTML-based slide architecture.
 
@@ -266,16 +266,19 @@ This fully automated approach ensures consistent and reliable version management
    - Used to document key learnings during execution
    - Captured in the "Update Project Files" phase
 
-2. **In create_version.md**:
-   - Captures learnings throughout the version creation process
-   - Each phase has its own Learning & Reflection section that contributes to learn.log:
-      - Phase 1: Appends Planning & Design learnings
-      - Phase 2: Appends Development Kickoff learnings
-      - Phase 3: Appends Implementation learnings
-      - Phase 4: Appends Code Review & Documentation learnings
-      - Phase 5: Appends Final Verification learnings
-      - Phase 6: Appends Implementation Review learnings
-   - Focus is on documenting code structure and HTML application modifications
+2. **In create_version.md** (following its 4-phase operational model):
+   - Captures learnings throughout the version creation process, recorded in `learn.log`.
+   - **Phase 1 (Comprehensive Planning & Design - Automated):** While this phase doesn't have its own direct "Learning & Reflection" section, its learnings are conceptually captured and then explicitly appended to `learn.log` during Phase 2.
+   - **Phase 2 (Development Kickoff):**
+     - Appends learnings from Phase 1 to `learn.log`.
+     - Appends its own "Phase 2 Learnings" (from its "Learning & Reflection" section) to `learn.log`.
+   - **Phase 3 (Iterative Feature Development & Implementation):**
+     - Allows for *brief, critical* learnings related to specific implementation challenges to be logged iteratively to `learn.log` as they occur.
+     - A comprehensive summary of all Phase 3 learnings is deferred and logged by Phase 4.
+   - **Phase 4 (Holistic Review, Testing, Documentation & Finalization):**
+     - Appends a consolidated summary of all learnings from the entire Phase 3 to `learn.log`.
+     - Appends its own "Phase 4 Learnings" (from its "Learning & Reflection" section) to `learn.log`.
+   - Focus is on documenting code structure and HTML application modifications.
 
 ### Implementation Notes:
 - `learn.log` is actively used for continuous improvement
@@ -305,17 +308,22 @@ This distinction between "created" files and "referenced/updated" files is impor
 The following files are referenced in the workflow but not created by either `do_plan.md` or `create_version.md`:
 
 ### Project Files Referenced But Not Created:
-1. `ROADMAP.md` - Referenced extensively for version planning and status tracking
-2. `content/Style.md` - Referenced for McKinsey presentation standards and styling guidelines
-3. The template files themselves:
-   - `plans/_templates/create_version.md` - Referenced and copied, but the original template is not created
-   - `plans/_templates/do_plan.md` - Referenced but not created by the workflow itself
-   - `plans/_templates/questions.md` - Referenced and potentially copied if not existing
-   - `plans/_templates/finish_version.md` - Referenced and copied (as completion_checklist.md), but the original template is not created
-4. Version control files that are referenced and updated but not created:
-   - `.github/workflows/` - CI/CD pipeline definitions (referenced if configured)
-   - `.gitignore` - Git ignore configuration (referenced and potentially updated)
-   - `CHANGELOG.md` - Release history (referenced and updated with new versions)
+1. `ROADMAP.md` - Referenced extensively for version planning and status tracking.
+2. `content/Style.md` - Referenced for McKinsey presentation standards and styling guidelines.
+3. Project source code files directly modified by `create_version.md`:
+   - `index.html` - Main HTML file, modified for slide content and structure.
+   - `src/js/script.js` - Primary JavaScript file, potentially modified for slide logic (if active).
+   - `src/js/main.js` - Alternative JavaScript file, potentially modified for slide logic.
+   - `README.md` (project root) - Overall project documentation, may be updated with high-level changes.
+4. The template files themselves (source of the planning process):
+   - `plans/_templates/create_version.md` - Referenced and copied.
+   - `plans/_templates/do_plan.md` - Referenced (executed).
+   - `plans/_templates/questions.md` - Referenced and potentially copied.
+   - `plans/_templates/finish_version.md` - Referenced and copied.
+5. Version control and CI/CD files (referenced or updated as part of broader project context):
+   - `.github/workflows/` - CI/CD pipeline definitions.
+   - `.gitignore` - Git ignore configuration.
+   - `CHANGELOG.md` - Release history (updated with new version details).
 
 ### Clarification on Log Files:
 - `learn.log` is created by the templates, not just referenced, so it is correctly listed in Q1 under "Log Files"

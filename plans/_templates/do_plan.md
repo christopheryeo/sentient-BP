@@ -87,14 +87,11 @@
 
 2. **Execution**
    - Create version directory with standard files
-   - Process all phases in sequence:
-     1. Planning & Design
+   - Process all phases in sequence (as defined in `create_version.md`):
+     1. Comprehensive Planning & Design (Automated)
      2. Development Kickoff
-     3. Implementation
-     4. Testing & QA
-     5. Deployment Preparation
-     6. Release & Post-Release
-     7. Retrospective
+     3. Iterative Feature Development & Implementation
+     4. Holistic Review, Testing, Documentation & Finalization
    - Update all relevant files automatically
    - Commit changes after each phase
 
