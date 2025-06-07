@@ -1,0 +1,8 @@
+{
+  "name": "sentient-bp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests defined\" && exit 0"
+  }
+}
