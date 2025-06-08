@@ -53,7 +53,7 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
 ---
 
 
-## 3. What are the phases in create_version.md?
+## 2. What are the phases in create_version.md?
 
 
 `create_version.md` contains the following 4 phases:
@@ -89,7 +89,7 @@ Each phase includes:
 - Documentation updates
 - Automated logging to learn.log
 
-## 4. Are the tasks in tasks.md that create_version.md creates executed?
+## 3. Are the tasks in tasks.md that create_version.md creates executed?
 
 Yes, tasks in `tasks.md` are executed during Phase 3 (Implementation) of `create_version.md`. Here's how it works:
 
@@ -122,7 +122,7 @@ This ensures that all tasks are executed in a controlled and verifiable manner, 
 
 ---
 
-## 5. Is the first task to be executed the one that lists all code that will be changed by the subsequent tasks?
+## 4. Is the first task to be executed the one that lists all code that will be changed by the subsequent tasks?
 
 Yes, a critical early task, referred to as "Initial Code Analysis" (and specified as "Code Impact Analysis" in the template), performed during **Phase 1 (Comprehensive Planning & Design (Automated))** of `create_version.md`, is designed to analyze and document required code changes. This analysis task is part of the implementation phase as follows:
 
@@ -142,7 +142,7 @@ Yes, a critical early task, referred to as "Initial Code Analysis" (and specifie
 
 This approach ensures code changes are properly planned and documented before full implementation, providing a clear roadmap for the development process while focusing on the HTML-based slide architecture.
 
-## 6. Can do_plan.md and create_version.md be executed by the AI without stopping for human approval or responses?
+## 5. Can do_plan.md and create_version.md be executed by the AI without stopping for human approval or responses?
 
 Yes, both `do_plan.md` and `create_version.md` are designed to run automatically without requiring human intervention, provided that all prerequisites are met. Here's how automated execution works in the current implementation:
 
@@ -177,7 +177,7 @@ Yes, both `do_plan.md` and `create_version.md` are designed to run automatically
 
 This fully automated approach ensures consistent and reliable version management while eliminating the need for manual intervention during execution.
 
-## 7. Where are learn.log used for logging in do_plan.md and create_version.md?
+## 6. Where are learn.log used for logging in do_plan.md and create_version.md?
 
 ### learn.log Usage in current 4-phase implementation:
 
@@ -206,7 +206,7 @@ This fully automated approach ensures consistent and reliable version management
 - Captures insights for slide architecture management and navigation consistency
 
 
-## 8. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
+## 7. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
 
 Yes, the files mentioned in Q1 represent a comprehensive list of all files and directories created by `do_plan.md` and `create_version.md`. The list in Q1 has been updated to include:
 
@@ -222,7 +222,7 @@ This distinction between "created" files and "referenced/updated" files is impor
 
 ---
 
-## 9. Which files are referenced in the workflow but not created by do_plan.md or create_version.md?
+## 8. Which files are referenced in the workflow but not created by do_plan.md or create_version.md?
 
 The following files are referenced in the workflow but not created by either `do_plan.md` or `create_version.md`:
 
@@ -246,7 +246,7 @@ The following files are referenced in the workflow but not created by either `do
 ### Clarification on Log Files:
 - `learn.log` is created by the templates, not just referenced, so it is correctly listed in Q1 under "Log Files"
 
-## 10. How does the learning and reflection mechanism work across phases in create_version.md?
+## 9. How does the learning and reflection mechanism work across phases in create_version.md?
 
 `create_version.md` implements a continuous learning cycle across all phases:
 
