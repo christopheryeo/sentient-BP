@@ -70,7 +70,6 @@ Upon receiving the instruction, the AI assistant will perform the following auto
 *   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a minimal set of files needed to manage the version's lifecycle:
     *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
     *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
-    *   `RELEASE_NOTES.md`: To be filled with release notes and test results.
 *   **Implementation Planning**: OpenAI Codex manages tasks directly from `ROADMAP.md` and `TECH_SPEC.md`, so no `TASKS.md` file is created.
 *   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
 
@@ -185,7 +184,6 @@ Only the main app versions are listed in the changelog; individual commits may n
 ## Version Documentation
 
 Each version directory in `1_planning/` should include:
-- `RELEASE_NOTES.md` - Specific to that version
 
 **Directory Naming**: Use semantic versioning (e.g., `V1.0.0`)
 
@@ -455,8 +453,7 @@ When executed, this template will create and manage the following structure:
 ```
 plans/1_planning/VX.Y.Z/
 ├── VERSION_PLAN.md    # Version planning guide
-├── TECH_SPEC.md       # Technical specifications
-└── RELEASE_NOTES.md   # Release notes and test results
+└── TECH_SPEC.md       # Technical specifications
 ```
 
 #### Key Features
