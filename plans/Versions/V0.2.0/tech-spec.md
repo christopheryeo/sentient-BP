@@ -14,7 +14,7 @@
 ### 2. Version Documentation
 - **File Structure**:
   ```
-  plans/2_completed/V{version}/
+  plans/Versions/V{version}/
   ├── README.md     # Version overview and goals
   ├── design.md     # Design decisions
   └── tech-spec.md  # Technical implementation details
@@ -80,5 +80,5 @@ plans/
 ├── 0_backlog/          # Future feature ideas and proposals
 ├── 1_planning/         # Currently planned versions
 ├── 2_in_progress/      # Actively being worked on
-└── 2_completed/        # Completed versions with documentation
+└── Versions/        # Completed versions with documentation
 ```

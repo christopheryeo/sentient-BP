@@ -29,11 +29,11 @@ plans/
 ├── 0_backlog/          # Future feature ideas and proposals
 ├── 1_planning/         # Currently planned versions
 ├── 2_in_progress/      # Actively being worked on
-└── 2_completed/        # Completed versions with documentation
+└── Versions/        # Completed versions with documentation
 ```
 
 ### 2. Version Documentation
-Each version in `2_completed/` includes:
+Each version in `Versions/` includes:
 - README.md: Overview and goals
 - design.md: Implementation details
 - tech-spec.md: Technical specifications

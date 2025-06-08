@@ -28,7 +28,7 @@ This file helps you complete the current version by locating and executing the v
    - Run the version's `completion_checklist.md`
    - Follow all steps in the checklist
    - Update ROADMAP.md and CHANGELOG.md as needed
-   - Move the version directory to `plans/2_completed/`
+   - Move the version directory to `plans/Versions/`
 
 4. **Final Verification**
    - Double-check all documentation updates
