@@ -191,6 +191,8 @@ Each version's progress is tracked in the version status table in `plans/_refere
 
 This approach eliminates the need for directory movements while keeping version status centralized in the changelog.
 
+Only the main app versions are listed in the changelog; individual commits may not have corresponding tags or entries.
+
 ## Version Documentation
 
 Each version directory in `1_planning/` should include:
@@ -323,7 +325,7 @@ All presentations must follow the McKinsey presentation standards defined in `co
 - **Purpose**: Records all notable changes made to the project
 - **Format**: Follows [Keep a Changelog](https://keepachangelog.com/) format
 - **Contents**:
-  - Versioned releases with dates and commit hashes
+  - Main app version releases with dates; individual commits are no longer tracked
   - Categorized changes (Added, Changed, Deprecated, Removed, Fixed, Security)
   - Links to relevant issues/PRs
 - **Update Frequency**: With each release or significant change
@@ -558,7 +560,7 @@ plans/1_planning/VX.Y.Z/
 
 ### Tags
 - Use semantic versioning (e.g., v0.2.3)
-- Tag all releases with corresponding version numbers
+- Tag main version releases with corresponding version numbers
 - Include release notes in the tag annotation
 
 ### Branching Strategy
