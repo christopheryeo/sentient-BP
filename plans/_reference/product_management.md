@@ -172,12 +172,12 @@ This detailed structure, when consistently applied, will significantly improve p
 
 ## Status Tracking
 
-Each version directory in `1_planning/` includes a `status.md` file that tracks its progress through these stages:
+Each version's progress is tracked in the version status table in `plans/_reference/CHANGELOG.md`. Versions move through these stages:
 
 1. **Planning** (Default)
    - New versions start here
    - All planning documents are created
-   - Status is tracked in `status.md`
+   - Status is tracked in `CHANGELOG.md`
 
 2. **In Progress**
    - Development has started
@@ -187,25 +187,13 @@ Each version directory in `1_planning/` includes a `status.md` file that tracks 
 3. **Completed**
    - Version is released
    - Final documentation is updated
-   - Status is marked complete
+   - Status is marked complete in `CHANGELOG.md`
 
-### Status File Format
-```markdown
-# Version Status
-- **Current Status**: [Planning/In Progress/Completed]
-- **Created**: [timestamp]
-- **Last Updated**: [timestamp]
-
-## Status History
-- [timestamp] - Status changed to [status]
-```
-
-This approach eliminates the need for directory movements while maintaining clear status tracking for each version.
+This approach eliminates the need for directory movements while keeping version status centralized in the changelog.
 
 ## Version Documentation
 
 Each version directory in `1_planning/` should include:
-- `status.md` - Tracks version status and history
 - `release_notes.md` - Specific to that version
 - `post_mortem.md` - If any valuable lessons were learned
 
