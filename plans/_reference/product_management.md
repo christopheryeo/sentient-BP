@@ -155,10 +155,10 @@ The standard subdirectories within `plans/` are:
 *   **`_templates/`**:
     *   **Purpose**: Contains standardized templates for various documents used in the project management process. This helps maintain consistency and ensures all necessary information is captured.
     *   **Content**: Examples include:
-        *   `feature_spec_template.md`
-        *   `tech_spec_template.md`
-        *   `bug_report_template.md`
-        *   `wip_readme_template.md`
+        *   `create_version.md`
+        *   `do_plan.md`
+        *   `finish_plan.md`
+        *   `finish_version.md`
     *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
@@ -195,15 +195,16 @@ Each version directory in `1_planning/` should include:
 **Directory Naming**: Use semantic versioning (e.g., `V1.0.0`)
 
         *   `content/style.md`, etc.
+
     *   **File Naming**: Descriptive kebab-case names.
 
 *   **`_templates/`**:
     *   **Purpose**: Contains standardized templates for various documents used in the project management process. This helps maintain consistency and ensures all necessary information is captured.
     *   **Content**: Examples include:
-        *   `feature_spec_template.md`
-        *   `tech_spec_template.md`
-        *   `bug_report_template.md`
-        *   `wip_readme_template.md`
+        *   `create_version.md`
+        *   `do_plan.md`
+        *   `finish_plan.md`
+        *   `finish_version.md`
     *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
