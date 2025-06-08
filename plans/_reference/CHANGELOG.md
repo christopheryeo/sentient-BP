@@ -102,7 +102,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated `plans/_reference/ROADMAP.md` to mark V0.2.6 as 'Completed'.
 - Updated status in `plans/1_planning/V0.2.6/TASKS.md` to 'Completed'.
-- Finalized `plans/1_planning/V0.2.6/VERSION_PLAN.md` and `plans/1_planning/V0.2.6/RELEASE_NOTES.md`.
+- Finalized `plans/1_planning/V0.2.6/VERSION_PLAN.md`.
 
 ## [V0.2.5] - 2025-06-05
 
