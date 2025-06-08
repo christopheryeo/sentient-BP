@@ -84,7 +84,7 @@ Each version directory tracks progress through these stages in `TASKS.md`:
 2. **In Progress** (Starts at Phase 3)
 3. **Completed** (After Phase 6)
 
-The status is automatically updated during phase transitions and includes timestamps for each state change.
+The status is automatically updated during phase transitions and includes timestamps for each state change. A central Version Status table in `plans/_reference/CHANGELOG.md` lists all versions and their status—remember to update this table accordingly.
 
 ### Example status section in TASKS.md:
 ```markdown
@@ -437,7 +437,7 @@ For each key feature or deliverable outlined in `VERSION_PLAN.md` and `ROADMAP.m
 -   **`VERSION_PLAN.md`**: Checkboxes for specific feature implementation milestones are marked.
 -   **Code files** (e.g., `index.html`, `src/js/script.js`): Modified with new code.
 -   **`learn.log`**: AI can log *brief, critical* learnings related to specific implementation challenges immediately, but phase-wide reflections are deferred.
--   **Deferred Documentation**: Updates to `CHANGELOG.md`, overall phase progress in `TASKS.md`, `completion_checklist.md` (for phase completion), and comprehensive `learn.log` entries are deferred to Phase 4.
+-   **Deferred Documentation**: Updates to `CHANGELOG.md`—including the Version Status table, overall phase progress in `TASKS.md`, `completion_checklist.md` (for phase completion), and comprehensive `learn.log` entries are deferred to Phase 4.
 
 ## Learning & Reflection (Automated - Iterative during this Phase)
 ```
@@ -491,7 +491,7 @@ For each key feature or deliverable outlined in `VERSION_PLAN.md` and `ROADMAP.m
 3.  **`completion_checklist.md`**:
     *   Mark all high-level items (e.g., '[x] All Core Features Implemented', '[x] Testing Phase Passed', '[x] Documentation Complete', '[x] Final Review Approved') as complete.
 4.  **`CHANGELOG.md`**:
-    *   Add a comprehensive entry for the version, detailing all new features, changes, and fixes.
+    *   Update the Version Status table and add a comprehensive entry for the version, detailing all new features, changes, and fixes.
 5.  **`RELEASE_NOTES.md`**:
     *   Draft or finalize release notes, including new features, known issues (if any), and test results summary.
 6.  **`learn.log`**:
