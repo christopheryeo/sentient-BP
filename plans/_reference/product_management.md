@@ -72,14 +72,11 @@ Upon receiving the instruction, the AI assistant will perform the following auto
 
 *   **Review `ROADMAP.md`**: The AI first checks `plans/_reference/ROADMAP.md` to identify the next planned version, its target date, and key deliverables.
 *   **Create Version-Specific Directory**: A new directory for the version will be created, following a naming convention like `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the new version number).
-*   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a set of standard files necessary for managing the version's lifecycle:
+*   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a minimal set of files needed to manage the version's lifecycle:
     *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
-    *   `TASKS.md`: Used for tracking tasks, current status, and includes a deployment checklist.
     *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
     *   `RELEASE_NOTES.md`: To be filled with release notes and test results.
-    *   `questions.md`: A copy of `plans/_templates/questions.md` is placed here, which you should have pre-populated (as mentioned in Prerequisites).
-    *   `docs/`: A subdirectory is created for any additional documentation or assets related to this version.
-*   **Initialize `TASKS.md`**: The status in the newly created `TASKS.md` file will be set to 'Planning'.
+*   **Implementation Planning**: OpenAI Codex manages tasks directly from `ROADMAP.md` and `TECH_SPEC.md`, so no `TASKS.md` file is created.
 *   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
 
 **4. Starting the Development Workflow (AI Execution of `VERSION_PLAN.md`)**
@@ -90,7 +87,7 @@ Upon receiving the instruction, the AI assistant will perform the following auto
     *   Phase 2: Development Kickoff
     *   Phase 3: Implementation
     *   And subsequent phases for testing, deployment, and release.
-*   The AI will follow the instructions within this `VERSION_PLAN.md`, using the configuration you provided in `questions.md`, to guide the development lifecycle.
+*   The AI will follow the instructions within this `VERSION_PLAN.md`, guided by information from `ROADMAP.md` and `TECH_SPEC.md`, to manage the development lifecycle.
 
 **5. Project File Updates (Automated)**
 
@@ -512,26 +509,9 @@ When executed, this template will create and manage the following structure:
 
 ```
 plans/1_planning/VX.Y.Z/
-├── comms/               # Communication materials
-│   ├── announcements/   # Release announcements
-│   └── updates/         # Status updates
-├── design/              # Design documents
-│   ├── architecture.md  # System architecture
-│   ├── api.md          # API specifications
-│   └── constraints.md  # Technical constraints
-├── docs/                # Documentation
-│   ├── user_guide.md   # End-user documentation
-│   └── api/            # API documentation
-├── testing/            # Test documentation
-│   ├── test_cases.md   # Test scenarios
-│   └── strategy.md     # Testing approach
-├── decisions/          # Key decisions log
-├── issues/             # Bug reports and issues
-├── README.md           # Version overview
-├── requirements.md     # Feature requirements
-├── tasks.md           # Task tracking
-├── risks.md           # Risk assessment
-└── retrospective.md   # Post-release review
+├── VERSION_PLAN.md    # Version planning guide
+├── TECH_SPEC.md       # Technical specifications
+└── RELEASE_NOTES.md   # Release notes and test results
 ```
 
 #### Key Features
