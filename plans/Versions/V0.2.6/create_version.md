@@ -68,7 +68,7 @@ Each version directory tracks progress through these stages in `TASKS.md`:
 2. **In Progress** (Starts at Phase 3)
 3. **Completed** (After Phase 6)
 
-The status is automatically updated during phase transitions and includes timestamps for each state change.
+The status is automatically updated during phase transitions and includes timestamps for each state change. A central Version Status table in `plans/_reference/CHANGELOG.md` lists all versions and their status—remember to update this table accordingly.
 
 ### Example status section in TASKS.md:
 ```markdown
@@ -597,7 +597,7 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
    - Update status in `TASKS.md` to 'Completed'
    - Finalize all version documentation
    - Update ROADMAP.md with completion status
-   - Generate CHANGELOG.md entry
+   - Update the Version Status table and generate a CHANGELOG.md entry
    - Create release notes in `release_notes.md`
 
 3. **Post-Release**
