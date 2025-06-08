@@ -1,5 +1,7 @@
 # Technical Specification
 
+**Development Style:** When developing any app, ensure it conforms to the guidelines in [content/Style.md](../../content/Style.md).
+
 ## 1. System Architecture
 *Overview of the system architecture and components*
 
