@@ -17,12 +17,11 @@ KEY FEATURES:
 USAGE INSTRUCTIONS:
 1. Execute the version creation process by running: "Execute do_plan.md" with your AI assistant
    - This will automatically:
-     - Read values from `questions.md` as defaults
      - Create the version directory (e.g., `plans/1_planning/VX.Y.Z/`)
      - Copy and initialize this template
-     - Set up all necessary files using values from `questions.md`
+     - Set up all necessary files using default configuration values
 2. The AI will execute the workflow phases using the pre-defined values
-3. All file operations and documentation will be handled automatically using the configuration from `questions.md`
+3. All file operations and documentation will be handled automatically using default configuration
 
 PHASES:
 1. Comprehensive Planning & Design (Automated)
@@ -82,7 +81,7 @@ This architectural inconsistency should be addressed in a future refactoring. Un
 
 ### For Users:
 1. **Execute this plan**: Simply tell your AI assistant: "Execute create_version.md"
-2. **No input required**: The AI will automatically execute all phases using configuration from `questions.md`
+2. **No input required**: The AI will automatically execute all phases using default configuration values
 3. **Review results**: Check the generated files and logs after completion
 
 ### For AI Assistants:
@@ -90,7 +89,7 @@ This architectural inconsistency should be addressed in a future refactoring. Un
 1. **Read the entire file first** to understand the full scope
 2. **Phase by phase**: Work through each section in order
 3. **For each phase**:
-   - Read all required information from `questions.md` and `ROADMAP.md`
+   - Read all required information from `ROADMAP.md` and other configuration files
    - Execute the specified actions automatically
    - Update/create any specified files
    - Document decisions/changes
@@ -124,9 +123,8 @@ Detailed explanation if needed
 Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ### Required Preconditions
-1. `questions.md` must be fully populated in the version directory
-2. All required directories must exist and be writable
-3. Git must be properly configured
+1. All required directories must exist and be writable
+2. Git must be properly configured
 
 ### Error Handling & Logging
 - **Single Log File**: All logs will go to `run.log` with timestamps (planned feature)
@@ -150,7 +148,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
    - Verify completion of each phase before proceeding
 
 2. **Configuration Processing**:
-   - Read all configuration from `questions.md`
+   - Load all required configuration values
    - Use default values when specific values are not provided
    - Log all decisions and parameter values used
 
@@ -274,7 +272,7 @@ plans/1_planning/VX.Y.Z/
 6. Track progress using checkboxes in `VERSION_PLAN.md`
 7. Prepare for development kickoff
 
-*Note: This combined phase is fully automated. The AI will gather all required information from `questions.md` and ROADMAP.md without requiring user input. Values from `questions.md` will be used as defaults throughout the process.*
+*Note: This combined phase is fully automated. The AI will gather all required information from ROADMAP.md and other configuration files without requiring user input. Default values will be used when specific configuration is missing.*
 
 ---
 
@@ -285,7 +283,7 @@ plans/1_planning/VX.Y.Z/
    - Extract milestones from ROADMAP.md
    - Update `VERSION_PLAN.md` with milestone details
    - Populate `TECH_SPEC.md` with technical requirements
-   - Update `TECH_SPEC.md` with UI/UX specifications from `questions.md`
+   - Update `TECH_SPEC.md` with UI/UX specifications from configuration files
    - Review and update checkboxes in `VERSION_PLAN.md` to reflect completion of initial planning, requirements gathering, and design specifications.
 
 2. **Validation**
@@ -295,7 +293,7 @@ plans/1_planning/VX.Y.Z/
 
 3. **Default Behavior**
    - If no milestones defined, create default development phases
-   - Use team members from `questions.md` or default to project team
+   - Use team members specified in configuration files or default to project team
    - Set reasonable default priorities if not specified
 
 ## Learning from Previous Phases:
@@ -321,7 +319,7 @@ plans/1_planning/VX.Y.Z/
 ## File Updates (Automated):
 1. Record current status updates in `VERSION_PLAN.md`
 2. Append Phase 1 learnings to `learn.log`
-3. Review and update `completion_checklist.md`: Refine checklist items based on detailed planning, add sub-tasks if necessary, and mark any pre-development milestones (e.g., 'Detailed Requirements Documented', 'Resource Allocation Confirmed').
+3. Review and update the version completion guide: refine checklist items based on detailed planning, add sub-tasks if necessary, and mark any pre-development milestones (e.g., 'Detailed Requirements Documented', 'Resource Allocation Confirmed').
 
 ## Learning & Reflection (Automated):
 ```
@@ -418,7 +416,7 @@ For each key feature or deliverable outlined in `VERSION_PLAN.md` and `ROADMAP.m
     *   Mark **Phase 3: Iterative Feature Development & Implementation** as 'Completed' with end date.
     *   Mark this **Phase 4: Holistic Review, Testing, Documentation & Finalization** as 'In Progress', then 'Completed' with dates.
     *   Update the overall version status (e.g., to 'Verification Complete' or 'Ready for Release').
-3.  **`completion_checklist.md`**:
+3.  **Version Completion Guide**:
     *   Mark all high-level items (e.g., '[x] All Core Features Implemented', '[x] Testing Phase Passed', '[x] Documentation Complete', '[x] Final Review Approved') as complete.
 4.  **`CHANGELOG.md`**:
     *   Update the Version Status table and add a comprehensive entry for the version, detailing all new features, changes, and fixes.

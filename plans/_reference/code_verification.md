@@ -29,13 +29,11 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - Phased implementation instructions
 
 ### 3. Configuration
-- `questions.md` (copied or created if not existing)
-  - Version configuration
+  - Version configuration file
   - Team assignments
 
 ### 4. Completion Files
-- `completion_checklist.md` (copied from `finish_version.md` template)
-  - Version completion guide
+  - `finish_version.md` (completion guide)
   - Documentation update instructions
   - ROADMAP.md and CHANGELOG.md update procedures
   - Directory movement instructions from `1_planning/` to `Versions/`
@@ -54,43 +52,6 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
 
 ---
 
-## 2. Do the files do_plan.md and create_version.md read information from the file questions.md?
-
-Yes, both `do_plan.md` and `create_version.md` extensively interact with `questions.md` as follows:
-
-### In do_plan.md:
-1. **Initial Setup**
-   - Requires pre-populated `questions.md` with version information
-   - Loads and parses YAML configuration from `questions.md`
-   - Creates a default `questions.md` if missing
-
-2. **Execution**
-   - Uses answers from `questions.md` during version creation
-   - Validates all required information is present in `questions.md`
-   - Verifies `questions.md` is complete before execution
-
-3. **Pre-requisites**
-   - `questions.md` must be fully populated before execution
-   - Used as the single source of truth for version configuration
-
-### In create_version.md:
-1. **Default Values**
-   - Reads values from `questions.md` as defaults
-   - Uses these values throughout the version creation process
-
-2. **Documentation**
-   - Updates files like `TECH_SPEC.md` with specifications from `questions.md`
-   - Uses team member information from `questions.md`
-
-3. **Automation**
-   - Gathers required information from `questions.md` and `ROADMAP.md`
-   - Uses values from `questions.md` as defaults throughout the process
-
-### Key Points:
-- `questions.md` serves as the primary configuration file
-- Both files require `questions.md` to be properly formatted and complete
-- The file is used to maintain consistency across the version creation process
-- Values from `questions.md` are used to populate various documentation files
 
 ## 3. What are the phases in create_version.md?
 
@@ -105,7 +66,7 @@ Yes, both `do_plan.md` and `create_version.md` extensively interact with `questi
 
 2. **Phase 2: Development Kickoff**
    - Milestone review and validation
-   - Team assignments from questions.md
+   - Team assignments from the configuration file
    - Development environment verification
    - Documentation of development standards
 
@@ -187,14 +148,14 @@ Yes, both `do_plan.md` and `create_version.md` are designed to run automatically
 
 ### Automated Execution Flow
 1. **Pre-requisites**:
-   - `questions.md` must be fully populated with required information
+   - All required configuration values must be provided
    - `ROADMAP.md` must exist and be accessible
    - Required permissions for file operations must be set
    - HTML structure and slide architecture must be understood
 
 2. **Non-Interactive Operation**:
    - Both files are designed to run without interactive input
-   - All decisions are made based on the configuration in `questions.md`
+   - All decisions are made based on predefined configuration
    - Error conditions are logged with appropriate messages
    - Focus is on HTML application modifications without deployment requirements
 
@@ -252,7 +213,7 @@ Yes, the files mentioned in Q1 represent a comprehensive list of all files and d
 - Core documentation files (`VERSION_PLAN.md`, `TASKS.md`, etc.)
 - The copied template files (`create_version.md` in the version directory)
 - Supporting directories (`docs/`, `testing/results/`)
-- Configuration files (`questions.md` - copied or created)
+- Configuration files (copied or created during initialization)
 - Log file (`learn.log`)
 
 The files listed under "Referenced and Updated Files" in Q1 (such as `.github/workflows/`, `.gitignore`, and `CHANGELOG.md`) are not created by these templates but are only referenced or updated during the process.
@@ -276,7 +237,6 @@ The following files are referenced in the workflow but not created by either `do
 4. The template files themselves (source of the planning process):
    - `plans/_templates/create_version.md` - Referenced and copied.
    - `plans/_templates/do_plan.md` - Referenced (executed).
-   - `plans/_templates/questions.md` - Referenced and potentially copied.
    - `plans/_templates/finish_version.md` - Referenced and copied.
 5. Version control and CI/CD files (referenced or updated as part of broader project context):
    - `.github/workflows/` - CI/CD pipeline definitions.

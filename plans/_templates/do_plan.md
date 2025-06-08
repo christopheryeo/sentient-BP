@@ -1,8 +1,7 @@
 # AI Version Planning Assistant
 
 ## How to Use
-1. Pre-populate `questions.md` with required information
-2. Run: `Execute do_plan.md`
+1. Run: `Execute do_plan.md`
 
 ## Pre-Execution Validation
 1. **Check Prerequisites**
@@ -10,12 +9,7 @@
    - Ensure git is initialized and configured
    - Check for required permissions in the repository
 
-2. **Load questions.md**
-   - Read and parse the YAML configuration from questions.md
-   - Use the values as defaults for all operations
-   - If questions.md is missing, create it with default values
-
-3. **Environment Setup**
+2. **Environment Setup**
    - Create required directories if they don't exist
    - Verify write permissions
    - Initialize any required services or connections
@@ -34,17 +28,15 @@
     - `RELEASE_NOTES.md`: Release notes and test results
   - Copy templates:
     - Use `plans/_templates/create_version.md` as the initial content for `VERSION_PLAN.md`
-    - `plans/_templates/questions.md`
 
 3. **Initialize Version Planning**
    - Populate `VERSION_PLAN.md` with version details from ROADMAP.md
-   - Validate all required information is in `questions.md`
+   - Validate all required information is available
    - If any required fields are missing:
      - Log detailed error to `run.log` (planned feature)
      - Exit with clear error message
    - Begin executing `create_version.md` starting with Phase 1
    - For each phase:
-     - Use answers from `questions.md`
      - Update relevant standard files
      - Commit changes with descriptive messages
      - Log all actions to `run.log` (planned feature)
@@ -71,9 +63,8 @@
 
 ## Expected Workflow
 1. **Pre-Execution**
-   - Validate environment and prerequisites
-   - Verify `questions.md` is complete
-   - Exit with error if validation fails
+ - Validate environment and prerequisites
+  - Exit with error if validation fails
 
 2. **Execution**
    - Create version directory with standard files
@@ -103,7 +94,6 @@
 
 ## Unattended Execution
 - **Requirements**:
-  - `questions.md` must be fully populated before execution
   - Required git configuration must be set up
   - Sufficient permissions for file operations
 

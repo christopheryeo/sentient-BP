@@ -6,7 +6,7 @@ This file helps you complete the current version by locating and executing the v
 1. Run: `Execute finish_plan.md`
 2. The assistant will:
    - Find the most recent version in `plans/1_planning/`
-   - Locate the `completion_checklist.md` in that version directory
+   - Locate the version's completion guide
    - Execute the checklist to complete the version
 
 ## Pre-Execution Checks
@@ -25,7 +25,7 @@ This file helps you complete the current version by locating and executing the v
    - Verify documentation is up to date
 
 3. **Execute Completion Checklist**
-   - Run the version's `completion_checklist.md`
+   - Run the version's completion guide
    - Follow all steps in the checklist
    - Update ROADMAP.md and CHANGELOG.md as needed
    - Move the version directory to `plans/Versions/`
