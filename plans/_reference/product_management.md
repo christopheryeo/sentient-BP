@@ -16,11 +16,10 @@
 To complete a version and mark it as done, follow these steps:
 
 1. **Run the Completion Process**
-   - Execute the `finish_plan.md` template using your AI assistant
+   - Execute the completion guide with your AI assistant
    - The assistant will:
     - Locate the current version in `plans/1_planning/`
-    - Run the version's completion guide
-    - Guide you through the completion process
+    - Guide you through the finalization steps
 
 2. **Automatic Updates**
   - The completion guide will automatically:
@@ -130,18 +129,17 @@ The standard subdirectories within `plans/` are:
 
 *   **`0_backlog/`**:
     *   **Purpose**: Captures all raw ideas, feature requests, identified bugs, and potential improvements that are not yet scheduled for active development.
-    *   **Content**: Typically contains documents like `feature-ideas.md`, `bug-reports.md`, or individual files for larger concepts. Each item should be described with enough detail to be understood later during a planning session.
-    *   **File Naming**: Use descriptive kebab-case names (e.g., `user-authentication-enhancement.md`).
+    *   **Content**: Typically contains markdown files describing feature ideas, bug reports, or other concepts. Each item should be described with enough detail to be understood later during a planning session.
+    *   **File Naming**: Use descriptive kebab-case names.
 
 *   **`1_planning/`**:
     *   **Purpose**: Holds all documentation related to features or versions that are actively being planned or are slated for near-term development.
     *   **Content**: Organized into version-specific subdirectories (e.g., `V1.0.0/`, `V1.1.0_feature-name/`). Each versioned subdirectory should contain:
         *   `README.md`: An overview of the version/feature, its goals, and key deliverables.
-        *   `design.md` or `ui_ux_spec.md`: Detailed design specifications, wireframes, mockups, or user flow diagrams.
-        *   `tech-spec.md`: Technical specifications, including architecture, data models, API changes, and impact on existing systems.
-        *   Other relevant planning documents (e.g., `requirements.md`, `user-stories.md`).
+        *   `TECH_SPEC.md`: Technical specifications, including architecture, data models, API changes, and impact on existing systems.
+        *   Other relevant planning documents as needed.
     *   **Directory Naming**: Use semantic versioning for general releases (e.g., `V1.0.0`, `V1.1.0`, `V2.0.0`). For feature-specific planning that might span multiple minor versions or is a significant standalone piece of work, consider `VMAJOR.MINOR_feature-name/` (e.g., `V1.2_search-implementation/`).
-    *   **File Naming**: Use standard names like `README.md`, `design.md`, `tech-spec.md`. For other documents, use descriptive kebab-case.
+    *   **File Naming**: Use standard names like `README.md` and `TECH_SPEC.md`. For other documents, use descriptive kebab-case.
 
 *   **`_reference/`**:
     *   **Purpose**: Stores general project reference materials that are not tied to a specific version or feature lifecycle but are relevant for the overall project.
@@ -157,8 +155,6 @@ The standard subdirectories within `plans/` are:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-        *   `finish_plan.md`
-        *   `finish_version.md`
     *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
@@ -189,8 +185,7 @@ Only the main app versions are listed in the changelog; individual commits may n
 ## Version Documentation
 
 Each version directory in `1_planning/` should include:
-- `release_notes.md` - Specific to that version
-- `post_mortem.md` - If any valuable lessons were learned
+- `RELEASE_NOTES.md` - Specific to that version
 
 **Directory Naming**: Use semantic versioning (e.g., `V1.0.0`)
 
@@ -203,8 +198,6 @@ Each version directory in `1_planning/` should include:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-        *   `finish_plan.md`
-        *   `finish_version.md`
     *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
@@ -347,30 +340,15 @@ Constraints:
 
 ## Quality Assurance
 
-### Code Verification
-
-#### `code_verification.md`
-- **Purpose**: Combines both the verification checklist and results in a single file
-- **Location**: `plans/_reference/code_verification.md`
-- **Usage**:
-  - Serves as the master checklist for all code verification activities
-  - Tracks verification results and findings in one place
-  - Used by both AI and human developers to ensure consistent code quality
-  - Covers structure, code quality, security, performance, testing, and dependencies
-  - Includes sections for both verification criteria and their results
-- **Note**: This consolidated approach replaces the previous split between `code_verification.md` and `verification_results.md`
 
 ### Testing
 - Write tests for all new features
 - Maintain test coverage above 80%
 - Run tests before each commit
 - Document test cases
-- Reference test results in `verification_results.md`
 
 ### Code Review
 - At least one reviewer required
-- Check against standards in `code_verification.md`
-- Document findings in `verification_results.md`
 - Verify:
   - Code quality and style compliance
   - Performance considerations
