@@ -18,16 +18,16 @@ To complete a version and mark it as done, follow these steps:
 1. **Run the Completion Process**
    - Execute the `finish_plan.md` template using your AI assistant
    - The assistant will:
-     - Locate the current version in `plans/1_planning/`
-     - Find and execute the version's `completion_checklist.md`
-     - Guide you through the completion process
+    - Locate the current version in `plans/1_planning/`
+    - Run the version's completion guide
+    - Guide you through the completion process
 
 2. **Automatic Updates**
-   - The `completion_checklist.md` will automatically:
-     - Update ROADMAP.md to mark the version as completed
-     - Move the version directory to `plans/Versions/`
-     - Update CHANGELOG.md with release notes
-     - Ensure all documentation is properly updated
+  - The completion guide will automatically:
+    - Update ROADMAP.md to mark the version as completed
+    - Move the version directory to `plans/Versions/`
+    - Update CHANGELOG.md with release notes
+    - Ensure all documentation is properly updated
 
 3. **Verification**
    - The AI assistant will verify that:
@@ -56,10 +56,6 @@ Before initiating the automated process, you need to prepare two key files:
         *   A clear list of key deliverables and objectives for this version.
     *   The AI assistant will read from this file to understand the scope and details of the new version.
 
-*   **Prepare `questions.md`**:
-    *   A `questions.md` file is used to configure various aspects of the version setup and subsequent development phases.
-    *   When a new version process is initiated, a template for this file, located at `plans/_templates/questions.md`, will be copied into the new version's specific directory (e.g., `plans/1_planning/VX.Y.Z/questions.md`).
-    *   You must pre-populate this `questions.md` file in the new version's directory with all the required information and configuration values that will be used as defaults throughout the automated process.
 
 **2. Initiating the Process (User Action)**
 
@@ -212,36 +208,6 @@ Each version directory in `1_planning/` should include:
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
-### questions.md Workflow
-
-The `questions.md` file serves as the central configuration for version creation and management. It's used by the automated workflow to create new versions with minimal manual input.
-
-#### Key Files:
-- `questions.md`: Contains YAML configuration with all version parameters
-- `do_plan.md`: Main execution script that reads from `questions.md`
-- `create_version.md`: Workflow template that uses values from `questions.md`
-
-#### Workflow:
-1. **Configuration**: Update `questions.md` with desired values
-   - Set version numbers, milestones, and other parameters
-   - Configure team assignments and ownership
-   - Define any custom workflows or processes
-
-2. **Execution**: Run `do_plan.md`
-   - The script reads configuration from `questions.md`
-   - Creates the version directory structure
-   - Initializes all necessary files with the configured values
-
-3. **Automation**:
-   - No manual input is required during execution
-   - All values are taken from `questions.md`
-   - Progress is logged for tracking
-
-#### Best Practices:
-- Keep `questions.md` under version control
-- Document any non-obvious parameters
-- Use comments to explain complex configurations
-- Maintain backward compatibility when updating the format
 
 ## Workflow
 
