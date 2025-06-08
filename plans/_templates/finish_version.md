@@ -1,6 +1,6 @@
 # Version Completion Guide: VX.Y.Z
 
-This guide will help you properly complete the current version by updating all necessary documentation, marking the version as completed, and moving it to the `2_completed` directory.
+This guide will help you properly complete the current version by updating all necessary documentation, marking the version as completed, and moving it to the `Versions` directory.
 
 ## 📋 Pre-Completion Checklist
 
@@ -42,7 +42,7 @@ This guide will help you properly complete the current version by updating all n
 - [ ] Check version numbers across files
 
 ### 4. Finalize Version
-- [ ] Move directory: `1_planning/VX.Y.Z/` → `2_completed/VX.Y.Z/`
+- [ ] Move directory: `1_planning/VX.Y.Z/` → `Versions/VX.Y.Z/`
 - [ ] Double-check all documentation updates
 - [ ] Verify all checklist items are complete
 

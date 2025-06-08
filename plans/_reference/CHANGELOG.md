@@ -109,7 +109,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [V0.2.4j] - 2025-06-03
 ### Added
-- Moved V0.2.4 from 1_planning to 2_completed
+- Moved V0.2.4 from 1_planning to Versions
 - Finalized version documentation
 - Updated project status
 
@@ -190,9 +190,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Content made more concise and scannable, adhering to McKinsey slide standards
 - **Documentation**:
   - Updated project documentation to reflect V0.2.3 completion
-  - Moved V0.2.3 directory to `plans/2_completed/`
+  - Moved V0.2.3 directory to `plans/Versions/`
   - Updated version history and roadmap
-  - Updated `plans/2_completed/V0.2.3/README.md` status to 'Completed'
+  - Updated `plans/Versions/V0.2.3/README.md` status to 'Completed'
   - Updated main `README.md` version badge, version history, and upcoming versions table
   - Updated `plans/_reference/ROADMAP.md` to note V0.2.3 completion
   - Updated `plans/_reference/completed_features_log.md`
@@ -256,7 +256,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [V0.2.2] - 2025-06-02
 ### Added
 - **Documentation Release**:
-  - Created versioned plan directory `plans/2_completed/V0.2.2/`
+  - Created versioned plan directory `plans/Versions/V0.2.2/`
   - Copied relevant planning documents from V0.2.1 to V0.2.2
   - Updated all documents to reflect documentation-only status
   - Aligned feature tracking across project files
@@ -267,7 +267,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Standardized formatting in content.md
   - Added proper heading structure
 ### Fixed
-- Corrected `plans/0_backlog/feature-ideas.md` and `plans/2_completed/V0.2.1/design.md` to fully align with the completion of slides 1-15 and to clarify future slide plans.
+- Corrected `plans/0_backlog/feature-ideas.md` and `plans/Versions/V0.2.1/design.md` to fully align with the completion of slides 1-15 and to clarify future slide plans.
 
 ## [0.2.1] - 2025-05-25
 ### Added

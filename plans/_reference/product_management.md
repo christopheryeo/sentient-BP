@@ -25,7 +25,7 @@ To complete a version and mark it as done, follow these steps:
 2. **Automatic Updates**
    - The `completion_checklist.md` will automatically:
      - Update ROADMAP.md to mark the version as completed
-     - Move the version directory to `plans/2_completed/`
+     - Move the version directory to `plans/Versions/`
      - Update CHANGELOG.md with release notes
      - Ensure all documentation is properly updated
 
@@ -39,7 +39,7 @@ To complete a version and mark it as done, follow these steps:
 4. **Completion**
    - Once all steps are completed, the version will be marked as done
    - The version will appear in the "Recent Releases" section of ROADMAP.md
-   - The version directory will be in `plans/2_completed/` for reference
+   - The version directory will be in `plans/Versions/` for reference
 
 ## Detailed Steps for Starting a New Version
 

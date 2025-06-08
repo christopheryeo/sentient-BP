@@ -55,7 +55,7 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - Version completion guide
   - Documentation update instructions
   - ROADMAP.md and CHANGELOG.md update procedures
-  - Directory movement instructions from `1_planning/` to `2_completed/`
+  - Directory movement instructions from `1_planning/` to `Versions/`
   - Project parameters
 
 ### 5. Referenced and Updated Files

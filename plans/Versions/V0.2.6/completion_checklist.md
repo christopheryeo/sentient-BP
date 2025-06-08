@@ -47,7 +47,7 @@
 - [x] Checked version numbers across files
 
 ### 4. Finalize Version
-- [x] Moved directory: `1_planning/V0.2.6/` → `2_completed/V0.2.6/`
+- [x] Moved directory: `1_planning/V0.2.6/` → `Versions/V0.2.6/`
 - [x] Verified all documentation updates
 - [x] Confirmed all checklist items are complete
 - [ ] Double-check all documentation updates

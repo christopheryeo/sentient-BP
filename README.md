@@ -89,7 +89,7 @@ sentient-BP/
 ├── plans/                  # Project management
 │   ├── 0_backlog/          # Future features and ideas
 │   ├── 1_planning/         # Active planning
-│   ├── 2_completed/        # Completed work
+│   ├── Versions/        # Completed work
 │   ├── _reference/         # Reference materials
 │   └── _templates/         # Document templates
 ├── content/                # Generated content
@@ -121,7 +121,7 @@ We use a structured approach to manage the project's development:
 
 - **Backlog**: Future features and ideas in `plans/0_backlog/`
 - **Planning**: Active planning documents in `plans/1_planning/`
-- **Completed**: Finished work in `plans/2_completed/`
+- **Completed**: Finished work in `plans/Versions/`
 
 For more details, see our [Project Management Guide](plans/_reference/product_management.md).
 
@@ -167,7 +167,7 @@ sentient-BP/
 ├── plans/                  # Project management
 │   ├── 0_backlog/          # Future features and ideas
 │   ├── 1_planning/         # Active planning
-│   ├── 2_completed/        # Completed work
+│   ├── Versions/        # Completed work
 │   └── _reference/         # Reference materials
 ├── content/                # Generated content
 ├── index.html              # Main entry point
