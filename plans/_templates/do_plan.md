@@ -28,23 +28,15 @@
 
 2. **Setup Version Directory**
    - Create a new directory: `plans/1_planning/VX.Y.Z/` (using semantic versioning)
-   - Create standard files in the new directory:
-     - `VERSION_PLAN.md`: Version overview, goals, and high-level design
-     - `TASKS.md`: Task tracking, status, and deployment checklist
-     - `TECH_SPEC.md`: Technical specifications and architecture
-     - `RELEASE_NOTES.md`: Release notes and test results
-     - `docs/`: Directory for additional documentation
-     - `testing/results/`: Directory for test execution outputs and QA artifacts
-     - `learn.log`: Log file for learnings and insights from execution
-     - `run.log`: (Planned) Log file for errors and AI decisions (implementation details TBD)
-   - Copy templates:
-     - `plans/_templates/create_version.md`
-     - `plans/_templates/questions.md`
-     - `plans/_templates/finish_version.md` (copied as `completion_checklist.md`)
+  - Create standard files in the new directory:
+    - `VERSION_PLAN.md`: Version overview, goals, and high-level design
+    - `TECH_SPEC.md`: Technical specifications and architecture
+    - `RELEASE_NOTES.md`: Release notes and test results
+  - Copy templates:
+    - Use `plans/_templates/create_version.md` as the initial content for `VERSION_PLAN.md`
+    - `plans/_templates/questions.md`
 
 3. **Initialize Version Planning**
-   - Update `TASKS.md` with initial status: 'Planning'
-   - Rename `finish_version.md` to `completion_checklist.md` in the version directory
    - Populate `VERSION_PLAN.md` with version details from ROADMAP.md
    - Validate all required information is in `questions.md`
    - If any required fields are missing:
@@ -54,7 +46,6 @@
    - For each phase:
      - Use answers from `questions.md`
      - Update relevant standard files
-     - Update `TASKS.md` when changing phases
      - Commit changes with descriptive messages
      - Log all actions to `run.log` (planned feature)
 
@@ -75,7 +66,6 @@
    - Run automated validation checks on all documentation
    - Verify consistency across all generated files
    - Apply automatic fixes for any detected issues
-   - Update `TASKS.md` with review outcomes
    - Create final commit with review updates
    - Mark version as 'Ready for Release' in ROADMAP.md
 
@@ -106,11 +96,6 @@
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.
-- **Status Tracking**: `TASKS.md` tracks:
-  - Current phase and progress
-  - Last completed action
-  - Next steps
-  - Any active issues
 - **Error Handling**:
   - Non-critical issues: Log as WARN and continue
   - Critical errors: Log as ERROR and exit with code
@@ -124,7 +109,6 @@
 
 - **Outputs**:
   - `run.log`: Complete execution log with timestamps (planned feature)
-  - `TASKS.md`: Current status and progress
   - Git commits for all changes
 
 - **Recovery**:

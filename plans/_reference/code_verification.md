@@ -12,12 +12,6 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - Scope and success criteria
   - Links to related resources
 
-- `TASKS.md`
-  - Task tracking and assignments
-  - Status updates and progress
-  - Deployment checklist
-  - Rollback procedures
-
 - `TECH_SPEC.md`
   - Technical specifications
   - System architecture
@@ -33,24 +27,13 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
 - `create_version.md` (copied from template)
   - Version-specific execution plan
   - Phased implementation instructions
-  - Progress tracking
 
-### 3. Supporting Directories
-- `docs/`
-  - Additional documentation
-  - Meeting notes
-  - Design assets
-  - Reference materials
-- `testing/results/`
-  - Test execution outputs
-  - QA verification artifacts
-
-### 4. Configuration
+### 3. Configuration
 - `questions.md` (copied or created if not existing)
   - Version configuration
   - Team assignments
 
-### 5. Completion Files
+### 4. Completion Files
 - `completion_checklist.md` (copied from `finish_version.md` template)
   - Version completion guide
   - Documentation update instructions
@@ -68,14 +51,6 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - Release history and changes
   - Version tracking
 
-### 6. Log Files
-- `run.log` (Planned)
-  - Will log errors and AI decisions
-  - Implementation details to be determined in future updates
-- `learn.log` (Active)
-  - Records learnings and insights from execution
-  - Used throughout the version creation process
-  - Captures key insights for continuous improvement
 
 ---
 
