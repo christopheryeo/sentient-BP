@@ -77,25 +77,6 @@ This architectural inconsistency should be addressed in a future refactoring. Un
 
 **Future Recommendation**: Consolidate to a single implementation approach.
 
-## Status Tracking
-
-Each version directory tracks progress through these stages in `TASKS.md`:
-1. **Planning** (Default)
-2. **In Progress** (Starts at Phase 3)
-3. **Completed** (After Phase 6)
-
-The status is automatically updated during phase transitions and includes timestamps for each state change. A central Version Status table in `plans/_reference/CHANGELOG.md` lists all versions and their status—remember to update this table accordingly.
-
-### Example status section in TASKS.md:
-```markdown
-# Version Status
-- **Current Status**: Planning
-- **Created**: 2025-06-04T13:44:17+08:00
-- **Last Updated**: 2025-06-04T13:44:17+08:00
-
-## Status History
-- 2025-06-04T13:44:17+08:00 - Status set to Planning
-```
 
 ## Quick Start Guide
 
@@ -152,11 +133,6 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.
-- **Status Tracking**: `TASKS.md` tracks:
-  - Current phase and progress
-  - Last completed action
-  - Next steps
-  - Any active issues
 - **Error Handling**:
   - Non-critical issues: Log as WARN and continue
   - Critical errors: Log as ERROR and exit with code
@@ -239,14 +215,11 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
    - If no stakeholders listed, default to project maintainers
 
 ### 1.2 Standard Files Setup
-- Ensure all standard files exist in version directory:
-  - `VERSION_PLAN.md`: Version overview, goals (from ROADMAP.md), and high-level progress checkboxes (e.g., for planning, design, implementation, verification). Initialize with checkboxes for key sections like 'Overall Planning', 'Technical Design', 'UX Design', 'Implementation Milestones', 'Testing', 'Documentation'.
-  - `TECH_SPEC.md`: Technical specifications including design, architecture, API documentation, and implementation details
-  - `TASKS.md`: Tracks progress through the 6 high-level phases (Planning & Design, Development Kickoff, Implementation, Code Review & Documentation, Final Verification, Implementation Review). It will show the status of each phase.
-  - `completion_checklist.md`: A dynamic checklist of key milestones and deliverables for the version. Initialized with high-level items.
-- Initialize `TASKS.md` to list the 6 standard phases, with the 'Planning & Design' phase marked as 'In Progress' and others as 'To Do'.
-- Initialize `completion_checklist.md` with top-level checklist items such as: '[ ] Overall Planning Complete', '[ ] Design Phase Finalized', '[ ] All Core Features Implemented', '[ ] Testing Phase Passed', '[ ] Documentation Complete', '[ ] Final Review Approved'.
-- Initialize `VERSION_PLAN.md` with unchecked checkboxes for all defined high-level sections.
+- Ensure the following files exist in the version directory:
+  - `VERSION_PLAN.md`: Version overview, goals (from ROADMAP.md), and high-level progress checkboxes.
+  - `TECH_SPEC.md`: Technical specifications including design, architecture, API documentation, and implementation details.
+  - `RELEASE_NOTES.md`: Release notes and test results.
+  - Initialize `VERSION_PLAN.md` with unchecked checkboxes for all defined high-level sections.
 
 ### 1.3 Validation
 - Verify all required information is present in ROADMAP.md
@@ -258,13 +231,9 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ```
 plans/1_planning/VX.Y.Z/
-├── VERSION_PLAN.md       # Version overview, goals, and high-level design
-├── TASKS.md             # Task list, status tracking, and deployment checklist
-├── TECH_SPEC.md         # Technical specs, architecture, and requirements
-├── RELEASE_NOTES.md     # Release notes and test results
-├── docs/               # Additional documentation and assets
-├── learn.log            # Learnings and insights from execution
-└── run.log              # (Planned) Errors and AI decisions
+├── VERSION_PLAN.md   # Version overview, goals, and high-level design
+├── TECH_SPEC.md      # Technical specs, architecture, and requirements
+├── RELEASE_NOTES.md  # Release notes and test results
 ```
 
 ### File Descriptions:
@@ -274,52 +243,25 @@ plans/1_planning/VX.Y.Z/
    - Scope and success criteria
    - Links to related resources
 
-2. **TASKS.md**
-   - Task list with status tracking
-   - Current version status and progress
-   - Deployment checklist
-   - Rollback procedures
-
-3. **TECH_SPEC.md**
+2. **TECH_SPEC.md**
    - Technical requirements and specifications
    - System architecture
    - API specifications
    - Design constraints
    - Dependencies
 
-4. **RELEASE_NOTES.md**
+3. **RELEASE_NOTES.md**
    - Release summary
    - New features and changes
    - Known issues
    - Test results summary
    - Upgrade instructions
 
-5. **docs/**
-   - Additional supporting documentation
-   - Design assets
-   - Meeting notes
-   - Reference materials
-
-6. **learn.log**
-   - Records learnings and insights from execution
-   - Used throughout the version creation process
-   - Captures key insights for continuous improvement
-7. **run.log** (Planned)
-   - Will log errors and AI decisions
-   - Implementation details to be determined in future updates
-
 ## Actions (Automated)
 1. Set up version control branch
 2. Initialize consolidated documentation structure
 3. Conduct automated technical analysis
-4. Generate initial task list for `TASKS.md` based on the granular outputs of the code investigation and Code Impact Analysis.
-      - Each task should represent a single, distinct coding action that can be independently implemented and verified. Examples include:
-        - - [ ] Create function `calculateDiscount(price, discount_rate)` in `utils.js`.
-        - - [ ] Add `<div class="user-profile">` inside `<header>` in `index.html`.
-        - - [ ] Modify CSS rule `.button` in `style.css` to include `background-color: #007bff;`.
-        - - [ ] Define new configuration key `MAX_USERS` in `config.json`.
-      - Tasks should be clearly phrased, indicating the action, the target (e.g., file, function, class), and specifics of the change.
-      - These tasks will populate the implementation phase sections of `TASKS.md`.
+4. Generate an initial list of required code changes based on the Code Impact Analysis.
 5. Execute Task 1: Code Impact Analysis
    - Analyze codebase to identify all required changes at a granular level. This includes, but is not limited to:
      - Specific functions/methods to be created, modified, or deleted.
@@ -328,8 +270,8 @@ plans/1_planning/VX.Y.Z/
      - Any configuration file adjustments.
      - Individual data transformations or manipulations.
    - The output of this analysis should be a list of discrete, actionable coding steps.
-   - Update `TASKS.md` by creating entries for each of these granular, step-by-step implementation tasks, following the formatting guidance detailed above (under "Generate initial task list...").
-6. Track progress in `TASKS.md`
+   - Document each required change in `TECH_SPEC.md` for later implementation.
+6. Track progress using checkboxes in `VERSION_PLAN.md`
 7. Prepare for development kickoff
 
 *Note: This combined phase is fully automated. The AI will gather all required information from `questions.md` and ROADMAP.md without requiring user input. Values from `questions.md` will be used as defaults throughout the process.*
@@ -342,7 +284,6 @@ plans/1_planning/VX.Y.Z/
 1. **Automatic Processing**
    - Extract milestones from ROADMAP.md
    - Update `VERSION_PLAN.md` with milestone details
-   - Set initial status in `TASKS.md`
    - Populate `TECH_SPEC.md` with technical requirements
    - Update `TECH_SPEC.md` with UI/UX specifications from `questions.md`
    - Review and update checkboxes in `VERSION_PLAN.md` to reflect completion of initial planning, requirements gathering, and design specifications.
@@ -372,16 +313,13 @@ plans/1_planning/VX.Y.Z/
    - Verify milestones from Phase 1 are complete and well-defined
    - Log any incomplete or unclear milestones as WARN
 
-2. **Task Status**
-   - Verify all tasks have proper status in TASKS.md
-   - Log any tasks without status as WARN
 
 3. **Development Standards**
    - Verify development standards are documented in TECH_SPEC.md
    - Log any missing or unclear standards as WARN
 
 ## File Updates (Automated):
-1. Update `tasks.md` with current status
+1. Record current status updates in `VERSION_PLAN.md`
 2. Append Phase 1 learnings to `learn.log`
 3. Review and update `completion_checklist.md`: Refine checklist items based on detailed planning, add sub-tasks if necessary, and mark any pre-development milestones (e.g., 'Detailed Requirements Documented', 'Resource Allocation Confirmed').
 
@@ -391,12 +329,10 @@ plans/1_planning/VX.Y.Z/
 
 ## What Went Well
 - Successful setup of development environment
-- Clear task status tracking established
 - Development standards documented
 
 ## Challenges Faced
 - Potential delays in environment setup
-- Need for clarification on some task statuses
 
 ## Key Insights
 - Early environment setup prevents later delays
@@ -413,9 +349,9 @@ plans/1_planning/VX.Y.Z/
 For each key feature or deliverable outlined in `VERSION_PLAN.md` and `ROADMAP.md`:
 1.  **Detailed Technical Design (if needed)**:
     *   Flesh out technical specifications for the current feature in `TECH_SPEC.md`. Include specific HTML structure changes, CSS class definitions, JS function logic, etc.
-    *   If not done in Phase 1/2, generate granular, actionable sub-tasks for this feature in the "Detailed Tasks" section of `TASKS.md`.
+    *   If not done in Phase 1/2, document granular, actionable sub-tasks for this feature within `TECH_SPEC.md`.
 2.  **Code Implementation**:
-    *   Implement the code changes as per `TECH_SPEC.md` and `TASKS.md`.
+    *   Implement the code changes as described in `TECH_SPEC.md`.
     *   Focus on `index.html` for HTML and CSS (within `<style>` tags), and `src/js/script.js` or `src/js/main.js` if JavaScript is involved.
 3.  **Developer Testing**:
     *   Perform unit testing for any JavaScript logic.
@@ -423,21 +359,16 @@ For each key feature or deliverable outlined in `VERSION_PLAN.md` and `ROADMAP.m
 4.  **Code Commits**:
     *   Commit implemented code changes frequently for each significant sub-task or feature part.
     *   Use commit message format: `feat(scope): Description of feature part X` or `fix(scope): Description of fix for Y`. Scope could be the specific component or slide name.
-5.  **Update Task Status**:
-    *   Mark corresponding detailed tasks in `TASKS.md` by checking their checkbox (e.g., changing `[ ]` to `[x]`) as they are completed.
-    *   Update relevant checkboxes for specific implemented features in `VERSION_PLAN.md` (e.g., under a feature's milestone).
+5.  **Progress Tracking**:
+    *   Mark relevant checkboxes for implemented features in `VERSION_PLAN.md` (e.g., under a feature's milestone).
 
 ### 3.2 Status Tracking during Implementation
--   The overall status for this **Phase 3** in `TASKS.md` (under "Phase Progress") remains 'In Progress' until all coding for all features of the version is complete.
--   The overall version status in `TASKS.md` (e.g., "Overall: In Progress (VX.Y.Z)") remains as is.
-
+- Progress is tracked in `VERSION_PLAN.md` until all features are complete.
 ### 3.3 File Updates (During this Phase - Minimal)
 -   **`TECH_SPEC.md`**: Updated iteratively with technical details as each feature is tackled.
--   **`TASKS.md`**: Detailed tasks for features are added/updated; individual tasks are marked 'DONE'.
 -   **`VERSION_PLAN.md`**: Checkboxes for specific feature implementation milestones are marked.
 -   **Code files** (e.g., `index.html`, `src/js/script.js`): Modified with new code.
 -   **`learn.log`**: AI can log *brief, critical* learnings related to specific implementation challenges immediately, but phase-wide reflections are deferred.
--   **Deferred Documentation**: Updates to `CHANGELOG.md`—including the Version Status table, overall phase progress in `TASKS.md`, `completion_checklist.md` (for phase completion), and comprehensive `learn.log` entries are deferred to Phase 4.
 
 ## Learning & Reflection (Automated - Iterative during this Phase)
 ```
@@ -484,7 +415,6 @@ For each key feature or deliverable outlined in `VERSION_PLAN.md` and `ROADMAP.m
 1.  **`VERSION_PLAN.md`**:
     *   Mark all main progress checkboxes (e.g., '[x] Implementation Milestones', '[x] Testing', '[x] Documentation') as complete.
     *   Ensure all feature-specific milestones are checked.
-2.  **`TASKS.md`**:
     *   Mark **Phase 3: Iterative Feature Development & Implementation** as 'Completed' with end date.
     *   Mark this **Phase 4: Holistic Review, Testing, Documentation & Finalization** as 'In Progress', then 'Completed' with dates.
     *   Update the overall version status (e.g., to 'Verification Complete' or 'Ready for Release').
