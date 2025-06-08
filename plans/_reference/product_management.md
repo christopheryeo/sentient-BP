@@ -149,7 +149,7 @@ The standard subdirectories within `plans/` are:
         *   `ROADMAP.md`: High-level overview of the project's long-term vision and planned major versions/features.
         *   `CHANGELOG.md`: A log of all notable changes made to the project, typically organized by version.
         *   `product_management.md`: This document itself, outlining the project management processes.
-        *   `coding_standards.md`, `style_guide.md`, etc.
+        *   `content/style.md`, etc.
     *   **File Naming**: Descriptive kebab-case names.
 
 *   **`_templates/`**:
@@ -194,7 +194,7 @@ Each version directory in `1_planning/` should include:
 
 **Directory Naming**: Use semantic versioning (e.g., `V1.0.0`)
 
-        *   `coding_standards.md`, `style_guide.md`, etc.
+        *   `content/style.md`, etc.
     *   **File Naming**: Descriptive kebab-case names.
 
 *   **`_templates/`**:
