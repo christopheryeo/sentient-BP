@@ -32,7 +32,7 @@
 - [ ] Review milestones and targets
 - [ ] Populate `VERSION_PLAN.md` and `TECH_SPEC.md`
 - [ ] Verify dependencies and resources
-- [ ] Record Phase 1 learnings in `learn.log`
+- [ ] Record Phase 1 learnings in `VERSION_PLAN.md`
 - [ ] Update status checkboxes
 
 ### 4.3 Phase 3: Iterative Feature Development & Implementation
@@ -41,7 +41,7 @@
 - [ ] Perform developer testing
 - [ ] Commit frequently using `feat(scope): description`
 - [ ] Mark feature progress in `VERSION_PLAN.md`
-- [ ] Log key learnings in `learn.log`
+- [ ] Log key learnings in `VERSION_PLAN.md`
 
 ### 4.4 Phase 4: Holistic Review, Testing, Documentation & Finalization
 - [ ] Run automated code checks and peer review
