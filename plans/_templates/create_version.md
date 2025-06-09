@@ -6,6 +6,7 @@
 - [ ] Copy this file into the new directory
 - [ ] Initialize `VERSION_PLAN.md` and `TECH_SPEC.md`
 - [ ] Ensure ROADMAP.md status is set to "In Planning"
+- [ ] After completing each task, mark its checkbox with `[x]` to keep this checklist updated at every step
 
 ## 2. Slide Style Compliance
 - [ ] Organize content using MECE and Pyramid Principle
