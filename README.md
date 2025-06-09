@@ -117,13 +117,11 @@ This project uses vanilla JavaScript and doesn't require a build step. Simply ed
 
 ## 📊 Project Management
 
-We use a structured approach to manage the project's development:
-
-- **Backlog**: Future features and ideas in `plans/0_backlog/`
-- **Planning**: Active planning documents in `plans/1_planning/`
-- **Completed**: Finished work in `plans/Versions/`
-
-For more details, see our [Project Management Guide](plans/_reference/product_management.md).
+We now manage everything directly in `plans/Versions/`. Each release has its
+own folder (for example, `plans/Versions/V0.2.6/`) containing the version
+plan, tasks and release notes. The old `0_backlog/` and `1_planning/`
+directories have been removed. For details, see our [Simple Project
+Management Guide](plans/_reference/simple_project_management.md).
 
 ## 🗺️ Roadmap
 
@@ -147,6 +145,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Changelog](plans/_reference/CHANGELOG.md)
 - [Roadmap](plans/_reference/ROADMAP.md)
 - [Project Management](plans/_reference/product_management.md)
+- [Simple Project Management](plans/_reference/simple_project_management.md)
 
 ---
 
