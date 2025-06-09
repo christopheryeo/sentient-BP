@@ -214,3 +214,13 @@ The updated guide no longer uses a dedicated `learn.log` file. Learnings are ins
 ## 9. Do `do_plan.md` and `create_version.md` still use `learn.log` or `run.log`?
 
 No. Both `learn.log` and `run.log` have been removed from the workflow. The templates for `do_plan.md` and `create_version.md` no longer reference or create these log files. Learning notes are tracked directly in `VERSION_PLAN.md`, and operational details are captured through normal commit history and other project documentation.
+
+## 10. Ensure that all files in the plans directory, except those in the Versions directory, conform to the list of files and directories defined in the product_management.md file
+
+To verify this, compare the subdirectories listed in `product_management.md` under "Plans Directory Organization" with the actual contents of the `plans/` directory. The guide specifies these valid subdirectories:
+
+- `Versions/`
+- `_reference/`
+- `_templates/`
+
+Running `ls plans` shows that only these subdirectories are present, with no extra files or directories. Therefore, all items in `plans/` outside of `Versions/` conform to the structure defined in `product_management.md`.
