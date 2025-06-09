@@ -17,7 +17,6 @@ Created in: `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the version number)
   - System architecture
   - API documentation
   - Design constraints and dependencies
-
 - `create_version.md` (copied from template)
   - Version-specific execution plan
   - Phased implementation instructions

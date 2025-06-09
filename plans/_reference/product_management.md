@@ -438,12 +438,6 @@ The `create_version.md` template is a comprehensive guide for managing software 
 #### Directory Structure Created
 When executed, this template will create and manage the following structure:
 
-```
-plans/1_planning/VX.Y.Z/
-├── VERSION_PLAN.md    # Version planning guide
-├── TECH_SPEC.md       # Technical specifications
-```
-
 #### Key Features
 - **AI-Assisted Execution**: Can be executed with a single command
 - **Phased Approach**: 10 distinct phases from planning to post-release

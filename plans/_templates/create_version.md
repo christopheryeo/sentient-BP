@@ -226,11 +226,6 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ## File Structure
 
-```
-plans/1_planning/VX.Y.Z/
-├── VERSION_PLAN.md   # Version overview, goals, and high-level design
-├── TECH_SPEC.md      # Technical specs, architecture, and requirements
-
 ### File Descriptions:
 1. **VERSION_PLAN.md**
    - Version overview and objectives
@@ -409,7 +404,6 @@ For each key feature or deliverable outlined in `VERSION_PLAN.md` and `ROADMAP.m
     *   Mark all high-level items (e.g., '[x] All Core Features Implemented', '[x] Testing Phase Passed', '[x] Documentation Complete', '[x] Final Review Approved') as complete.
 4.  **`CHANGELOG.md`**:
     *   Update the Version Status table and add a comprehensive entry for the version, detailing all new features, changes, and fixes.
-6.  **`learn.log`**:
     *   Append a consolidated summary of learnings from the entire Phase 3 (all features) and from this Phase 4.
     *   Example structure for consolidated Phase 3 learnings:
         ```
