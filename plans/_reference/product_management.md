@@ -70,17 +70,17 @@ Upon receiving the instruction, the AI assistant will perform the following auto
 *   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a minimal set of files needed to manage the version's lifecycle:
     *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
     *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
-*   **Implementation Planning**: Tasks are tracked as a numbered checklist directly inside `VERSION_PLAN.md`. There is no separate `TASKS.md` file.
+*   **Implementation Planning**: Tasks are tracked as a numbered checklist directly inside `VERSION_PLAN.md`.
 *   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
 
 **4. Starting the Development Workflow (AI Execution of `VERSION_PLAN.md`)**
 
 *   Once the setup is complete, the AI assistant will automatically begin executing Phase 1 of the newly created `VERSION_PLAN.md` (which is the content from `plans/_templates/create_version.md`) within the new version's directory (e.g., `plans/Versions/VX.Y.Z/VERSION_PLAN.md`).
-*   This `VERSION_PLAN.md` outlines a multi-phase process for the new version, typically including:
-    *   Phase 1: Comprehensive Planning & Design (Automated)
+*   This `VERSION_PLAN.md` outlines a four-phase workflow for the new version:
+    *   Phase 1: Comprehensive Planning & Design
     *   Phase 2: Development Kickoff
-    *   Phase 3: Implementation
-    *   And subsequent phases for testing, deployment, and release.
+    *   Phase 3: Iterative Feature Development & Implementation
+    *   Phase 4: Holistic Review, Testing, Documentation & Finalization
 *   The AI will follow the instructions within this `VERSION_PLAN.md`, guided by information from `ROADMAP.md` and `TECH_SPEC.md`, to manage the development lifecycle.
 
 **5. Project File Updates (Automated)**
@@ -153,7 +153,7 @@ The standard subdirectories within `plans/` are:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md`.
+    *   **File Naming**: Clearly indicate that it's a template.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
@@ -195,7 +195,7 @@ Each version directory in `plans/Versions/` should include:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md`.
+    *   **File Naming**: Clearly indicate that it's a template.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
@@ -429,7 +429,7 @@ Execute do_plan.md
 
 ### Version Planning Template (create_version.md)
 
-The `create_version.md` template is a comprehensive guide for managing software versions throughout their entire lifecycle. It's designed to be used with AI assistance and follows a phased approach from planning to post-release.
+The `create_version.md` template is a comprehensive guide for managing software versions throughout their entire lifecycle. It's designed to be used with AI assistance and follows a four-phase approach from planning to finalization.
 
 #### Location
 - Template: `plans/_templates/create_version.md`
@@ -440,7 +440,7 @@ When executed, this template will create and manage the following structure:
 
 #### Key Features
 - **AI-Assisted Execution**: Can be executed with a single command
-- **Phased Approach**: 10 distinct phases from planning to post-release
+- **Phased Approach**: Four phases from planning to finalization
 - **Comprehensive Documentation**: Ensures all aspects are documented
 - **Version Control Ready**: Includes guidance for Git integration
 
