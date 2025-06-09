@@ -210,3 +210,7 @@ The following files are referenced in the workflow but not created by either `do
 ### Additional Notes
 
 The updated guide no longer uses a dedicated `learn.log` file. Learnings are instead recorded in `VERSION_PLAN.md` after each phase. Teams may maintain additional logs if desired, but they are optional.
+
+## 9. Do `do_plan.md` and `create_version.md` still use `learn.log` or `run.log`?
+
+No. Both `learn.log` and `run.log` have been removed from the workflow. The templates for `do_plan.md` and `create_version.md` no longer reference or create these log files. Learning notes are tracked directly in `VERSION_PLAN.md`, and operational details are captured through normal commit history and other project documentation.
