@@ -2,7 +2,7 @@
 
 ## 1. Preparation
 - [ ] Run `Execute do_plan.md` with the AI assistant
-- [ ] Create directory `plans/1_planning/VX.Y.Z/`
+- [ ] Create directory `plans/Versions/VX.Y.Z/`
 - [ ] Copy this file into the new directory
 - [ ] Initialize `VERSION_PLAN.md` and `TECH_SPEC.md`
 - [ ] Ensure ROADMAP.md status is set to "In Planning"
