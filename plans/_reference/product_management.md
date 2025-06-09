@@ -18,14 +18,14 @@ To complete a version and mark it as done, follow these steps:
 1. **Run the Completion Process**
    - Execute the completion guide with your AI assistant
    - The assistant will:
-    - Locate the current version in `plans/1_planning/`
+   - Locate the current version directory in `plans/Versions/`
     - Guide you through the finalization steps
 
 2. **Automatic Updates**
   - The completion guide will automatically:
     - Update ROADMAP.md to mark the version as completed
-    - Move the version directory to `plans/Versions/`
-    - Update CHANGELOG.md with release notes
+    - Update the version's status to **Completed** in `CHANGELOG.md`
+    - Record release notes in `CHANGELOG.md`
     - Ensure all documentation is properly updated
 
 3. **Verification**
@@ -33,7 +33,7 @@ To complete a version and mark it as done, follow these steps:
      - All planned features are implemented
      - Documentation is up to date
      - Version numbers are consistent
-     - The version directory has been moved correctly
+     - The version status is updated correctly
 
 4. **Completion**
    - Once all steps are completed, the version will be marked as done
@@ -66,16 +66,16 @@ Before initiating the automated process, you need to prepare two key files:
 Upon receiving the instruction, the AI assistant will perform the following automated steps by executing the logic within `do_plan.md`:
 
 *   **Review `ROADMAP.md`**: The AI first checks `plans/_reference/ROADMAP.md` to identify the next planned version, its target date, and key deliverables.
-*   **Create Version-Specific Directory**: A new directory for the version will be created, following a naming convention like `plans/1_planning/VX.Y.Z/` (where X.Y.Z is the new version number).
+*   **Create Version-Specific Directory**: A new directory for the version will be created in `plans/Versions/`, following a naming convention like `plans/Versions/VX.Y.Z/` (where X.Y.Z is the new version number).
 *   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a minimal set of files needed to manage the version's lifecycle:
     *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
     *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
-*   **Implementation Planning**: OpenAI Codex manages tasks directly from `ROADMAP.md` and `TECH_SPEC.md`, so no `TASKS.md` file is created.
+*   **Implementation Planning**: Tasks are tracked as a numbered checklist directly inside `VERSION_PLAN.md`. There is no separate `TASKS.md` file.
 *   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
 
 **4. Starting the Development Workflow (AI Execution of `VERSION_PLAN.md`)**
 
-*   Once the setup is complete, the AI assistant will automatically begin executing Phase 1 of the newly created `VERSION_PLAN.md` (which is the content from `plans/_templates/create_version.md`) within the new version's directory (e.g., `plans/1_planning/VX.Y.Z/VERSION_PLAN.md`).
+*   Once the setup is complete, the AI assistant will automatically begin executing Phase 1 of the newly created `VERSION_PLAN.md` (which is the content from `plans/_templates/create_version.md`) within the new version's directory (e.g., `plans/Versions/VX.Y.Z/VERSION_PLAN.md`).
 *   This `VERSION_PLAN.md` outlines a multi-phase process for the new version, typically including:
     *   Phase 1: Comprehensive Planning & Design (Automated)
     *   Phase 2: Development Kickoff
@@ -109,8 +109,8 @@ sentient-BP/
 │   ├── source.bundle.html  # Processed HTML bundle with styling
 ├── plans/                   # Project management documents
 │   ├── 0_backlog/          # Future features and ideas
-│   ├── 1_planning/         # All active and completed versions
-│   │   └── VX.Y.Z/        # Version directories with status tracking
+│   ├── Versions/           # Version directories
+│   │   └── VX.Y.Z/        # Active and completed versions
 │   ├── _reference/         # Reference materials
 │   └── _templates/         # Document templates
 ├── src/                    # Source code
@@ -130,9 +130,9 @@ The standard subdirectories within `plans/` are:
     *   **Content**: Typically contains markdown files describing feature ideas, bug reports, or other concepts. Each item should be described with enough detail to be understood later during a planning session.
     *   **File Naming**: Use descriptive kebab-case names.
 
-*   **`1_planning/`**:
-    *   **Purpose**: Holds all documentation related to features or versions that are actively being planned or are slated for near-term development.
-    *   **Content**: Organized into version-specific subdirectories (e.g., `V1.0.0/`, `V1.1.0_feature-name/`). Each versioned subdirectory should contain:
+*   **`Versions/`**:
+    *   **Purpose**: Contains a directory for each version of the application, regardless of its status (planning, in progress, or completed).
+    *   **Content**: Organized into version-specific subdirectories (e.g., `V1.0.0/`, `V1.1.0_feature-name/`). Each subdirectory should contain:
         *   `README.md`: An overview of the version/feature, its goals, and key deliverables.
         *   `TECH_SPEC.md`: Technical specifications, including architecture, data models, API changes, and impact on existing systems.
         *   Other relevant planning documents as needed.
@@ -153,7 +153,7 @@ The standard subdirectories within `plans/` are:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
+    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
@@ -182,7 +182,7 @@ Only the main app versions are listed in the changelog; individual commits may n
 
 ## Version Documentation
 
-Each version directory in `1_planning/` should include:
+Each version directory in `plans/Versions/` should include:
 
 **Directory Naming**: Use semantic versioning (e.g., `V1.0.0`)
 
@@ -195,7 +195,7 @@ Each version directory in `1_planning/` should include:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md` or `feature-spec_template.md`.
+    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md`.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
@@ -208,17 +208,17 @@ This detailed structure, when consistently applied, will significantly improve p
    - Ideas are reviewed and prioritized regularly
 
 2. **Planning**
-   - Selected features move to `1_planning/`
+   - Create a new version directory in `plans/Versions/`
    - Create detailed specifications and designs
    - Get stakeholder approval before implementation
 
 3. **In Progress**
-   - Update status to 'In Progress' when work begins
+   - Update the version status to **In Progress** in `CHANGELOG.md`
    - Update documentation as development progresses
    - Regular commits with clear messages
 
 4. **Completed**
-   - Update status to 'Completed' when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
+   - Update the version status to **Completed** in `CHANGELOG.md` when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
    - Include post-implementation review, if applicable (e.g., for feature releases).
    - Update `plans/_reference/CHANGELOG.md` with all changes, clearly stating the nature of the release.
    - Ensure all changes are properly documented in the changelog, following the Keep a Changelog format.
@@ -268,7 +268,7 @@ All presentations must follow the McKinsey presentation standards defined in `co
 - **Purpose**: Serves as the single source of truth for current and future development plans
 - **Contents**:
   - Upcoming versions with status and target dates
-  - Current focus with detailed task lists
+  - Current focus with high-level deliverables (detailed tasks are maintained in `VERSION_PLAN.md`)
   - Planned features and improvements
   - Technical debt and future considerations
 - **Update Frequency**: During planning meetings and when priorities change
@@ -301,7 +301,7 @@ All presentations must follow the McKinsey presentation standards defined in `co
 
 #### Workflow
 1. New features are added to ROADMAP.md under appropriate version sections
-2. As work begins, detailed tasks are added to the relevant version in ROADMAP.md
+2. As work begins, tasks are tracked as a numbered checklist in the version's `VERSION_PLAN.md`
 3. Upon completion, changes are recorded in CHANGELOG.md
 4. README.md is updated to reflect major changes and new features
 5. All documentation is kept in sync with the current state of the project
@@ -433,7 +433,7 @@ The `create_version.md` template is a comprehensive guide for managing software 
 
 #### Location
 - Template: `plans/_templates/create_version.md`
-- Usage: Copy to `plans/1_planning/VX.Y.Z/` when starting a new version
+- Usage: Copy to `plans/Versions/VX.Y.Z/` when starting a new version
 
 #### Directory Structure Created
 When executed, this template will create and manage the following structure:
