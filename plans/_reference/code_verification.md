@@ -166,9 +166,9 @@ Yes, both `do_plan.md` and `create_version.md` are designed to run automatically
 
 This fully automated approach ensures consistent and reliable version management while eliminating the need for manual intervention during execution.
 
-## 6. Does the workflow still use learn.log?
+## 6. How are learnings recorded?
 
-The updated `product_management.md` does not mention a `learn.log` file. Previous workflows stored learning notes in this log between phases, but its use is now optional.
+The workflow no longer uses a `learn.log` file. All learning notes are stored directly in `VERSION_PLAN.md` at the end of each phase.
 
 
 ## 7. Are the files mentioned in Q1 the only ones created by do_plan.md and create_version.md?
@@ -209,4 +209,8 @@ The following files are referenced in the workflow but not created by either `do
 
 ### Additional Notes
 
-The updated guide no longer references a dedicated `learn.log` file. Earlier templates used this log to capture learning and reflection at each phase. Teams may still record insights if desired, but it is not required.
+The updated guide no longer uses a dedicated `learn.log` file. Learnings are instead recorded in `VERSION_PLAN.md` after each phase. Teams may maintain additional logs if desired, but they are optional.
+
+## 9. Do `do_plan.md` and `create_version.md` still use `learn.log` or `run.log`?
+
+No. Both `learn.log` and `run.log` have been removed from the workflow. The templates for `do_plan.md` and `create_version.md` no longer reference or create these log files. Learning notes are tracked directly in `VERSION_PLAN.md`, and operational details are captured through normal commit history and other project documentation.
