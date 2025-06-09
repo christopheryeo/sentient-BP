@@ -5,9 +5,8 @@
 
 ## Pre-Execution Validation
 1. [ ] **Check Prerequisites**
-   - [ ] Verify ROADMAP.md exists and is accessible
-   - [ ] Ensure git is initialized and configured
-   - [ ] Check for required permissions in the repository
+   - [ ] Verify `plans/_reference/ROADMAP.md` exists and is accessible
+   - [ ] Check for required permissions
 
 2. [ ] **Environment Setup**
    - [ ] Create required directories if they don't exist
@@ -17,11 +16,11 @@
 ## Execution Instructions for AI
 
 1. [ ] **Review Roadmap**
-   - [ ] Check ROADMAP.md for the next planned version and its details
+   - [ ] Check `plans/_reference/ROADMAP.md` for the next planned version and its details
    - [ ] Verify the target date and key deliverables
 
 2. [ ] **Setup Version Directory**
-   - [ ] Create a new directory: `plans/1_planning/VX.Y.Z/` (using semantic versioning)
+   - [ ] Create a new directory: `plans/Versions/VX.Y.Z/` (using semantic versioning)
    - [ ] Create standard files in the new directory:
      - [ ] `VERSION_PLAN.md`: Version overview, goals, and high-level design
      - [ ] `TECH_SPEC.md`: Technical specifications and architecture
@@ -29,20 +28,20 @@
      - [ ] Use `plans/_templates/create_version.md` as the initial content for `VERSION_PLAN.md`
 
 3. [ ] **Initialize Version Planning**
-   - [ ] Populate `VERSION_PLAN.md` with version details from ROADMAP.md
+   - [ ] Populate `VERSION_PLAN.md` with version details from `plans/_reference/ROADMAP.md`
    - [ ] Validate all required information is available
    - [ ] If any required fields are missing:
-     - [ ] Log detailed error to `run.log` (planned feature)
+     - [ ] Record detailed error in `VERSION_PLAN.md`
      - [ ] Exit with clear error message
    - [ ] Begin executing `create_version.md` starting with Phase 1
    - [ ] For each phase:
      - [ ] Update relevant standard files
      - [ ] Commit changes with descriptive messages
-     - [ ] Log all actions to `run.log` (planned feature)
+     - [ ] Record all actions in `VERSION_PLAN.md`
 
 4. [ ] **Update Project Files**
-   - [ ] Update ROADMAP.md with new version details and status
-   - [ ] Add new version section to CHANGELOG.md
+   - [ ] Update `plans/_reference/ROADMAP.md` with new version details and status
+   - [ ] Add new version section to `plans/_reference/CHANGELOG.md`
    - [ ] Ensure all standard files are complete and consistent
    - [ ] Document key learnings in `learn.log`
    - [ ] Commit all changes with descriptive messages following the format:
@@ -58,7 +57,7 @@
    - [ ] Verify consistency across all generated files
    - [ ] Apply automatic fixes for any detected issues
    - [ ] Create final commit with review updates
-   - [ ] Mark version as 'Ready for Release' in ROADMAP.md
+   - [ ] Mark version as 'Ready for Release' in `plans/_reference/ROADMAP.md`
 
 ## Expected Workflow
 1. [ ] **Pre-Execution**
@@ -77,14 +76,14 @@
 
 3. [ ] **Post-Execution**
    - [ ] Verify all changes were applied
-   - [ ] Update ROADMAP.md and CHANGELOG.md
-   - [ ] Log completion status to `run.log` (planned feature)
+   - [ ] Update `plans/_reference/ROADMAP.md` and `plans/_reference/CHANGELOG.md`
+   - [ ] Record completion status in `VERSION_PLAN.md`
 
 ## Error Handling & Logging
-- [ ] **Single Log File**: All logs will go to `run.log` with timestamps (planned feature)
+- [ ] **Logging**: Important actions are recorded in `VERSION_PLAN.md` with timestamps
   - [ ] Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - [ ] Levels: INFO, WARN, ERROR, DEBUG
-  - [ ] Sources: SYSTEM, AI, USER, GIT, etc.
+  - [ ] Sources: SYSTEM, AI, USER, etc.
 - [ ] **Error Handling**
   - [ ] Non-critical issues: Log as WARN and continue
   - [ ] Critical errors: Log as ERROR and exit with code
@@ -92,12 +91,12 @@
 
 ## Unattended Execution
 - [ ] **Requirements**
-  - [ ] Required git configuration must be set up
+  - [ ] Required environment configuration must be set up
   - [ ] Sufficient permissions for file operations
 
 - [ ] **Outputs**
-  - [ ] `run.log`: Complete execution log with timestamps (planned feature)
-  - [ ] Git commits for all changes
+  - [ ] `VERSION_PLAN.md`: Complete execution notes with timestamps
+  - [ ] Commits recorded for all changes
 
 - [ ] **Recovery**
   - [ ] If interrupted, can be restarted and will resume from last successful phase
