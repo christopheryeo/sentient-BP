@@ -25,7 +25,6 @@
   - Create standard files in the new directory:
     - `VERSION_PLAN.md`: Version overview, goals, and high-level design
     - `TECH_SPEC.md`: Technical specifications and architecture
-    - `RELEASE_NOTES.md`: Release notes and test results
   - Copy templates:
     - Use `plans/_templates/create_version.md` as the initial content for `VERSION_PLAN.md`
 
@@ -79,7 +78,6 @@
 3. **Post-Execution**
    - Verify all changes were applied
    - Update ROADMAP.md and CHANGELOG.md
-   - Generate execution summary in `RELEASE_NOTES.md`
    - Log completion status to `run.log` (planned feature)
 
 ## Error Handling & Logging
