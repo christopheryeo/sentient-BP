@@ -2,6 +2,7 @@
 
 ## How to Use
 1. [ ] Run: `Execute do_plan.md`
+2. [ ] After completing any task, change its checkbox to `[x]` so progress is updated at every step
 
 ## Pre-Execution Validation
 1. [ ] **Check Prerequisites**
