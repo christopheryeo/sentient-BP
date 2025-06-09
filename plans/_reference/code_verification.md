@@ -196,7 +196,6 @@ The following files are referenced in the workflow but not created by either `do
 3. Project source code files directly modified by `create_version.md`:
    - `index.html` - Main HTML file, modified for slide content and structure.
    - `src/js/script.js` - Primary JavaScript file, potentially modified for slide logic (if active).
-   - `src/js/main.js` - Alternative JavaScript file, potentially modified for slide logic.
    - `README.md` (project root) - Overall project documentation, may be updated with high-level changes.
 4. The template files themselves (source of the planning process):
    - `plans/_templates/create_version.md` - Referenced and copied.

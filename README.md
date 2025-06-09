@@ -181,7 +181,7 @@ sentient-BP/
 ├── css/
 │   └── styles.css       # Main stylesheet
 ├── js/
-│   └── main.js         # Main JavaScript file
+│   └── script.js       # Main JavaScript file
 ├── static/images/       # Image assets
 ├── index.html           # Main HTML file
 └── README.md            # Project documentation
@@ -214,7 +214,7 @@ Edit the CSS variables in `css/styles.css` to match your brand colors:
 ### Adding New Features
 1. Add new slide content in the `slidesData` array
 2. Add custom styles in `css/styles.css`
-3. Extend functionality in `js/main.js`
+3. Extend functionality in `js/script.js`
 
 ## Browser Support
 

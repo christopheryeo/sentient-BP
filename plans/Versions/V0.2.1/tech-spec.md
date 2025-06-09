@@ -24,7 +24,7 @@ src/
 │   ├── layout.css      # Grid and flex systems
 │   └── components/     # UI components
 ├── js/
-│   ├── main.js       # App initialization
+│   ├── script.js     # App initialization
 │   ├── navigation.js   # Slide controls
 │   └── utils/         # Helper functions
 └── assets/             # Static files
