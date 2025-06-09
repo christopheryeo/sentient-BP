@@ -1,105 +1,31 @@
-# AI Version Planning Assistant
+# Version Setup Checklist
 
-## How to Use
-1. Run: `Execute do_plan.md`
+Follow these steps in order. Mark each step as complete when finished.
 
-## Pre-Execution Validation
-1. **Check Prerequisites**
-   - Verify ROADMAP.md exists and is accessible
-   - Ensure git is initialized and configured
-   - Check for required permissions in the repository
+1. [ ] **Validate Prerequisites**
+   - Confirm `plans/_reference/ROADMAP.md` exists
+   - Ensure git is initialized and credentials are configured
+   - Verify write permissions in the repository
 
-2. **Environment Setup**
-   - Create required directories if they don't exist
-   - Verify write permissions
-   - Initialize any required services or connections
+2. [ ] **Create Version Directory**
+   - Determine the next version number from ROADMAP
+   - Make `plans/1_planning/VX.Y.Z/`
+   - Copy `plans/_templates/create_version.md` to `VERSION_PLAN.md`
+   - Copy `plans/_templates/TECH_SPEC.md` to `TECH_SPEC.md`
 
-## Execution Instructions for AI
+3. [ ] **Populate Planning Files**
+   - Fill `VERSION_PLAN.md` with version objectives from ROADMAP
+   - Add initial technical notes to `TECH_SPEC.md`
 
-1. **Review Roadmap**
-   - Check ROADMAP.md for the next planned version and its details
-   - Verify the target date and key deliverables
+4. [ ] **Update Project References**
+   - Mark the version as "In Planning" in ROADMAP
+   - Add a new section to `plans/_reference/CHANGELOG.md`
 
-2. **Setup Version Directory**
-   - Create a new directory: `plans/1_planning/VX.Y.Z/` (using semantic versioning)
-  - Create standard files in the new directory:
-    - `VERSION_PLAN.md`: Version overview, goals, and high-level design
-    - `TECH_SPEC.md`: Technical specifications and architecture
-  - Copy templates:
-    - Use `plans/_templates/create_version.md` as the initial content for `VERSION_PLAN.md`
+5. [ ] **Execute Version Plan Phases**
+   - Follow each phase in `VERSION_PLAN.md`
+   - Commit changes after completing a phase
 
-3. **Initialize Version Planning**
-   - Populate `VERSION_PLAN.md` with version details from ROADMAP.md
-   - Validate all required information is available
-   - If any required fields are missing:
-     - Log detailed error to `run.log` (planned feature)
-     - Exit with clear error message
-   - Begin executing `create_version.md` starting with Phase 1
-   - For each phase:
-     - Update relevant standard files
-     - Commit changes with descriptive messages
-     - Log all actions to `run.log` (planned feature)
-
-4. **Update Project Files**
-   - Update ROADMAP.md with new version details and status
-   - Add new version section to CHANGELOG.md
-   - Ensure all standard files are complete and consistent
-   - Document key learnings in `learn.log`
-   - Commit all changes with descriptive messages following the format:
-     ```
-     type(scope): concise description
-     
-     Detailed explanation if needed
-     ```
-     Where type is one of: feat, fix, docs, style, refactor, test, chore
-
-5. **Automated Review & Finalization**
-   - Run automated validation checks on all documentation
-   - Verify consistency across all generated files
-   - Apply automatic fixes for any detected issues
-   - Create final commit with review updates
-   - Mark version as 'Ready for Release' in ROADMAP.md
-
-## Expected Workflow
-1. **Pre-Execution**
- - Validate environment and prerequisites
-  - Exit with error if validation fails
-
-2. **Execution**
-   - Create version directory with standard files
-   - Process all phases in sequence (as defined in `create_version.md`):
-     1. Comprehensive Planning & Design (Automated)
-     2. Development Kickoff
-     3. Iterative Feature Development & Implementation
-     4. Holistic Review, Testing, Documentation & Finalization
-   - Update all relevant files automatically
-   - Commit changes after each phase
-
-3. **Post-Execution**
-   - Verify all changes were applied
-   - Update ROADMAP.md and CHANGELOG.md
-   - Log completion status to `run.log` (planned feature)
-
-## Error Handling & Logging
-- **Single Log File**: All logs will go to `run.log` with timestamps (planned feature)
-  - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
-  - Levels: INFO, WARN, ERROR, DEBUG
-  - Sources: SYSTEM, AI, USER, GIT, etc.
-- **Error Handling**:
-  - Non-critical issues: Log as WARN and continue
-  - Critical errors: Log as ERROR and exit with code
-  - Include recovery information in the log
-
-## Unattended Execution
-- **Requirements**:
-  - Required git configuration must be set up
-  - Sufficient permissions for file operations
-
-- **Outputs**:
-  - `run.log`: Complete execution log with timestamps (planned feature)
-  - Git commits for all changes
-
-- **Recovery**:
-  - If interrupted, can be restarted and will resume from last successful phase
-  - Previous phase outputs are preserved
-  - Logs contain all necessary information for manual recovery if needed
+6. [ ] **Finalize Version Setup**
+   - Run automated checks and apply fixes if needed
+   - Mark the version "Ready for Release" in ROADMAP
+   - Make a final commit summarizing all changes
