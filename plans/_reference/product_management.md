@@ -70,7 +70,7 @@ Upon receiving the instruction, the AI assistant will perform the following auto
 *   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a minimal set of files needed to manage the version's lifecycle:
     *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
     *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
-*   **Implementation Planning**: Tasks are tracked as a numbered checklist directly inside `VERSION_PLAN.md`. There is no separate `TASKS.md` file.
+*   **Implementation Planning**: Tasks are tracked as a numbered checklist directly inside `VERSION_PLAN.md`.
 *   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
 
 **4. Starting the Development Workflow (AI Execution of `VERSION_PLAN.md`)**
@@ -153,7 +153,7 @@ The standard subdirectories within `plans/` are:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md`.
+    *   **File Naming**: Clearly indicate that it's a template.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
@@ -195,7 +195,7 @@ Each version directory in `plans/Versions/` should include:
     *   **Content**: Examples include:
         *   `create_version.md`
         *   `do_plan.md`
-    *   **File Naming**: Clearly indicate that it's a template, e.g., `template_feature-spec.md`.
+    *   **File Naming**: Clearly indicate that it's a template.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 
