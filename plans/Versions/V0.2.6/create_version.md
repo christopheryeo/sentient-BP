@@ -18,7 +18,7 @@ USAGE INSTRUCTIONS:
 1. Execute the version creation process by running: "Execute do_plan.md" with your AI assistant
    - This will automatically:
      - Read values from `questions.md` as defaults
-     - Create the version directory (e.g., `plans/1_planning/VX.Y.Z/`)
+     - Create the version directory (e.g., `plans/Versions/VX.Y.Z/`)
      - Copy and initialize this template
      - Set up all necessary files using values from `questions.md`
 2. The AI will execute the workflow phases using the pre-defined values
@@ -63,14 +63,14 @@ All slide content must adhere to the McKinsey presentation standards defined in 
 
 ## Status Tracking
 
-Each version directory tracks progress through these stages in `TASKS.md`:
+Each version directory tracks progress through these stages in `VERSION_PLAN.md`:
 1. **Planning** (Default)
 2. **In Progress** (Starts at Phase 3)
 3. **Completed** (After Phase 6)
 
 The status is automatically updated during phase transitions and includes timestamps for each state change. A central Version Status table in `plans/_reference/CHANGELOG.md` lists all versions and their status—remember to update this table accordingly.
 
-### Example status section in TASKS.md:
+### Example status section in VERSION_PLAN.md:
 ```markdown
 # Version Status
 - **Current Status**: Planning
@@ -136,7 +136,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
   - Format: `[TIMESTAMP] [LEVEL] [SOURCE] Message`
   - Levels: INFO, WARN, ERROR, DEBUG
   - Sources: SYSTEM, AI, USER, GIT, etc.
-- **Status Tracking**: `TASKS.md` tracks:
+ - **Status Tracking**: `VERSION_PLAN.md` tracks:
   - Current phase and progress
   - Last completed action
   - Next steps
@@ -148,7 +148,7 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 
 ### File Management
 1. **Initial Setup**
-   - Copy this template from `plans/_templates/create_version.md` to your version directory (e.g., `plans/1_planning/VX.Y.Z/`)
+   - Copy this template from `plans/_templates/create_version.md` to your version directory (e.g., `plans/Versions/VX.Y.Z/`)
    - Create a new file named `VERSION_PLAN.md` in the version directory with the version-specific content
 
 ### Execution Rules for AI
@@ -226,8 +226,8 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 - Ensure all standard files exist in version directory:
   - `VERSION_PLAN.md`: Version overview and goals (from ROADMAP.md)
   - `TECH_SPEC.md`: Technical specifications including design, architecture, API documentation, and implementation details
-  - `TASKS.md`: Tracks progress (Planning/In Progress/Completed) and tasks
-- Initialize status in `TASKS.md` with initial status: 'Planning'
+  - `VERSION_PLAN.md` includes a task checklist for tracking progress
+ - Initialize the status section in `VERSION_PLAN.md` with initial status: 'Planning'
 
 ### 1.3 Validation
 - Verify all required information is present in ROADMAP.md
@@ -238,9 +238,8 @@ Where type is one of: feat, fix, docs, style, refactor, test, chore
 ## File Structure
 
 ```
-plans/1_planning/VX.Y.Z/
+plans/Versions/VX.Y.Z/
 ├── VERSION_PLAN.md       # Version overview, goals, and high-level design
-├── TASKS.md             # Task list, status tracking, and deployment checklist
 ├── TECH_SPEC.md         # Technical specs, architecture, and requirements
 ├── RELEASE_NOTES.md     # Release notes and test results
 ├── docs/               # Additional documentation and assets
@@ -257,8 +256,8 @@ plans/1_planning/VX.Y.Z/
    - Scope and success criteria
    - Links to related resources
 
-2. **TASKS.md**
-   - Task list with status tracking
+2. **Task Checklist (in VERSION_PLAN.md)**
+   - Numbered tasks with status tracking
    - Current version status and progress
    - Deployment checklist
    - Rollback procedures
@@ -301,8 +300,8 @@ plans/1_planning/VX.Y.Z/
 4. Generate initial task list starting with code investigation
 5. Execute Task 1: Code Impact Analysis
    - Analyze codebase for required changes
-   - Update `TASKS.md` with specific implementation tasks
-6. Track progress in `TASKS.md`
+   - Update the task checklist in `VERSION_PLAN.md` with implementation tasks
+6. Track progress in `VERSION_PLAN.md`
 7. Prepare for development kickoff
 
 *Note: This combined phase is fully automated. The AI will gather all required information from `questions.md` and ROADMAP.md without requiring user input. Values from `questions.md` will be used as defaults throughout the process.*
@@ -315,7 +314,7 @@ plans/1_planning/VX.Y.Z/
 1. **Automatic Processing**
    - Extract milestones from ROADMAP.md
    - Update `VERSION_PLAN.md` with milestone details
-   - Set initial status in `TASKS.md`
+   - Set initial status section in `VERSION_PLAN.md`
    - Populate `TECH_SPEC.md` with technical requirements
    - Update `TECH_SPEC.md` with UI/UX specifications from `questions.md`
 
@@ -345,7 +344,7 @@ plans/1_planning/VX.Y.Z/
    - Log any incomplete or unclear milestones as WARN
 
 2. **Task Status**
-   - Verify all tasks have proper status in TASKS.md
+   - Verify all tasks have proper status in `VERSION_PLAN.md`
    - Log any tasks without status as WARN
 
 3. **Development Standards**
@@ -353,7 +352,7 @@ plans/1_planning/VX.Y.Z/
    - Log any missing or unclear standards as WARN
 
 ## File Updates (Automated):
-1. Update `tasks.md` with current status
+1. Update the task checklist in `VERSION_PLAN.md` with current status
 2. Append Phase 1 learnings to `learn.log`
 
 ## Learning & Reflection (Automated):
@@ -385,7 +384,7 @@ plans/1_planning/VX.Y.Z/
 1. **Input Analysis**:
    - [ ] Load and analyze `TECH_SPEC.md` for technical requirements
    - [ ] Load and analyze `VERSION_PLAN.md` for project objectives
-   - [ ] Review all tasks in `TASKS.md`
+   - [ ] Review all tasks in `VERSION_PLAN.md`
 
 2. **Alignment Check**:
    - [ ] Verify each task maps to specific technical requirements
@@ -394,12 +393,12 @@ plans/1_planning/VX.Y.Z/
    - [ ] Identify any gaps or misalignments
 
 3. **Output**:
-   - [ ] Document alignment findings in `TASKS.md` under a new 'Alignment Review' section
+   - [ ] Document alignment findings in `VERSION_PLAN.md` under a new 'Alignment Review' section
    - [ ] Flag any misalignments or missing requirements
    - [ ] Provide recommendations for task adjustments
 
 **File Updates**:
-- [ ] Update `TASKS.md` with alignment review findings
+- [ ] Update the task checklist in `VERSION_PLAN.md` with alignment review findings
 - [ ] Append review summary to `learn.log`
 
 **Next Steps**:
@@ -449,7 +448,7 @@ plans/1_planning/VX.Y.Z/
 
 ## Automatic Verification Checks:
 1. **Implementation Status Check**
-   - Verify implementation progress in TASKS.md
+    - Verify implementation progress in `VERSION_PLAN.md`
    - Log any blocking issues as WARN with details
 
 2. **Requirements Validation**
@@ -459,7 +458,7 @@ plans/1_planning/VX.Y.Z/
 ## File Updates (Automated):
 1. **Core Documentation**
    - Update `VERSION_PLAN.md` with version overview and objectives
-   - Maintain `TASKS.md` with current task status and assignments
+    - Maintain the task checklist in `VERSION_PLAN.md` with current status and assignments
    - Update `TECH_SPEC.md` with technical specifications
    - Keep `RELEASE_NOTES.md` current with version highlights
 
@@ -552,7 +551,7 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
 
 ## Automatic Verification Checks:
 1. Deployment Checklist Check
-   - Verify deployment checklist is complete in TASKS.md
+    - Verify deployment checklist is complete in `VERSION_PLAN.md`
    - Log any incomplete items as WARN
 2. Rollback Verification Check
    - Confirm rollback procedures are tested and documented
@@ -594,7 +593,7 @@ Note: Only the files and directories listed in Q1 of code_verification.md should
    - Rollback on failure with detailed logs
 
 2. **Documentation Updates**
-   - Update status in `TASKS.md` to 'Completed'
+    - Update status in `VERSION_PLAN.md` to 'Completed'
    - Finalize all version documentation
    - Update ROADMAP.md with completion status
    - Update the Version Status table and generate a CHANGELOG.md entry
