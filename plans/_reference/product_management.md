@@ -107,7 +107,6 @@ sentient-BP/
 ├── content/                 # Core presentation content and assets
 │   ├── content.md          # Main content file (Markdown format)
 │   ├── source.bundle.html  # Processed HTML bundle with styling
-│   └── McKinsey Slide Layout Deep Dive.pdf  # Design reference
 ├── plans/                   # Project management documents
 │   ├── 0_backlog/          # Future features and ideas
 │   ├── 1_planning/         # All active and completed versions
@@ -318,8 +317,6 @@ All presentations must follow the McKinsey presentation standards defined in `co
 4. **Document Assumptions**: Note any assumptions made during implementation
 5. **Review Outputs**: Always review and validate AI-generated code
 
-Example structure is available in `plans/1_planning/V0.2.3/prompt.md`
-
 ### Working with AI
 - Be specific in your prompts
 - Break down complex tasks
@@ -383,15 +380,6 @@ The `content/` directory is the central repository for all presentation content 
   - Source attribution
   - Confidentiality notices
 
-### 3. McKinsey Slide Layout Deep Dive.pdf
-- **Purpose**: Reference document for slide design standards
-- **Contents**:
-  - Slide templates
-  - Color schemes
-  - Typography guidelines
-  - Layout specifications
-  - Data visualization standards
-
 ### Content Update Workflow
 1. Update `content.md` with new content
 2. Process through the presentation generator
@@ -449,12 +437,6 @@ The `create_version.md` template is a comprehensive guide for managing software 
 
 #### Directory Structure Created
 When executed, this template will create and manage the following structure:
-
-```
-plans/1_planning/VX.Y.Z/
-├── VERSION_PLAN.md    # Version planning guide
-└── TECH_SPEC.md       # Technical specifications
-```
 
 #### Key Features
 - **AI-Assisted Execution**: Can be executed with a single command
