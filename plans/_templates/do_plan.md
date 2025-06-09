@@ -44,7 +44,7 @@
    - [ ] Update `plans/_reference/ROADMAP.md` with new version details and status
    - [ ] Add new version section to `plans/_reference/CHANGELOG.md`
    - [ ] Ensure all standard files are complete and consistent
-  - [ ] Document key learnings in `VERSION_PLAN.md`
+   - [ ] Document key learnings in `VERSION_PLAN.md`
    - [ ] Commit all changes with descriptive messages following the format:
      ```
      type(scope): concise description
