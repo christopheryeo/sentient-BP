@@ -87,9 +87,7 @@ sentient-BP/
 │       └── simple.html             # Simplified version
 ├── dist/                   # Compiled/built files (if using a build tool)
 ├── plans/                  # Project management
-│   ├── 0_backlog/          # Future features and ideas
-│   ├── 1_planning/         # Active planning
-│   ├── Versions/        # Completed work
+│   ├── Versions/           # Version directories
 │   ├── _reference/         # Reference materials
 │   └── _templates/         # Document templates
 ├── content/                # Generated content
@@ -119,9 +117,8 @@ This project uses vanilla JavaScript and doesn't require a build step. Simply ed
 
 We use a structured approach to manage the project's development:
 
-- **Backlog**: Future features and ideas in `plans/0_backlog/`
-- **Planning**: Active planning documents in `plans/1_planning/`
-- **Completed**: Finished work in `plans/Versions/`
+- **Versions**: All work lives in `plans/Versions/` and is tracked in `plans/_reference/CHANGELOG.md`
+- **Reference**: Long-term docs in `plans/_reference/`
 
 For more details, see our [Project Management Guide](plans/_reference/product_management.md).
 
@@ -165,10 +162,9 @@ sentient-BP/
 │   ├── css/                # Stylesheets
 │   └── assets/             # Images, fonts, etc.
 ├── plans/                  # Project management
-│   ├── 0_backlog/          # Future features and ideas
-│   ├── 1_planning/         # Active planning
-│   ├── Versions/        # Completed work
-│   └── _reference/         # Reference materials
+│   ├── Versions/           # Version directories
+│   ├── _reference/         # Reference materials
+│   └── _templates/         # Document templates
 ├── content/                # Generated content
 ├── index.html              # Main entry point
 └── README.md               # Project documentation
@@ -247,7 +243,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - **Version History**: See [CHANGELOG.md](plans/_reference/CHANGELOG.md) for a detailed history of all versions, commits, and changes.
 - **Upcoming Features**: View our [Roadmap](plans/_reference/ROADMAP.md) for current and planned development.
-- **Current Focus**: [V0.2.4 - Management Team Photos & Bios](plans/1_planning/V0.2.4/)
+- **Current Focus**: [V0.2.7 - Company Facts Table Improvements](plans/Versions/V0.2.7/)
 
 ---
 

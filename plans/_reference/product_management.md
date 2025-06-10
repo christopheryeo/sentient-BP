@@ -119,7 +119,6 @@ sentient-BP/
 │   ├── content.md          # Main content file (Markdown format)
 │   ├── source.bundle.html  # Processed HTML bundle with styling
 ├── plans/                   # Project management documents
-│   ├── 0_backlog/          # Future features and ideas
 │   ├── Versions/           # Version directories
 │   │   └── VX.Y.Z/        # Active and completed versions
 │   ├── _reference/         # Reference materials
@@ -135,12 +134,6 @@ sentient-BP/
 The `plans/` directory is central to our project management methodology. It provides a structured way to track ideas, plan upcoming work, manage ongoing tasks, and archive completed efforts. Adhering to a standardized organization within `plans/` ensures clarity and allows for easy replication of our project management processes across different projects.
 
 The standard subdirectories within `plans/` are:
-
-*   **`0_backlog/`**:
-    *   **Purpose**: Captures all raw ideas, feature requests, identified bugs, and potential improvements that are not yet scheduled for active development.
-    *   **Content**: Typically contains markdown files describing feature ideas, bug reports, or other concepts. Each item should be described with enough detail to be understood later during a planning session.
-    *   **File Naming**: Use descriptive kebab-case names.
-
 *   **`Versions/`**:
     *   **Purpose**: Contains a directory for each version of the application, regardless of its status (planning, in progress, or completed).
     *   **Content**: Organized into version-specific subdirectories (e.g., `V1.0.0/`, `V1.1.0_feature-name/`). Each subdirectory should contain:
@@ -195,8 +188,6 @@ Each version directory in `plans/Versions/` should include:
     *   **File Naming**: Clearly indicate that it's a template.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
-
-
 ## Workflow
 
 1. Add upcoming features or ideas directly to `ROADMAP.md`.
