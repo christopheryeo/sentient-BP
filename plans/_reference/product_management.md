@@ -108,7 +108,6 @@ sentient-BP/
 │   ├── content.md          # Main content file (Markdown format)
 │   ├── source.bundle.html  # Processed HTML bundle with styling
 ├── plans/                   # Project management documents
-│   ├── 0_backlog/          # Future features and ideas
 │   ├── Versions/           # Version directories
 │   │   └── VX.Y.Z/        # Active and completed versions
 │   ├── _reference/         # Reference materials
@@ -124,12 +123,6 @@ sentient-BP/
 The `plans/` directory is central to our project management methodology. It provides a structured way to track ideas, plan upcoming work, manage ongoing tasks, and archive completed efforts. Adhering to a standardized organization within `plans/` ensures clarity and allows for easy replication of our project management processes across different projects.
 
 The standard subdirectories within `plans/` are:
-
-*   **`0_backlog/`**:
-    *   **Purpose**: Captures all raw ideas, feature requests, identified bugs, and potential improvements that are not yet scheduled for active development.
-    *   **Content**: Typically contains markdown files describing feature ideas, bug reports, or other concepts. Each item should be described with enough detail to be understood later during a planning session.
-    *   **File Naming**: Use descriptive kebab-case names.
-
 *   **`Versions/`**:
     *   **Purpose**: Contains a directory for each version of the application, regardless of its status (planning, in progress, or completed).
     *   **Content**: Organized into version-specific subdirectories (e.g., `V1.0.0/`, `V1.1.0_feature-name/`). Each subdirectory should contain:
@@ -198,26 +191,17 @@ Each version directory in `plans/Versions/` should include:
     *   **File Naming**: Clearly indicate that it's a template.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
-
-
 ## Workflow
-
-1. **Backlog**
-   - New features and ideas are added to `0_backlog/`
-   - Each idea gets its own markdown file
-   - Ideas are reviewed and prioritized regularly
-
-2. **Planning**
+1. **Planning**
    - Create a new version directory in `plans/Versions/`
    - Create detailed specifications and designs
    - Get stakeholder approval before implementation
-
-3. **In Progress**
+2. **In Progress**
    - Update the version status to **In Progress** in `CHANGELOG.md`
    - Update documentation as development progresses
    - Regular commits with clear messages
 
-4. **Completed**
+3. **Completed**
    - Update the version status to **Completed** in `CHANGELOG.md` when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
    - Include post-implementation review, if applicable (e.g., for feature releases).
    - Update `plans/_reference/CHANGELOG.md` with all changes, clearly stating the nature of the release.
