@@ -4,6 +4,7 @@
 - [Starting a New Version](#detailed-steps-for-starting-a-new-version)
 - [Project Structure](#project-structure)
 - [Workflow](#workflow)
+- [Simplified Approach](#simplified-approach)
 - [Documentation Standards](#documentation-standards)
 - [Version Control](#version-control)
 - [AI Collaboration](#ai-collaboration)
@@ -100,6 +101,16 @@ This guide is based on the information found in `README.md`, `plans/_templates/c
 
 Welcome to the Sentient.io Interactive Presentation project management guide. This document provides a structured approach to managing our development process, ensuring consistency, quality, and effective collaboration between team members and AI assistants.
 
+## Simplified Approach
+
+For day-to-day work we rely on two files:
+
+1. **`ROADMAP.md`** – lists features we plan to add.
+2. **`CHANGELOG.md`** – records everything that has been implemented.
+
+There are no additional planning documents or version directories. Add future ideas to
+`ROADMAP.md` and log completed work in `CHANGELOG.md`.
+
 ## Project Structure
 
 ```
@@ -152,26 +163,12 @@ This detailed structure, when consistently applied, will significantly improve p
 
 ## Status Tracking
 
-Each version's progress is tracked in the version status table in `plans/_reference/CHANGELOG.md`. Versions move through these stages:
+We track progress with two simple documents:
 
-1. **Planning** (Default)
-   - New versions start here
-   - All planning documents are created
-   - Status is tracked in `CHANGELOG.md`
+- `ROADMAP.md` lists features we intend to build.
+- `CHANGELOG.md` records what has been completed.
 
-2. **In Progress**
-   - Development has started
-   - Status is automatically updated
-   - All changes are version controlled
-
-3. **Completed**
-   - Version is released
-   - Final documentation is updated
-   - Status is marked complete in `CHANGELOG.md`
-
-This approach eliminates the need for directory movements while keeping version status centralized in the changelog.
-
-Only the main app versions are listed in the changelog; individual commits may not have corresponding tags or entries.
+When a feature is finished, its details are added to the changelog and the roadmap can be updated accordingly.
 
 ## Version Documentation
 
@@ -192,20 +189,10 @@ Each version directory in `plans/Versions/` should include:
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
 ## Workflow
-1. **Planning**
-   - Create a new version directory in `plans/Versions/`
-   - Create detailed specifications and designs
-   - Get stakeholder approval before implementation
-2. **In Progress**
-   - Update the version status to **In Progress** in `CHANGELOG.md`
-   - Update documentation as development progresses
-   - Regular commits with clear messages
 
-3. **Completed**
-   - Update the version status to **Completed** in `CHANGELOG.md` when done. This signifies the completion of a defined scope of work, which could be a feature release, a bugfix release, or a documentation-only release (e.g., V0.2.2).
-   - Include post-implementation review, if applicable (e.g., for feature releases).
-   - Update `plans/_reference/CHANGELOG.md` with all changes, clearly stating the nature of the release.
-   - Ensure all changes are properly documented in the changelog, following the Keep a Changelog format.
+1. Add upcoming features or ideas directly to `ROADMAP.md`.
+2. Implement the work.
+3. Document completed changes in `CHANGELOG.md`.
 
 ## Documentation Standards
 
@@ -284,11 +271,10 @@ All presentations must follow the McKinsey presentation standards defined in `co
 - **Ownership**: Maintained by the core team with input from all contributors
 
 #### Workflow
-1. New features are added to ROADMAP.md under appropriate version sections
-2. As work begins, tasks are tracked as a numbered checklist in the version's `VERSION_PLAN.md`
-3. Upon completion, changes are recorded in CHANGELOG.md
-4. README.md is updated to reflect major changes and new features
-5. All documentation is kept in sync with the current state of the project
+1. Add ideas to `ROADMAP.md`.
+2. Implement the changes.
+3. Record what was done in `CHANGELOG.md`.
+4. Update the README when major features ship.
 
 ## AI Collaboration
 
