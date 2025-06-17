@@ -1,7 +1,7 @@
 # Sentient.io Presentation - Project Management Guide
 
 ## Table of Contents
-- [Starting a New Version](#detailed-steps-for-starting-a-new-version)
+- [Starting a New Version](#starting-a-new-version)
 - [Project Structure](#project-structure)
 - [Workflow](#workflow)
 - [Simplified Approach](#simplified-approach)
@@ -9,93 +9,18 @@
 - [Version Control](#version-control)
 - [AI Collaboration](#ai-collaboration)
 - [Quality Assurance](#quality-assurance)
-- [Templates & Examples](#templates--examples)
 - [Best Practices](#best-practices)
 
-## Version Completion Process
+## Starting a New Version
 
-To complete a version and mark it as done, follow these steps:
+Beginning work on a new release is intentionally lightweight:
 
-1. **Run the Completion Process**
-   - Execute the completion guide with your AI assistant
-   - The assistant will:
-   - Locate the current version directory in `plans/Versions/`
-    - Guide you through the finalization steps
+1. Add the version and its target date to `ROADMAP.md`.
+2. As work begins, change its status to **In Progress**.
+3. Document completed tasks in `CHANGELOG.md`.
+4. When everything is finished, mark the version **Completed** in `ROADMAP.md` and ensure final notes are recorded in `CHANGELOG.md`.
 
-2. **Automatic Updates**
-  - The completion guide will automatically:
-    - Update ROADMAP.md to mark the version as completed
-    - Update the version's status to **Completed** in `CHANGELOG.md`
-    - Record release notes in `CHANGELOG.md`
-    - Ensure all documentation is properly updated
-
-3. **Verification**
-   - The AI assistant will verify that:
-     - All planned features are implemented
-     - Documentation is up to date
-     - Version numbers are consistent
-     - The version status is updated correctly
-
-4. **Completion**
-   - Once all steps are completed, the version will be marked as done
-   - The version will appear in the "Recent Releases" section of ROADMAP.md
-   - The version directory will be in `plans/Versions/` for reference
-
-## Detailed Steps for Starting a New Version
-
-To start the development of the next app version, follow these steps, which involve both manual preparation and AI-assisted automation:
-
-**1. Prerequisites (Manual Setup)**
-
-Before initiating the automated process, you need to prepare two key files:
-
-*   **Update `plans/_reference/ROADMAP.md`**:
-    *   Ensure the `ROADMAP.md` file is updated with the details for the new version. This includes:
-        *   The new version number (e.g., V0.3.0).
-        *   The target date for the version release.
-        *   A clear list of key deliverables and objectives for this version.
-    *   The AI assistant will read from this file to understand the scope and details of the new version.
-
-
-**2. Initiating the Process (User Action)**
-
-*   To begin, instruct your AI assistant (e.g., Jules) to: **"Execute `do_plan.md`"**.
-*   `do_plan.md` is a master script template located at `plans/_templates/do_plan.md` that orchestrates the setup of the new version.
-
-**3. Automated Setup (AI Execution of `do_plan.md`)**
-
-Upon receiving the instruction, the AI assistant will perform the following automated steps by executing the logic within `do_plan.md`:
-
-*   **Review `ROADMAP.md`**: The AI first checks `plans/_reference/ROADMAP.md` to identify the next planned version, its target date, and key deliverables.
-*   **Create Version-Specific Directory**: A new directory for the version will be created in `plans/Versions/`, following a naming convention like `plans/Versions/VX.Y.Z/` (where X.Y.Z is the new version number).
-*   **Populate Directory with Standard Planning Files**: The AI will populate this new directory with a minimal set of files needed to manage the version's lifecycle:
-    *   `VERSION_PLAN.md`: This is the main guide for the new version. It is created by copying the content from `plans/_templates/create_version.md`.
-    *   `TECH_SPEC.md`: For detailing technical specifications, architecture, and requirements.
-*   **Implementation Planning**: Tasks are tracked as a numbered checklist directly inside `VERSION_PLAN.md`.
-*   **Populate `VERSION_PLAN.md`**: The AI will then populate the `VERSION_PLAN.md` in the new version directory with specific details (like version number, objectives) extracted from `plans/_reference/ROADMAP.md`.
-
-**4. Starting the Development Workflow (AI Execution of `VERSION_PLAN.md`)**
-
-*   Once the setup is complete, the AI assistant will automatically begin executing Phase 1 of the newly created `VERSION_PLAN.md` (which is the content from `plans/_templates/create_version.md`) within the new version's directory (e.g., `plans/Versions/VX.Y.Z/VERSION_PLAN.md`).
-*   This `VERSION_PLAN.md` outlines a four-phase workflow for the new version:
-    *   Phase 1: Comprehensive Planning & Design
-    *   Phase 2: Development Kickoff
-    *   Phase 3: Iterative Feature Development & Implementation
-    *   Phase 4: Holistic Review, Testing, Documentation & Finalization
-*   The AI will follow the instructions within this `VERSION_PLAN.md`, guided by information from `ROADMAP.md` and `TECH_SPEC.md`, to manage the development lifecycle.
-
-**5. Project File Updates (Automated)**
-
-Throughout this process, several key project files are updated automatically:
-
-*   `plans/_reference/ROADMAP.md`:
-    *   The status of the new version will be updated to 'In Planning' during Phase 1 of `VERSION_PLAN.md`.
-    *   Later, it will be updated with the completion status upon release.
-*   `plans/_reference/CHANGELOG.md`: A new section for the version will be added to the `CHANGELOG.md` to document changes as development progresses and upon release.
-
-By following these steps, the development process for a new application version is systematically initiated, leveraging automation to ensure consistency and adherence to the defined project management structure.
----
-This guide is based on the information found in `README.md`, `plans/_templates/create_version.md`, and `plans/_templates/do_plan.md`.
+This simple workflow keeps all planning in two files and avoids extra templates or directories.
 
 ## Introduction
 
@@ -119,7 +44,6 @@ sentient-BP/
 │   ├── content.md          # Main content file (Markdown format)
 │   ├── source.bundle.html  # Processed HTML bundle with styling
 ├── plans/                   # Project management documents
-│   ├── 0_backlog/          # Future features and ideas
 │   ├── Versions/           # Version directories
 │   │   └── VX.Y.Z/        # Active and completed versions
 │   ├── _reference/         # Reference materials
@@ -135,11 +59,6 @@ sentient-BP/
 The `plans/` directory is central to our project management methodology. It provides a structured way to track ideas, plan upcoming work, manage ongoing tasks, and archive completed efforts. Adhering to a standardized organization within `plans/` ensures clarity and allows for easy replication of our project management processes across different projects.
 
 The standard subdirectories within `plans/` are:
-
-*   **`0_backlog/`**:
-    *   **Purpose**: Captures all raw ideas, feature requests, identified bugs, and potential improvements that are not yet scheduled for active development.
-    *   **Content**: Typically contains markdown files describing feature ideas, bug reports, or other concepts. Each item should be described with enough detail to be understood later during a planning session.
-    *   **File Naming**: Use descriptive kebab-case names.
 
 *   **`Versions/`**:
     *   **Purpose**: Contains a directory for each version of the application, regardless of its status (planning, in progress, or completed).
@@ -160,10 +79,8 @@ The standard subdirectories within `plans/` are:
     *   **File Naming**: Descriptive kebab-case names.
 
 *   **`_templates/`**:
-    *   **Purpose**: Contains standardized templates for various documents used in the project management process. This helps maintain consistency and ensures all necessary information is captured.
-    *   **Content**: Examples include:
-        *   `create_version.md`
-        *   `do_plan.md`
+    *   **Purpose**: Contains optional template documents to help standardize notes and planning.
+    *   **Content**: Generic planning and documentation templates.
     *   **File Naming**: Clearly indicate that it's a template.
 
 This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
@@ -179,22 +96,7 @@ When a feature is finished, its details are added to the changelog and the roadm
 
 ## Version Documentation
 
-Each version directory in `plans/Versions/` should include:
-
-**Directory Naming**: Use semantic versioning (e.g., `V1.0.0`)
-
-        *   `content/style.md`, etc.
-
-    *   **File Naming**: Descriptive kebab-case names.
-
-*   **`_templates/`**:
-    *   **Purpose**: Contains standardized templates for various documents used in the project management process. This helps maintain consistency and ensures all necessary information is captured.
-    *   **Content**: Examples include:
-        *   `create_version.md`
-        *   `do_plan.md`
-    *   **File Naming**: Clearly indicate that it's a template.
-
-This detailed structure, when consistently applied, will significantly improve project organization and knowledge sharing.
+Historical releases are stored in `plans/Versions/`. These folders contain legacy planning files created before the simplified workflow.
 
 
 ## Workflow
@@ -248,7 +150,7 @@ All presentations must follow the McKinsey presentation standards defined in `co
 - **Purpose**: Serves as the single source of truth for current and future development plans
 - **Contents**:
   - Upcoming versions with status and target dates
-  - Current focus with high-level deliverables (detailed tasks are maintained in `VERSION_PLAN.md`)
+  - Current focus with high-level deliverables
   - Planned features and improvements
   - Technical debt and future considerations
 - **Update Frequency**: During planning meetings and when priorities change
@@ -383,51 +285,7 @@ The `content/` directory is the central repository for all presentation content 
    - Minimize external dependencies
    - Implement lazy loading where appropriate
 
-## Templates & Examples
 
-### Starting a New Version (do_plan.md)
-
-To begin a new version planning process, simply tell your AI assistant:
-```
-Execute do_plan.md
-```
-
-**Location**: `plans/_templates/do_plan.md`
-
-**What it does**:
-- Automatically checks ROADMAP.md for the next version
-- Creates and initializes a new version directory
-- Guides you through each planning phase
-- Updates all necessary files (roadmap, changelog, etc.)
-- Handles version control commits
-
-**Requirements**:
-- AI assistant with file execution capabilities
-- Write access to the repository
-- Internet connection (for AI functionality)
-
-### Version Planning Template (create_version.md)
-
-The `create_version.md` template is a comprehensive guide for managing software versions throughout their entire lifecycle. It's designed to be used with AI assistance and follows a four-phase approach from planning to finalization.
-
-#### Location
-- Template: `plans/_templates/create_version.md`
-- Usage: Copy to `plans/Versions/VX.Y.Z/` when starting a new version
-
-#### Directory Structure Created
-When executed, this template will create and manage the following structure:
-
-#### Key Features
-- **AI-Assisted Execution**: Can be executed with a single command
-- **Phased Approach**: Four phases from planning to finalization
-- **Comprehensive Documentation**: Ensures all aspects are documented
-- **Version Control Ready**: Includes guidance for Git integration
-
-#### How to Use
-1. Copy the template to your version directory
-2. Run `Execute create_version.md` with your AI assistant
-3. Follow the interactive prompts
-4. The AI will handle file creation and updates
 
 
 ### Feature Specification
